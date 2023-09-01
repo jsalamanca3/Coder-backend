@@ -47,8 +47,8 @@ class ProductManager {
 
 // Ejemplo
 const manager = new ProductManager();
-manager.addProduct("Camiseta", "Una camiseta de algodón", 20, "camiseta.jpg", "C001", 50);
-manager.addProduct("Pantalón", "Un pantalón de mezclilla", 40, "pantalon.jpg", "P001", 30);
+manager.addProduct("Camiseta", "Una camiseta", 50, "camiseta.jpg", "1", 10);
+manager.addProduct("Pantalón", "Un pantalón", 70, "pantalon.jpg", "2", 15);
 
 console.log(manager.getProducts());
 
