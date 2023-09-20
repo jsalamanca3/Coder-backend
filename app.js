@@ -1,7 +1,7 @@
 import express from 'express';
 import ProductManager from './ProductManager.js';
 
-//const express = require('express');
+//const express = require('express')h;
 /* const ProductManager = require('./ProductManager'); */
 
 const app = express();
