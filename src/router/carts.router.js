@@ -3,7 +3,7 @@ import { Router } from "express";
 import { v4 as uuidv4 } from 'uuid';
 const router = Router();
 
-router.post("/api/carts", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const newCart = {
       id: generateCartId(),
@@ -16,7 +16,7 @@ router.post("/api/carts", async (req, res) => {
   }
 });
 
-router.get("/api/carts/:cid", async (req, res) => {
+router.get("/:cid", async (req, res) => {
   try {
     const cid = req.params.cid;
     const data = await fs.readFile(`carrito_${cid}.json`, "utf8");
@@ -27,7 +27,7 @@ router.get("/api/carts/:cid", async (req, res) => {
   }
 });
 
-router.post("/api/carts/:cid/product/:pid", async (req, res) => {
+router.post("/:cid/product/:pid", async (req, res) => {
     try {
       const cid = req.params.cid;
       const pid = req.params.pid;

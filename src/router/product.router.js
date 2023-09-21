@@ -3,17 +3,20 @@ import productManager from "../ProductManager.js";
 import Joi from 'joi';
 const router = Router();
 
-router.get("/api/products", async (req, res) => {
-  try {
-    const limit = req.query.limit ? parseInt(req.query.limit) : undefined;
-    const products = await productManager.getProducts(limit);
-    res.json(products);
-  } catch (error) {
-    res.status(500).json({ error: "Error al obtener los productos" });
-  }
-});
+router.get("/", async (req, res) => {
+    try {
+      const limit = req.query.limit ? parseInt(req.query.limit) : undefined;
+      if (limit !== undefined && (isNaN(limit) || limit <= 0)) {
+        return res.status(400).json({ error: "El parámetro 'limit' debe ser un número positivo" });
+      }
+      const products = await productManager.getProducts(limit);
+      res.status(200).json({ message: "Productos cargados", products });
+    } catch (error) {
+      res.status(500).json({ error: "Error al obtener los productos", message: error.message });
+    }
+  });
 
-router.get("/api/products/:pid", async (req, res) => {
+router.get("/:pid", async (req, res) => {
   try {
     const productId = parseInt(req.params.pid);
     const product = await productManager.getProductById(productId);
@@ -38,7 +41,7 @@ const productSchema = Joi.object({
     thumbnails: Joi.array().items(Joi.string()).required(),
   });
 
-router.post("/api/products", async (req, res) => {
+router.post("/", async (req, res) => {
     try {
       const { error, value } = productSchema.validate(req.body);
 
@@ -59,7 +62,7 @@ router.post("/api/products", async (req, res) => {
   });
 
 
-router.put("/api/products/:pid", async (req, res) => {
+router.put("/:pid", async (req, res) => {
   try {
     const pid = req.params.pid;
     const updatedProduct = req.body;
@@ -74,7 +77,7 @@ router.put("/api/products/:pid", async (req, res) => {
   }
 });
 
-router.delete("/api/products/:pid", async (req, res) => {
+router.delete("/:pid", async (req, res) => {
   try {
     const pid = req.params.pid;
     const success = await productManager.deleteProduct(pid);
