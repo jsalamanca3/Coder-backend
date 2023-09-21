@@ -71,5 +71,4 @@ async function getProductByIdFromDatabase(pid) {
     throw error;
   }
 }
-
 export default router;

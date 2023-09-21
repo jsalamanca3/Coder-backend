@@ -1,9 +1,11 @@
 import express from 'express';
 import cartsRouter from './router/carts.router.js';
 import productRouter from './router/product.router.js';
+
 const app = express();
 
 const port = process.env.PORT || 8080;
+
 
 app.use(express.json());
 

@@ -1,28 +1,32 @@
 import fs from 'fs';
+import { v4 as uuidv4 } from 'uuid';
 
-export default class ProductManager {
+class ProductManager {
   constructor(filePath) {
     this.path = filePath;
-    this.products = [];
     this.loadProducts();
   }
 
-   async loadProducts() {
+  async loadProducts() {
     try {
-      const data = await fs.readFileSync(this.path, 'utf8');
+      const data = await fs.promises.readFile(this.path, 'utf8');
       this.products = JSON.parse(data);
     } catch (error) {
-      this.products = [];
+      throw new Error(`Sea producido un Error al cargar el producto: ${error.message}`);
     }
   }
 
   async saveProducts() {
-    await fs.writeFileSync(this.path, JSON.stringify(this.products, null, 2), 'utf8');
+    try {
+      await fs.promises.writeFile(this.path, JSON.stringify(this.products, null, 2), 'utf8');
+    } catch (error) {
+      throw new Error(` Sea producido un Error al guardar el producto: ${error.message}`);
+    }
   }
 
   async addProduct(product) {
     const newProduct = {
-      id: this.products.length + 1,
+      id: uuidv4(),
       ...product,
     };
     this.products.push(newProduct);
@@ -35,7 +39,11 @@ export default class ProductManager {
   }
 
   getProductById(id) {
-    return this.products.find((product) => product.id === id);
+    const product = this.products.find((product) => product.id === id);
+  if (!product) {
+    throw new Error("Producto no encontrado");
+  }
+  return product;
   }
 
   async updateProduct(id, updatedProduct) {
@@ -58,3 +66,4 @@ export default class ProductManager {
     return false;
   }
 }
+export default ProductManager;
