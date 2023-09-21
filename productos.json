@@ -7,5 +7,15 @@
         "code": "001",
         "stock": 50,
         "id": 1
+    },
+
+    {
+        "title": "Soy un otro producto",
+        "description": "Descripción del Producto 2",
+        "price": 2300,
+        "thumbnail": "imagen2.jpg",
+        "code": "003",
+        "stock": 35,
+        "id": 2
     }
 ]

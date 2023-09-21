@@ -1,6 +1,5 @@
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
-
 class ProductManager {
   constructor(filePath) {
     this.path = filePath;
@@ -66,4 +65,6 @@ class ProductManager {
     return false;
   }
 }
-export default ProductManager;
+
+const productManager = new ProductManager('../productos.json');
+export default productManager;
