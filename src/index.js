@@ -1,4 +1,4 @@
-const ProductManager = require("./ProductManager");
+const ProductManager = require("./functions/ProductManager");
 
 const productManager = new ProductManager("productos.json");
 
