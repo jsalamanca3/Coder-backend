@@ -3,7 +3,7 @@ import cartsRouter from './router/carts.router.js';
 import productRouter from './router/product.router.js';
 import viewsRouter from './router/views.router.js';
 import http from 'http';
-import { Server as SocketServer } from 'socket.io';
+import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
 
 const app = express();
@@ -15,8 +15,8 @@ app.engine('handlebars', engine({ defaultLayouts: 'main' }));
 app.set('view engine', 'handlebars');
 
 /* websocket - server */
-const server = http.createServer(app);
-const io = new SocketServer(server);
+const httpServer = http.createServer(app);
+const io = new Server(httpServer);
 
 const port = process.env.PORT || 8080;
 
@@ -30,7 +30,7 @@ app.listen(port, () => {
   console.log(`Escuchando al puerto ${port}`);
 });
 
-/* server socket */
+/* server Websocket */
 
 io.on('connection', (socket) => {
   socket.on('addProduct', (newProduct) => {

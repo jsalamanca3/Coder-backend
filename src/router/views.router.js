@@ -34,4 +34,17 @@ router.post("/realTimeProducts/addProduct", async (req, res) => {
   }
 });
 
+router.post("/realTimeProducts/deleteProduct", async (req, res) => {
+  try {
+    const productId = req.body.id;
+    await productManager.deleteProduct(productId);
+    io.emit('productDeleted', productId);
+    res.status(204).end();
+  } catch (error) {
+    console.error("Error al eliminar un producto:", error);
+    res.status(500).send("Error interno del servidor");
+  }
+});
+
+
 export default router;

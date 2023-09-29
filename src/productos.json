@@ -6,7 +6,7 @@
     "thumbnails": "imagen1.jpg",
     "code": "001",
     "stock": 50,
-    "id": 1
+    "id": "9640796f-8f63-4b55-85a8-c7b5982g3768"
   },
   {
     "title": "Soy una Bufanda",
@@ -15,6 +15,34 @@
     "thumbnails": "imagen2.jpg",
     "code": "003",
     "stock": 35,
-    "id": 2
+    "id": "9632396f-1f63-4b55-65a8-c7b5981f8728"
+  },
+  {
+    "id": "9641396f-1f63-4b55-85a8-c7b5982e3728",
+    "title": "soy otra bufanda"
+  },
+  {
+    "id": "7a00b566-2dad-477e-8dea-0031f4d5dd46",
+    "title": "soy otro Zapato"
+  },
+  {
+    "id": "9f7f494a-4f0e-4fa0-9c99-0a55ed10793f",
+    "title": "otro Zapato"
+  },
+  {
+    "id": "6b30fb33-155b-4bde-a899-7ba7358f5fe4",
+    "title": "soy David"
+  },
+  {
+    "id": "f09a4bde-5f70-4976-87e2-5b008c978228",
+    "title": "soy otro David"
+  },
+  {
+    "id": "7a2293d5-fe07-4794-812c-ebbae1f20306",
+    "title": "soy un nuevo David"
+  },
+  {
+    "id": "b6c171e6-2075-4db6-bf9e-57ed1787f93c",
+    "title": "soy Julian"
   }
 ]
