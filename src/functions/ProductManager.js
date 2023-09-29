@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 class ProductManager {
   constructor(filePath) {
     this.path = filePath;
+    this.products = [];
     this.loadProducts();
   }
 
@@ -64,7 +65,22 @@ class ProductManager {
     }
     return false;
   }
+  async removeProductById(productId) {
+    try {
+      const index = this.products.findIndex((product) => product.id === productId);
+      if (index !== -1) {
+        const deletedProduct = this.products.splice(index, 1)[0];
+        await this.saveProducts();
+        return deletedProduct;
+      }
+      return null;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
-const productManager = new ProductManager('../productos.json');
+
+const productManager = new ProductManager('./productos.json');
+export { productManager };
 export default productManager;

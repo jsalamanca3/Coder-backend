@@ -1,6 +1,6 @@
 [
     {
-        "title": "Soy un producto",
+        "title": "Soy un Zapato",
         "description": "Descripción del Producto 1",
         "price": 1700,
         "thumbnails": "imagen1.jpg",
@@ -10,7 +10,7 @@
     },
 
     {
-        "title": "Soy un otro producto",
+        "title": "Soy una Bufanda",
         "description": "Descripción del Producto 2",
         "price": 2300,
         "thumbnails": "imagen2.jpg",
