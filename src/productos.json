@@ -1,21 +1,20 @@
 [
-    {
-        "title": "Soy un Zapato",
-        "description": "Descripción del Producto 1",
-        "price": 1700,
-        "thumbnails": "imagen1.jpg",
-        "code": "001",
-        "stock": 50,
-        "id": 1
-    },
-
-    {
-        "title": "Soy una Bufanda",
-        "description": "Descripción del Producto 2",
-        "price": 2300,
-        "thumbnails": "imagen2.jpg",
-        "code": "003",
-        "stock": 35,
-        "id": 2
-    }
+  {
+    "title": "Soy un Zapato",
+    "description": "Descripción del Producto 1",
+    "price": 1700,
+    "thumbnails": "imagen1.jpg",
+    "code": "001",
+    "stock": 50,
+    "id": 1
+  },
+  {
+    "title": "Soy una Bufanda",
+    "description": "Descripción del Producto 2",
+    "price": 2300,
+    "thumbnails": "imagen2.jpg",
+    "code": "003",
+    "stock": 35,
+    "id": 2
+  }
 ]
