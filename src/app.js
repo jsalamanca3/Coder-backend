@@ -7,16 +7,14 @@ import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
 
 const app = express();
+const httpServer = http.createServer(app);
+const io = new Server(httpServer);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* handlebars */
 app.engine('handlebars', engine({ defaultLayouts: 'main' }));
 app.set('view engine', 'handlebars');
-
-/* websocket - server */
-const httpServer = http.createServer(app);
-const io = new Server(httpServer);
 
 const port = process.env.PORT || 8080;
 
@@ -33,11 +31,6 @@ app.listen(port, () => {
 /* server Websocket */
 
 io.on('connection', (socket) => {
-  socket.on('addProduct', (newProduct) => {
-    console.log('Producto agregado:', newProduct);
-    socket.emit('newAddProduct', newProduct);
-  });
-
   const products = [];
   socket.on('addProduct', (newProduct) => {
     products.push(newProduct);

@@ -1,4 +1,5 @@
-const socket = io('/api/');
+const socketClient = io('/api');
+
 const productList = document.getElementById('productList');
 const addProductForm = document.getElementById('addProductForm');
 const deleteProductForm = document.getElementById('deleteProductForm');
@@ -6,18 +7,18 @@ const deleteProductForm = document.getElementById('deleteProductForm');
 productList.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete-button')) {
     const productId = e.target.dataset.productId;
-    socket.emit('deleteProduct', productId);
+    socketClient.emit('deleteProduct', productId);
   }
 });
 
-socket.on('productAdded', (newProduct) => {
+socketClient.on('productAdded', (newProduct) => {
   const newItem = document.createElement('li');
   newItem.textContent = newProduct.title;
   newItem.dataset.productId = newProduct.id;
   productList.appendChild(newItem);
 });
 
-socket.on('productDeleted', (productId) => {
+socketClient.on('productDeleted', (productId) => {
   const productItem = document.querySelector(`li[data-product-id="${productId}"]`);
   if (productItem) {
     productItem.remove();
@@ -30,7 +31,7 @@ addProductForm.addEventListener('submit', (e) => {
   const newProduct = {
     title: productTitleInput.value,
   };
-  socket.emit('addProduct', newProduct);
+  socketClient.emit('addProduct', newProduct);
   productTitleInput.value = '';
 });
 
@@ -38,6 +39,6 @@ deleteProductForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const productIdInput = deleteProductForm.querySelector('[name="id"]');
   const productId = productIdInput.value;
-  socket.emit('deleteProduct', productId);
+  socketClient.emit('deleteProduct', productId);
   productIdInput.value = '';
 });

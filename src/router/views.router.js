@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { productManager } from '../functions/ProductManager.js';
+import { io } from '../app.js'
 const router = Router();
 
 
@@ -27,6 +28,7 @@ router.post("/realTimeProducts/addProduct", async (req, res) => {
   try {
     const product = req.body;
     const newProduct = await productManager.addProduct(product);
+    io.emit('addProduct', newProduct);
     res.status(201).json(newProduct);
   } catch (error) {
     console.error("Error al agregar un producto:", error);
