@@ -2,6 +2,7 @@ import fs from 'fs/promises';
 import CartManager from '../functions/cartManager.js';
 import { Router } from "express";
 import { v4 as uuidv4 } from 'uuid';
+
 const router = Router();
 
 const cartId = generateCartId(); // obtener el ID del carrito
@@ -44,10 +45,24 @@ router.post("/:cid/product/:pid", async (req, res) => {
   }
 });
 
+router.get("/:cid/product/:pid", async (req, res) => {
+  try {
+    const productId = req.params.pid;
+    const product = await getProductByIdFromDatabase(productId);
+    if (product) {
+      res.json(product);
+    } else {
+      res.status(404).json({ error: "Producto no encontrado" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Error al obtener el producto" });
+  }
+});
+
 
 async function getProductByIdFromDatabase(pid) {
   try {
-    const data = await fs.readFile('./../productos.json', 'utf8');
+    const data = await fs.readFile('./productos.json', 'utf8');
     const products = JSON.parse(data);
     const product = products.find((p) => p.id === pid);
     return product;

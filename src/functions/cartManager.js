@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import { v4 as uuidv4 } from 'uuid';
-import { io } from '../app.js';
+import { socketServer } from '../app.js';
 
 class CartManager {
   constructor(cartId) {
@@ -56,14 +56,13 @@ class CartManager {
         productId,
         quantity,
       };
-      io.emit('productAdded', addedProduct);
+      socketServer.emit('productAdded', addedProduct);
 
       return cart;
     } catch (error) {
       throw error;
     }
   }
-
 
   async removeProductFromCart(productId) {
     try {
