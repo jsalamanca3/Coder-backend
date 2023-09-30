@@ -38,7 +38,7 @@ addProductForm.addEventListener('submit', async (e) => {
 });
 deleteProductForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const productIdInput = deleteProductForm.querySelector('[name="id "]');
+  const productIdInput = deleteProductForm.querySelector('[name="id"]');
   const productId = productIdInput.value;
   try {
     await socketClient.emit('deleteProduct', productId);

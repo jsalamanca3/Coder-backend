@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
-class ProductManager {
+export class ProductManager {
   constructor(filePath) {
     this.path = filePath;
     this.products = [];
@@ -65,6 +65,7 @@ class ProductManager {
     }
     return false;
   }
+
   async removeProductById(productId) {
     try {
       const index = this.products.findIndex((product) => product.id === productId);

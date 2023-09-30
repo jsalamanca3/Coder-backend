@@ -2,6 +2,7 @@ import express from 'express';
 import cartsRouter from './router/carts.router.js';
 import productRouter from './router/product.router.js';
 import viewsRouter from './router/views.router.js';
+import { ProductManager } from './functions/ProductManager.js';
 import { __dirname } from "./utils.js";
 import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
@@ -32,27 +33,37 @@ const socketServer = new Server(httpServer);
 
 /* server Websocket */
 
-socketServer.on('connection', (socket)  => {
-  console.log("Cliente Conectado ${socket.id}");
+socketServer.on('connection', (socket) => {
+  const productManager = new ProductManager('./productos.json');
+  console.log(`Cliente conectado ${socket.id}`);
   socket.on('disconnect', () => {
-    console.log('Cliente desconectado ${socket.id}');
-  })
-});
-
- socketServer.on('connection', (socket) => {
-  const products = [];
-  socket.on('addProduct', (newProduct) => {
-    products.push(newProduct);
-    console.log('Producto agregado:', newProduct);
-    socketServer.emit('productAdded', newProduct);
+    console.log(`Cliente desconectado ${socket.id}`);
   });
 
-  socket.on('deleteProduct', (productId) => {
-    const deletedProduct = removeProductById(productId);
-    if (deletedProduct) {
-      socketServer.emit('productDeleted', productId);
+  socket.on('addProduct', async (newProduct) => {
+    try {
+      const addedProduct = await productManager.addProduct(newProduct);
+      console.log('Producto agregado:', addedProduct);
+      socketServer.emit('productAdded', addedProduct);
+    } catch (error) {
+      console.error('Error al agregar producto:', error.message);
+    }
+  });
+
+  socket.on('deleteProduct', async (productId) => {
+    try {
+      const deletedProduct = await productManager.removeProductById(productId);
+      if (deletedProduct) {
+        socketServer.emit('productDeleted', productId);
+        console.log('Producto eliminado:', deletedProduct);
+      } else {
+        console.log('Producto no encontrado o no se pudo eliminar.');
+      }
+    } catch (error) {
+      console.error('Error al eliminar producto:', error.message);
     }
   });
 });
+
 
 export { socketServer };
