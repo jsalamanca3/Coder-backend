@@ -1,11 +1,16 @@
 import express from 'express';
+import { __dirname } from "./utils.js";
 import cartsRouter from './router/carts.router.js';
 import productRouter from './router/product.router.js';
 import viewsRouter from './router/views.router.js';
+import usersRouter from './router/user.router.js';
 import { ProductManager } from './functions/ProductManager.js';
-import { __dirname } from "./utils.js";
 import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
+import "./dao/configDB.js";
+import createRouter from './router/products.service.router.js';
+import chatRouter from './router/chat.router.js';
+import { messageModel } from './dao/models/messages.models.js';
 
 const app = express();
 
@@ -15,13 +20,17 @@ app.use(express.static(__dirname + "/public"));
 
 /* handlebars */
 app.engine('handlebars', engine());
-app.set("views", __dirname + "/views");
 app.set('view engine', 'handlebars');
+app.set("views", __dirname + "/views");
 
 /* Routers */
 app.use("/api/products", productRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/createproducts", createRouter);
 app.use("/api/carts", cartsRouter);
+app.use("/api/chat", chatRouter);
 app.use("/", viewsRouter);
+
 
 const PORT = 8080;
 
@@ -63,6 +72,24 @@ socketServer.on('connection', (socket) => {
       console.error('Error al eliminar producto:', error.message);
     }
   });
+
+  socket.on('connection', (socket) => {
+    socket.on('newUser', (user) => {
+      socket.emit('chatMessage', { user: 'Chat Bot', message: `¡Bienvenido, ${user}!` });
+      socket.broadcast.emit('chatMessage', { user: 'Chat Bot', message: `${user} se ha unido al chat.` });
+    });
+  });
+
+  socket.on('message', async (message) => {
+    try {
+      const newMessage = new messageModel(message);
+      await newMessage.save();
+      socket.emit('chatMessage', newMessage);
+    } catch (error) {
+      console.error('Error al guardar el mensaje:', error);
+    }
+  });
+
 });
 
 

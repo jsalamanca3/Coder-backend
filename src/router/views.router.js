@@ -1,5 +1,8 @@
 import { Router } from "express";
 import { productManager } from '../functions/ProductManager.js';
+import { usersManager } from '../dao/managers/userManager.js';
+import { productsManager } from '../dao/managers/productsManager.js'
+import { messageModel } from "../dao/models/messages.models.js"
 import { socketServer } from '../app.js';
 
 const router = Router();
@@ -46,6 +49,22 @@ router.post("/realTimeProducts/deleteProduct", async (req, res) => {
     console.error("Error al eliminar un producto:", error);
     res.status(500).send("Error interno del servidor");
   }
+});
+
+router.get("/signup", (req, res) => {
+  res.render('signup');
+});
+
+router.get("/createproduct", (req, res) => {
+  res.render('createProduct');
+});
+
+router.get("/home/:idUser", async (req, res) => {
+  const {idUser} = req.params
+  const userInfo = await usersManager.findById(idUser)
+  const { first_name, last_name } = userInfo;
+  const products = await productsManager.findAll();
+  res.render('home', {first_name, last_name, products});
 });
 
 export default router;
