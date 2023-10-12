@@ -35,10 +35,13 @@ router.post('/saveMessage', (req, res) => {
 
   const cleanedMessage = sanitizeMessage(message);
 
-  const newMessage = new messageModal({ email: userEmail, message });
+  console.log('userEmail:', userEmail);
+  console.log('message:', message);
+
+  const newMessage = new messageModel({ email: userEmail, message: message });
   newMessage.save()
     .then(() => {
-      res.status(200).json({ message: 'Mensaje guardado con éxito' });
+      res.status(200).json({ message: 'Mensaje guardado con éxito', data: newMessage });
     })
     .catch((error) => {
       console.error('Error al guardar el mensaje:', error);

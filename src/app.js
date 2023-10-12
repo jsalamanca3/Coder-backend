@@ -73,24 +73,21 @@ socketServer.on('connection', (socket) => {
     }
   });
 
-  socket.on('connection', (socket) => {
-    socket.on('newUser', (user) => {
-      socket.emit('chatMessage', { user: 'Chat Bot', message: `¡Bienvenido, ${user}!` });
-      socket.broadcast.emit('chatMessage', { user: 'Chat Bot', message: `${user} se ha unido al chat.` });
-    });
+  socket.on('newUser', (user) => {
+    socket.emit('chatMessage', { user: 'Chat Bot', message: `¡Bienvenid@, ${user}!` });
+    socket.broadcast.emit('chatMessage', { user: 'Chat Bot', message: `${user} se ha unido al chat.` });
   });
 
   socket.on('message', async (message) => {
     try {
-      const newMessage = new messageModel(message);
+      const newMessage = new messageModel({ email: message.email, message: message.message });
       await newMessage.save();
-      socket.emit('chatMessage', newMessage);
+      socket.broadcast.emit('chatMessage', newMessage);
     } catch (error) {
       console.error('Error al guardar el mensaje:', error);
     }
   });
 
 });
-
 
 export { socketServer };

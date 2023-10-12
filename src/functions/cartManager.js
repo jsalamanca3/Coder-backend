@@ -1,31 +1,28 @@
-import fs from 'fs/promises';
-import { v4 as uuidv4 } from 'uuid';
+import { cartsModel } from '../dao/models/carts.model.js';
+import { productsModel } from '../dao/models/products.model.js';
 import { socketServer } from '../app.js';
 
 class CartManager {
   constructor(cartId) {
     this.cartId = cartId;
-    this.cartFilePath = `carrito.json`;
   }
 
   async createCart() {
     try {
-      const cartId = uuidv4();
-      const newCart = {
-        id: cartId,
-        products: [],
-      };
-      await fs.writeFile(this.cartFilePath, JSON.stringify(newCart, null, 2), 'utf8');
+      const newCart = new cartsModel();
+      newCart.id = this.cartId;
+      newCart.products = [];
+      await newCart.save();
       return newCart;
     } catch (error) {
       throw error;
     }
   }
 
-  async getCart() {
+  async getCart(cartId) {
     try {
-      const data = await fs.readFile(this.cartFilePath, 'utf8');
-      return JSON.parse(data);
+      const cart = await cartsModel.findOne({ id: cartId });
+      return cart;
     } catch (error) {
       throw error;
     }
@@ -33,13 +30,15 @@ class CartManager {
 
   async addProductToCart(cartId, productId, quantity = 1) {
     try {
-      const cartFilePath = `carrito.json`;
-      let cart = { id: cartId, products: [] };
+      const cart = await cartsModel.findOne({ id: cartId });
+      if (!cart) {
+        throw new Error("Carrito no encontrado");
+      }
 
-      try {
-        const cartData = await fs.readFile(cartFilePath, "utf8");
-        cart = JSON.parse(cartData);
-      } catch (error) {}
+      const product = await productsModel.findOne({ id: productId });
+      if (!product) {
+        throw new Error("Producto no encontrado");
+      }
 
       const existingProduct = cart.products.find((item) => item.product === productId);
 
@@ -49,13 +48,14 @@ class CartManager {
         cart.products.push({ product: productId, quantity });
       }
 
-      await fs.writeFile(cartFilePath, JSON.stringify(cart, null, 2), "utf8");
+      await cart.save();
 
       const addedProduct = {
         cartId: cart.id,
         productId,
         quantity,
       };
+
       socketServer.emit('productAdded', addedProduct);
 
       return cart;
@@ -64,13 +64,17 @@ class CartManager {
     }
   }
 
-  async removeProductFromCart(productId) {
+  async removeProductFromCart(cartId, productId) {
     try {
-      const cart = await this.getCart();
+      const cart = await cartsModel.findOne({ id: cartId });
+      if (!cart) {
+        throw new Error("Carrito no encontrado");
+      }
+
       const index = cart.products.findIndex((item) => item.product === productId);
       if (index !== -1) {
         cart.products.splice(index, 1);
-        await fs.writeFile(this.cartFilePath, JSON.stringify(cart, null, 2), 'utf8');
+        await cart.save();
       }
       return cart;
     } catch (error) {
