@@ -83,9 +83,7 @@ socketServer.on('connection', (socket) => {
 
     if (data && isValidEmail(data.email) && isValidMessage(data.message)) {
       try {
-        console.log('Mensaje recibido:', data);
-        const newMessage = new messageModel({ /* email: data.email, message: data.message,*/ processed: true });
-        await newMessage.save();
+        const newMessage = new messageModel({ email: data.email, message: data.message, processed: true });
         console.log('Mensaje guardado en la base de datos:', newMessage);
         socket.broadcast.emit('chatMessage', newMessage);
         console.log('Mensaje emitido al chat:', newMessage);
@@ -93,7 +91,6 @@ socketServer.on('connection', (socket) => {
         console.error('Error al guardar el mensaje:', error);
       }
     } else {
-      console.error('Datos de mensaje incompletos o incorrectos:', data);
       socket.emit('messageError', 'Los datos del mensaje son incorrectos.');
     }
   });
