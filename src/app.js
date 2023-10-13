@@ -78,15 +78,33 @@ socketServer.on('connection', (socket) => {
     socket.broadcast.emit('chatMessage', { user: 'Chat Bot', message: `${user} se ha unido al chat.` });
   });
 
-  socket.on('message', async (message) => {
-    try {
-      const newMessage = new messageModel({ email: message.email, message: message.message });
-      await newMessage.save();
-      socket.broadcast.emit('chatMessage', newMessage);
-    } catch (error) {
-      console.error('Error al guardar el mensaje:', error);
+  socket.on('message', async (data) => {
+    console.log('Datos de mensaje recibidos:', data);
+
+    if (data && isValidEmail(data.email) && isValidMessage(data.message)) {
+      try {
+        console.log('Mensaje recibido:', data);
+        const newMessage = new messageModel({ /* email: data.email, message: data.message,*/ processed: true });
+        await newMessage.save();
+        console.log('Mensaje guardado en la base de datos:', newMessage);
+        socket.broadcast.emit('chatMessage', newMessage);
+        console.log('Mensaje emitido al chat:', newMessage);
+      } catch (error) {
+        console.error('Error al guardar el mensaje:', error);
+      }
+    } else {
+      console.error('Datos de mensaje incompletos o incorrectos:', data);
+      socket.emit('messageError', 'Los datos del mensaje son incorrectos.');
     }
   });
+
+  function isValidEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  function isValidMessage(message) {
+    return message && message.trim() !== '';
+  }
 
 });
 

@@ -15,8 +15,11 @@ document.getElementById("chat-form").addEventListener("submit", async (e) => {
     userEmail &&
     typeof userEmail === "string"
   ) {
-    socketClient.emit('message', { email: userEmail, message });
+    console.log('Mensaje enviado:', { email: userEmail, message: message });
+   /*  socketClient.emit('message', { email: userEmail, message: message, processed: true }); */
+
     document.getElementById("message").value = "";
+
     const newMessage = {
       email: userEmail,
       message: message,
@@ -50,17 +53,19 @@ function addMessage(message, user) {
   chatMessages.appendChild(messageElement);
 }
 
-chatForm.addEventListener("submit", async (e) => {
+/* chatForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const message = messageInput.value;
   socketClient.emit("message", message);
   messageInput.value = "";
-});
+}); */
 
-socketClient.on("chatMessage", (data) => {
-  const { user, message } = data;
-  addMessage(message, user);
-});
+/* socketClient.on("chatMessage", (data) => {
+  if (!data.processed) {
+    const { user, message } = data;
+    addMessage(message, user);
+  }
+}); */
 
 let user;
 
