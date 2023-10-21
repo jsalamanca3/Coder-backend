@@ -42,7 +42,7 @@ router.post("/:cid/product/:pid", async (req, res) => {
     const cid = req.params.cid;
     const pid = req.params.pid;
     const quantity = req.body.quantity || 1;
-    const product = await productsModel.findOne({ id: pid });
+    const product = await productsModel.findById(pid);
     if (!product) {
       return res.status(404).json({ error: "Producto no encontrado" });
     }
@@ -80,8 +80,7 @@ router.get("/:cid/product/:pid", async (req, res) => {
       res.status(404).json({ error: "Carrito no encontrado" });
       return;
     }
-
-    const productInCart = cart.products.find((item) => item.product.id === pid);
+    const productInCart = cart.products.find((item) => item.product.toString() === pid);
     if (productInCart) {
       res.json(productInCart);
     } else {
