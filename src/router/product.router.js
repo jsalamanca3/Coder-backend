@@ -1,7 +1,10 @@
 import { Router } from "express";
 import { productsModel } from "../dao/models/products.model.js";
 import Joi from 'joi';
+import { cartsModel } from "../dao/models/carts.model.js";
+import { CartManager } from "../functions/cartManager.js";
 const router = Router();
+
 
 router.get("/", async (req, res) => {
   try {
@@ -37,6 +40,26 @@ router.get("/", async (req, res) => {
       sortCriteria.title = -1;
     }
 
+    const userId = req.user.id;
+    let userCart = await cartsModel.findOne({ userId });
+
+    if (!userCart) {
+      const newCart = new cartsModel();
+      newCart.id = generateCartId();
+      newCart.products = [];
+      newCart.userId = userId;
+      await newCart.save();
+      userCart = newCart;
+    }
+
+
+    /* const userCart = await cartsModel.findOne({ userId: req.user._id });
+    if (!userCart) {
+      const cartManager = new CartManager();
+      const newCart = await cartManager.createCart();
+      userCart = newCart;
+    } */
+
     const totalProducts = await productsModel.countDocuments(filterCriteria);
     const totalPages = Math.ceil(totalProducts / limit);
 
@@ -62,7 +85,9 @@ router.get("/", async (req, res) => {
       hasNextPage,
       prevLink,
       nextLink,
+      userCart,
     });
+
   } catch (error) {
     if (error.message === "Producto no encontrado") {
       res.status(404).json({ error: "Producto no encontrado" });

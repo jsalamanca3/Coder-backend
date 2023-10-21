@@ -90,6 +90,7 @@ router.get('/products', async (req, res) => {
 router.get('/carts/:cid', async (req, res) => {
   try {
     const cartId = req.params.cid;
+    console.log('soy un mensaje:', cartId)
     const cart = await cartsModel.findOne({ id: cartId });
     if (!cart) {
       return res.status(404).json({ error: 'Carrito no encontrado' });
