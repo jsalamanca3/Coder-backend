@@ -8,7 +8,6 @@ import { ProductManager } from './functions/ProductManager.js';
 import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
 import "./dao/configDB.js";
-import createRouter from './router/products.service.router.js';
 import chatRouter from './router/chat.router.js';
 import { messageModel } from './dao/models/messages.models.js';
 
@@ -26,7 +25,7 @@ app.set("views", __dirname + "/views");
 /* Routers */
 app.use("/api/products", productRouter);
 app.use("/api/users", usersRouter);
-app.use("/api/createproducts", createRouter);
+app.use("/api/createproducts", productRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/chat", chatRouter);
 app.use("/", viewsRouter);
