@@ -1,17 +1,22 @@
 import { cartsModel } from '../dao/models/carts.model.js';
 import { productsModel } from '../dao/models/products.model.js';
 import { socketServer } from '../app.js';
+import { v4 as uuidv4 } from 'uuid';
 
+function generateCartId() {
+  return uuidv4();
+}
 export class CartManager {
   constructor(cartId) {
     this.cartId = cartId;
   }
 
-  async createCart() {
+  async createCart(userId) {
     try {
       const newCart = new cartsModel();
-      newCart.id = this.cartId;
+      newCart.id = this.cartId || generateCartId();
       newCart.products = [];
+      newCart.userId = userId || '';
       await newCart.save();
       return newCart;
     } catch (error) {

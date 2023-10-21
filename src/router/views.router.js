@@ -4,6 +4,7 @@ import { usersManager } from '../dao/managers/userManager.js';
 import { productsManager } from '../dao/managers/productsManager.js';
 import { socketServer } from '../app.js';
 import { CartManager } from "../functions/cartManager.js";
+import { cartsModel } from "../dao/models/carts.model.js";
 
 const router = Router();
 const productManager = new ProductManager();
@@ -11,8 +12,10 @@ const cartManager = new CartManager();
 
 router.get("/", async (req, res) => {
   try {
+    const carts = await cartManager.createCart();
     const products = await productManager.findAll();
-    res.render('home', { products });
+    const cardId = carts.id
+    res.render('home', { products, cardId });
   } catch (error) {
     console.error("Error al obtener la lista de productos:", error);
     res.status(500).send("Error interno del servidor");
@@ -63,11 +66,18 @@ router.get("/createproduct", (req, res) => {
 });
 
 router.get("/home/:idUser", async (req, res) => {
-  const {idUser} = req.params
+  const { idUser } = req.params
   const userInfo = await usersManager.findById(idUser)
   const { first_name, last_name } = userInfo;
-  const products = await productsManager.findAll();
-  res.render('home', {first_name, last_name, products});
+  let products = await productsManager.findAll();
+  const userCart = await cartsModel.findOne({ userId: idUser });
+  let carts = '';
+  !userCart ? carts = await cartManager.createCart(idUser) : carts = userCart;
+  const cardId = carts.id
+  products.map((item) => {
+    item.cartId = cardId
+  })
+  res.render('home', { first_name, last_name, products });
 });
 
 router.get('/products', async (req, res) => {
