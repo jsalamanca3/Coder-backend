@@ -89,74 +89,81 @@ router.get("/:pid", async (req, res) => {
 });
 
 const productSchema = Joi.object({
-    title: Joi.string().required(),
-    description: Joi.string().required(),
-    code: Joi.string().required(),
-    price: Joi.number().min(0).required(),
-    status: Joi.string().valid('available', 'sold').required(),
-    stock: Joi.number().integer().min(0).required(),
-    category: Joi.string().required(),
-    thumbnails: Joi.string().required()
-  });
+  title: Joi.string().required(),
+  description: Joi.string().required(),
+  code: Joi.string().required(),
+  price: Joi.number().min(0).required(),
+  status: Joi.string().valid('available', 'sold').required(),
+  stock: Joi.number().integer().min(0).required(),
+  category: Joi.string().required(),
+  thumbnails: Joi.string().required()
+});
 
 router.post("/", async (req, res) => {
-    try {
-      const { error, value } = productSchema.validate(req.body);
+  try {
+    const { error, value } = productSchema.validate(req.body);
 
-      if (error) {
-        res.status(400).json({ error: error.details[0].message });
-        return;
-      }
-      const newProduct = new productsModel({
-        title: value.title,
-        description: value.description,
-        code: value.code,
-        price: value.price,
-        status: value.status,
-        stock: value.stock,
-        category: value.category,
-        thumbnails: value.thumbnails,
-      });
-
-      await newProduct.save();
-
-      res.status(201).json(newProduct);
-    } catch (error) {
-      res.status(500).json({ error: "Error al agregar el producto" });
+    if (error) {
+      res.status(400).json({ error: error.details[0].message });
+      return;
     }
-  });
-
-
-  router.put("/:pid", async (req, res) => {
-    try {
-      const productId = req.params.pid;
-      const updatedProductData = req.body;
-
-      const updatedProduct = await productsModel.findByIdAndUpdate(productId, updatedProductData, { new: true });
-
-      if (updatedProduct) {
-        res.json(updatedProduct);
-      } else {
-        res.status(404).json({ error: "Producto no encontrado" });
-      }
-    } catch (error) {
-      res.status(500).json({ error: "Error al actualizar el producto" });
+    let imageValue = '';
+    if (value.thumbnails.split('/')[0] === 'data:image') {
+      imageValue = value.thumbnails;
+    } else {
+      imageValue = `https://api.dicebear.com/7.x/pixel-art/svg?seed=${value.title}`
     }
-  });
+    
+    const newProduct = new productsModel({
+      title: value.title,
+      description: value.description,
+      code: value.code,
+      price: value.price,
+      status: value.status,
+      stock: value.stock,
+      category: value.category,
+      thumbnails: imageValue,
+    });
 
-  router.delete("/:pid", async (req, res) => {
-    try {
-      const productId = req.params.pid;
-      const result = await productsModel.findByIdAndDelete(productId);
+    await newProduct.save();
 
-      if (result) {
-        res.json({ message: "Producto eliminado exitosamente" });
-      } else {
-        res.status(404).json({ error: "Producto no encontrado" });
-      }
-    } catch (error) {
-      res.status(500).json({ error: "Error al eliminar el producto" });
+    res.status(201).json(newProduct);
+  } catch (error) {
+    res.status(500).json({ error: "Error al agregar el producto" });
+  }
+});
+
+
+router.put("/:pid", async (req, res) => {
+  try {
+    const productId = req.params.pid;
+    const updatedProductData = req.body;
+
+    const updatedProduct = await productsModel.findByIdAndUpdate(productId, updatedProductData, { new: true });
+
+    if (updatedProduct) {
+      res.json(updatedProduct);
+    } else {
+      res.status(404).json({ error: "Producto no encontrado" });
     }
-  });
+  } catch (error) {
+    res.status(500).json({ error: "Error al actualizar el producto" });
+  }
+});
+
+router.delete("/:pid", async (req, res) => {
+  try {
+    const productId = req.params.pid;
+    const result = await productsModel.findByIdAndDelete(productId);
+
+    if (result) {
+      res.json({ message: "Producto eliminado exitosamente" });
+    } else {
+      res.status(404).json({ error: "Producto no encontrado" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Error al eliminar el producto" });
+  }
+});
 
 export default router;
