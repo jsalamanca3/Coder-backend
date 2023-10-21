@@ -23,7 +23,7 @@ export class ProductManager extends BasicManager {
 
   async getProducts(filters = {}, sort = {}) {
     try {
-      const products = await productsModel.find(filters).sort(sort).exec();
+      const products = await productsModel.paginate(filters).sort(sort).exec();
       return products;
     } catch (error) {
       throw new Error(`Error al obtener productos: ${error.message}`);

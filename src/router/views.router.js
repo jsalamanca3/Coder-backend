@@ -101,7 +101,7 @@ router.get('/carts/:cid', async (req, res) => {
   try {
     const cartId = req.params.cid;
     console.log('soy un mensaje:', cartId)
-    const cart = await cartsModel.findOne({ id: cartId });
+    const cart = await cartsModel.findOne({ id: cartId }).populate('products.product'); //método populate
     if (!cart) {
       return res.status(404).json({ error: 'Carrito no encontrado' });
     }

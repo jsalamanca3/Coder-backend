@@ -7,13 +7,13 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   try {
-    const limit = req.query.limit ? parseInt(req.query.limit) : 10;
     const page = req.query.page ? parseInt(req.query.page) : 1;
+    const limit = req.query.limit ? parseInt(req.query.limit) : 10;
     const sort = req.query.sort;
     const query = req.query.query;
 
-    if (limit <= 0) {
-      return res.status(400).json({ status: "error", error: "El parámetro 'limit' debe ser un número positivo" });
+    if (limit <= 0 || page <= 0) {
+      return res.status(400).json({ status: "error", error: "Los parámetros 'limit' y 'page' deben ser números positivos" });
     }
 
     let filterCriteria = {};
@@ -39,24 +39,19 @@ router.get("/", async (req, res) => {
       sortCriteria.title = -1;
     }
 
-    const totalProducts = await productsModel.countDocuments(filterCriteria);
-    const totalPages = Math.ceil(totalProducts / limit);
-
-    const hasPrevPage = page > 1;
-    const hasNextPage = page < totalPages;
+    const { docs, totalDocs, totalPages, hasPrevPage, hasNextPage } = await productsModel.paginate(filterCriteria, {
+      page,
+      limit,
+      sort: sortCriteria,
+    });
 
     const prevLink = hasPrevPage ? `/products?page=${page - 1}&limit=${limit}` : null;
     const nextLink = hasNextPage ? `/products?page=${page + 1}&limit=${limit}` : null;
 
-    const productsToReturn = await productsModel
-      .find(filterCriteria)
-      .sort(sortCriteria)
-      .skip((page - 1) * limit)
-      .limit(limit);
-
     res.status(200).json({
       status: "success",
-      payload: productsToReturn,
+      payload: docs,
+      totalDocs,
       totalPages,
       prevPage: hasPrevPage ? page - 1 : null,
       nextPage: hasNextPage ? page + 1 : null,
@@ -64,15 +59,9 @@ router.get("/", async (req, res) => {
       hasNextPage,
       prevLink,
       nextLink,
-      userCart,
     });
-
   } catch (error) {
-    if (error.message === "Producto no encontrado") {
-      res.status(404).json({ error: "Producto no encontrado" });
-    } else {
-      res.status(500).json({ error: "Error al obtener los productos", message: error.message });
-    }
+    res.status(500).json({ error: "Error al obtener los productos", message: error.message });
   }
 });
 
