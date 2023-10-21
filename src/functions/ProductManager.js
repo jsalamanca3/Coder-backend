@@ -1,7 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 import { productsModel } from "../dao/models/products.model.js";
+import BasicManager from '../dao/managers/basicManager.js';
 
-export class ProductManager {
+export class ProductManager extends BasicManager {
+  constructor() {
+    super(productsModel);
+  }
+  
   async addProduct(product) {
     const newProduct = new productsModel({
       id: uuidv4(),

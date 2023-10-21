@@ -3,25 +3,25 @@ import { ProductManager } from '../functions/ProductManager.js';
 import { usersManager } from '../dao/managers/userManager.js';
 import { productsManager } from '../dao/managers/productsManager.js';
 import { socketServer } from '../app.js';
+import { CartManager } from "../functions/cartManager.js";
 
 const router = Router();
 const productManager = new ProductManager();
+const cartManager = new CartManager();
 
 router.get("/", async (req, res) => {
   try {
-    const products = await productManager.getProducts();
-    console.log(products);
+    const products = await productManager.findAll();
     res.render('home', { products });
-    console.log("Soy un mensaje nuevo de: ", products);
   } catch (error) {
     console.error("Error al obtener la lista de productos:", error);
     res.status(500).send("Error interno del servidor");
   }
 });
 
-router.get("/realTimeProducts", (req, res) => {
+router.get("/realTimeProducts", async (req, res) => {
   try {
-    const products = productManager.getProducts();
+    const products = await productManager.findAll();
     res.render('realTimeProducts', { products });
   } catch (error) {
     console.error("Error al obtener la lista de productos:", error);
@@ -72,13 +72,20 @@ router.get("/home/:idUser", async (req, res) => {
 
 router.get('/products', async (req, res) => {
   try {
-    const products = await productManager.getProducts();
-    res.render('home', { products });
+    const userId = req.user ? req.user.id : 'guest';
+    const cart = await cartManager.getCart(userId);
+
+    if (!cart) {
+      await cartManager.createCart(userId);
+    }
+    const products = await productManager.findAll();
+    res.render('home', { products, cart });
   } catch (error) {
     console.error("Error al cargar la vista de productos:", error);
     res.status(500).send("Error interno del servidor");
   }
 });
+
 
 router.get('/carts/:cid', async (req, res) => {
   try {
@@ -87,9 +94,12 @@ router.get('/carts/:cid', async (req, res) => {
     if (!cart) {
       return res.status(404).json({ error: 'Carrito no encontrado' });
     }
+    res.render('carrito', { cart });
   } catch (error) {
-    res.status(500).json({ error: 'Error al cargar la vista del carrito' });
+    console.error('Error al cargar la vista del carrito:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
+
 
 export default router;

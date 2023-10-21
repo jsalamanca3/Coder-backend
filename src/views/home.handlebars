@@ -1,17 +1,17 @@
-    <h2>Hola!
-        {{first_name}}
-        {{last_name}}
-    </h2>
+    <h2>Hola! {{first_name}} {{last_name}} </h2>
     <h3>Lista de Productos:</h3>
     <ul>
-        {{#each products}}
-            <li>Nombre del producto: {{title}}</li>
-            <li>Descripción: {{description}}</li>
-            <li>Precio: {{price}}</li>
-            <li><img style="width: 100px; height: 100px;" src="{{thumbnails}}"></li>
-            <li>Categoría: {{category}}</li>
-            {{#if _id}}
-                <p>_id: {{_id}}</p>
-            {{/if}}
-        {{/each }}
+         {{#each products}}
+            <li>Nombre del producto: {{this.title}}</li>
+            <li>Descripción: {{this.description}}</li>
+            <li>Precio: {{this.price}}</li>
+            <li><img style="width: 100px; height: 100px;" src="{{this.thumbnails}}"></li>
+            <li>Categoría: {{this.category}}</li>
+            <li>
+                <form action="api/carts/{{cart._id}}" method="post">
+                    <input type="hidden" name="productId" value="{{this._id}}">
+                    <button type="submit">Agregar al carrito</button>
+                </form>
+            </li>
+        {{/each}}
     </ul>

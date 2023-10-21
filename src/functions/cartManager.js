@@ -2,7 +2,7 @@ import { cartsModel } from '../dao/models/carts.model.js';
 import { productsModel } from '../dao/models/products.model.js';
 import { socketServer } from '../app.js';
 
-class CartManager {
+export class CartManager {
   constructor(cartId) {
     this.cartId = cartId;
   }
@@ -34,30 +34,18 @@ class CartManager {
       if (!cart) {
         throw new Error("Carrito no encontrado");
       }
-
       const product = await productsModel.findOne({ id: productId });
       if (!product) {
         throw new Error("Producto no encontrado");
       }
-
       const existingProduct = cart.products.find((item) => item.product === productId);
-
       if (existingProduct) {
         existingProduct.quantity += quantity;
       } else {
         cart.products.push({ product: productId, quantity });
       }
-
       await cart.save();
-
-      const addedProduct = {
-        cartId: cart.id,
-        productId,
-        quantity,
-      };
-
-      socketServer.emit('productAdded', addedProduct);
-
+      socketServer.emit('productAdded', { cartId: cart.id, productId, quantity });
       return cart;
     } catch (error) {
       throw error;
@@ -82,5 +70,3 @@ class CartManager {
     }
   }
 }
-
-export default CartManager;

@@ -2,7 +2,8 @@
     <h1>Lista de Productos en Tiempo Real</h1>
     <ul id="productList">
       {{#each products}}
-        <li data-product-id="{{this.id}}">{{this.title}}</li>
+        <li data-product-id="{{this.id}}">Producto: {{this.title}}</li>
+        <li data-product-id="{{this.id}}">Precio por unidad:{{this.price}}</li>
       {{/each}}
     </ul>
     <form id="addProductForm" action="/realTimeProducts/addProduct" method="post">

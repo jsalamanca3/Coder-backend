@@ -19,4 +19,3 @@ export default class BasicManager {
         return this.model.deleteOne({_id: id});
     }
 }
-
