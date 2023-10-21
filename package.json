@@ -18,6 +18,7 @@
     "mongodb": "^6.1.0",
     "mongoose": "^7.6.1",
     "mongoose-paginate-v2": "^1.7.4",
+    "pagination": "^0.4.6",
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
     "uuid": "^9.0.1"
