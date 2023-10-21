@@ -181,7 +181,7 @@ router.delete("/:cid", async (req, res) => {
   }
 });
 
-router.post('/api/cart/:cid', async (req, res) => {
+router.post('/cart/:cid', async (req, res) => {
   try {
     const cartId = req.params.cid;
     const productId = req.body.productId;
