@@ -43,8 +43,8 @@ router.get("/", async (req, res) => {
     const hasPrevPage = page > 1;
     const hasNextPage = page < totalPages;
 
-    const prevLink = hasPrevPage ? `/productos?page=${page - 1}&limit=${limit}` : null;
-    const nextLink = hasNextPage ? `/productos?page=${page + 1}&limit=${limit}` : null;
+    const prevLink = hasPrevPage ? `/products?page=${page - 1}&limit=${limit}` : null;
+    const nextLink = hasNextPage ? `/products?page=${page + 1}&limit=${limit}` : null;
 
     const productsToReturn = await productsModel
       .find(filterCriteria)
@@ -107,6 +107,13 @@ router.post("/", async (req, res) => {
         res.status(400).json({ error: error.details[0].message });
         return;
       }
+      let imageValue = '';
+      if (value.thumbnails.split('/')[0] === 'data:image') {
+        imageValue = value.thumbnails;
+      } else {
+        imageValue = `https://api.dicebear.com/7.x/pixel-art/svg?seed=${value.title}`
+      }
+
       const newProduct = new productsModel({
         title: value.title,
         description: value.description,
@@ -115,7 +122,7 @@ router.post("/", async (req, res) => {
         status: value.status,
         stock: value.stock,
         category: value.category,
-        thumbnails: value.thumbnails,
+        thumbnails: imageValue,
       });
 
       await newProduct.save();
