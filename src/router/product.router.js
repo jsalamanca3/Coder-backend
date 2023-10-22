@@ -39,10 +39,19 @@ router.get("/", async (req, res) => {
       sortCriteria.title = -1;
     }
 
+    if (req.query.category) {
+      filterCriteria.category = req.query.category;
+    }
+    if (req.query.title) {
+      filterCriteria.title = req.query.title;
+    }
+
     const { docs, totalDocs, totalPages, hasPrevPage, hasNextPage } = await productsModel.paginate(filterCriteria, {
       page,
       limit,
       sort: sortCriteria,
+      category: filterCriteria.category,
+      title: filterCriteria.title,
     });
 
     const prevLink = hasPrevPage ? `/products?page=${page - 1}&limit=${limit}` : null;
