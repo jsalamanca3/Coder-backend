@@ -4,6 +4,7 @@ import cartsRouter from './router/carts.router.js';
 import productRouter from './router/product.router.js';
 import viewsRouter from './router/views.router.js';
 import usersRouter from './router/user.router.js';
+import loginRouter from './router/login.router.js';
 import { ProductManager } from './functions/ProductManager.js';
 import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
@@ -24,12 +25,12 @@ app.set("views", __dirname + "/views");
 
 /* Routers */
 app.use("/api/products", productRouter);
+app.use("/api/login", loginRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/createproducts", productRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/chat", chatRouter);
 app.use("/", viewsRouter);
-
 
 const PORT = 8080;
 

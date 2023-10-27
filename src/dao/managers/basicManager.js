@@ -18,4 +18,7 @@ export default class BasicManager {
     async deleteOne(id) {
         return this.model.deleteOne({_id: id});
     }
+    async findByFirstName(firstName) {
+        return this.model.find({ first_name: firstName }).lean();
+    }
 }

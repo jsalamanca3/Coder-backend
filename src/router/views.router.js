@@ -5,6 +5,7 @@ import { productsManager } from '../dao/managers/productsManager.js';
 import { socketServer } from '../app.js';
 import { CartManager } from "../functions/cartManager.js";
 import { cartsModel } from "../dao/models/carts.model.js";
+import  checkUserRole from '../dao/managers/loginManager.js';
 
 const router = Router();
 const productManager = new ProductManager();
@@ -57,10 +58,6 @@ router.post("/realTimeProducts/deleteProduct", async (req, res) => {
   }
 });
 
-router.get("/signup", (req, res) => {
-  res.render('signup');
-});
-
 router.get("/createproduct", (req, res) => {
   res.render('createProduct');
 });
@@ -110,6 +107,22 @@ router.get('/carts/:cid', async (req, res) => {
     console.error('Error al cargar la vista del carrito:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
+});
+
+router.get("/api/register", (req, res) => {
+  res.render('signup');
+});
+
+router.get('/api/login', (req, res) => {
+  res.render('signup');
+});
+
+router.get('/profile', checkUserRole('usuario'), (req, res) => {
+  res.send('Bienvenido, usuario');
+});
+
+router.get('/admin', checkUserRole('admin'), (req, res) => {
+  res.send('Bienvenido, administrador');
 });
 
 

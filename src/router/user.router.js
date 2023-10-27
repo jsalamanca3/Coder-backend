@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { usersManager } from "../dao/managers/userManager.js"
+import { usersManager } from "../dao/managers/userManager.js";
+import bcrypt from "bcrypt";
 
 const router = Router();
 
@@ -23,16 +24,32 @@ router.get('/:idUser', async (req, res) => {
 })
 
 router.post("/", async (req, res) => {
-    const {first_name, last_name, email, password} = req.body
-    if(!first_name || !last_name || !email || !password){
-        return res.status(400).json({message: 'Faltan campos por completar'})
+    const { first_name, last_name, email, password } = req.body;
+    if (!first_name || !last_name || !email || !password) {
+      return res.status(400).json({ message: "Faltan campos por completar" });
     }
     try {
-        const createdUser = await usersManager.createOne(req.body)
-        res.redirect(`/home/${createdUser._id}`);
+      const saltRounds = 10;
+      const hashedPassword = await bcrypt.hash(password, saltRounds);
+      const createdUser = await usersManager.createOne({
+        first_name,
+        last_name,
+        email,
+        password: hashedPassword,
+      });
+      res.redirect(`/home/${createdUser._id}`);
     } catch (error) {
-        res.status(500).json({error: error.message})
+      console.error("Error al registrar el usuario:", error);
+      res.status(500).send("Error al registrar el usuario");
     }
+  });
+
+router.get('/logout', (req,res) => {
+    req.session.destroy(error => {
+        if(!error) res.send('logout ok!')
+        else res.send({status: 'Logout ERROR', body: error})
+    })
 });
+
 
 export default router;
