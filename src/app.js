@@ -11,9 +11,12 @@ import { engine } from 'express-handlebars';
 import "./dao/configDB.js";
 import chatRouter from './router/chat.router.js';
 import { messageModel } from './dao/models/messages.models.js';
+import session from "express-session";
+import mongoStore from "connect-mongo";
+import cookieParser from "cookie-parser";
 
 const app = express();
-
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
@@ -22,6 +25,23 @@ app.use(express.static(__dirname + "/public"));
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set("views", __dirname + "/views");
+
+
+/* session Mongo */
+
+const URI =
+  "mongodb+srv://jfsalamanca3:ZPqT0FGjnNu4MaS2@mycluster1.xanlde6.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=AtlasApp";
+app.use(
+  session({
+    secret: "CLAVESECRETA",
+    cookie: {
+      maxAge: 60 * 60 * 1000,
+    },
+    store: new mongoStore({
+      mongoUrl: URI,
+    }),
+  })
+);
 
 /* Routers */
 app.use("/api/products", productRouter);

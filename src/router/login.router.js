@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 const router = Router();
 
 
-router.get('/', (req, res) => {
+/* router.get('/', (req, res) => {
     const { first_name, password } = req.query;
     if (first_name !== 'pepe' || password !== 'pepepass') {
       return res.send('login failed');
@@ -13,6 +13,20 @@ router.get('/', (req, res) => {
     req.session.user = first_name;
     req.session.admin = true;
     res.send('login success!');
+}); */
+
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  const userDB = await usersManager.findByEmail(email);
+  if (!userDB) {
+    return res.json({ error: "This email does not exist" });
+  }
+  req.session["email"] = email;
+  req.session["first_name"] = userDB.first_name;
+  if (email === "adminCoder@coder.com" && password === "Cod3r123") {
+    req.session["isAdmin"] = true;
+  }
+  res.redirect("/home");
 });
 
 router.post('/', async (req, res) => {
