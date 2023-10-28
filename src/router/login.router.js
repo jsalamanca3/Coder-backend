@@ -38,19 +38,32 @@ router.post("/", async (req, res) => {
     }
 }); */
 
-router.get('/logout', (req,res) => {
-  req.session.destroy(error => {
-      if(!error)
-      res.send('logout ok!'),
-      res.redirect("/")
-      else res.send({status: 'Logout ERROR', body: error})
-  })
+router.get('/logout', (req, res) => {
+  req.session.destroy((error) => {
+    if (!error) {
+      res.send('logout ok!');
+      res.redirect("/login");
+    } else {
+      res.send({ status: 'Logout ERROR', body: error });
+    }
+  });
 });
+
+
 
 router.post("/signup", async (req, res) => {
   const { password } = req.body;
-  const hashedPassword = await usersManager.createOne({...req.body, password:hashedPassword});
-  res.status(200).json({message: "El usuario ha sido creado", createdUser})
-})
+  const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+  const userToCreate = { ...req.body, password: hashedPassword };
+
+  try {
+    const createdUser = await usersManager.createOne(userToCreate);
+    res.status(200).json({ message: "El usuario ha sido creado", createdUser });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 
 export default router;

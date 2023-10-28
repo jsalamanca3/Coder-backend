@@ -23,5 +23,5 @@ export default class BasicManager {
     }
     async findByEmail(email) {
         return this.model.find({ email: email }).lean();
-    }Gi
+    }
 }
