@@ -58,7 +58,7 @@ router.post("/realTimeProducts/deleteProduct", async (req, res) => {
   }
 });
 
-router.get("/createproduct", (req, res) => {
+router.get("/api/createproduct", (req, res) => {
   res.render('createProduct');
 });
 
@@ -77,7 +77,7 @@ router.get("/home/:idUser", async (req, res) => {
   res.render('home', { first_name, last_name, products });
 });
 
-router.get('/products', async (req, res) => {
+router.get('/api/products', async (req, res) => {
   try {
     const userId = req.user ? req.user.id : 'guest';
     const cart = await cartManager.getCart(userId);
@@ -113,8 +113,8 @@ router.get("/api/register", (req, res) => {
   res.render('signup');
 });
 
-router.get('/api/login', (req, res) => {
-  res.render('signup');
+router.get('/login', (req, res) => {
+  res.render('login');
 });
 
 router.get('/profile', checkUserRole('usuario'), (req, res) => {
@@ -124,6 +124,5 @@ router.get('/profile', checkUserRole('usuario'), (req, res) => {
 router.get('/admin', checkUserRole('admin'), (req, res) => {
   res.send('Bienvenido, administrador');
 });
-
 
 export default router;

@@ -44,12 +44,4 @@ router.post("/", async (req, res) => {
     }
   });
 
-router.get('/logout', (req,res) => {
-    req.session.destroy(error => {
-        if(!error) res.send('logout ok!')
-        else res.send({status: 'Logout ERROR', body: error})
-    })
-});
-
-
 export default router;
