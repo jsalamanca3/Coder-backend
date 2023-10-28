@@ -7,26 +7,26 @@ const router = Router();
 
 router.post("/", async (req, res) => {
   const { email, password } = req.body;
-  const userDB = await usersManager.findByEmail(email);
-  if (!userDB) {
+  const user = await usersManager.findByEmail(email);
+  if (!user) {
     return res.json({ error: "Password o Email incorrecto" });
   }
-  const comparePassword = await compareData(password, userDB[0].password);
+  const comparePassword = await compareData(password, user[0].password);
   if (!comparePassword) {
     return res.json({ error: "Password o Email incorrecto" })
   }
   req.session["email"] = email;
-  req.session["first_name"] = userDB.first_name;
+  req.session["first_name"] = user.first_name;
   req.session["isAdmin"] =
     email === "adminCoder@coder.com" && password === "Cod3r123" ? true : false;
-  res.redirect('/home/${user[0]._id}');
+  res.redirect(`/home/${user[0]._id}`);
 });
 
 
 router.get('/logout', (req, res) => {
   req.session.destroy((error) => {
     if (!error) {
-      res.redirect("/login");
+      res.redirect("/");
     } else {
       res.send({ status: 'Logout ERROR', body: error });
     }

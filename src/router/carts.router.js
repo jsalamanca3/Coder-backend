@@ -187,10 +187,9 @@ router.post('/carts/:cid', async (req, res) => {
   try {
     const cartId = req.params.cid;
     const productId = req.body.productId;
-
     const cart = await cartManager.addProductToCart(cartId, productId);
 
-    res.redirect('/carts/' + cart.id);
+    res.redirect(`/carts/${cart.id}`);
     res.json({ message: 'Producto agregado al carrito' });
   } catch (error) {
     console.error('Error al agregar producto al carrito:', error);
