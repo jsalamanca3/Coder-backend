@@ -11,7 +11,7 @@ const router = Router();
 const productManager = new ProductManager();
 const cartManager = new CartManager();
 
-router.get("/", async (req, res) => {
+router.get("/api", async (req, res) => {
   try {
     const carts = await cartManager.createCart();
     const products = await productManager.findAll();
@@ -113,7 +113,7 @@ router.get("/api/register", (req, res) => {
   res.render('signup');
 });
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
   res.render('login');
 });
 

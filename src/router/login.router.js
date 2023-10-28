@@ -11,37 +11,21 @@ router.post("/", async (req, res) => {
   if (!userDB) {
     return res.json({ error: "Password o Email incorrecto" });
   }
-  const comparePassword = await compareData(password, userDB.password);
+  const comparePassword = await compareData(password, userDB[0].password);
   if(!comparePassword) {
     return res.json({error: "Password o Email incorrecto"})
   }
   req.session["email"] = email;
   req.session["first_name"] = userDB.first_name;
-  re.session["isAdmin"] =
+  req.session["isAdmin"] =
   email === "adminCoder@coder.com" && password === "Cod3r123" ? true : false;
-  res.redirect("/home");
+  res.redirect('/home/${user[0]._id}');
 });
 
-/* router.post('/', async (req, res) => {
-    const { email, password } = req.body;
-    const user = await usersManager.findByEmail({ email: email });
-    if (!user) {
-      return res.status(401).send('Correo o contraseña incorrectos');
-    }
-    const passwordMatch = await bcrypt.compare(password, user.password);
-    if (passwordMatch) {
-      req.session.user = email;
-      req.session.userRole = user.role;
-      res.send('Inicio de sesión exitoso');
-    } else {
-      res.status(401).send('Correo o contraseña incorrectos');
-    }
-}); */
 
 router.get('/logout', (req, res) => {
   req.session.destroy((error) => {
     if (!error) {
-      res.send('logout ok!');
       res.redirect("/login");
     } else {
       res.send({ status: 'Logout ERROR', body: error });

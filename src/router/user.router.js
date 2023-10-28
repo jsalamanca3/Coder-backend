@@ -36,6 +36,7 @@ router.post("/", async (req, res) => {
         last_name,
         email,
         password: hashedPassword,
+        role: usuario,
       });
       res.redirect(`/home/${createdUser._id}`);
     } catch (error) {
