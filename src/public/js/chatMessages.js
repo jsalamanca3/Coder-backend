@@ -92,7 +92,7 @@ async function getUserInput() {
 
   if (value) {
     const userEmail = value,
-    user = userEmail;
+      user = userEmail;
     socketClient.emit("newUser", user);
     return true;
   } else {

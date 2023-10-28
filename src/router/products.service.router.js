@@ -22,21 +22,21 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const { title, price, stock } = req.body
-    if( !title || !price ){
-        return res.status(400).json({message: 'Los campos de Nombre y Precio son requeridos'});
-    }
-    if(!stock) {
-        delete req.body.stock;
-    }
-    const productData = req.body;
-    try {
-        const newProduct = await productsManager.addProduct(productData);
-        res.json(newProduct);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-    });
+  const { title, price, stock } = req.body
+  if (!title || !price) {
+    return res.status(400).json({ message: 'Los campos de Nombre y Precio son requeridos' });
+  }
+  if (!stock) {
+    delete req.body.stock;
+  }
+  const productData = req.body;
+  try {
+    const newProduct = await productsManager.addProduct(productData);
+    res.json(newProduct);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
 
 router.put('/:id', async (req, res) => {
   const { id } = req.params;

@@ -105,20 +105,20 @@ router.post("/", async (req, res) => {
   try {
     const { error, value } = productSchema.validate(req.body);
 
-      if (error) {
-        res.status(400).json({ error: error.details[0].message });
-        return;
-      }
-      const newProduct = new productsModel({
-        title: value.title,
-        description: value.description,
-        code: value.code,
-        price: value.price,
-        status: value.status,
-        stock: value.stock,
-        category: value.category,
-        thumbnails: value.thumbnails,
-      });
+    if (error) {
+      res.status(400).json({ error: error.details[0].message });
+      return;
+    }
+    const newProduct = new productsModel({
+      title: value.title,
+      description: value.description,
+      code: value.code,
+      price: value.price,
+      status: value.status,
+      stock: value.stock,
+      category: value.category,
+      thumbnails: value.thumbnails,
+    });
 
     await newProduct.save();
 

@@ -4,27 +4,27 @@ import mongoosePaginate from "mongoose-paginate-v2";
 const { Schema, model } = mongoose;
 
 const productsSchema = new Schema({
-    title:{
+    title: {
         type: String,
         required: true
     },
-    description:{
+    description: {
         type: String,
     },
-    code:{
+    code: {
         type: String,
         requered: true
     },
-    price:{
-        type:Number,
+    price: {
+        type: Number,
         required: true
     },
-    status:{
+    status: {
         type: String,
         enum: ["available", "sold"]
-      },
-    stock:{
-        type:Number,
+    },
+    stock: {
+        type: Number,
         default: 0
     },
     thumbnails: {

@@ -5,7 +5,7 @@ import { productsManager } from '../dao/managers/productsManager.js';
 import { socketServer } from '../app.js';
 import { CartManager } from "../functions/cartManager.js";
 import { cartsModel } from "../dao/models/carts.model.js";
-import  checkUserRole from '../dao/managers/loginManager.js';
+import checkUserRole from '../dao/managers/loginManager.js';
 
 const router = Router();
 const productManager = new ProductManager();

@@ -12,13 +12,13 @@ router.post("/", async (req, res) => {
     return res.json({ error: "Password o Email incorrecto" });
   }
   const comparePassword = await compareData(password, userDB[0].password);
-  if(!comparePassword) {
-    return res.json({error: "Password o Email incorrecto"})
+  if (!comparePassword) {
+    return res.json({ error: "Password o Email incorrecto" })
   }
   req.session["email"] = email;
   req.session["first_name"] = userDB.first_name;
   req.session["isAdmin"] =
-  email === "adminCoder@coder.com" && password === "Cod3r123" ? true : false;
+    email === "adminCoder@coder.com" && password === "Cod3r123" ? true : false;
   res.redirect('/home/${user[0]._id}');
 });
 
@@ -32,8 +32,6 @@ router.get('/logout', (req, res) => {
     }
   });
 });
-
-
 
 router.post("/signup", async (req, res) => {
   const { password } = req.body;

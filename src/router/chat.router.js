@@ -3,19 +3,19 @@ import { messageModel } from "../dao/models/messages.models.js"
 const router = Router();
 
 router.get('/getMessages', async (req, res) => {
-    try {
-      const message = await messageModel.find().lean();
-      res.render("chat", { message });
-    } catch (error) {
-      console.error('Error al obtener mensajes:', error);
-      res.status(500).json({ error: 'Error al obtener mensajes' });
-    }
-  });
+  try {
+    const message = await messageModel.find().lean();
+    res.render("chat", { message });
+  } catch (error) {
+    console.error('Error al obtener mensajes:', error);
+    res.status(500).json({ error: 'Error al obtener mensajes' });
+  }
+});
 
- router.get('/chat', (req, res) => {
-    const userEmail = req.user.email;
-    res.render('chat', { userEmail });
-  });
+router.get('/chat', (req, res) => {
+  const userEmail = req.user.email;
+  res.render('chat', { userEmail });
+});
 
 router.post('/saveMessage', (req, res) => {
   const userEmail = req.body.email;

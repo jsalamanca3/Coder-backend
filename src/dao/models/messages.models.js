@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const { Schema, model } = mongoose;
 
 const messageSchema = new Schema({
-    email:{
+    email: {
         type: String,
         required: true
     },
-    message:{
+    message: {
         type: String,
         required: true
     }

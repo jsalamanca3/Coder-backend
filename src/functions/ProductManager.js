@@ -6,7 +6,7 @@ export class ProductManager extends BasicManager {
   constructor() {
     super(productsModel);
   }
-  
+
   async addProduct(product) {
     const newProduct = new productsModel({
       id: uuidv4(),

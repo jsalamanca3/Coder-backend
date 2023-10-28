@@ -1,14 +1,13 @@
+<h2>Chat en vivo</h2>
 
-    <h2>Chat en vivo</h2>
+<div id="chat-messages"></div>
+<form id="chat-form">
+    <input type="email" id="email" placeholder="Escriba su correo electrónico">
+    <input type="text" id="message" placeholder="Escribe un mensaje">
+    <button type="submit">Enviar</button>
+</form>
 
-    <div id="chat-messages"></div>
-    <form id="chat-form">
-        <input type="email" id="email" placeholder="Escriba su correo electrónico">
-        <input type="text" id="message" placeholder="Escribe un mensaje">
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/chatMessages.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chatMessages.js"></script>
