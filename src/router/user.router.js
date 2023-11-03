@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/logout', (req, res) => {
+router.get("/logout", (req, res) => {
   req.session.destroy((error) => {
     if (!error) {
       res.redirect("/login");
@@ -28,15 +28,15 @@ router.get('/logout', (req, res) => {
 router.post(
   "/signup",
   passport.authenticate("signup", {
-    successRedirect:'/home',
-    failureRedirect:'/error',
+    successRedirect:"/home",
+    failureRedirect:"/error",
   })
 );
 router.post(
   "/login",
   passport.authenticate("login", {
-    successRedirect:'/home',
-    failureRedirect:'/error',
+    successRedirect:"/home",
+    failureRedirect:"/error",
   })
 );
 
@@ -74,7 +74,6 @@ router.post("/", async (req, res) => {
   if (!first_name || !last_name || !email || !password) {
     return res.status(400).json({ message: "Faltan campos por completar" });
   }
-  const usuario = 'usuario';
   try {
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
@@ -83,7 +82,7 @@ router.post("/", async (req, res) => {
       last_name,
       email,
       password: hashedPassword,
-      role: usuario,
+      role: 'usuario',
     });
     res.redirect(`/home/${createdUser._id}`);
   } catch (error) {

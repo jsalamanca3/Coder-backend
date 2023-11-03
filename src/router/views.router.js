@@ -15,6 +15,10 @@ router.get("/", (req, res) => {
   res.render('login');
 });
 
+router.get("/login", (req, res) => {
+  res.render('login');
+});
+
 router.get("/register", (req, res) => {
   res.render('signup');
 });
@@ -31,7 +35,19 @@ router.get("/admin", checkUserRole('admin'), (req, res) => {
   res.send('Bienvenido, administrador');
 });
 
-router.get("/realTimeProducts", async (req, res) => {
+router.get("/api", async (req, res) => {
+  try {
+    const carts = await cartManager.createCart();
+    const products = await productManager.findAll();
+    const cardId = carts.id
+    res.render('home', { products, cardId });
+  } catch (error) {
+    console.error("Error al obtener la lista de productos:", error);
+    res.status(500).send("Error interno del servidor");
+  }
+});
+
+router.get("api/realTimeProducts", async (req, res) => {
   try {
     const products = await productManager.findAll();
     res.render('realTimeProducts', { products });
@@ -41,7 +57,7 @@ router.get("/realTimeProducts", async (req, res) => {
   }
 });
 
-router.post("/realTimeProducts/addProduct", async (req, res) => {
+router.post("api/realTimeProducts/addProduct", async (req, res) => {
   try {
     const product = req.body;
     const newProduct = await productManager.addProduct(product);
@@ -53,7 +69,7 @@ router.post("/realTimeProducts/addProduct", async (req, res) => {
   }
 });
 
-router.post("/realTimeProducts/deleteProduct", async (req, res) => {
+router.post("api/realTimeProducts/deleteProduct", async (req, res) => {
   try {
     const productId = req.body.id;
     await productManager.deleteProduct(productId);
@@ -96,18 +112,6 @@ router.get('/api/products', async (req, res) => {
     res.render('home', { products, cart });
   } catch (error) {
     console.error("Error al cargar la vista de productos:", error);
-    res.status(500).send("Error interno del servidor");
-  }
-});
-
-router.get("/api", async (req, res) => {
-  try {
-    const carts = await cartManager.createCart();
-    const products = await productManager.findAll();
-    const cardId = carts.id
-    res.render('home', { products, cardId });
-  } catch (error) {
-    console.error("Error al obtener la lista de productos:", error);
     res.status(500).send("Error interno del servidor");
   }
 });
