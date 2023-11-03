@@ -11,16 +11,24 @@ const router = Router();
 const productManager = new ProductManager();
 const cartManager = new CartManager();
 
-router.get("/api", async (req, res) => {
-  try {
-    const carts = await cartManager.createCart();
-    const products = await productManager.findAll();
-    const cardId = carts.id
-    res.render('home', { products, cardId });
-  } catch (error) {
-    console.error("Error al obtener la lista de productos:", error);
-    res.status(500).send("Error interno del servidor");
-  }
+router.get("/", (req, res) => {
+  res.render('login');
+});
+
+router.get("/register", (req, res) => {
+  res.render('signup');
+});
+
+router.get("/error", (req, res) => {
+  res.render("error");
+})
+
+router.get("/profile", checkUserRole('usuario'), (req, res) => {
+  res.send('Bienvenido, usuario');
+});
+
+router.get("/admin", checkUserRole('admin'), (req, res) => {
+  res.send('Bienvenido, administrador');
 });
 
 router.get("/realTimeProducts", async (req, res) => {
@@ -32,7 +40,6 @@ router.get("/realTimeProducts", async (req, res) => {
     res.status(500).send("Error interno del servidor");
   }
 });
-
 
 router.post("/realTimeProducts/addProduct", async (req, res) => {
   try {
@@ -93,6 +100,17 @@ router.get('/api/products', async (req, res) => {
   }
 });
 
+router.get("/api", async (req, res) => {
+  try {
+    const carts = await cartManager.createCart();
+    const products = await productManager.findAll();
+    const cardId = carts.id
+    res.render('home', { products, cardId });
+  } catch (error) {
+    console.error("Error al obtener la lista de productos:", error);
+    res.status(500).send("Error interno del servidor");
+  }
+});
 
 router.get('/carts/:cid', async (req, res) => {
   try {
@@ -107,22 +125,6 @@ router.get('/carts/:cid', async (req, res) => {
     console.error('Error al cargar la vista del carrito:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
-});
-
-router.get("/api/register", (req, res) => {
-  res.render('signup');
-});
-
-router.get('/', (req, res) => {
-  res.render('login');
-});
-
-router.get('/profile', checkUserRole('usuario'), (req, res) => {
-  res.send('Bienvenido, usuario');
-});
-
-router.get('/admin', checkUserRole('admin'), (req, res) => {
-  res.send('Bienvenido, administrador');
 });
 
 export default router;

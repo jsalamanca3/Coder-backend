@@ -2,6 +2,7 @@ import { Router } from "express";
 import { usersManager } from "../dao/managers/userManager.js";
 import bcrypt from "bcrypt";
 import { compareData, hashData } from "../utils.js";
+import passport from "passport";
 
 const router = Router();
 
@@ -22,17 +23,6 @@ router.post("/", async (req, res) => {
   res.redirect('/home/${user[0]._id}');
 });
 
-
-router.get('/logout', (req, res) => {
-  req.session.destroy((error) => {
-    if (!error) {
-      res.redirect("/login");
-    } else {
-      res.send({ status: 'Logout ERROR', body: error });
-    }
-  });
-});
-
 router.post("/signup", async (req, res) => {
   const { password } = req.body;
   const hashedPassword = await bcrypt.hash(password, saltRounds);
@@ -46,6 +36,5 @@ router.post("/signup", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
 
 export default router;

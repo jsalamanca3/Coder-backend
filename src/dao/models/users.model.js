@@ -23,8 +23,13 @@ const userSchema = new Schema({
     role: {
         type: String,
         required: true
+    },
+    from_github: {
+        type: Boolean,
+        default: false,
+
     }
-})
+});
 
 const usersModel = model('User', userSchema);
 export { usersModel };

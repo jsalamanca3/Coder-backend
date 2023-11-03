@@ -4,7 +4,6 @@ import Joi from 'joi';
 import { v4 as uuidv4 } from 'uuid';
 const router = Router();
 
-
 router.get("/", async (req, res) => {
   try {
     const page = req.query.page ? parseInt(req.query.page) : 1;
@@ -127,7 +126,6 @@ router.post("/", async (req, res) => {
     res.status(500).json({ error: "Error al agregar el producto" });
   }
 });
-
 
 router.put("/:pid", async (req, res) => {
   try {

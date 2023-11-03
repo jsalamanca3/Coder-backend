@@ -14,6 +14,13 @@ import { messageModel } from './dao/models/messages.models.js';
 import session from "express-session";
 import mongoStore from "connect-mongo";
 import cookieParser from "cookie-parser";
+import passport from 'passport';
+import './passport.js';
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const MONGODB_URI = process.env.MONGODB_URI;
 
 const app = express();
 app.use(cookieParser());
@@ -28,9 +35,7 @@ app.set("views", __dirname + "/views");
 
 
 /* session Mongo */
-
-const URI =
-  "mongodb+srv://jfsalamanca3:ZPqT0FGjnNu4MaS2@mycluster1.xanlde6.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=AtlasApp";
+const URI = MONGODB_URI;
 app.use(
   session({
     secret: "CLAVESECRETA",
@@ -43,14 +48,18 @@ app.use(
   })
 );
 
+/* passport */
+app.use(passport.initialize());
+app.use(passport.session());
+
 /* Routers */
-app.use("/api/products", productRouter);
+app.use("/", viewsRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/users", usersRouter);
+app.use("/api/products", productRouter);
 app.use("/api/createproducts", productRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/chat", chatRouter);
-app.use("/", viewsRouter);
 
 const PORT = 8080;
 

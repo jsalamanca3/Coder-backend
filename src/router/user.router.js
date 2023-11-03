@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { usersManager } from "../dao/managers/userManager.js";
 import bcrypt from "bcrypt";
+import passport from "passport";
+import session from "express-session";
 
 const router = Router();
 
@@ -12,6 +14,50 @@ router.get('/', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 })
+
+router.get('/logout', (req, res) => {
+  req.session.destroy((error) => {
+    if (!error) {
+      res.redirect("/login");
+    } else {
+      res.send({ status: 'Logout ERROR', body: error });
+    }
+  });
+});
+
+router.post(
+  "/signup",
+  passport.authenticate("signup", {
+    successRedirect:'/home',
+    failureRedirect:'/error',
+  })
+);
+router.post(
+  "/login",
+  passport.authenticate("login", {
+    successRedirect:'/home',
+    failureRedirect:'/error',
+  })
+);
+
+/* Github */
+router.get(
+  "/auth/github",
+  passport.authenticate("github", {
+    scope: [ 'user:email']
+  })
+);
+
+router.get(
+  "/github",
+  passport.authenticate("github", {
+    failureRedirect: '/error',
+  }),
+  (req, res) => {
+    req.session.user = req.user;
+    res.redirect("/home");
+  }
+);
 
 router.get('/:idUser', async (req, res) => {
   const { idUser } = req.params
@@ -28,6 +74,7 @@ router.post("/", async (req, res) => {
   if (!first_name || !last_name || !email || !password) {
     return res.status(400).json({ message: "Faltan campos por completar" });
   }
+  const usuario = 'usuario';
   try {
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
