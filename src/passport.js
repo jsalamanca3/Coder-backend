@@ -12,7 +12,8 @@ const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 
 /* Local */
-passport.use("signup",
+passport.use(
+  "signup",
   new LocalStorategy(
     {
       usernameField: "email",
@@ -37,7 +38,8 @@ passport.use("signup",
   )
 );
 
-passport.use("login",
+passport.use(
+  "login",
   new LocalStorategy(
     {
       usernameField: "email",
@@ -61,33 +63,40 @@ passport.use("login",
 );
 
 /* GitHub */
-passport.use("github",
+passport.use(
+  "github",
   new GithubStrategy(
     {
       clientID: GITHUB_CLIENT_ID,
       clientSecret: GITHUB_CLIENT_SECRET,
       callbackURL: "http://localhost:8080/api/users/github",
-      scope: ['user:email']
+      scope: ["user:email"],
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        const userDB = await usersManager.findByEmail(profile.emails[0].value);
+        const githubEmail = profile.emails[0].value;
+        if (!githubEmail) {
+          done(new Error("Correo electrónico de GitHub no disponible"));
+          return;
+        }
+
+        const userDB = await usersManager.findByEmail(githubEmail);
+
         if (!userDB.from_github) {
           const saltRounds = 10;
-          const hashedPassword = await bcrypt.hash('1234', saltRounds);
-          const newUser  = {
-            first_name: profile._json.name?.split(' ', 2).join(' ') || profile.username,
-            last_name: profile._json.name?.split(' ').slice(2, 4).join(' ') || 'lastname',
-            email: profile.emails[0].value,
+          const hashedPassword = await bcrypt.hash("1234", saltRounds);
+          const newUser = {
+            first_name: profile._json.name?.split(" ", 2).join(" ") || profile.username,
+            last_name: profile._json.name?.split(" ").slice(2, 4).join(" ") || "lastname",
+            email: githubEmail,
             password: hashedPassword,
             from_github: true,
-            role: 'usuario'
+            role: "usuario",
           };
           const result = await usersManager.createOne(newUser);
-          done(null, result);
-        }
-        else {
-          done(null, userDB);
+          return done(null, result);
+        } else {
+          return done(null, userDB);
         }
       } catch (error) {
         done(error);
@@ -96,14 +105,16 @@ passport.use("github",
   )
 );
 
-
 passport.serializeUser(function (userDB, done) {
-  console.log('serialize ' + userDB._id)
+  console.log("serialize " + userDB._id);
   done(null, userDB._id);
 });
 
-passport.deserializeUser( async (id, done) => {
-  const userDB = await usersManager.findById(id);
-  done(null, userDB);
-  });
-
+passport.deserializeUser(async function(id, done) {
+  try {
+    const userDB = await usersManager.findById(id);
+    done(null, userDB);
+  } catch (error){
+    done(error)
+  }
+});

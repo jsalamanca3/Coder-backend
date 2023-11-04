@@ -39,12 +39,6 @@ router.post("/login",
 );
 
 /* Github */
-router.get("/auth/github",
-  passport.authenticate("github", {
-    scope: ['user:email']
-  })
-);
-
 router.get("/github",
   passport.authenticate("github", {
     failureRedirect: '/error',
@@ -54,6 +48,12 @@ router.get("/github",
     const userId = req.user.id
     res.redirect(`/home/${userId}`);
   }
+);
+
+router.get("/auth/github",
+  passport.authenticate("github", {
+    scope: ["userDB:email"]
+  })
 );
 
 router.get('/:idUser', async (req, res) => {
