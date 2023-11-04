@@ -4,6 +4,7 @@ import { Strategy as GithubStrategy } from "passport-github2";
 import { usersManager } from "./dao/managers/userManager.js";
 import { hashData, compareData } from "./utils.js";
 import dotenv from "dotenv";
+import bcrypt from "bcrypt";
 
 dotenv.config();
 
@@ -62,41 +63,43 @@ passport.use(
 );
 
 /* GitHub */
-passport.use(
-  "github",
+passport.use("github",
   new GithubStrategy(
     {
       clientID: GITHUB_CLIENT_ID,
       clientSecret: GITHUB_CLIENT_SECRET,
       callbackURL: "http://localhost:8080/api/users/github",
+      scope: ['user:email']
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        console.log(profile);
-        const userDB = await usersManager.findByEmail(profile.email);
+        const userDB = await usersManager.findByEmail(profile.emails[0].value);
         if (userDB) {
           if (userDB.form_github) {
             return done(null, userDB);
           } else {
-            return done(null, false);
+            // signup
+            const saltRounds = 10;
+            const hashedPassword = await bcrypt.hash('1234', saltRounds);
+            console.log(profile)
+            const createdUser = await usersManager.createOne({
+              first_name: profile._json.name?.split(' ', 2).join(' ') || profile.username,
+              last_name: profile._json.name?.split(' ').slice(2, 4).join(' ') || 'lastname',
+              email: profile.emails[0].value,
+              password: hashedPassword,
+              from_github: true,
+              role: 'usuario'
+            });
+            return done(null, createdUser);
           }
         }
-        // signup
-        const newUser = {
-          first_name: "prueba",
-          last_name: "test",
-          email: profile.email,
-          password: "123123123",
-          form_github: true,
-        };
-        createdUser = await usersManager.createOne(newUser);
-        done(nell, createdUser);
       } catch (error) {
         done(error);
       }
     }
   )
 );
+
 
 passport.serializeUser(function (user, done) {
   done(null, user._id);
