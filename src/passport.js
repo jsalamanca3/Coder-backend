@@ -80,14 +80,14 @@ passport.use("github",
             const saltRounds = 10;
             const hashedPassword = await bcrypt.hash('1234', saltRounds);
             const createdUser = await usersManager.createOne({
-              first_name: profile._json.name.split(' ', 2).join(' '),
-              last_name: profile._json.name.split(' ').slice(2, 4).join(' '),
+              first_name: profile._json.name?.split(' ', 2).join(' ') || profile.username,
+              last_name: profile._json.name?.split(' ').slice(2, 4).join(' ') || 'lastname',
               email: profile.emails[0].value,
               password: hashedPassword,
               from_github: true,
               role: 'usuario'
             });
-            done(null, createdUser);
+            profile.id = createdUser._id;
             return done(null, profile);
           }
         }
@@ -99,6 +99,7 @@ passport.use("github",
 );
 
 passport.serializeUser(function (user, done) {
+  console.log('serialize ' + user.id)
   done(null, user.id);
 });
 

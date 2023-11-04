@@ -3,10 +3,6 @@ import { authToken, generateToken } from "../utils";
 
 const router = Router();
 
-router.get('/api/users/github', passport.authenticate('github', {failureRedirect:['/login']}), async(req, res) => {
-    req.session.user = req.user;
-    res.redirect('/');
-});
 
 /* Token */
 
