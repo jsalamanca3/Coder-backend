@@ -20,7 +20,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/home", (req, res) => {
-  res.render('home');
+  res.render("home");
 });
 
 router.get("/register", (req, res) => {

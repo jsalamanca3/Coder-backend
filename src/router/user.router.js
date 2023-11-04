@@ -25,37 +25,34 @@ router.get("/logout", (req, res) => {
   });
 });
 
-router.post(
-  "/signup",
+router.post("/signup",
   passport.authenticate("signup", {
-    successRedirect:"/home",
-    failureRedirect:"/error",
+    successRedirect: "/home",
+    failureRedirect: "/error",
   })
 );
-router.post(
-  "/login",
+router.post("/login",
   passport.authenticate("login", {
-    successRedirect:"/home",
-    failureRedirect:"/error",
+    successRedirect: "/home",
+    failureRedirect: "/error",
   })
 );
 
 /* Github */
-router.get(
-  "/auth/github",
+router.get("/auth/github",
   passport.authenticate("github", {
-    scope: [ 'user:email']
+    scope: ['user:email']
   })
 );
 
-router.get(
-  "/github",
+router.get("/github",
   passport.authenticate("github", {
     failureRedirect: '/error',
   }),
-  (req, res) => {
+  async (req, res) => {
     req.session.user = req.user;
-    res.redirect("/home");
+    const userId = req.user.id
+    res.redirect(`/home/${userId}`);
   }
 );
 

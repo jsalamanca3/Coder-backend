@@ -27,7 +27,6 @@ const userSchema = new Schema({
     from_github: {
         type: Boolean,
         default: false,
-
     }
 });
 

@@ -3,8 +3,8 @@ import { Strategy as LocalStorategy } from "passport-local";
 import { Strategy as GithubStrategy } from "passport-github2";
 import { usersManager } from "./dao/managers/userManager.js";
 import { hashData, compareData } from "./utils.js";
-import dotenv from "dotenv";
 import bcrypt from "bcrypt";
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -12,8 +12,7 @@ const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
 
 /* Local */
-passport.use(
-  "signup",
+passport.use("signup",
   new LocalStorategy(
     {
       usernameField: "email",
@@ -38,8 +37,7 @@ passport.use(
   )
 );
 
-passport.use(
-  "login",
+passport.use("login",
   new LocalStorategy(
     {
       usernameField: "email",
@@ -74,24 +72,22 @@ passport.use("github",
     async (accessToken, refreshToken, profile, done) => {
       try {
         const userDB = await usersManager.findByEmail(profile.emails[0].value);
-        if (userDB) {
-          if (userDB.form_github) {
-            return done(null, userDB);
-          } else {
-            // signup
-            const saltRounds = 10;
-            const hashedPassword = await bcrypt.hash('1234', saltRounds);
-            console.log(profile)
-            const createdUser = await usersManager.createOne({
-              first_name: profile._json.name?.split(' ', 2).join(' ') || profile.username,
-              last_name: profile._json.name?.split(' ').slice(2, 4).join(' ') || 'lastname',
-              email: profile.emails[0].value,
-              password: hashedPassword,
-              from_github: true,
-              role: 'usuario'
-            });
-            return done(null, createdUser);
-          }
+        if (!userDB.from_github) {
+          const saltRounds = 10;
+          const hashedPassword = await bcrypt.hash('1234', saltRounds);
+          const newUser  = {
+            first_name: profile._json.name?.split(' ', 2).join(' ') || profile.username,
+            last_name: profile._json.name?.split(' ').slice(2, 4).join(' ') || 'lastname',
+            email: profile.emails[0].value,
+            password: hashedPassword,
+            from_github: true,
+            role: 'usuario'
+          };
+          const result = await usersManager.createOne(newUser);
+          done(null, result);
+        }
+        else {
+          done(null, userDB);
         }
       } catch (error) {
         done(error);
@@ -101,15 +97,13 @@ passport.use("github",
 );
 
 
-passport.serializeUser(function (user, done) {
-  done(null, user._id);
+passport.serializeUser(function (userDB, done) {
+  console.log('serialize ' + userDB._id)
+  done(null, userDB._id);
 });
 
-passport.deserializeUser(async function (id, done) {
-  try {
-    const user = await usersManager.findById(id);
-    done(null, user);
-  } catch (error) {
-    done(error);
-  }
-});
+passport.deserializeUser( async (id, done) => {
+  const userDB = await usersManager.findById(id);
+  done(null, userDB);
+  });
+
