@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
   req.session["first_name"] = userDB.first_name;
   req.session["isAdmin"] =
     email === "adminCoder@coder.com" && password === "Cod3r123" ? true : false;
-  res.redirect('/home/${user[0]._id}');
+  res.redirect(`/home/${userDB[0]._id}`);
 });
 
 router.post("/signup", async (req, res) => {

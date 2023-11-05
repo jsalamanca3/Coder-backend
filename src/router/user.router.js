@@ -25,42 +25,6 @@ router.get("/logout", (req, res) => {
   });
 });
 
-router.post("/signup",
-  passport.authenticate("signup", {
-    successRedirect: "/home",
-    failureRedirect: "/error",
-  })
-);
-router.post("/login",
-  passport.authenticate("login", {
-    successRedirect: "/home",
-    failureRedirect: "/error",
-  })
-);
-
-/* Github */
-router.get("/auth/github",
-  passport.authenticate("github", {
-    scope: ["userDB:email"]
-  })
-);
-
-router.get("/github",
-  passport.authenticate("github", {
-    failureRedirect: '/error',
-  }),
-  async (req, res) => {
-    if (req.user[0]) {
-      req.session.user = req.user[0];
-    } else {
-      req.session.user = req.user;
-    }
-    console.log('por aqui paso');
-    const userId = req.session.user._id
-    res.redirect(`/home/${userId}`);
-  }
-);
-
 router.get('/:idUser', async (req, res) => {
   const { idUser } = req.params
   try {
