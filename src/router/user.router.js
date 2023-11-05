@@ -39,21 +39,26 @@ router.post("/login",
 );
 
 /* Github */
+router.get("/auth/github",
+  passport.authenticate("github", {
+    scope: ["userDB:email"]
+  })
+);
+
 router.get("/github",
   passport.authenticate("github", {
     failureRedirect: '/error',
   }),
   async (req, res) => {
-    req.session.user = req.user;
-    const userId = req.user.id
+    if (req.user[0]) {
+      req.session.user = req.user[0];
+    } else {
+      req.session.user = req.user;
+    }
+    console.log('por aqui paso');
+    const userId = req.session.user._id
     res.redirect(`/home/${userId}`);
   }
-);
-
-router.get("/auth/github",
-  passport.authenticate("github", {
-    scope: ["userDB:email"]
-  })
 );
 
 router.get('/:idUser', async (req, res) => {
