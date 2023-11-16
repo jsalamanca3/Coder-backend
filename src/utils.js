@@ -2,6 +2,9 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -18,10 +21,10 @@ export const compareData = async (data, hashData) => {
 
 /* Token */
 
-const PRIVATE_KEY = "SOYUNACLAVESECRETA";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 export const generateToken = (user) => {
-    const token = jwt.sign({user}, PRIVATE_KEY, {expiresIn: '24'})
+    const token = jwt.sign({user}, JWT_SECRET, {expiresIn: '300'})
     return token;
 };
 
@@ -30,7 +33,7 @@ export const authToken = (req,res,next) => {
     if(!authHeader) return re.status(401).send({error: "No sea autenticado"})
 
     const token = authHeader.split( ' ' )[1];
-    jwt.verify(token, PRIVATE_KEY, (error, credentials) => {
+    jwt.verify(token, JWT_SECRET, (error, credentials) => {
         if(error) return res.status(403).send({error: "No tienes autoización"})
         req.user = credentials.user;
         next();

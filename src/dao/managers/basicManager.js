@@ -1,6 +1,7 @@
 export default class BasicManager {
-    constructor(model) {
-        this.model = model
+    constructor(model, populateOption) {
+        this.model = model;
+        this.populateOption = populateOption;
     }
     async findAll() {
         return this.model.find().lean();
@@ -22,5 +23,11 @@ export default class BasicManager {
     }
     async findByEmail(email) {
         return this.model.find({ email: email }).lean();
+    }
+    async cartsfindAll() {
+        return this.model.find().populate(this.populateOption);
+    }
+    async cartsfindById(id) {
+    return this.model.findById(id).populate(this.populateOption);
     }
 }

@@ -3,7 +3,7 @@ import BasicManager from "./basicManager.js";
 
 class ProductsManager extends BasicManager {
   constructor() {
-    super(productsModel)
+    super(productsModel);
   }
 
   async getAllProducts() {

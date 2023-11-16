@@ -20,8 +20,11 @@ router.post("/", async (req, res) => {
 router.get("/:cid", async (req, res) => {
   try {
     const cid = req.params.cid;
-    const cart = await cartsModel.findOne({ id: cid });
-
+    const cart = await cartsModel.findOne({ _id: cid })
+    .populate({
+      path: 'products.product',
+      model: 'Product',
+    })
     if (cart) {
       res.json(cart);
     } else {
@@ -46,7 +49,7 @@ router.post("/:cid/product/:pid", async (req, res) => {
       return res.status(404).json({ error: "Producto no encontrado" });
     }
 
-    const cart = await cartsModel.findOne({ id: cid });
+    const cart = await cartsModel.findOne({ _id: cid });
     if (!cart) {
       return res.status(404).json({ error: "Carrito no encontrado" });
     }
@@ -74,7 +77,7 @@ router.get("/:cid/product/:pid", async (req, res) => {
     const cid = req.params.cid;
     const pid = req.params.pid;
 
-    const cart = await cartsModel.findOne({ id: cid });
+    const cart = await cartsModel.findOne({ _id: cid });
     if (!cart) {
       res.status(404).json({ error: "Carrito no encontrado" });
       return;
@@ -97,7 +100,7 @@ router.delete("/:cid/products/:pid", async (req, res) => {
 
     console.log("Carrito ID:", cid);
     console.log("Producto ID:", pid);
-    const cart = await cartsModel.findOne({ id: cid });
+    const cart = await cartsModel.findOne({ _id: cid });
 
     if (!cart) {
       return res.status(404).json({ error: "Carrito no encontrado" });
@@ -128,7 +131,7 @@ router.put("/:cid", async (req, res) => {
       return res.status(400).json({ error: "El formato de productos no es válido" });
     }
 
-    const cart = await cartsModel.findOne({ id: cid });
+    const cart = await cartsModel.findOne({ _id: cid });
 
     if (!cart) {
       return res.status(404).json({ error: "Carrito no encontrado" });
@@ -151,7 +154,7 @@ router.put("/:cid/products/:pid", async (req, res) => {
     if (!quantity || typeof quantity !== 'number') {
       return res.status(400).json({ error: "Cantidad inválida" });
     }
-    const cart = await cartsModel.findOne({ id: cid });
+    const cart = await cartsModel.findOne({ _id: cid });
     if (!cart) {
       return res.status(404).json({ error: "Carrito no encontrado" });
     }
@@ -171,7 +174,7 @@ router.put("/:cid/products/:pid", async (req, res) => {
 router.delete("/:cid", async (req, res) => {
   try {
     const cid = req.params.cid;
-    const cart = await cartsModel.findOneAndRemove({ id: cid });
+    const cart = await cartsModel.findOneAndRemove({ _id: cid });
 
     if (!cart) {
       return res.status(404).json({ error: "Carrito no encontrado" });

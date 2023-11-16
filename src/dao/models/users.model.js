@@ -22,11 +22,16 @@ const userSchema = new Schema({
     },
     role: {
         type: String,
-        required: true
+        enum: ["admin", "premium", "user"],
+        default: "user",
     },
     from_github: {
         type: Boolean,
         default: false,
+    },
+    cart: {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "carts",
     }
 });
 

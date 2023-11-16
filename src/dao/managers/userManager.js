@@ -3,7 +3,7 @@ import BasicManager from "./basicManager.js";
 
 class UsersManager extends BasicManager {
     constructor() {
-        super(usersModel)
+        super(usersModel, 'Cart')
     }
 }
 

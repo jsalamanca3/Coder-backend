@@ -13,7 +13,7 @@ const productsSchema = new Schema({
     },
     code: {
         type: String,
-        requered: true
+        required: true
     },
     price: {
         type: Number,
@@ -29,11 +29,11 @@ const productsSchema = new Schema({
     },
     thumbnails: {
         type: String,
-        requered: true
+        required: true
     },
     category: {
         type: String,
-        requered: true
+        required: true
     }
 })
 
