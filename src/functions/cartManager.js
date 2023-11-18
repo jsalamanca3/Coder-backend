@@ -18,7 +18,7 @@ export class CartManager extends BasicManager {
       const newCart = new cartsModel();
       newCart.id = this.cartId || generateCartId();
       newCart.products = [];
-      newCart.userId = userId || "";
+      newCart.userId = userId || '';
       await newCart.save();
       return newCart;
     } catch (error) {

@@ -49,7 +49,7 @@ router.post("/:cid/product/:pid", async (req, res) => {
       return res.status(404).json({ error: "Producto no encontrado" });
     }
 
-    const cart = await cartsModel.findOne({ _id: cid });
+    const cart = await cartsModel.findOne({ id: cid });
     if (!cart) {
       return res.status(404).json({ error: "Carrito no encontrado" });
     }

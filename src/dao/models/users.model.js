@@ -29,7 +29,7 @@ const userSchema = new Schema({
         type: Boolean,
         default: false,
     },
-    cart: {
+   cart: {
         type: mongoose.SchemaTypes.ObjectId,
         ref: "carts",
     }

@@ -5,6 +5,7 @@ import { usersManager } from "./dao/managers/userManager.js";
 import { hashData, compareData } from "./utils.js";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
+import { CartManager } from "./functions/cartManager.js";
 
 dotenv.config();
 
@@ -76,21 +77,30 @@ passport.use("github", new GithubStrategy({
       //signup
       const saltRounds = 10;
       const hashedPassword = await bcrypt.hash("1234", saltRounds);
+
+      const cartManagerInstance = new CartManager();
+
       const newUser = {
         first_name: profile._json.name?.split(" ", 2).join(" ") || profile.username,
         last_name: profile._json.name?.split(" ").slice(2, 4).join(" ") || "gt",
         email: gitHubEmail,
         password: hashedPassword,
         from_github: true,
-        role: "usuario",
+        role: "user",
       };
+
       const createdUser = await usersManager.createOne(newUser);
-      return done(null, createdUser)
+      const userId = createdUser._id;
+      const createCart = await cartManagerInstance.createCart(userId);
+      createdUser.cart = createCart._id;
+      await createdUser.save();
+
+      return done(null, createdUser);
     } catch (error) {
+      console.error('Error al procesar la autenticación de GitHub:', error);
       done(error);
     }
-  }
-));
+  }));
 
 passport.serializeUser(function (userDB, done) {
   const userId = userDB._id || userDB[0]._id;

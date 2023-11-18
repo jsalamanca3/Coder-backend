@@ -3,6 +3,7 @@ import { usersManager } from "../dao/managers/userManager.js";
 import bcrypt from "bcrypt";
 import passport from "passport";
 import session from "express-session";
+import { CartManager } from "../functions/cartManager.js";
 
 const router = Router();
 
@@ -43,12 +44,17 @@ router.post("/", async (req, res) => {
   try {
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+    const cartManagerInstance = new CartManager();
+    const createCart = await cartManagerInstance.createCart(userId);
+
     const createdUser = await usersManager.createOne({
       first_name,
       last_name,
       email,
       password: hashedPassword,
-      role: 'usuario',
+      role: 'user',
+      cart: createCart._id,
     });
     res.redirect(`/home/${createdUser._id}`);
   } catch (error) {
