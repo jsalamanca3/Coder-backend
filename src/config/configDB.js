@@ -1,10 +1,8 @@
 // configDB.js
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+import config from "./config.js";
 
-dotenv.config();
-
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = config.mongo_uri;
 
 mongoose
   .connect(MONGODB_URI)

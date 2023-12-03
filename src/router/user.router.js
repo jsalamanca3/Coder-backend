@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { usersManager } from "../dao/managers/userManager.js";
+import { usersManager } from "../persistencia/dao/managers/userManager.js";
 import bcrypt from "bcrypt";
 import passport from "passport";
 import session from "express-session";
-import { CartManager } from "../functions/cartManager.js";
+import { CartManager } from "../persistencia/dao/functions/cartManager.js";
 
 const router = Router();
 

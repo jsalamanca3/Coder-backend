@@ -1,8 +1,8 @@
-import { cartsModel } from "../dao/models/carts.model.js";
-import { productsModel } from "../dao/models/products.model.js";
-import { socketServer } from "../app.js";
+import { cartsModel } from "../models/carts.model.js";
+import { productsModel } from "../models/products.model.js";
+import { socketServer } from "../../../app.js";
 import { v4 as uuidv4 } from "uuid";
-import BasicManager from "../dao/managers/basicManager.js";
+import BasicManager from "../managers/basicManager.js";
 
 function generateCartId() {
   return uuidv4();

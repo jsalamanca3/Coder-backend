@@ -6,22 +6,18 @@ import viewsRouter from './router/views.router.js';
 import usersRouter from './router/user.router.js';
 import loginRouter from './router/login.router.js';
 import sessionRouter from './router/sessions.router.js';
-import { ProductManager } from './functions/ProductManager.js';
+import { ProductManager } from './persistencia/dao/functions/ProductManager.js';
 import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
-import "./dao/configDB.js";
+import "./config/configDB.js";
 import chatRouter from './router/chat.router.js';
-import { messageModel } from './dao/models/messages.models.js';
+import { messageModel } from './persistencia/dao/models/messages.models.js';
 import session from "express-session";
 import mongoStore from "connect-mongo";
 import cookieParser from "cookie-parser";
 import passport from 'passport';
 import './passport.js';
-import dotenv from "dotenv";
-
-dotenv.config();
-
-const MONGODB_URI = process.env.MONGODB_URI;
+import config from './config/config.js';
 
 const app = express();
 app.use(cookieParser());
@@ -36,7 +32,7 @@ app.set("views", __dirname + "/views");
 
 
 /* session Mongo */
-const URI = MONGODB_URI;
+const MONGODB_URI = config.mongo_uri;
 app.use(
   session({
     secret: "CLAVESECRETA",
@@ -44,7 +40,7 @@ app.use(
       maxAge: 60 * 60 * 1000,
     },
     store: new mongoStore({
-      mongoUrl: URI,
+      mongoUrl: MONGODB_URI,
     }),
   })
 );

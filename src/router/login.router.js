@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { usersManager } from "../dao/managers/userManager.js";
+import { usersManager } from "../persistencia/dao/managers/userManager.js";
 import bcrypt from "bcrypt";
 import { compareData, hashData } from "../utils.js";
 

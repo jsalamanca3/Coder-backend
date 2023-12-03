@@ -1,16 +1,14 @@
 import passport from "passport";
 import { Strategy as LocalStorategy } from "passport-local";
 import { Strategy as GithubStrategy } from "passport-github2";
-import { usersManager } from "./dao/managers/userManager.js";
+import { usersManager } from "./persistencia/dao/managers/userManager.js";
 import { hashData, compareData } from "./utils.js";
 import bcrypt from "bcrypt";
-import dotenv from "dotenv";
-import { CartManager } from "./functions/cartManager.js";
+import config from "./config/config.js";
+import { CartManager } from "./persistencia/dao/functions/cartManager.js";
 
-dotenv.config();
-
-const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
-const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
+const GITHUB_CLIENT_ID = config.github_client_id;
+const GITHUB_CLIENT_SECRET = config.github_client_secret;
 
 /* Local */
 passport.use("signup", new LocalStorategy({

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { v4 as uuidv4 } from 'uuid';
-import { cartsModel } from '../dao/models/carts.model.js';
-import { productsModel } from '../dao/models/products.model.js';
+import { cartsModel } from '../persistencia/dao/models/carts.model.js';
+import { productsModel } from '../persistencia/dao/models/products.model.js';
 
 const router = Router();
 

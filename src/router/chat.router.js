@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { messageModel } from "../dao/models/messages.models.js"
+import { messageModel } from "../persistencia/dao/models/messages.models.js"
 const router = Router();
 
 router.get('/getMessages', async (req, res) => {

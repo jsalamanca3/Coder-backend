@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { ProductManager } from '../functions/ProductManager.js';
-import { usersManager } from '../dao/managers/userManager.js';
-import { productsManager } from '../dao/managers/productsManager.js';
+import { ProductManager } from '../persistencia/dao/functions/ProductManager.js';
+import { usersManager } from '../persistencia/dao/managers/userManager.js';
+import { productsManager } from '../persistencia/dao/managers/productsManager.js';
 import { socketServer } from '../app.js';
-import { CartManager } from "../functions/cartManager.js";
-import { cartsModel } from "../dao/models/carts.model.js";
-import checkUserRole from '../dao/managers/loginManager.js';
+import { CartManager } from "../persistencia/dao/functions/cartManager.js";
+import { cartsModel } from "../persistencia/dao/models/carts.model.js";
+import checkUserRole from '../persistencia/dao/managers/loginManager.js';
 
 const router = Router();
 const productManager = new ProductManager();

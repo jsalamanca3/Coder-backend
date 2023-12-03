@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
-import { productsModel } from "../dao/models/products.model.js";
-import BasicManager from '../dao/managers/basicManager.js';
+import { productsModel } from "../models/products.model.js";
+import BasicManager from '../managers/basicManager.js';
 
 export class ProductManager extends BasicManager {
   constructor() {

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { productsManager } from "../dao/managers/productsManager.js";
+import { productsManager } from "../persistencia/dao/managers/productsManager.js";
 const router = Router();
 
 router.get('/', async (req, res) => {

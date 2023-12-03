@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { productsModel } from "../dao/models/products.model.js";
+import { productsModel } from "../persistencia/dao/models/products.model.js";
 import Joi from 'joi';
 import { v4 as uuidv4 } from 'uuid';
 const router = Router();
