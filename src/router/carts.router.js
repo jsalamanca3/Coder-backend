@@ -2,7 +2,8 @@ import { Router } from "express";
 import { v4 as uuidv4 } from 'uuid';
 import { cartsModel } from '../persistencia/dao/models/carts.model.js';
 import { productsModel } from '../persistencia/dao/models/products.model.js';
-import autorizeMiddleware from '../middlewares/authorize.middleware.js'
+import autorizeMiddleware from '../middlewares/authorize.middleware.js';
+import { ticketsModel } from "../persistencia/dao/models/ticket.model.js";
 const router = Router();
 
 router.post("/", async (req, res) => {
@@ -200,5 +201,70 @@ router.post('/carts/:cid', autorizeMiddleware, async (req, res) => {
     res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
+
+/* agregar ticket */
+router.post('/:cid/purchase', async (req, res) => {
+  try {
+    const cid = req.params.cid;
+    const cart = await cartsModel.findOne({ _id: cid }).populate('products.product');
+    if (!cart) {
+      return res.status(404).json({ error: 'Carrito no encontrado' });
+    }
+
+    const productsToPurchase = cart.products;
+    const failedProducts = [];
+
+    for (const cartProduct of productsToPurchase) {
+      const product = cartProduct.product;
+      const quantityToPurchase = cartProduct.quantity;
+
+      if (product.stock >= quantityToPurchase) {
+        product.stock -= quantityToPurchase;
+        await product.save();
+      } else {
+        failedProducts.push(product._id);
+      }
+    }
+    const user = cart.user;
+
+    const ticket = new ticketsModel({
+      code: generateTicketCode(),
+      purchase_datetime: new Date(),
+      amount: calculateTotalAmount(productsToPurchase),
+      purchaser: user.email,
+      products: productsToPurchase,
+    });
+
+    await ticket.save();
+
+    cart.products = cart.products.filter(cartProduct => failedProducts.includes(cartProduct.product._id));
+
+    await cart.save();
+
+    if (failedProducts.length > 0) {
+      return res.json({ failedProducts });
+    }
+
+    res.json({ message: 'Compra realizada exitosamente', ticket });
+  } catch (error) {
+    console.error('Error al procesar la compra:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
+function generateTicketCode() {
+  const randomString = Math.random().toString(36).substring(2, 8).toUpperCase();
+  const timestamp = Date.now().toString().substring(6);
+  return `TICKET-${randomString}-${timestamp}`;
+}
+
+function calculateTotalAmount(products) {
+  return products.reduce((total, product) => {
+    const { price, quantity } = product;
+    return total + (price * quantity);
+  }, 0);
+}
+
+
 
 export default router;
