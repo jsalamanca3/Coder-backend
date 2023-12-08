@@ -60,6 +60,24 @@ passport.use("login", new LocalStorategy({ usernameField: "email" },
 )
 );
 
+/* JWT */
+passport.use("jwt", new JWTStrategy({
+  secretOrKey: JWT_SECRET,
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+}, async (jwt_payload, done) => {
+  try {
+    const userDB = await usersManager.findById(jwt_payload.sub);
+
+    if (userDB) {
+      return done(null, userDB);
+    } else {
+      return done(null, false);
+    }
+  } catch (error) {
+    return done(error, false);
+  }
+}));
+
 /* GitHub */
 passport.use("github", new GithubStrategy({
   clientID: GITHUB_CLIENT_ID,
@@ -96,7 +114,7 @@ passport.use("github", new GithubStrategy({
 
       const createdUser = await usersManager.createOne(newUser);
       const userId = createdUser._id;
-      const createCart = await cartManagerInstance.createCart(userId);
+      const createCart = await cartManagerInstance.cartRepository.createCart(userId);
       createdUser.cart = createCart._id;
       await createdUser.save();
 
@@ -107,28 +125,15 @@ passport.use("github", new GithubStrategy({
     }
   }));
 
-
-/* JWT */
-passport.use("jwt", new JWTStrategy({
-  secretOrKey: JWT_SECRET,
-  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-},
-async (jwt_payload, done) => {
-  console.log(jwt_payload);
-  done(null, false);
-}))
-
-
 /* Google */
 passport.use("google", new GoogleStrategy({
   clientID: GOOGLE_CLIENT_ID,
   clientSecret: GOOGLE_CLIENT_SECRET,
   callbackURL: "http://localhost:8080/api/sessions/auth/google/callback",
-  scope: ["user:email"],
 },
   async (accessToken, refreshToken, profile, done) => {
     try {
-      const goolgeEmail = profile.emails[0].value || profile._json.email;
+      const goolgeEmail = profile._json.email;
       const userDB = await usersManager.findByEmail(goolgeEmail);
       //login
       if (userDB.length > 0) {
@@ -155,7 +160,7 @@ passport.use("google", new GoogleStrategy({
 
       const createdUser = await usersManager.createOne(newUser);
       const userId = createdUser._id;
-      const createCart = await cartManagerInstance.createCart(userId);
+      const createCart = await cartManagerInstance.cartRepository.createCart(userId);
       createdUser.cart = createCart._id;
       await createdUser.save();
 

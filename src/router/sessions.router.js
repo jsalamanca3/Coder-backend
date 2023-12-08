@@ -56,16 +56,13 @@ router.post('/register', (req, res) => {
     res.send({status:"success", access_token});
 });
 
+
 router.post('/login', (req, res) => {
     const {email,password} = req.body;
     const user = users.find(user => user.email===email&&user.password===password);
     if(!user) return res.status(400).send({staus:"error", error:"Invalid credentials"});
     const access_token = generateToken(user);
     res.send({status:"success", access_token});
-});
-
-router.get('/current', authToken,(req, res) => {
-    res.send({status:"seccess", payload:req.user});
 });
 
 /* GOOGLE */
@@ -90,5 +87,76 @@ router.get('/auth/google/callback',
     res.redirect(`/home/${userId}`);
   }
 );
+
+//current
+
+// Estrategia de JWT
+router.get('/current-jwt',
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    try {
+      if (req.isAuthenticated()) {
+        const userDTO = {
+          first_name: req.user.first_name,
+          last_name: req.user.last_name,
+          email: req.user.email,
+        };
+        res.status(200).json(userDTO);
+      } else {
+        res.status(401).json({ error: 'Unauthorized' });
+      }
+    } catch (error) {
+      console.error('Error en la ruta /current-jwt:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  }
+);
+
+// Estrategia de GitHub
+router.get('/current-github',
+  passport.authenticate('github', { session: false }),
+  (req, res) => {
+    try {
+      if (req.isAuthenticated()) {
+        const userDTO = {
+          first_name: req.user.first_name,
+          last_name: req.user.last_name,
+          email: req.user.email,
+        };
+        res.status(200).json(userDTO);
+      } else {
+        res.status(401).json({ error: 'Unauthorized' });
+      }
+    } catch (error) {
+      console.error('Error en la ruta /current-github:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  }
+);
+
+// Estrategia de Google
+router.get('/current-google',
+  passport.authenticate('google', { session: false }),
+  (req, res) => {
+    try {
+      if (req.isAuthenticated()) {
+        const userDTO = {
+          first_name: req.user.first_name,
+          last_name: req.user.last_name,
+          email: req.user.email,
+        };
+        res.status(200).json(userDTO);
+      } else {
+        res.status(401).json({ error: 'Unauthorized' });
+      }
+    } catch (error) {
+      console.error('Error en la ruta /current-google:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  }
+);
+
+
+
 
 export default router;
