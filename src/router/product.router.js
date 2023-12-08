@@ -2,6 +2,7 @@ import { Router } from "express";
 import { productsModel } from "../persistencia/dao/models/products.model.js";
 import Joi from 'joi';
 import { v4 as uuidv4 } from 'uuid';
+import autorizeMiddleware from '../middlewares/authorize.middleware.js'
 const router = Router();
 
 router.get("/", async (req, res) => {
@@ -100,7 +101,7 @@ const productSchema = Joi.object({
   thumbnails: Joi.string().required()
 });
 
-router.post("/", async (req, res) => {
+router.post("/", autorizeMiddleware, async (req, res) => {
   try {
     const { error, value } = productSchema.validate(req.body);
 
@@ -127,7 +128,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.put("/:pid", async (req, res) => {
+router.put("/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const productId = req.params.pid;
     const updatedProductData = req.body;
@@ -144,7 +145,7 @@ router.put("/:pid", async (req, res) => {
   }
 });
 
-router.delete("/:pid", async (req, res) => {
+router.delete("/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const productId = req.params.pid;
     const result = await productsModel.findByIdAndDelete(productId);

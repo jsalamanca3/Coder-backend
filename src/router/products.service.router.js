@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { productsManager } from "../persistencia/dao/managers/productsManager.js";
+import autorizeMiddleware from '../middlewares/authorize.middleware.js';
 const router = Router();
 
 router.get('/', async (req, res) => {
@@ -21,7 +22,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', autorizeMiddleware, async (req, res) => {
   const { title, price, stock } = req.body
   if (!title || !price) {
     return res.status(400).json({ message: 'Los campos de Nombre y Precio son requeridos' });
@@ -38,7 +39,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', autorizeMiddleware, async (req, res) => {
   const { id } = req.params;
   const updatedProductData = req.body;
   try {
@@ -49,7 +50,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', autorizeMiddleware, async (req, res) => {
   const { id } = req.params;
   try {
     const deletedProduct = await productsManager.deleteProduct(id);

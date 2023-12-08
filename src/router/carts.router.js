@@ -2,7 +2,7 @@ import { Router } from "express";
 import { v4 as uuidv4 } from 'uuid';
 import { cartsModel } from '../persistencia/dao/models/carts.model.js';
 import { productsModel } from '../persistencia/dao/models/products.model.js';
-
+import autorizeMiddleware from '../middlewares/authorize.middleware.js'
 const router = Router();
 
 router.post("/", async (req, res) => {
@@ -39,7 +39,7 @@ function generateCartId() {
   return uuidv4();
 }
 
-router.post("/:cid/product/:pid", async (req, res) => {
+router.post("/:cid/product/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const cid = req.params.cid;
     const pid = req.params.pid;
@@ -186,7 +186,7 @@ router.delete("/:cid", async (req, res) => {
   }
 });
 
-router.post('/carts/:cid', async (req, res) => {
+router.post('/carts/:cid', autorizeMiddleware, async (req, res) => {
   try {
     const cartId = req.params.cid;
     const productId = req.body.productId;

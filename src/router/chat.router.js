@@ -1,5 +1,6 @@
 import { Router } from "express";
-import { messageModel } from "../persistencia/dao/models/messages.models.js"
+import { messageModel } from "../persistencia/dao/models/messages.models.js";
+import autorizeMiddleware from '../middlewares/authorize.middleware.js';
 const router = Router();
 
 router.get('/getMessages', async (req, res) => {
@@ -17,7 +18,7 @@ router.get('/chat', (req, res) => {
   res.render('chat', { userEmail });
 });
 
-router.post('/saveMessage', (req, res) => {
+router.post('/saveMessage', autorizeMiddleware, (req, res) => {
   const userEmail = req.body.email;
   const message = req.body.message;
 
