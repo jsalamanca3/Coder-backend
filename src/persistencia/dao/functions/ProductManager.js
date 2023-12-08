@@ -4,8 +4,9 @@ import ProductRepository from "../Repository/productRepository.js";
 export class ProductManager extends BasicManager {
   constructor() {
     super(productsModel);
+    this.initialize();
   }
   initialize (){
-    const productRepository = new ProductRepository();
+    this.productRepository = new ProductRepository();
   }
 }

@@ -64,7 +64,7 @@ router.get("api/realTimeProducts", async (req, res) => {
 router.post("api/realTimeProducts/addProduct", async (req, res) => {
   try {
     const product = req.body;
-    const newProduct = await productManager.addProduct(product);
+    const newProduct = await productManager.productRepository.addProduct(product);
     socketServer.emit('addProduct', newProduct);
     res.status(201).json(newProduct);
   } catch (error) {
@@ -76,7 +76,7 @@ router.post("api/realTimeProducts/addProduct", async (req, res) => {
 router.post("api/realTimeProducts/deleteProduct", async (req, res) => {
   try {
     const productId = req.body.id;
-    await productManager.deleteProduct(productId);
+    await productManager.productRepository.deleteProduct(productId);
     socketServer.emit('productDeleted', productId);
     res.status(204).end();
   } catch (error) {
@@ -107,7 +107,7 @@ router.get("/home/:idUser", async (req, res) => {
 router.get('/api/products', async (req, res) => {
   try {
     const userId = req.user ? req.user.id : 'guest';
-    const cart = await cartManager.getCart(userId);
+    const cart = await cartManager.cartRepository.getCart(userId);
 
     if (!cart) {
       await cartManager.createCart(userId);
