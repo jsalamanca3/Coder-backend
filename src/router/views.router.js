@@ -41,7 +41,7 @@ router.get("/admin", checkUserRole('admin'), (req, res) => {
 
 router.get("/api", async (req, res) => {
   try {
-    const carts = await cartManager.createCart();
+    const carts = await cartManager.cartRepository.createCart();
     const products = await productManager.findAll();
     const cardId = carts.id
     res.render('home', { products, cardId });
@@ -96,7 +96,7 @@ router.get("/home/:idUser", async (req, res) => {
   let products = await productsManager.findAll();
   const userCart = await cartsModel.findOne({ userId: idUser });
   let carts = '';
-  !userCart ? carts = await cartManager.createCart(idUser) : carts = userCart;
+  !userCart ? carts = await cartManager.cartRepository.createCart(idUser) : carts = userCart;
   const cardId = carts.id
   products.map((item) => {
     item.cartId = cardId

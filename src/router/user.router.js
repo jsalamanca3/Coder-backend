@@ -26,7 +26,9 @@ router.get("/logout", (req, res) => {
   });
 });
 
-router.get('/:idUser', async (req, res) => {
+router.get('/:idUser',
+  passport.authenticate('jwt', {session: false }),
+  async (req, res) => {
   const { idUser } = req.params
   try {
     const user = await usersManager.findById(idUser)

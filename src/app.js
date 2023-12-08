@@ -35,7 +35,7 @@ app.set("views", __dirname + "/views");
 const MONGODB_URI = config.mongo_uri;
 app.use(
   session({
-    secret: "CLAVESECRETA",
+    secret: config.session_secret,
     cookie: {
       maxAge: 60 * 60 * 1000,
     },
