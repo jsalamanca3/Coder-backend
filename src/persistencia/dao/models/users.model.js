@@ -34,8 +34,8 @@ const userSchema = new Schema({
         default: false,
     },
    cart: {
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: "carts",
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Cart",
     }
 });
 

@@ -1,10 +1,45 @@
 import { Router } from "express";
 import { v4 as uuidv4 } from 'uuid';
 import { cartsModel } from '../persistencia/dao/models/carts.model.js';
+import { usersModel } from '../persistencia/dao/models/users.model.js'
 import { productsModel } from '../persistencia/dao/models/products.model.js';
 import autorizeMiddleware from '../middlewares/authorize.middleware.js';
 import { ticketModel } from "../persistencia/dao/models/ticket.model.js";
+import nodemailer from "nodemailer";
+import config from "../config/config.js";
 const router = Router();
+
+const MAIL_USER = config.mail_user;
+const MAIL_PASSWORD = config.mail_password;
+
+router.get("/active", async (req, res) => {
+  try {
+    if (!req.user) {
+      console.log("Usuario no autenticado");
+      return res.status(401).json({ error: "Usuario no autenticado" });
+    }
+
+    const userId = req.user._id;
+    console.log("ID de usuario:", userId);
+
+    const user = await usersModel.findOne({ _id: userId });
+    if (user && user.cart) {
+      const cart = await cartsModel.findById(user.cart);
+      console.log("Resultado de la búsqueda de carrito:", cart);
+
+      if (cart) {
+        res.json({ cart });
+      } else {
+        res.status(404).json({ error: "Carrito activo no encontrado" });
+      }
+    } else {
+      res.status(404).json({ error: "Usuario no encontrado o carrito no asociado" });
+    }
+  } catch (error) {
+    console.error("Error al obtener el carrito activo:", error);
+    res.status(500).json({ error: "Error al obtener el carrito activo" });
+  }
+});
 
 router.post("/", async (req, res) => {
   try {
@@ -204,89 +239,139 @@ router.post('/carts/:cid', autorizeMiddleware, async (req, res) => {
 });
 
 /* agregar ticket */
+// router.post('/:cid/purchase', async (req, res) => {
+//   try {
+//     const cartId = req.params.cid;
+//     const cart = await cartsModel
+//       .findOne({ _id: cartId })
+//       .populate('products.product');
+
+//       console.log('carrito', cart, cartId);
+
+//     if (!cart) {
+//       return res.status(404).json({ error: 'Carrito no encontrado' });
+//     }
+
+//     console.log('soy el carrito:', cart);
+
+//     const user = cart.user;
+
+//     console.log('soy el usuario:', cart.user);
+
+//     if (!user || !user.email) {
+//       console.log('Invalid user or email:', user);
+//       return res.status(400).json({ error: 'El usuario asociado al carrito no tiene un correo válido' });
+//     }
+//     console.log('soy el correo:', user);
+//     const userEmail = user.email;
+
+//     const productsToPurchase = cart.products;
+//     const failedProducts = [];
+
+//     const totalAmount = calculateTotalAmount(productsToPurchase);
+
+//     if (isNaN(totalAmount)) {
+//       return res.status(400).json({ error: 'El monto total no es válido' });
+//     }
+
+//     for (const cartProduct of productsToPurchase) {
+//       const product = cartProduct.product;
+
+//       if (!product || typeof product.stock !== 'number') {
+//         console.log('Invalid product:', product);
+//         continue;
+//       }
+
+//       const quantityToPurchase = cartProduct.quantity;
+
+//       if (product.stock >= quantityToPurchase) {
+//         product.stock -= quantityToPurchase;
+//         await product.save();
+//       } else {
+//         failedProducts.push(product._id);
+//       }
+//     }
+
+//     const ticket = new ticketModel({
+//       code: generateTicketCode(),
+//       purchase_datetime: new Date(),
+//       amount: totalAmount,
+//       purchaser: user.email || userEmail,
+//       products: productsToPurchase,
+//     });
+
+//     await ticket.save();
+
+//     const transporter = nodemailer.createTransport({
+//       service: 'gmail',
+//       auth: {
+//         user: MAIL_USER,
+//         pass: MAIL_PASSWORD,
+//       },
+//     });
+
+//     const mailOptions = {
+//       from: MAIL_USER,
+//       to: userEmail,
+//       subject: 'Detalle de compra',
+//       text: `¡Gracias por tu compra!\n\nDetalles de la compra:\n\n${JSON.stringify(ticket, null, 2)}`,
+//     };
+
+//     transporter.sendMail(mailOptions, (error, info) => {
+//       if (error) {
+//         console.error('Error al enviar el correo electrónico:', error);
+//         return res.status(500).json({ error: 'Error al enviar el correo electrónico' });
+//       }
+//       console.log('Correo electrónico enviado:', info.response);
+
+//       res.status(200).json({ message: 'Compra completada con éxito' });
+//     });
+
+//   } catch (error) {
+//     console.error('Error al procesar la compra:', error);
+//     res.status(500).json({ error: 'Error interno del servidor' });
+//   }
+// });
+
 router.post('/:cid/purchase', async (req, res) => {
   try {
-    const cid = req.params.cid;
-    const cart = await cartsModel.findOne({ _id: cid }).populate('products.product');
+
+    const cartId = req.params.cid;
+
+    console.log('Valor de cartId al inicio:', cartId);
+
+    const cart = await cartsModel
+      .findOne({ _id: cartId })
+      .populate('user')
+      .populate('products.product');
+
+    console.log('carrito', cart, cartId);
 
     if (!cart) {
       return res.status(404).json({ error: 'Carrito no encontrado' });
     }
 
-    const productsToPurchase = cart.products;
-    const totalAmount = calculateTotalAmount(productsToPurchase);
+    console.log('soy el carrito:', cart);
 
-    if (isNaN(totalAmount)) {
-      return res.status(400).json({ error: 'El monto total no es válido' });
-    }
+    const userId = cart.userId;
+    const user = await usersModel.findOne({ _id: userId });
 
-    const failedProducts = productsToPurchase.filter(cartProduct => {
-      const product = cartProduct.product;
-
-      if (!product || typeof product.stock !== 'number') {
-        console.log('Invalid product:', product);
-        return true;
-      }
-
-      const quantityToPurchase = cartProduct.quantity;
-      if (product.stock < quantityToPurchase) {
-        return true;
-      }
-
-      product.stock -= quantityToPurchase;
-      return false;
-    });
-
-    await Promise.all(productsToPurchase.map(cartProduct => cartProduct.product.save()));
-
-    const user = cart.user;
+    console.log('soy el usuario:', cart.userId);
+    console.log('soy el usuario 1:', user);
 
     if (!user || !user.email) {
+      console.log('Invalid user or email:', user);
       return res.status(400).json({ error: 'El usuario asociado al carrito no tiene un correo válido' });
     }
 
+    console.log('soy el correo:', user);
     const userEmail = user.email;
-
-    console.log('Total Amount:', totalAmount);
-
-    const ticket = new ticketModel({
-      code: generateTicketCode(),
-      purchase_datetime: new Date(),
-      amount: totalAmount,
-      purchaser: user.email || userEmail,
-      products: productsToPurchase,
-    });
-
-    await ticket.save();
-
-    cart.products = failedProducts;
-
-    await cart.save();
-
-    if (failedProducts.length > 0) {
-      return res.json({ failedProducts });
-    }
-
-    res.json({ message: 'Compra realizada exitosamente', ticket });
-  } catch (error) {
-    console.error('Error al procesar la compra:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
-  }
-});
-
-/* router.post('/:cid/purchase', async (req, res) => {
-  try {
-    const cid = req.params.cid;
-    const cart = await cartsModel.findOne({ _id: cid }).populate('products.product');
-    console.log('Cart:', cart);
-    if (!cart) {
-      return res.status(404).json({ error: 'Carrito no encontrado' });
-    }
 
     const productsToPurchase = cart.products;
     const failedProducts = [];
 
     const totalAmount = calculateTotalAmount(productsToPurchase);
+
     if (isNaN(totalAmount)) {
       return res.status(400).json({ error: 'El monto total no es válido' });
     }
@@ -307,17 +392,7 @@ router.post('/:cid/purchase', async (req, res) => {
       } else {
         failedProducts.push(product._id);
       }
-    };
-
-    const user = cart.user;
-
-    if (!user || !user.email) {
-      return res.status(400).json({ error: 'El usuario asociado al carrito no tiene un correo válido' });
-    };
-
-    const userEmail = user.email;
-
-    console.log('Total Amount:', totalAmount);
+    }
 
     const ticket = new ticketModel({
       code: generateTicketCode(),
@@ -329,20 +404,38 @@ router.post('/:cid/purchase', async (req, res) => {
 
     await ticket.save();
 
-    cart.products = cart.products.filter(cartProduct => failedProducts.includes(cartProduct.product._id));
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: MAIL_USER,
+        pass: MAIL_PASSWORD,
+      },
+    });
 
-    await cart.save();
+    const mailOptions = {
+      from: MAIL_USER,
+      to: userEmail,
+      subject: 'Detalle de compra',
+      text: `¡Gracias por tu compra!\n\nDetalles de la compra:\n\n${JSON.stringify(ticket, null, 2)}`,
+    };
 
-    if (failedProducts.length > 0) {
-      return res.json({ failedProducts });
-    }
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error('Error al enviar el correo electrónico:', error);
+        return res.status(500).json({ error: 'Error al enviar el correo electrónico' });
+      }
+      console.log('Correo electrónico enviado:', info.response);
 
-    res.json({ message: 'Compra realizada exitosamente', ticket });
+      res.status(200).json({ message: 'Compra completada con éxito' });
+    });
+
   } catch (error) {
     console.error('Error al procesar la compra:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
-}); */
+});
+
+
 
 
 function generateTicketCode() {
@@ -355,7 +448,8 @@ function calculateTotalAmount(products) {
   let totalAmount = 0;
 
   for (const product of products) {
-    const { price, quantity } = product;
+    const { quantity } = product;
+    const price = product.product.price;
 
     if (typeof price !== 'number' || typeof quantity !== 'number') {
       console.error('Error: price o quantity no son números', product);
@@ -374,7 +468,5 @@ function calculateTotalAmount(products) {
 
   return parseFloat(totalAmount);
 }
-
-
 
 export default router;

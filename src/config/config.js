@@ -10,4 +10,6 @@ export default {
     google_client_secret: process.env.GOOGLE_CLIENT_SECRET,
     session_secret: process.env.SESSION_SECRET,
     jwt_secret: process.env.JWT_SECRET,
+    mail_user: process.env.MAIL_USER,
+    mail_password: process.env.MAIL_PASSWORD
 };

@@ -1,5 +1,9 @@
 <h2>Hola! {{first_name}} {{last_name}} </h2>
 <button onclick="location.href='/api/users/logout'">Logout</button>
+<div>
+	<button id="purchaseButton">Realizar Compra</button>
+</div>
+
 <h3>Lista de Productos:</h3>
 <ul>
 	{{#each products}}
@@ -16,3 +20,5 @@
 	</li>
 	{{/each}}
 </ul>
+
+<script src="/js/purchase.js"></script>
