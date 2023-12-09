@@ -11,6 +11,10 @@ const cartsSchema = new mongoose.Schema({
       _id: false,
     },
   ],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  },
   userId: String,
 });
 

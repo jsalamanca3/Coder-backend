@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { cartsModel } from '../persistencia/dao/models/carts.model.js';
 import { productsModel } from '../persistencia/dao/models/products.model.js';
 import autorizeMiddleware from '../middlewares/authorize.middleware.js';
-import { ticketsModel } from "../persistencia/dao/models/ticket.model.js";
+import { ticketModel } from "../persistencia/dao/models/ticket.model.js";
 const router = Router();
 
 router.post("/", async (req, res) => {
@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
     const newCart = new cartsModel();
     newCart.id = generateCartId();
     newCart.products = [];
+    newCart.user = req.user;
     await newCart.save();
     res.status(201).json(newCart);
   } catch (error) {
@@ -207,6 +208,77 @@ router.post('/:cid/purchase', async (req, res) => {
   try {
     const cid = req.params.cid;
     const cart = await cartsModel.findOne({ _id: cid }).populate('products.product');
+
+    if (!cart) {
+      return res.status(404).json({ error: 'Carrito no encontrado' });
+    }
+
+    const productsToPurchase = cart.products;
+    const totalAmount = calculateTotalAmount(productsToPurchase);
+
+    if (isNaN(totalAmount)) {
+      return res.status(400).json({ error: 'El monto total no es válido' });
+    }
+
+    const failedProducts = productsToPurchase.filter(cartProduct => {
+      const product = cartProduct.product;
+
+      if (!product || typeof product.stock !== 'number') {
+        console.log('Invalid product:', product);
+        return true;
+      }
+
+      const quantityToPurchase = cartProduct.quantity;
+      if (product.stock < quantityToPurchase) {
+        return true;
+      }
+
+      product.stock -= quantityToPurchase;
+      return false;
+    });
+
+    await Promise.all(productsToPurchase.map(cartProduct => cartProduct.product.save()));
+
+    const user = cart.user;
+
+    if (!user || !user.email) {
+      return res.status(400).json({ error: 'El usuario asociado al carrito no tiene un correo válido' });
+    }
+
+    const userEmail = user.email;
+
+    console.log('Total Amount:', totalAmount);
+
+    const ticket = new ticketModel({
+      code: generateTicketCode(),
+      purchase_datetime: new Date(),
+      amount: totalAmount,
+      purchaser: user.email || userEmail,
+      products: productsToPurchase,
+    });
+
+    await ticket.save();
+
+    cart.products = failedProducts;
+
+    await cart.save();
+
+    if (failedProducts.length > 0) {
+      return res.json({ failedProducts });
+    }
+
+    res.json({ message: 'Compra realizada exitosamente', ticket });
+  } catch (error) {
+    console.error('Error al procesar la compra:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+});
+
+/* router.post('/:cid/purchase', async (req, res) => {
+  try {
+    const cid = req.params.cid;
+    const cart = await cartsModel.findOne({ _id: cid }).populate('products.product');
+    console.log('Cart:', cart);
     if (!cart) {
       return res.status(404).json({ error: 'Carrito no encontrado' });
     }
@@ -214,8 +286,19 @@ router.post('/:cid/purchase', async (req, res) => {
     const productsToPurchase = cart.products;
     const failedProducts = [];
 
+    const totalAmount = calculateTotalAmount(productsToPurchase);
+    if (isNaN(totalAmount)) {
+      return res.status(400).json({ error: 'El monto total no es válido' });
+    }
+
     for (const cartProduct of productsToPurchase) {
       const product = cartProduct.product;
+
+      if (!product || typeof product.stock !== 'number') {
+        console.log('Invalid product:', product);
+        continue;
+      }
+
       const quantityToPurchase = cartProduct.quantity;
 
       if (product.stock >= quantityToPurchase) {
@@ -224,14 +307,23 @@ router.post('/:cid/purchase', async (req, res) => {
       } else {
         failedProducts.push(product._id);
       }
-    }
+    };
+
     const user = cart.user;
 
-    const ticket = new ticketsModel({
+    if (!user || !user.email) {
+      return res.status(400).json({ error: 'El usuario asociado al carrito no tiene un correo válido' });
+    };
+
+    const userEmail = user.email;
+
+    console.log('Total Amount:', totalAmount);
+
+    const ticket = new ticketModel({
       code: generateTicketCode(),
       purchase_datetime: new Date(),
-      amount: calculateTotalAmount(productsToPurchase),
-      purchaser: user.email,
+      amount: totalAmount,
+      purchaser: user.email || userEmail,
       products: productsToPurchase,
     });
 
@@ -250,7 +342,8 @@ router.post('/:cid/purchase', async (req, res) => {
     console.error('Error al procesar la compra:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
   }
-});
+}); */
+
 
 function generateTicketCode() {
   const randomString = Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -259,10 +352,27 @@ function generateTicketCode() {
 }
 
 function calculateTotalAmount(products) {
-  return products.reduce((total, product) => {
+  let totalAmount = 0;
+
+  for (const product of products) {
     const { price, quantity } = product;
-    return total + (price * quantity);
-  }, 0);
+
+    if (typeof price !== 'number' || typeof quantity !== 'number') {
+      console.error('Error: price o quantity no son números', product);
+      continue;
+    }
+
+    console.log(`Price: ${price}, Quantity: ${quantity}, Subtotal: ${price * quantity}`);
+
+    totalAmount += price * quantity;
+  }
+
+  if (isNaN(totalAmount)) {
+    console.error('Error: El monto total no es un número válido');
+    return 0;
+  }
+
+  return parseFloat(totalAmount);
 }
 
 
