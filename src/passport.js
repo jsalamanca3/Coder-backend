@@ -166,7 +166,7 @@ passport.use("google", new GoogleStrategy({
 
       return done(null, createdUser);
     } catch (error) {
-      console.error('Error al procesar la autenticación de GitHub:', error);
+      console.error('Error al procesar la autenticación de Google:', error);
       done(error);
     }
   }));

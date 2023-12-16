@@ -12,9 +12,9 @@ class CartRepository extends RepositoryInterface {
     async createCart(userId) {
         try {
           const newCart = new cartsModel();
-          newCart.id = this.cartId || generateCartId();
+          newCart.id = generateCartId();
           newCart.products = [];
-          newCart.userId = userId || '';
+          newCart.user = userId;
           await newCart.save();
           return newCart;
         } catch (error) {
