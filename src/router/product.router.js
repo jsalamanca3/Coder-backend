@@ -3,6 +3,7 @@ import { productsModel } from "../persistencia/dao/models/products.model.js";
 import Joi from 'joi';
 import { v4 as uuidv4 } from 'uuid';
 import autorizeMiddleware from '../middlewares/authorize.middleware.js'
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 const router = Router();
 
 router.get("/", async (req, res) => {
@@ -13,7 +14,7 @@ router.get("/", async (req, res) => {
     const query = req.query.query;
 
     if (limit <= 0 || page <= 0) {
-      return res.status(400).json({ status: "error", error: "Los parámetros 'limit' y 'page' deben ser números positivos" });
+      return res.status(401).json({ error: errorDictionary['INVALID_DATA_FORMAT'] });
     }
 
     let filterCriteria = {};
@@ -70,7 +71,7 @@ router.get("/", async (req, res) => {
       nextLink,
     });
   } catch (error) {
-    res.status(500).json({ error: "Error al obtener los productos", message: error.message });
+    return res.status(401).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
   }
 });
 
@@ -83,10 +84,10 @@ router.get("/:pid", async (req, res) => {
     if (product) {
       res.json(product);
     } else {
-      res.status(404).json({ error: "Producto no encontrado" });
+      return res.status(401).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
     }
   } catch (error) {
-    res.status(500).json({ error: "Error al obtener el producto" });
+    return res.status(401).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
   }
 });
 
@@ -124,7 +125,7 @@ router.post("/", autorizeMiddleware, async (req, res) => {
 
     res.status(201).json(newProduct);
   } catch (error) {
-    res.status(500).json({ error: "Error al agregar el producto" });
+    return res.status(401).json({ error: errorDictionary['PRODUCT_CREATION_ERROR'] });
   }
 });
 
@@ -138,10 +139,10 @@ router.put("/:pid", autorizeMiddleware, async (req, res) => {
     if (updatedProduct) {
       res.json(updatedProduct);
     } else {
-      res.status(404).json({ error: "Producto no encontrado" });
+      return res.status(401).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
     }
   } catch (error) {
-    res.status(500).json({ error: "Error al actualizar el producto" });
+    return res.status(401).json({ error: errorDictionary['ERROR_TO_UPDATE_PRODUCT'] });
   }
 });
 
@@ -153,10 +154,10 @@ router.delete("/:pid", autorizeMiddleware, async (req, res) => {
     if (result) {
       res.json({ message: "Producto eliminado exitosamente" });
     } else {
-      res.status(404).json({ error: "Producto no encontrado" });
+      return res.status(401).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
     }
   } catch (error) {
-    res.status(500).json({ error: "Error al eliminar el producto" });
+    return res.status(401).json({ error: errorDictionary['ERROR_DELETE_PRODUCT'] });
   }
 });
 

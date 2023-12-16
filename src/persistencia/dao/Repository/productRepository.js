@@ -1,7 +1,7 @@
 import { productsModel } from '../models/products.model.js';
 import RepositoryInterface from './repositoryInterface.js';
 import { v4 as uuidv4 } from 'uuid';
-
+import { errorDictionary } from '../../../error/error.enum.js';
 class ProductRepository extends RepositoryInterface {
       async addProduct(product) {
         const newProduct = new productsModel({
@@ -12,7 +12,7 @@ class ProductRepository extends RepositoryInterface {
           await newProduct.save();
           return newProduct;
         } catch (error) {
-          throw new Error(`Error al agregar el producto: ${error.message}`);
+          throw new Error({error: errorDictionary['PRODUCT_NOT_FOUND'] `${error.message}`});
         }
       }
       async getProducts(filters = {}, sort = {}) {
@@ -20,13 +20,13 @@ class ProductRepository extends RepositoryInterface {
           const products = await productsModel.paginate(filters).sort(sort).exec();
           return products;
         } catch (error) {
-          throw new Error(`Error al obtener productos: ${error.message}`);
+          throw new Error({error: errorDictionary['PRODUCT_NOT_FOUND'] `${error.message}`});
         }
       }
       async getProductById(id) {
         const product = await productsModel.findOne({ id }).exec();
         if (!product) {
-          throw new Error("Producto no encontrado");
+          throw new Error({error: errorDictionary['PRODUCT_NOT_FOUNT']});
         }
         return product;
       }

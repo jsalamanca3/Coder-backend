@@ -7,6 +7,7 @@ import autorizeMiddleware from '../middlewares/authorize.middleware.js';
 import { ticketModel } from "../persistencia/dao/models/ticket.model.js";
 import nodemailer from "nodemailer";
 import config from "../config/config.js";
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 const router = Router();
 
 const MAIL_USER = config.mail_user;
@@ -16,7 +17,7 @@ router.get("/active", async (req, res) => {
   try {
     if (!req.user) {
       console.log("Usuario no autenticado");
-      return res.status(401).json({ error: "Usuario no autenticado" });
+      return res.status(401).json({ error: errorDictionary['USER_NOT_FOUND'] });
     }
 
     const userId = req.user._id;
@@ -30,14 +31,14 @@ router.get("/active", async (req, res) => {
       if (cart) {
         res.json({ cart });
       } else {
-        res.status(404).json({ error: "Carrito activo no encontrado" });
+        res.status(404).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
       }
     } else {
-      res.status(404).json({ error: "Usuario no encontrado o carrito no asociado" });
+      res.status(404).json({ error: errorDictionary['USER_NOT_FOUND'] });
     }
   } catch (error) {
     console.error("Error al obtener el carrito activo:", error);
-    res.status(500).json({ error: "Error al obtener el carrito activo" });
+    res.status(500).json({ error: errorDictionary['UNEXPECTED_ERROR'] });
   }
 });
 
@@ -50,7 +51,7 @@ router.post("/", async (req, res) => {
     await newCart.save();
     res.status(201).json(newCart);
   } catch (error) {
-    res.status(500).json({ error: "Error al crear el carrito" });
+    res.status(500).json({ error: errorDictionary['CART_CREATION_ERROR'] });
   }
 });
 
@@ -65,10 +66,10 @@ router.get("/:cid", async (req, res) => {
     if (cart) {
       res.json(cart);
     } else {
-      res.status(404).json({ error: "Carrito no encontrado" });
+      res.status(500).json({ error: errorDictionary['CART_NOT_FOUND'] });
     }
   } catch (error) {
-    res.status(500).json({ error: "Error al obtener el carrito" });
+    res.status(500).json({ error: errorDictionary['CART_OPERATION_ERROR'] });
   }
 });
 
@@ -83,12 +84,12 @@ router.post("/:cid/product/:pid", autorizeMiddleware, async (req, res) => {
     const quantity = req.body.quantity || 1;
     const product = await productsModel.findById(pid);
     if (!product) {
-      return res.status(404).json({ error: "Producto no encontrado" });
+      return res.status(404).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
     }
 
     const cart = await cartsModel.findOne({ id: cid });
     if (!cart) {
-      return res.status(404).json({ error: "Carrito no encontrado" });
+      return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
     }
     const productInCart = cart.products.find((item) => item.product.equals(product._id));
 
@@ -189,22 +190,22 @@ router.put("/:cid/products/:pid", async (req, res) => {
     const quantity = req.body.quantity;
 
     if (!quantity || typeof quantity !== 'number') {
-      return res.status(400).json({ error: "Cantidad inválida" });
+      return res.status(404).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
     }
     const cart = await cartsModel.findOne({ _id: cid });
     if (!cart) {
-      return res.status(404).json({ error: "Carrito no encontrado" });
+      return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
     }
     const productInCart = cart.products.find(item => item.product.equals(pid));
     if (!productInCart) {
-      return res.status(404).json({ error: "Producto no encontrado en el carrito" });
+      res.status(500).json({ error: errorDictionary['ADD_TO_CART_ERROR'] });
     }
     productInCart.quantity = quantity;
 
     await cart.save();
     res.json(cart);
   } catch (error) {
-    res.status(500).json({ error: "Error al actualizar la cantidad del producto en el carrito" });
+    res.status(500).json({ error: errorDictionary['ADD_TO_CART_ERROR'] });
   }
 });
 
@@ -214,12 +215,12 @@ router.delete("/:cid", async (req, res) => {
     const cart = await cartsModel.findOneAndRemove({ _id: cid });
 
     if (!cart) {
-      return res.status(404).json({ error: "Carrito no encontrado" });
+      return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
     }
     console.log('Carrito eliminado:', cart);
     res.json(cart);
   } catch (error) {
-    res.status(500).json({ error: "Error al eliminar los productos del carrito" });
+    return res.status(404).json({ error: errorDictionary['CART_DELETE_PRODUCT'] });
   }
 });
 
@@ -234,105 +235,11 @@ router.post('/carts/:cid', autorizeMiddleware, async (req, res) => {
     res.json({ message: 'Producto agregado al carrito' });
   } catch (error) {
     console.error('Error al agregar producto al carrito:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    return res.status(404).json({ error: errorDictionary['UNEXPECTED_ERROR'] });
   }
 });
 
 /* agregar ticket */
-// router.post('/:cid/purchase', async (req, res) => {
-//   try {
-//     const cartId = req.params.cid;
-//     const cart = await cartsModel
-//       .findOne({ _id: cartId })
-//       .populate('products.product');
-
-//       console.log('carrito', cart, cartId);
-
-//     if (!cart) {
-//       return res.status(404).json({ error: 'Carrito no encontrado' });
-//     }
-
-//     console.log('soy el carrito:', cart);
-
-//     const user = cart.user;
-
-//     console.log('soy el usuario:', cart.user);
-
-//     if (!user || !user.email) {
-//       console.log('Invalid user or email:', user);
-//       return res.status(400).json({ error: 'El usuario asociado al carrito no tiene un correo válido' });
-//     }
-//     console.log('soy el correo:', user);
-//     const userEmail = user.email;
-
-//     const productsToPurchase = cart.products;
-//     const failedProducts = [];
-
-//     const totalAmount = calculateTotalAmount(productsToPurchase);
-
-//     if (isNaN(totalAmount)) {
-//       return res.status(400).json({ error: 'El monto total no es válido' });
-//     }
-
-//     for (const cartProduct of productsToPurchase) {
-//       const product = cartProduct.product;
-
-//       if (!product || typeof product.stock !== 'number') {
-//         console.log('Invalid product:', product);
-//         continue;
-//       }
-
-//       const quantityToPurchase = cartProduct.quantity;
-
-//       if (product.stock >= quantityToPurchase) {
-//         product.stock -= quantityToPurchase;
-//         await product.save();
-//       } else {
-//         failedProducts.push(product._id);
-//       }
-//     }
-
-//     const ticket = new ticketModel({
-//       code: generateTicketCode(),
-//       purchase_datetime: new Date(),
-//       amount: totalAmount,
-//       purchaser: user.email || userEmail,
-//       products: productsToPurchase,
-//     });
-
-//     await ticket.save();
-
-//     const transporter = nodemailer.createTransport({
-//       service: 'gmail',
-//       auth: {
-//         user: MAIL_USER,
-//         pass: MAIL_PASSWORD,
-//       },
-//     });
-
-//     const mailOptions = {
-//       from: MAIL_USER,
-//       to: userEmail,
-//       subject: 'Detalle de compra',
-//       text: `¡Gracias por tu compra!\n\nDetalles de la compra:\n\n${JSON.stringify(ticket, null, 2)}`,
-//     };
-
-//     transporter.sendMail(mailOptions, (error, info) => {
-//       if (error) {
-//         console.error('Error al enviar el correo electrónico:', error);
-//         return res.status(500).json({ error: 'Error al enviar el correo electrónico' });
-//       }
-//       console.log('Correo electrónico enviado:', info.response);
-
-//       res.status(200).json({ message: 'Compra completada con éxito' });
-//     });
-
-//   } catch (error) {
-//     console.error('Error al procesar la compra:', error);
-//     res.status(500).json({ error: 'Error interno del servidor' });
-//   }
-// });
-
 router.post('/:cid/purchase', async (req, res) => {
   try {
 
@@ -348,7 +255,7 @@ router.post('/:cid/purchase', async (req, res) => {
     console.log('carrito', cart, cartId);
 
     if (!cart) {
-      return res.status(404).json({ error: 'Carrito no encontrado' });
+      return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
     }
 
     console.log('soy el carrito:', cart);
@@ -361,7 +268,7 @@ router.post('/:cid/purchase', async (req, res) => {
 
     if (!user || !user.email) {
       console.log('Invalid user or email:', user);
-      return res.status(400).json({ error: 'El usuario asociado al carrito no tiene un correo válido' });
+      return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
     }
 
     console.log('soy el correo:', user);
@@ -373,7 +280,7 @@ router.post('/:cid/purchase', async (req, res) => {
     const totalAmount = calculateTotalAmount(productsToPurchase);
 
     if (isNaN(totalAmount)) {
-      return res.status(400).json({ error: 'El monto total no es válido' });
+      return res.status(404).json({ error: errorDictionary['INVALID_PRODUCT_DATA'] });
     }
 
     for (const cartProduct of productsToPurchase) {
@@ -422,7 +329,7 @@ router.post('/:cid/purchase', async (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.error('Error al enviar el correo electrónico:', error);
-        return res.status(500).json({ error: 'Error al enviar el correo electrónico' });
+        return res.status(404).json({ error: errorDictionary['FAILE_TO_EMAIL'] });
       }
       console.log('Correo electrónico enviado:', info.response);
 
@@ -431,11 +338,9 @@ router.post('/:cid/purchase', async (req, res) => {
 
   } catch (error) {
     console.error('Error al procesar la compra:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    return res.status(404).json({ error: errorDictionary['UNEXPECTED_ERROR'] });
   }
 });
-
-
 
 
 function generateTicketCode() {

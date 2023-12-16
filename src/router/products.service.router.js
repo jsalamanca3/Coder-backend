@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { productsManager } from "../persistencia/dao/managers/productsManager.js";
 import autorizeMiddleware from '../middlewares/authorize.middleware.js';
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 const router = Router();
 
 router.get('/', async (req, res) => {

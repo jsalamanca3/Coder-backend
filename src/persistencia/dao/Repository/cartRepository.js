@@ -3,6 +3,7 @@ import RepositoryInterface from './repositoryInterface.js';
 import { productsModel } from '../models/products.model.js';
 import { socketServer } from '../../../app.js';
 import { v4 as uuidv4 } from "uuid";
+import { errorDictionary } from '../../../error/error.enum.js';
 
 function generateCartId() {
     return uuidv4();
@@ -18,7 +19,7 @@ class CartRepository extends RepositoryInterface {
           await newCart.save();
           return newCart;
         } catch (error) {
-          throw error;
+          throw new Error({error: errorDictionary['CART_CREATION_ERROR']});
         }
       }
 
@@ -28,7 +29,7 @@ class CartRepository extends RepositoryInterface {
         .findOne({ id: cartId })
         return cart;
       } catch (error) {
-        throw error;
+        throw new Error({error: errorDictionary['CART_NOT_FOUND']});
       }
       }
 
@@ -36,11 +37,11 @@ class CartRepository extends RepositoryInterface {
     try {
         const cart = await cartsModel.findOne({ id: cartId });
         if (!cart) {
-          throw new Error("Carrito no encontrado");
+          throw new Error({error: errorDictionary['CART_NOT_FOUND']});
         }
         const product = await productsModel.findOne({ id: productId });
         if (!product) {
-          throw new Error("Producto no encontrado");
+          throw new Error({error: errorDictionary['PRODUCT_NOT_FOUND']});
         }
         const existingProduct = cart.products.find(
           (item) => item.product === productId
@@ -58,7 +59,7 @@ class CartRepository extends RepositoryInterface {
         });
         return cart;
       } catch (error) {
-        throw error;
+        throw new Error({error: errorDictionary['CART_OPERATION_ERROR']});
       }
     }
 
@@ -66,7 +67,7 @@ class CartRepository extends RepositoryInterface {
     try {
         const cart = await cartsModel.findOne({ id: cartId });
         if (!cart) {
-          throw new Error("Carrito no encontrado");
+          throw new Error({error: errorDictionary['CART_NOT_FOUND']});
         }
 
         const index = cart.products.findIndex(
@@ -78,7 +79,7 @@ class CartRepository extends RepositoryInterface {
         }
         return cart;
       } catch (error) {
-        throw error;
+        throw new Error({error: errorDictionary['CART_NOT_FOUND']});
       }
     }
 }

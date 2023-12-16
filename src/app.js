@@ -18,6 +18,7 @@ import cookieParser from "cookie-parser";
 import passport from 'passport';
 import './passport.js';
 import config from './config/config.js';
+import mockingProducts from './router/mockingproducts.js';
 
 const app = express();
 app.use(cookieParser());
@@ -58,6 +59,7 @@ app.use("/api/products", productRouter);
 app.use("/api/createproducts", productRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/chat", chatRouter);
+app.use("/api/mockingproducts", mockingProducts);
 
 const PORT = 8080;
 

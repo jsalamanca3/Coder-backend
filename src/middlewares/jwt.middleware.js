@@ -9,6 +9,6 @@ export const jwtValidation = (req, res, next) => {
     req.user = responseToken;
     next();
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(500).json({error: errorDictionary['AUTHENTICATION_ERROR']});
   }
 };

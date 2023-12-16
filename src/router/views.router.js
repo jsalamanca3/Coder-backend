@@ -6,6 +6,7 @@ import { socketServer } from '../app.js';
 import { CartManager } from "../persistencia/dao/functions/cartManager.js";
 import { cartsModel } from "../persistencia/dao/models/carts.model.js";
 import checkUserRole from '../persistencia/dao/managers/loginManager.js';
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 
 const router = Router();
 const productManager = new ProductManager();
@@ -47,7 +48,7 @@ router.get("/api", async (req, res) => {
     res.render('home', { products, cardId });
   } catch (error) {
     console.error("Error al obtener la lista de productos:", error);
-    res.status(500).send("Error interno del servidor");
+    res.status(500).send({error: errorDictionary['PRODUCT_NOT_FOUND']});
   }
 });
 
@@ -57,7 +58,7 @@ router.get("api/realTimeProducts", async (req, res) => {
     res.render('realTimeProducts', { products });
   } catch (error) {
     console.error("Error al obtener la lista de productos:", error);
-    res.status(500).send("Error interno del servidor");
+    res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
 
@@ -69,7 +70,7 @@ router.post("api/realTimeProducts/addProduct", async (req, res) => {
     res.status(201).json(newProduct);
   } catch (error) {
     console.error("Error al agregar un producto:", error);
-    res.status(500).send("Error interno del servidor");
+    res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
 
@@ -81,7 +82,7 @@ router.post("api/realTimeProducts/deleteProduct", async (req, res) => {
     res.status(204).end();
   } catch (error) {
     console.error("Error al eliminar un producto:", error);
-    res.status(500).send("Error interno del servidor");
+    res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
 
@@ -116,7 +117,7 @@ router.get('/api/products', async (req, res) => {
     res.render('home', { products, cart });
   } catch (error) {
     console.error("Error al cargar la vista de productos:", error);
-    res.status(500).send("Error interno del servidor");
+    res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
 
@@ -131,7 +132,7 @@ router.get('/carts/:cid', async (req, res) => {
     res.render('carrito', { cart });
   } catch (error) {
     console.error('Error al cargar la vista del carrito:', error);
-    res.status(500).json({ error: 'Error interno del servidor' });
+    res.status(500).json({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
 

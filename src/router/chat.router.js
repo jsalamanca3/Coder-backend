@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { messageModel } from "../persistencia/dao/models/messages.models.js";
 import autorizeMiddleware from '../middlewares/authorize.middleware.js';
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 const router = Router();
 
 router.get('/getMessages', async (req, res) => {
@@ -9,7 +10,7 @@ router.get('/getMessages', async (req, res) => {
     res.render("chat", { message });
   } catch (error) {
     console.error('Error al obtener mensajes:', error);
-    res.status(500).json({ error: 'Error al obtener mensajes' });
+    return res.status(401).json({ error: errorDictionary['MESSAGE_ERROR'] });
   }
 });
 
@@ -23,15 +24,15 @@ router.post('/saveMessage', autorizeMiddleware, (req, res) => {
   const message = req.body.message;
 
   if (!userEmail || !message) {
-    return res.status(400).json({ error: 'El correo electrónico o el mensaje están vacíos' });
+    return res.status(401).json({ error: errorDictionary['INVALID_DATA_FORMAT'] });
   }
 
   if (!validateEmail(userEmail)) {
-    return res.status(400).json({ error: 'Correo electrónico no válido' });
+    return res.status(401).json({ error: errorDictionary['INVALID_EMAIL'] });
   }
 
   if (message.length > 1000) {
-    return res.status(400).json({ error: 'El mensaje es demasiado largo' });
+    return res.status(401).json({ error: errorDictionary['MESSAGE_IS_VERY_LONG'] });
   }
 
   const cleanedMessage = sanitizeMessage(message);
@@ -46,7 +47,7 @@ router.post('/saveMessage', autorizeMiddleware, (req, res) => {
     })
     .catch((error) => {
       console.error('Error al guardar el mensaje:', error);
-      res.status(500).json({ error: 'Error al guardar el mensaje' });
+      return res.status(401).json({ error: errorDictionary['ERROR_TO_SAVE_MESSAGE'] });
     });
 });
 

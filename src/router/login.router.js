@@ -2,6 +2,7 @@ import { Router } from "express";
 import { usersManager } from "../persistencia/dao/managers/userManager.js";
 import bcrypt from "bcrypt";
 import { compareData, hashData } from "../utils.js";
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 
 const router = Router();
 
@@ -9,11 +10,11 @@ router.post("/", async (req, res) => {
   const { email, password } = req.body;
   const userDB = await usersManager.findByEmail(email);
   if (!userDB) {
-    return res.json({ error: "Password o Email incorrecto" });
+    return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
   }
   const comparePassword = await compareData(password, userDB[0].password);
   if (!comparePassword) {
-    return res.json({ error: "Password o Email incorrecto" })
+    return res.status(401).json({ error: errorDictionary['ERROR_TO_SAVE_MESSAGE'] });
   }
   req.session["email"] = email;
   req.session["first_name"] = userDB.first_name;
@@ -32,7 +33,7 @@ router.post("/signup", async (req, res) => {
     const createdUser = await usersManager.createOne(userToCreate);
     res.status(200).json({ message: "El usuario ha sido creado", createdUser });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(401).json({ error: errorDictionary['ERROR_TO_CREATE_USER'] });
   }
 });
 

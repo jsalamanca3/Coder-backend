@@ -4,6 +4,7 @@ import bcrypt from "bcrypt";
 import passport from "passport";
 import session from "express-session";
 import { CartManager } from "../persistencia/dao/functions/cartManager.js";
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 
 const router = Router();
 
@@ -12,7 +13,7 @@ router.get('/', async (req, res) => {
     const users = await usersManager.findAll()
     res.status(200).json({ message: 'Usuarios', users });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: errorDictionary['USER_NOT_FOUND'] });
   }
 })
 
@@ -21,7 +22,7 @@ router.get("/logout", (req, res) => {
     if (!error) {
       res.redirect("/login");
     } else {
-      res.send({ status: 'Logout ERROR', body: error });
+      res.send({ error: errorDictionary['USER_NOT_FOUND'], body: error });
     }
   });
 });
@@ -34,14 +35,14 @@ router.get('/:idUser',
     const user = await usersManager.findById(idUser)
     res.status(200).json({ message: 'Usuario', user });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: errorDictionary['USER_NOT_FOUND']});
   }
 })
 
 router.post("/", async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
   if (!first_name || !last_name || !email || !password) {
-    return res.status(400).json({ message: "Faltan campos por completar" });
+    return res.status(400).json({ error: errorDictionary['INVALID_DATA_FORMAT'] });
   }
   try {
     const saltRounds = 10;
@@ -61,7 +62,7 @@ router.post("/", async (req, res) => {
     res.redirect(`/home/${createdUser._id}`);
   } catch (error) {
     console.error("Error al registrar el usuario:", error);
-    res.status(500).send("Error al registrar el usuario");
+    res.status(500).send({error: errorDictionary['ERROR_TO_CREATE_USER']});
   }
 });
 

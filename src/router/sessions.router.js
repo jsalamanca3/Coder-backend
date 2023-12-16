@@ -1,6 +1,7 @@
 import { Router } from "express";
 import passport from "passport";
 import { authToken, generateToken } from "../utils.js";
+import { errorDictionary } from './ruta/del/diccionarioDeErrores';
 
 const router = Router();
 
@@ -60,7 +61,7 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res) => {
     const {email,password} = req.body;
     const user = users.find(user => user.email===email&&user.password===password);
-    if(!user) return res.status(400).send({staus:"error", error:"Invalid credentials"});
+    if(!user) return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
     const access_token = generateToken(user);
     res.send({status:"success", access_token});
 });
@@ -103,11 +104,11 @@ router.get('/current-jwt',
         };
         res.status(200).json(userDTO);
       } else {
-        res.status(401).json({ error: 'Unauthorized' });
+        return res.status(401).json({ error: errorDictionary['AUTHENTICATION_ERROR'] });
       }
     } catch (error) {
       console.error('Error en la ruta /current-jwt:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
+      return res.status(500).json({ error: errorDictionary['DATABASE_CONNECTION_ERROR'] });
     }
   }
 );
@@ -125,11 +126,11 @@ router.get('/current-github',
         };
         res.status(200).json(userDTO);
       } else {
-        res.status(401).json({ error: 'Unauthorized' });
+        return res.status(401).json({ error: errorDictionary['AUTHENTICATION_ERROR'] });
       }
     } catch (error) {
       console.error('Error en la ruta /current-github:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
+      return res.status(500).json({ error: errorDictionary['DATABASE_CONNECTION_ERROR'] });
     }
   }
 );
@@ -147,11 +148,11 @@ router.get('/current-google',
         };
         res.status(200).json(userDTO);
       } else {
-        res.status(401).json({ error: 'Unauthorized' });
+        return res.status(401).json({ error: errorDictionary['AUTHENTICATION_ERROR'] });
       }
     } catch (error) {
       console.error('Error en la ruta /current-google:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
+      return res.status(500).json({ error: errorDictionary['DATABASE_CONNECTION_ERROR'] });
     }
   }
 );
