@@ -245,14 +245,10 @@ router.post('/:cid/purchase', async (req, res) => {
 
     const cartId = req.params.cid;
 
-    console.log('Valor de cartId al inicio:', cartId);
-
     const cart = await cartsModel
       .findOne({ _id: cartId })
       .populate('user')
       .populate('products.product');
-
-    console.log('carrito', cart, cartId);
 
     if (!cart) {
       return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
@@ -260,19 +256,18 @@ router.post('/:cid/purchase', async (req, res) => {
 
     console.log('soy el carrito:', cart);
 
-    const userId = cart.userId;
+    const userId = cart.user;
     const user = await usersModel.findOne({ _id: userId });
-
-    console.log('soy el usuario:', cart.userId);
-    console.log('soy el usuario 1:', user);
+    console.log('soy el usuario:', userId);
 
     if (!user || !user.email) {
-      console.log('Invalid user or email:', user);
+      console.log('soy el email:', email);
       return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
     }
 
     console.log('soy el correo:', user);
     const userEmail = user.email;
+    console.log('soy el email del correo:', userEmail);
 
     const productsToPurchase = cart.products;
     const failedProducts = [];
@@ -305,7 +300,7 @@ router.post('/:cid/purchase', async (req, res) => {
       code: generateTicketCode(),
       purchase_datetime: new Date(),
       amount: totalAmount,
-      purchaser: user.email || userEmail,
+      purchaser: userEmail,
       products: productsToPurchase,
     });
 

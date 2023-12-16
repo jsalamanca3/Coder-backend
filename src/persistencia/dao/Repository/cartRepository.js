@@ -10,18 +10,22 @@ function generateCartId() {
   }
 
 class CartRepository extends RepositoryInterface {
-    async createCart(userId) {
-        try {
-          const newCart = new cartsModel();
-          newCart.id = generateCartId();
-          newCart.products = [];
-          newCart.user = userId;
-          await newCart.save();
-          return newCart;
-        } catch (error) {
-          throw new Error(errorDictionary['CART_CREATION_ERROR']);
-        }
+  async createCart(userId) {
+    try {
+      const existingCart = await cartsModel.findOne({ user: userId });
+      if (existingCart) {
+        return existingCart;
       }
+      const newCart = new cartsModel();
+      newCart.id = this.cartId || generateCartId();
+      newCart.products = [];
+      newCart.user = userId;
+      await newCart.save();
+      return newCart;
+    } catch (error) {
+      throw error;
+    }
+  }
 
   async getCart(cartId) {
     try {
