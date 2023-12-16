@@ -19,7 +19,7 @@ class CartRepository extends RepositoryInterface {
           await newCart.save();
           return newCart;
         } catch (error) {
-          throw new Error({error: errorDictionary['CART_CREATION_ERROR']});
+          throw new Error(errorDictionary['CART_CREATION_ERROR']);
         }
       }
 

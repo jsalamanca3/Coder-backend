@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import { errorDictionary } from "../error/error.enum";
 const JWT_SECRET = "jwtSECRET";
 
 export const jwtValidation = (req, res, next) => {

@@ -1,3 +1,4 @@
+import { errorDictionary } from "../error/error.enum.js";
 // Middleware de autorización
 const authorizeMiddleware = (req, res, next) => {
     const userRole = req.user ? req.user.role : null;

@@ -59,7 +59,7 @@ app.use("/api/products", productRouter);
 app.use("/api/createproducts", productRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/chat", chatRouter);
-app.use("/api/mockingproducts", mockingProducts);
+app.use("/api/mocking", mockingProducts);
 
 const PORT = 8080;
 

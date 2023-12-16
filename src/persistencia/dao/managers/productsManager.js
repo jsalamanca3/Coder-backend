@@ -68,7 +68,7 @@ class ProductsManager extends BasicManager {
   };
 
   async generateMockProducts() {
-    await productModel.deleteMany({});
+    await productsModel.deleteMany({});
     const mockProducts = [];
     for (let i = 1; i <= 100; i++) {
       const product = new productsModel({
