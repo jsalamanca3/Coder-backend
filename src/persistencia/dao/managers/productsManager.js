@@ -1,6 +1,6 @@
 import { productsModel } from "../models/products.model.js";
 import BasicManager from "./basicManager.js";
-import faker from "faket";
+import { faker } from '@faker-js/faker';
 import { errorDictionary } from "../../../error/error.enum.js";
 
 class ProductsManager extends BasicManager {

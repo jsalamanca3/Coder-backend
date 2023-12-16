@@ -4,7 +4,7 @@ import { productsManager } from '../persistencia/dao/managers/productsManager.js
 import { errorDictionary } from '../error/error.enum.js';
 const router = Router();
 
-roter.get('/mockingproducts', async (req, res) => {
+router.get('/mockingproducts', async (req, res) => {
   try {
     const mockProducts = await productsManager.generateMockProducts();
     res.json({ success: true, message: 'Productos simulados generados con éxito', products: mockProducts });

@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 import passport from "passport";
 import session from "express-session";
 import { CartManager } from "../persistencia/dao/functions/cartManager.js";
-import { errorDictionary } from './ruta/del/diccionarioDeErrores';
+import { errorDictionary } from "../error/error.enum.js";
 
 const router = Router();
 

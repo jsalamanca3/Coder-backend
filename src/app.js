@@ -18,7 +18,7 @@ import cookieParser from "cookie-parser";
 import passport from 'passport';
 import './passport.js';
 import config from './config/config.js';
-import mockingProducts from './router/mockingproducts.js';
+import mockingProducts from './router/mockingproducts.router.js';
 
 const app = express();
 app.use(cookieParser());

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { messageModel } from "../persistencia/dao/models/messages.models.js";
 import autorizeMiddleware from '../middlewares/authorize.middleware.js';
-import { errorDictionary } from './ruta/del/diccionarioDeErrores';
+import { errorDictionary } from "../error/error.enum.js";
 const router = Router();
 
 router.get('/getMessages', async (req, res) => {

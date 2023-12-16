@@ -3,7 +3,7 @@ import { productsModel } from "../persistencia/dao/models/products.model.js";
 import Joi from 'joi';
 import { v4 as uuidv4 } from 'uuid';
 import autorizeMiddleware from '../middlewares/authorize.middleware.js'
-import { errorDictionary } from './ruta/del/diccionarioDeErrores';
+import { errorDictionary } from "../error/error.enum.js";
 const router = Router();
 
 router.get("/", async (req, res) => {

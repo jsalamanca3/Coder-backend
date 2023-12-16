@@ -6,7 +6,7 @@ import { socketServer } from '../app.js';
 import { CartManager } from "../persistencia/dao/functions/cartManager.js";
 import { cartsModel } from "../persistencia/dao/models/carts.model.js";
 import checkUserRole from '../persistencia/dao/managers/loginManager.js';
-import { errorDictionary } from './ruta/del/diccionarioDeErrores';
+import { errorDictionary } from "../error/error.enum.js";
 
 const router = Router();
 const productManager = new ProductManager();

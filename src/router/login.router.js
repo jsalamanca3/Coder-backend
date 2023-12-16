@@ -2,7 +2,7 @@ import { Router } from "express";
 import { usersManager } from "../persistencia/dao/managers/userManager.js";
 import bcrypt from "bcrypt";
 import { compareData, hashData } from "../utils.js";
-import { errorDictionary } from './ruta/del/diccionarioDeErrores';
+import { errorDictionary } from "../error/error.enum.js";
 
 const router = Router();
 

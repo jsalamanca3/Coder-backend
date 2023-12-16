@@ -7,7 +7,7 @@ import autorizeMiddleware from '../middlewares/authorize.middleware.js';
 import { ticketModel } from "../persistencia/dao/models/ticket.model.js";
 import nodemailer from "nodemailer";
 import config from "../config/config.js";
-import { errorDictionary } from './ruta/del/diccionarioDeErrores';
+import { errorDictionary } from "../error/error.enum.js";
 const router = Router();
 
 const MAIL_USER = config.mail_user;

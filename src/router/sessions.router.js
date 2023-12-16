@@ -1,7 +1,7 @@
 import { Router } from "express";
 import passport from "passport";
 import { authToken, generateToken } from "../utils.js";
-import { errorDictionary } from './ruta/del/diccionarioDeErrores';
+import { errorDictionary } from "../error/error.enum.js";
 
 const router = Router();
 
