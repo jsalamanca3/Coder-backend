@@ -15,10 +15,9 @@
 	<li>
 		<form action="/api/carts/{{this.cartId}}/product/{{this._id}}" method="post">
 			<input type="hidden" name="productId" value="{{this._id}}">
-			<button id="addToCart" type="submit">Agregar al carrito</button>
+			<button type="submit">Agregar al carrito</button>
 		</form>
 	</li>
 	{{/each}}
 </ul>
-<script src="/js/addToCart.js"></script>
 <script src="/js/purchase.js"></script>

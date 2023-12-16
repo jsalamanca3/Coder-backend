@@ -80,9 +80,7 @@ function generateCartId() {
 router.post("/:cid/product/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const cid = req.params.cid;
-    console.log('soy el _id:', cid);
     const pid = req.params.pid;
-    console.log('soy el _id del p:', pid);
     const quantity = req.body.quantity || 1;
     const product = await productsModel.findById(pid);
     if (!product) {
@@ -376,25 +374,4 @@ function calculateTotalAmount(products) {
   return parseFloat(totalAmount);
 }
 
-// carts.router.js
-
-router.get("/user-ids", async (req, res) => {
-  try {
-      const userId = req.user._id;
-      const user = await usersModel.findOne({ _id: userId });
-
-      if (user && user.cart) {
-          const cartId = user.cart;
-          const cart = await cartsModel.findOne({ _id: cartId });
-          const productId = cart.products.length > 0 ? cart.products[0].product : null;
-
-          res.json({ cartId, productId });
-      } else {
-          res.status(404).json({ error: "Usuario o carrito no encontrados" });
-      }
-  } catch (error) {
-      console.error("Error al obtener los IDs del usuario:", error);
-      res.status(500).json({ error: "Error interno del servidor" });
-  }
-});
 export default router;
