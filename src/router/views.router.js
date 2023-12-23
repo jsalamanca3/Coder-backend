@@ -7,6 +7,7 @@ import { CartManager } from "../persistencia/dao/functions/cartManager.js";
 import { cartsModel } from "../persistencia/dao/models/carts.model.js";
 import checkUserRole from '../persistencia/dao/managers/loginManager.js';
 import { errorDictionary } from "../error/error.enum.js";
+import logger from "../winston.js";
 
 const router = Router();
 const productManager = new ProductManager();
@@ -47,7 +48,7 @@ router.get("/api", async (req, res) => {
     const cardId = carts.id
     res.render('home', { products, cardId });
   } catch (error) {
-    console.error("Error al obtener la lista de productos:", error);
+    logger.error("Error al obtener la lista de productos:", error);
     res.status(500).send({error: errorDictionary['PRODUCT_NOT_FOUND']});
   }
 });
@@ -57,7 +58,7 @@ router.get("api/realTimeProducts", async (req, res) => {
     const products = await productManager.findAll();
     res.render('realTimeProducts', { products });
   } catch (error) {
-    console.error("Error al obtener la lista de productos:", error);
+    logger.error("Error al obtener la lista de productos:", error);
     res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
@@ -69,7 +70,7 @@ router.post("api/realTimeProducts/addProduct", async (req, res) => {
     socketServer.emit('addProduct', newProduct);
     res.status(201).json(newProduct);
   } catch (error) {
-    console.error("Error al agregar un producto:", error);
+    logger.error("Error al agregar un producto:", error);
     res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
@@ -81,7 +82,7 @@ router.post("api/realTimeProducts/deleteProduct", async (req, res) => {
     socketServer.emit('productDeleted', productId);
     res.status(204).end();
   } catch (error) {
-    console.error("Error al eliminar un producto:", error);
+    logger.error("Error al eliminar un producto:", error);
     res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
@@ -116,7 +117,7 @@ router.get('/api/products', async (req, res) => {
     const products = await productManager.findAll();
     res.render('home', { products, cart });
   } catch (error) {
-    console.error("Error al cargar la vista de productos:", error);
+    logger.error("Error al cargar la vista de productos:", error);
     res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });
@@ -124,14 +125,14 @@ router.get('/api/products', async (req, res) => {
 router.get('/carts/:cid', async (req, res) => {
   try {
     const cartId = req.params.cid;
-    console.log('soy un mensaje:', cartId)
+    logger.info('soy un mensaje:', cartId)
     const cart = await cartsModel.findOne({ id: cartId }).populate('products.product'); //método populate
     if (!cart) {
       return res.status(404).json({ error: 'Carrito no encontrado' });
     }
     res.render('carrito', { cart });
   } catch (error) {
-    console.error('Error al cargar la vista del carrito:', error);
+    logger.error('Error al cargar la vista del carrito:', error);
     res.status(500).json({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
 });

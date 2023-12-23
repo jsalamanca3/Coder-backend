@@ -11,5 +11,6 @@ export default {
     session_secret: process.env.SESSION_SECRET,
     jwt_secret: process.env.JWT_SECRET,
     mail_user: process.env.MAIL_USER,
-    mail_password: process.env.MAIL_PASSWORD
+    mail_password: process.env.MAIL_PASSWORD,
+    environment: process.env.ENVIRONMENT,
 };

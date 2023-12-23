@@ -2,6 +2,7 @@ import { Router } from "express";
 import { messageModel } from "../persistencia/dao/models/messages.models.js";
 import autorizeMiddleware from '../middlewares/authorize.middleware.js';
 import { errorDictionary } from "../error/error.enum.js";
+import logger from "../winston.js";
 const router = Router();
 
 router.get('/getMessages', async (req, res) => {
@@ -9,7 +10,7 @@ router.get('/getMessages', async (req, res) => {
     const message = await messageModel.find().lean();
     res.render("chat", { message });
   } catch (error) {
-    console.error('Error al obtener mensajes:', error);
+    logger.error('Error al obtener mensajes:', error);
     return res.status(401).json({ error: errorDictionary['MESSAGE_ERROR'] });
   }
 });
@@ -37,8 +38,8 @@ router.post('/saveMessage', autorizeMiddleware, (req, res) => {
 
   const cleanedMessage = sanitizeMessage(message);
 
-  console.log('userEmail:', userEmail);
-  console.log('message:', message);
+  logger.info('userEmail:', userEmail);
+  logger.info('message:', message);
 
   const newMessage = new messageModel({ email: userEmail, message: message });
   newMessage.save()

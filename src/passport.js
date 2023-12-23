@@ -8,6 +8,7 @@ import { hashData, compareData } from "./utils.js";
 import bcrypt from "bcrypt";
 import config from "./config/config.js";
 import { CartManager } from "./persistencia/dao/functions/cartManager.js";
+import logger from "./winston.js";
 
 const GITHUB_CLIENT_ID = config.github_client_id;
 const GITHUB_CLIENT_SECRET = config.github_client_secret;
@@ -120,7 +121,7 @@ passport.use("github", new GithubStrategy({
 
       return done(null, createdUser);
     } catch (error) {
-      console.error('Error al procesar la autenticación de GitHub:', error);
+      logger.error('Error al procesar la autenticación de GitHub:', error);
       done(error);
     }
   }));
@@ -166,7 +167,7 @@ passport.use("google", new GoogleStrategy({
 
       return done(null, createdUser);
     } catch (error) {
-      console.error('Error al procesar la autenticación de GitHub:', error);
+      logger.error('Error al procesar la autenticación de GitHub:', error);
       done(error);
     }
   }));
@@ -174,7 +175,7 @@ passport.use("google", new GoogleStrategy({
 
 passport.serializeUser(function (userDB, done) {
   const userId = userDB._id || userDB[0]._id;
-  console.log("serialize " + userId);
+  logger.info("serialize " + userId);
   done(null, userId);
 });
 

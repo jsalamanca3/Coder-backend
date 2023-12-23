@@ -1,0 +1,225 @@
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-23T00:00:49.115Z'
+}
+{
+  message: 'Proceso 14608 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:02.831Z'
+}
+{
+  message: 'Proceso 12540 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:02.969Z'
+}
+{
+  message: 'Proceso 8164 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:03.008Z'
+}
+{
+  message: 'Proceso 12148 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:03.415Z'
+}
+{
+  message: 'Este es un mensaje de debug de prueba',
+  level: 'debug',
+  timestamp: '2023-12-23T00:01:11.164Z'
+}
+{
+  message: 'Este es un mensaje para http de prueba',
+  level: 'http',
+  timestamp: '2023-12-23T00:01:11.166Z'
+}
+{
+  message: 'Este es un mensaje de info de prueba',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:11.167Z'
+}
+{
+  message: 'Este es un mensaje de warning de prueba',
+  level: 'warning',
+  timestamp: '2023-12-23T00:01:11.167Z'
+}
+{
+  message: 'Este es un mensaje de error de prueba',
+  level: 'error',
+  timestamp: '2023-12-23T00:01:11.168Z'
+}
+{
+  message: 'Este es un mensaje de debug de prueba',
+  level: 'debug',
+  timestamp: '2023-12-23T00:01:19.068Z'
+}
+{
+  message: 'Este es un mensaje para http de prueba',
+  level: 'http',
+  timestamp: '2023-12-23T00:01:19.069Z'
+}
+{
+  message: 'Este es un mensaje de info de prueba',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:19.070Z'
+}
+{
+  message: 'Este es un mensaje de warning de prueba',
+  level: 'warning',
+  timestamp: '2023-12-23T00:01:19.072Z'
+}
+{
+  message: 'Este es un mensaje de error de prueba',
+  level: 'error',
+  timestamp: '2023-12-23T00:01:19.072Z'
+}
+{
+  message: 'Este es un mensaje de debug de prueba',
+  level: 'debug',
+  timestamp: '2023-12-23T00:01:43.668Z'
+}
+{
+  message: 'Este es un mensaje para http de prueba',
+  level: 'http',
+  timestamp: '2023-12-23T00:01:43.669Z'
+}
+{
+  message: 'Este es un mensaje de info de prueba',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:43.670Z'
+}
+{
+  message: 'Este es un mensaje de warning de prueba',
+  level: 'warning',
+  timestamp: '2023-12-23T00:01:43.670Z'
+}
+{
+  message: 'Este es un mensaje de error de prueba',
+  level: 'error',
+  timestamp: '2023-12-23T00:01:43.671Z'
+}
+{
+  message: 'Este es un mensaje de debug de prueba',
+  level: 'debug',
+  timestamp: '2023-12-23T00:01:44.455Z'
+}
+{
+  message: 'Este es un mensaje para http de prueba',
+  level: 'http',
+  timestamp: '2023-12-23T00:01:44.456Z'
+}
+{
+  message: 'Este es un mensaje de info de prueba',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:44.457Z'
+}
+{
+  message: 'Este es un mensaje de warning de prueba',
+  level: 'warning',
+  timestamp: '2023-12-23T00:01:44.457Z'
+}
+{
+  message: 'Este es un mensaje de error de prueba',
+  level: 'error',
+  timestamp: '2023-12-23T00:01:44.458Z'
+}
+{
+  message: 'Este es un mensaje de debug de prueba',
+  level: 'debug',
+  timestamp: '2023-12-23T00:01:44.994Z'
+}
+{
+  message: 'Este es un mensaje para http de prueba',
+  level: 'http',
+  timestamp: '2023-12-23T00:01:44.995Z'
+}
+{
+  message: 'Este es un mensaje de info de prueba',
+  level: 'info',
+  timestamp: '2023-12-23T00:01:44.995Z'
+}
+{
+  message: 'Este es un mensaje de warning de prueba',
+  level: 'warning',
+  timestamp: '2023-12-23T00:01:44.996Z'
+}
+{
+  message: 'Este es un mensaje de error de prueba',
+  level: 'error',
+  timestamp: '2023-12-23T00:01:44.996Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-23T00:03:51.450Z'
+}
+{
+  message: 'Proceso 9676 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:04:04.152Z'
+}
+{
+  message: 'Proceso 13384 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:04:04.241Z'
+}
+{
+  message: 'Proceso 14772 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:04:04.318Z'
+}
+{
+  message: 'Proceso 9788 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-23T00:04:04.349Z'
+}
+{
+  message: 'Este es un mensaje de debug de prueba',
+  level: 'debug',
+  timestamp: '2023-12-23T00:04:27.883Z'
+}
+{
+  message: 'Este es un mensaje para http de prueba',
+  level: 'http',
+  timestamp: '2023-12-23T00:04:27.884Z'
+}
+{
+  message: 'Este es un mensaje de info de prueba',
+  level: 'info',
+  timestamp: '2023-12-23T00:04:27.885Z'
+}
+{
+  message: 'Este es un mensaje de warning de prueba',
+  level: 'warning',
+  timestamp: '2023-12-23T00:04:27.886Z'
+}
+{
+  message: 'Este es un mensaje de error de prueba',
+  level: 'error',
+  timestamp: '2023-12-23T00:04:27.887Z'
+}
+{
+  message: 'Este es un mensaje de debug de prueba',
+  level: 'debug',
+  timestamp: '2023-12-23T00:04:30.363Z'
+}
+{
+  message: 'Este es un mensaje para http de prueba',
+  level: 'http',
+  timestamp: '2023-12-23T00:04:30.364Z'
+}
+{
+  message: 'Este es un mensaje de info de prueba',
+  level: 'info',
+  timestamp: '2023-12-23T00:04:30.366Z'
+}
+{
+  message: 'Este es un mensaje de warning de prueba',
+  level: 'warning',
+  timestamp: '2023-12-23T00:04:30.367Z'
+}
+{
+  message: 'Este es un mensaje de error de prueba',
+  level: 'error',
+  timestamp: '2023-12-23T00:04:30.367Z'
+}

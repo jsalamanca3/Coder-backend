@@ -5,6 +5,7 @@ import passport from "passport";
 import session from "express-session";
 import { CartManager } from "../persistencia/dao/functions/cartManager.js";
 import { errorDictionary } from "../error/error.enum.js";
+import logger from "../winston.js";
 
 const router = Router();
 
@@ -61,7 +62,7 @@ router.post("/", async (req, res) => {
     });
     res.redirect(`/home/${createdUser._id}`);
   } catch (error) {
-    console.error("Error al registrar el usuario:", error);
+    logger.error("Error al registrar el usuario:", error);
     res.status(500).send({error: errorDictionary['ERROR_TO_CREATE_USER']});
   }
 });

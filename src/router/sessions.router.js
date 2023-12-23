@@ -2,6 +2,7 @@ import { Router } from "express";
 import passport from "passport";
 import { authToken, generateToken } from "../utils.js";
 import { errorDictionary } from "../error/error.enum.js";
+import logger from "../winston.js";
 
 const router = Router();
 
@@ -107,7 +108,7 @@ router.get('/current-jwt',
         return res.status(401).json({ error: errorDictionary['AUTHENTICATION_ERROR'] });
       }
     } catch (error) {
-      console.error('Error en la ruta /current-jwt:', error);
+      logger.error('Error en la ruta /current-jwt:', error);
       return res.status(500).json({ error: errorDictionary['DATABASE_CONNECTION_ERROR'] });
     }
   }
@@ -129,7 +130,7 @@ router.get('/current-github',
         return res.status(401).json({ error: errorDictionary['AUTHENTICATION_ERROR'] });
       }
     } catch (error) {
-      console.error('Error en la ruta /current-github:', error);
+      logger.error('Error en la ruta /current-github:', error);
       return res.status(500).json({ error: errorDictionary['DATABASE_CONNECTION_ERROR'] });
     }
   }
@@ -151,7 +152,7 @@ router.get('/current-google',
         return res.status(401).json({ error: errorDictionary['AUTHENTICATION_ERROR'] });
       }
     } catch (error) {
-      console.error('Error en la ruta /current-google:', error);
+      logger.error('Error en la ruta /current-google:', error);
       return res.status(500).json({ error: errorDictionary['DATABASE_CONNECTION_ERROR'] });
     }
   }

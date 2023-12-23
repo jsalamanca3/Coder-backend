@@ -5,6 +5,7 @@ import productRouter from './router/product.router.js';
 import viewsRouter from './router/views.router.js';
 import usersRouter from './router/user.router.js';
 import loginRouter from './router/login.router.js';
+import loggerTest from './router/loggerTest.router.js';
 import sessionRouter from './router/sessions.router.js';
 import { ProductManager } from './persistencia/dao/functions/ProductManager.js';
 import { Server } from 'socket.io';
@@ -19,12 +20,27 @@ import passport from 'passport';
 import './passport.js';
 import config from './config/config.js';
 import mockingProducts from './router/mockingproducts.router.js';
+import logger from './winston.js';
+import cluster from 'cluster';
+import { cpus } from 'os';
 
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
+
+if (cluster.isPrimary) {
+  console.log(`Este es el proceso Principal ${process.pid}`);
+  for (let i = 0; i < cpus().length; i++) {
+    cluster.fork();
+  }
+  cluster.on("exit", (worker) => {
+    logger.info(`Proceso ${worker.process.pid} ha terminado`)
+  });
+}
+
+
 
 /* handlebars */
 app.engine('handlebars', engine());
@@ -60,11 +76,12 @@ app.use("/api/createproducts", productRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/api/chat", chatRouter);
 app.use("/api/mocking", mockingProducts);
+app.use("/api/loggerTest", loggerTest);
 
 const PORT = 8080;
 
 const httpServer = app.listen(PORT, () => {
-  console.log(`Escuchando al puerto ${PORT}`);
+  logger.info(`Escuchando al puerto ${PORT}`);
 });
 
 const socketServer = new Server(httpServer);
@@ -73,18 +90,18 @@ const socketServer = new Server(httpServer);
 
 socketServer.on('connection', (socket) => {
   const productManager = new ProductManager('./productos.json');
-  console.log(`Cliente conectado ${socket.id}`);
+  logger.info(`Cliente conectado ${socket.id}`);
   socket.on('disconnect', () => {
-    console.log(`Cliente desconectado ${socket.id}`);
+    logger.info(`Cliente desconectado ${socket.id}`);
   });
 
   socket.on('addProduct', async (newProduct) => {
     try {
       const addedProduct = await productManager.addProduct(newProduct);
-      console.log('Producto agregado:', addedProduct);
+      logger.info('Producto agregado:', addedProduct);
       socketServer.emit('productAdded', addedProduct);
     } catch (error) {
-      console.error('Error al agregar producto:', error.message);
+      logger.error('Error al agregar producto:', error.message);
     }
   });
 
@@ -93,12 +110,12 @@ socketServer.on('connection', (socket) => {
       const deletedProduct = await productManager.removeProductById(productId);
       if (deletedProduct) {
         socketServer.emit('productDeleted', productId);
-        console.log('Producto eliminado:', deletedProduct);
+        logger.info('Producto eliminado:', deletedProduct);
       } else {
-        console.log('Producto no encontrado o no se pudo eliminar.');
+        logger.info('Producto no encontrado o no se pudo eliminar.');
       }
     } catch (error) {
-      console.error('Error al eliminar producto:', error.message);
+      logger.error('Error al eliminar producto:', error.message);
     }
   });
 
@@ -108,16 +125,16 @@ socketServer.on('connection', (socket) => {
   });
 
   socket.on('message', async (data) => {
-    console.log('Datos de mensaje recibidos:', data);
+    logger.info('Datos de mensaje recibidos:', data);
 
     if (data && isValidEmail(data.email) && isValidMessage(data.message)) {
       try {
         const newMessage = new messageModel({ email: data.email, message: data.message, processed: true });
-        console.log('Mensaje guardado en la base de datos:', newMessage);
+        logger.info('Mensaje guardado en la base de datos:', newMessage);
         socket.broadcast.emit('chatMessage', newMessage);
-        console.log('Mensaje emitido al chat:', newMessage);
+        logger.info('Mensaje emitido al chat:', newMessage);
       } catch (error) {
-        console.error('Error al guardar el mensaje:', error);
+        logger.error('Error al guardar el mensaje:', error);
       }
     } else {
       socket.emit('messageError', 'Los datos del mensaje son incorrectos.');
