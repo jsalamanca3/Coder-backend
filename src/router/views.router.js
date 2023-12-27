@@ -33,6 +33,10 @@ router.get("/api/login/forgotPassword", (req, res) => {
   res.render('forgotPassword');
 })
 
+router.get("/api/login/resetPassword", (req, res) => {
+  res.render('resetPassword');
+})
+
 router.get("/error", (req, res) => {
   res.render("error");
 })

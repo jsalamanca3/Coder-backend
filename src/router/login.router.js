@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { usersManager } from "../persistencia/dao/managers/userManager.js";
+import { usersModel } from "../persistencia/dao/models/users.model.js";
 import bcrypt from "bcrypt";
 import { compareData, hashData } from "../utils.js";
 import { errorDictionary } from "../error/error.enum.js";
@@ -89,6 +90,11 @@ router.post('/forgotPassword', async (req, res) => {
     }
     res.status(200).json({ message: 'Correo enviado con éxito' });
   });
+});
+
+router.use((req, res, next) => {
+  console.log('Solicitud:', req.method, req.url, req.body);
+  next();
 });
 
 router.post("/resetPassword", async (req, res) => {
