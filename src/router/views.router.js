@@ -29,6 +29,10 @@ router.get("/register", (req, res) => {
   res.render('signup');
 });
 
+router.get("/api/login/forgotPassword", (req, res) => {
+  res.render('forgotPassword');
+})
+
 router.get("/error", (req, res) => {
   res.render("error");
 })
