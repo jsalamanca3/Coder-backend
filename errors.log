@@ -223,3 +223,5470 @@
   level: 'error',
   timestamp: '2023-12-23T00:04:30.367Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T16:41:31.894Z'
+}
+{
+  message: 'Proceso 5104 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T16:41:46.655Z'
+}
+{
+  message: 'Proceso 2596 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T16:41:46.751Z'
+}
+{
+  message: 'Proceso 16040 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T16:41:47.008Z'
+}
+{
+  message: 'Proceso 9000 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T16:41:47.089Z'
+}
+{
+  message: 'serialize 657dfa68f42383a3a3eb5322',
+  level: 'info',
+  timestamp: '2023-12-25T16:44:30.706Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:45:37.578Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:45:37.763Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      },
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:45:38.295Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:45:38.382Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:45:38.394Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:45:38.395Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:45:38.398Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:45:57.457Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:45:57.610Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:45:58.215Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:45:58.295Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:45:58.298Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:45:58.299Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:45:58.300Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:45:58.706Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:45:58.861Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:45:59.295Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:45:59.401Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:45:59.405Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:45:59.406Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:45:59.407Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:45:59.790Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:45:59.947Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:46:00.206Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:46:00.360Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:46:00.567Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:46:00.654Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:46:00.657Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:46:00.657Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:46:00.658Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:46:00.740Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:46:01.162Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:46:01.180Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:46:01.376Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:46:01.380Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:46:01.381Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:46:01.382Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:46:01.742Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:46:01.897Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:46:02.151Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:46:02.320Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:46:02.565Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:46:02.714Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:46:02.748Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:46:02.782Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:46:02.804Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:46:02.830Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:46:02.833Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:46:02.834Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:46:02.835Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:46:02.867Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:46:02.869Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:46:02.870Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:46:02.872Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:46:02.910Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:46:02.913Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:46:02.914Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:46:02.915Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:46:03.163Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:46:03.241Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:46:03.243Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:46:03.243Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:46:03.244Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:46:37.723Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      {
+        product: new ObjectId("657d9941a52694a188226bfd"),
+        quantity: 3
+      },
+      {
+        product: new ObjectId("657d9941a52694a188226bff"),
+        quantity: 1
+      },
+      {
+        product: new ObjectId("657e0ad0147af11453bfe6ff"),
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: new ObjectId("657dfa68f42383a3a3eb5322"),
+    __v: 3
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:46:37.889Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      user: {
+        value: new ObjectId("657dfa68f42383a3a3eb5322"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': new ObjectId("657dfa68f42383a3a3eb5322")
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              __v: 0,
+              cart: new ObjectId("657dfa68f42383a3a3eb5325")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      },
+      'products.product': {
+        value: [
+          new ObjectId("657d9941a52694a188226bfd"),
+          new ObjectId("657d9941a52694a188226bff"),
+          new ObjectId("657e0ad0147af11453bfe6ff")
+        ],
+        options: {
+          model: Model { Product },
+          _docs: [
+            '657dfa68f42383a3a3eb5325': [
+              new ObjectId("657d9941a52694a188226bfd"),
+              new ObjectId("657d9941a52694a188226bff"),
+              new ObjectId("657e0ad0147af11453bfe6ff")
+            ]
+          ],
+          _childDocs: [
+            {
+              _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+              title: 'Awesome Wooden Fish',
+              description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+              code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+              price: 82,
+              status: 'available',
+              stock: 76,
+              thumbnails: 'https://loremflickr.com/640/480',
+              category: 'Clothing',
+              __v: 0
+            }
+          ],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+    products: [
+      { product: null, quantity: 3 },
+      { product: null, quantity: 1 },
+      {
+        product: {
+          _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+          title: 'Awesome Wooden Fish',
+          description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+          code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+          price: 82,
+          status: 'available',
+          stock: 76,
+          thumbnails: 'https://loremflickr.com/640/480',
+          category: 'Clothing',
+          __v: 0
+        },
+        quantity: 2
+      }
+    ],
+    id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+    user: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      __v: 0,
+      cart: new ObjectId("657dfa68f42383a3a3eb5325")
+    },
+    __v: 3
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2023-12-25T16:46:38.466Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("657dfa68f42383a3a3eb5322") },
+    parent: {
+      _id: new ObjectId("657dfa68f42383a3a3eb5325"),
+      products: [
+        { product: null, quantity: 3 },
+        { product: null, quantity: 1 },
+        {
+          product: {
+            _id: new ObjectId("657e0ad0147af11453bfe6ff"),
+            title: 'Awesome Wooden Fish',
+            description: 'Vociferor conculco desolo circumvenio acquiro suffoco cumque.',
+            code: 'fed8f55e-7e53-49b1-a1c0-ac276305437e',
+            price: 82,
+            status: 'available',
+            stock: 76,
+            thumbnails: 'https://loremflickr.com/640/480',
+            category: 'Clothing',
+            __v: 0
+          },
+          quantity: 2
+        }
+      ],
+      id: '866d9ae1-5537-4242-b09e-d87c504ed7dc',
+      user: {
+        _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        __v: 0,
+        cart: new ObjectId("657dfa68f42383a3a3eb5325")
+      },
+      __v: 3
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2023-12-25T16:46:38.545Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("657dfa68f42383a3a3eb5322"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$XO61/o6XidcweDIC4Y5Ypea10TKYA1ni1LVp//De46FgXV0UolZQ2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("657dfa68f42383a3a3eb5325")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2023-12-25T16:46:38.547Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2023-12-25T16:46:38.548Z'
+}
+{
+  level: 'error',
+  message: "Error al procesar la compra: Cannot read properties of null (reading 'price')",
+  stack: "TypeError: Cannot read properties of null (reading 'price')\n" +
+    '    at calculateTotalAmount (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:365:35)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:288:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T16:46:38.548Z'
+}
+{
+  message: 'serialize 657dfa68f42383a3a3eb5322',
+  level: 'info',
+  timestamp: '2023-12-25T16:51:12.403Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2023-12-25T16:53:49.641Z',
+  [Symbol(id)]: <Buffer 65 7d fa 68 f4 23 83 a3 a3 eb 53 22>
+}
+{
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2023-12-25T16:53:49.787Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T17:01:56.465Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T17:04:36.461Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T17:05:13.100Z'
+}
+{
+  message: 'Proceso 3836 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:05:31.664Z'
+}
+{
+  message: 'Proceso 16164 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:05:31.816Z'
+}
+{
+  message: 'Proceso 6012 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:05:32.057Z'
+}
+{
+  message: 'Proceso 12268 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:05:32.064Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T17:05:33.332Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T17:06:56.859Z'
+}
+{
+  message: 'Cliente conectado e-jXdKwkQZ3tLTWBAAAB',
+  level: 'info',
+  timestamp: '2023-12-25T17:09:11.668Z'
+}
+{
+  message: 'Cliente desconectado e-jXdKwkQZ3tLTWBAAAB',
+  level: 'info',
+  timestamp: '2023-12-25T17:09:47.792Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T17:20:17.667Z'
+}
+{
+  message: 'Proceso 10708 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:20:28.622Z'
+}
+{
+  message: 'Proceso 8460 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:20:28.690Z'
+}
+{
+  message: 'Proceso 2540 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:20:28.714Z'
+}
+{
+  message: 'Proceso 6364 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:20:28.863Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T17:23:40.931Z'
+}
+{
+  message: 'Proceso 16116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:23:54.383Z'
+}
+{
+  message: 'Proceso 15780 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:23:54.667Z'
+}
+{
+  message: 'Proceso 13516 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:23:54.747Z'
+}
+{
+  message: 'Proceso 11236 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T17:23:54.784Z'
+}
+{
+  message: 'serialize 657dfa68f42383a3a3eb5322',
+  level: 'info',
+  timestamp: '2023-12-25T17:24:15.254Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T17:24:29.999Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T17:28:16.773Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T17:28:31.034Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T19:05:49.423Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:05:53.780Z'
+}
+{
+  message: 'Proceso 10708 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:06:12.725Z'
+}
+{
+  message: 'Proceso 4108 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:06:13.187Z'
+}
+{
+  message: 'Proceso 16600 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:06:13.405Z'
+}
+{
+  message: 'Proceso 13472 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:06:13.714Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:06:19.415Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:06:28.035Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:07:48.828Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:08:16.473Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:10:28.229Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T19:11:05.302Z'
+}
+{
+  message: 'Proceso 4940 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:11:19.987Z'
+}
+{
+  message: 'Proceso 16528 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:11:20.121Z'
+}
+{
+  message: 'Proceso 9536 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:11:20.188Z'
+}
+{
+  message: 'Proceso 15672 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:11:20.281Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:14:42.329Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T19:23:28.201Z'
+}
+{
+  message: 'Proceso 14740 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:23:40.227Z'
+}
+{
+  message: 'Proceso 4436 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:23:40.305Z'
+}
+{
+  message: 'Proceso 5088 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:23:40.315Z'
+}
+{
+  message: 'Proceso 15276 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:23:40.557Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:24:28.184Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:24:48.173Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T19:29:13.186Z'
+}
+{
+  message: 'Proceso 12660 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:29:25.055Z'
+}
+{
+  message: 'Proceso 10560 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:29:25.121Z'
+}
+{
+  message: 'Proceso 6852 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:29:25.386Z'
+}
+{
+  message: 'Proceso 11516 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:29:25.691Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T19:31:39.366Z'
+}
+{
+  message: 'Proceso 12948 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:31:52.779Z'
+}
+{
+  message: 'Proceso 13616 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:31:52.782Z'
+}
+{
+  message: 'Proceso 16680 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:31:52.788Z'
+}
+{
+  message: 'Proceso 8904 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:31:52.912Z'
+}
+{
+  message: 'serialize 6589d8edc7839d33be22add5',
+  level: 'info',
+  timestamp: '2023-12-25T19:33:01.575Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:33:33.258Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:34:32.074Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:48:51.424Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T19:50:35.921Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T19:51:53.170Z'
+}
+{
+  message: 'Proceso 6284 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:52:09.368Z'
+}
+{
+  message: 'Proceso 3448 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:52:09.386Z'
+}
+{
+  message: 'Proceso 10152 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:52:09.478Z'
+}
+{
+  message: 'Proceso 13680 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:52:09.757Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T19:59:29.790Z'
+}
+{
+  message: 'Proceso 11552 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:59:41.014Z'
+}
+{
+  message: 'Proceso 16700 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:59:41.122Z'
+}
+{
+  message: 'Proceso 744 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:59:41.574Z'
+}
+{
+  message: 'Proceso 14940 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T19:59:41.784Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:00:09.579Z'
+}
+{
+  message: 'Proceso 1480 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:00:22.565Z'
+}
+{
+  message: 'Proceso 15928 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:00:22.566Z'
+}
+{
+  message: 'Proceso 9176 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:00:22.802Z'
+}
+{
+  message: 'Proceso 10012 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:00:23.145Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T20:00:30.351Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:31:37.480Z'
+}
+{
+  message: 'Proceso 1252 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:31:53.702Z'
+}
+{
+  message: 'Proceso 7276 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:31:53.835Z'
+}
+{
+  message: 'Proceso 2844 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:31:54.264Z'
+}
+{
+  message: 'Proceso 7772 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:31:54.537Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:33:04.437Z'
+}
+{
+  message: 'Proceso 16184 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:33:18.461Z'
+}
+{
+  message: 'Proceso 17184 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:33:18.511Z'
+}
+{
+  message: 'Proceso 9156 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:33:18.636Z'
+}
+{
+  message: 'Proceso 12056 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:33:18.645Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T20:35:37.967Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:43:18.217Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T20:43:21.210Z'
+}
+{
+  message: 'Proceso 11780 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:43:36.665Z'
+}
+{
+  message: 'Proceso 6692 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:43:36.667Z'
+}
+{
+  message: 'Proceso 6396 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:43:36.678Z'
+}
+{
+  message: 'Proceso 10912 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:43:37.026Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:47:11.880Z'
+}
+{
+  message: 'Proceso 10400 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:47:25.822Z'
+}
+{
+  message: 'Proceso 15060 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:47:26.016Z'
+}
+{
+  message: 'Proceso 9916 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:47:26.185Z'
+}
+{
+  message: 'Proceso 9204 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:47:26.643Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:55:51.867Z'
+}
+{
+  message: 'Proceso 17016 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:56:05.697Z'
+}
+{
+  message: 'Proceso 14600 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:56:05.738Z'
+}
+{
+  message: 'Proceso 3840 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:56:05.740Z'
+}
+{
+  message: 'Proceso 16656 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:56:05.749Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:58:33.535Z'
+}
+{
+  message: 'Proceso 17304 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:58:37.842Z'
+}
+{
+  message: 'Proceso 8308 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:58:37.969Z'
+}
+{
+  message: 'Proceso 12132 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:58:38.044Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T20:58:46.956Z'
+}
+{
+  message: 'Proceso 14768 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:59:03.525Z'
+}
+{
+  message: 'Proceso 6340 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:59:03.570Z'
+}
+{
+  message: 'Proceso 16208 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:59:03.818Z'
+}
+{
+  message: 'Proceso 2000 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T20:59:04.167Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T21:01:49.899Z'
+}
+{
+  message: 'Proceso 11680 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:02:01.147Z'
+}
+{
+  message: 'Proceso 6452 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:02:01.157Z'
+}
+{
+  message: 'Proceso 14852 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:02:01.275Z'
+}
+{
+  message: 'Proceso 13576 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:02:01.283Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T21:02:52.834Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T21:03:25.033Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T21:21:23.467Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T21:27:04.186Z'
+}
+{
+  message: 'Proceso 13828 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:27:19.920Z'
+}
+{
+  message: 'Proceso 2724 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:27:19.921Z'
+}
+{
+  message: 'Proceso 15400 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:27:19.973Z'
+}
+{
+  message: 'Proceso 9656 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:27:20.147Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T21:30:43.131Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T21:30:48.148Z'
+}
+{
+  message: 'Proceso 3064 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:30:58.384Z'
+}
+{
+  message: 'Proceso 15892 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:30:58.395Z'
+}
+{
+  message: 'Proceso 11776 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:30:58.468Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T21:30:58.540Z'
+}
+{
+  message: 'Proceso 13324 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:31:00.490Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T21:31:51.399Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T21:32:42.013Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T21:51:32.403Z'
+}
+{
+  message: 'Proceso 14748 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:51:54.845Z'
+}
+{
+  message: 'Proceso 2540 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:51:54.861Z'
+}
+{
+  message: 'Proceso 9952 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:51:54.875Z'
+}
+{
+  message: 'Proceso 14604 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:51:55.582Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T21:52:29.475Z'
+}
+{
+  message: 'Proceso 12340 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:52:45.050Z'
+}
+{
+  message: 'Proceso 16676 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:52:45.178Z'
+}
+{
+  message: 'Proceso 4928 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:52:45.265Z'
+}
+{
+  message: 'Proceso 2320 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:52:45.487Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T21:53:30.316Z'
+}
+{
+  message: 'Proceso 3492 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:53:43.041Z'
+}
+{
+  message: 'Proceso 1212 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:53:43.090Z'
+}
+{
+  message: 'Proceso 16828 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:53:43.149Z'
+}
+{
+  message: 'Proceso 10764 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T21:53:43.246Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-25T22:20:19.839Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T22:43:48.437Z'
+}
+{
+  message: 'Proceso 4116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:43:59.629Z'
+}
+{
+  message: 'Proceso 9040 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:43:59.837Z'
+}
+{
+  message: 'Proceso 12284 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:43:59.838Z'
+}
+{
+  message: 'Proceso 16244 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:44:00.041Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T22:46:07.394Z'
+}
+{
+  message: 'Proceso 3100 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:46:18.757Z'
+}
+{
+  message: 'Proceso 9508 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:46:18.849Z'
+}
+{
+  message: 'Proceso 12404 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:46:18.926Z'
+}
+{
+  message: 'Proceso 11592 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:46:19.033Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T22:47:43.427Z'
+}
+{
+  message: 'Proceso 15628 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:47:54.693Z'
+}
+{
+  message: 'Proceso 14256 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:47:54.695Z'
+}
+{
+  message: 'Proceso 15896 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:47:54.872Z'
+}
+{
+  message: 'Proceso 13344 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:47:54.959Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T22:48:31.080Z'
+}
+{
+  message: 'Proceso 1176 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:48:45.872Z'
+}
+{
+  message: 'Proceso 15116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:48:45.923Z'
+}
+{
+  message: 'Proceso 16044 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:48:46.133Z'
+}
+{
+  message: 'Proceso 7604 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:48:46.222Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T22:50:29.302Z'
+}
+{
+  message: 'Proceso 11712 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:50:40.174Z'
+}
+{
+  message: 'Proceso 16828 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:50:40.305Z'
+}
+{
+  message: 'Proceso 1308 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:50:40.362Z'
+}
+{
+  message: 'Proceso 8128 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:50:40.574Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T22:58:57.612Z'
+}
+{
+  message: 'Proceso 14072 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:05.773Z'
+}
+{
+  message: 'Proceso 7024 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:05.938Z'
+}
+{
+  message: 'Proceso 6396 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:06.017Z'
+}
+{
+  message: 'Proceso 12456 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:06.132Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:14.435Z'
+}
+{
+  message: 'Proceso 1764 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:25.595Z'
+}
+{
+  message: 'Proceso 9908 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:25.683Z'
+}
+{
+  message: 'Proceso 8016 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:25.705Z'
+}
+{
+  message: 'Proceso 9660 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-25T22:59:26.130Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T01:25:02.258Z'
+}
+{
+  message: 'Proceso 11660 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:25:12.345Z'
+}
+{
+  message: 'Proceso 10468 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:25:12.353Z'
+}
+{
+  message: 'Proceso 664 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:25:12.466Z'
+}
+{
+  message: 'Proceso 8176 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:25:12.605Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T01:33:29.787Z'
+}
+{
+  message: 'Proceso 12304 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:33:39.884Z'
+}
+{
+  message: 'Proceso 15708 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:33:40.150Z'
+}
+{
+  message: 'Proceso 4032 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:33:40.169Z'
+}
+{
+  message: 'Proceso 12800 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T01:33:40.351Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T12:59:32.139Z'
+}
+{
+  message: 'Proceso 3856 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T12:59:55.733Z'
+}
+{
+  message: 'Proceso 11776 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T12:59:55.868Z'
+}
+{
+  message: 'Proceso 2252 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T12:59:56.770Z'
+}
+{
+  message: 'Proceso 16348 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T12:59:56.858Z'
+}
+{
+  message: 'serialize 657dfa68f42383a3a3eb5322',
+  level: 'info',
+  timestamp: '2023-12-26T13:00:41.313Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T13:14:35.063Z'
+}
+{
+  message: 'Proceso 12388 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:14:47.102Z'
+}
+{
+  message: 'Proceso 12500 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:14:47.163Z'
+}
+{
+  message: 'Proceso 6400 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:14:47.195Z'
+}
+{
+  message: 'Proceso 6600 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:14:47.205Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T13:25:27.748Z'
+}
+{
+  message: 'Proceso 708 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:25:45.439Z'
+}
+{
+  message: 'Proceso 6300 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:25:45.522Z'
+}
+{
+  message: 'Proceso 9296 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:25:45.698Z'
+}
+{
+  message: 'Proceso 16252 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T13:25:45.787Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T14:16:29.387Z'
+}
+{
+  message: 'Proceso 15544 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:16:43.906Z'
+}
+{
+  message: 'Proceso 1984 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:16:44.036Z'
+}
+{
+  message: 'Proceso 17500 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:16:44.235Z'
+}
+{
+  message: 'Proceso 9752 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:16:44.394Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T14:31:48.884Z'
+}
+{
+  message: 'Proceso 12932 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:32:04.407Z'
+}
+{
+  message: 'Proceso 17312 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:32:04.571Z'
+}
+{
+  message: 'Proceso 10012 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:32:04.671Z'
+}
+{
+  message: 'Proceso 14852 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:32:04.743Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T14:52:46.447Z'
+}
+{
+  message: 'Proceso 8788 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:53:01.950Z'
+}
+{
+  message: 'Proceso 13340 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:53:01.958Z'
+}
+{
+  message: 'Proceso 9060 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:53:02.255Z'
+}
+{
+  message: 'Proceso 5556 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:53:02.288Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T14:54:42.242Z'
+}
+{
+  message: 'Proceso 15452 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:54:57.430Z'
+}
+{
+  message: 'Proceso 18304 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:54:57.445Z'
+}
+{
+  message: 'Proceso 7936 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:54:57.546Z'
+}
+{
+  message: 'Proceso 17468 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:54:57.629Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T14:57:28.437Z'
+}
+{
+  message: 'Proceso 12960 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:57:44.543Z'
+}
+{
+  message: 'Proceso 9040 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:57:44.744Z'
+}
+{
+  message: 'Proceso 16636 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:57:44.880Z'
+}
+{
+  message: 'Proceso 16624 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T14:57:44.943Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T14:58:55.268Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T15:05:36.570Z'
+}
+{
+  message: 'Proceso 16700 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T15:05:51.716Z'
+}
+{
+  message: 'Proceso 14124 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T15:05:51.760Z'
+}
+{
+  message: 'Proceso 9120 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T15:05:52.016Z'
+}
+{
+  message: 'Proceso 17152 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T15:05:52.404Z'
+}
+{
+  errors: {
+    user: ValidatorError: Path `user` is required.
+        at validate (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1364:13)
+        at SchemaType.doValidate (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1348:7)
+        at C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:2958:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `user` is required.',
+        type: 'required',
+        path: 'user',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'user',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'Cart validation failed',
+  level: 'error',
+  message: 'Error al obtener la lista de productos: Cart validation failed: user: Path `user` is required.',
+  stack: 'ValidationError: Cart validation failed: user: Path `user` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:3173:32)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:2966:17\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\schematype.js:1367:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  timestamp: '2023-12-26T22:11:02.351Z'
+}
+{
+  errors: {
+    user: ValidatorError: Path `user` is required.
+        at validate (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1364:13)
+        at SchemaType.doValidate (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1348:7)
+        at C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:2958:18
+        at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+      properties: {
+        validator: [Function (anonymous)],
+        message: 'Path `user` is required.',
+        type: 'required',
+        path: 'user',
+        value: undefined
+      },
+      kind: 'required',
+      path: 'user',
+      value: undefined,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'Cart validation failed',
+  level: 'error',
+  message: 'Error al obtener la lista de productos: Cart validation failed: user: Path `user` is required.',
+  stack: 'ValidationError: Cart validation failed: user: Path `user` is required.\n' +
+    '    at Document.invalidate (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:3173:32)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:2966:17\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\schematype.js:1367:9\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)',
+  timestamp: '2023-12-26T22:11:07.492Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-26T22:12:07.492Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-26T22:15:42.307Z'
+}
+{
+  message: 'serialize 657dfa68f42383a3a3eb5322',
+  level: 'info',
+  timestamp: '2023-12-26T22:17:52.592Z'
+}
+{
+  level: 'error',
+  message: 'Error al cargar la vista de productos: cartManager.createCart is not a function',
+  stack: 'TypeError: cartManager.createCart is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/views.router.js:115:25\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-12-26T22:18:06.968Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T22:28:18.192Z'
+}
+{
+  message: 'Proceso 4444 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:28:35.992Z'
+}
+{
+  message: 'Proceso 4588 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:28:36.499Z'
+}
+{
+  message: 'Proceso 9684 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:28:36.550Z'
+}
+{
+  message: 'Proceso 16004 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:28:37.553Z'
+}
+{
+  message: 'serialize 657dfa68f42383a3a3eb5322',
+  level: 'info',
+  timestamp: '2023-12-26T22:31:55.618Z'
+}
+{
+  level: 'error',
+  message: 'Error al registrar el usuario: userId is not defined',
+  stack: 'ReferenceError: userId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:56:61',
+  timestamp: '2023-12-26T22:32:54.283Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T22:40:44.980Z'
+}
+{
+  message: 'Proceso 11244 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:41:05.237Z'
+}
+{
+  message: 'Proceso 5548 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:41:05.354Z'
+}
+{
+  message: 'Proceso 3788 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:41:05.459Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T22:41:41.901Z'
+}
+{
+  message: 'Proceso 11276 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:42:00.917Z'
+}
+{
+  message: 'Proceso 15188 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:42:00.993Z'
+}
+{
+  message: 'Proceso 15828 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:42:01.226Z'
+}
+{
+  message: 'Proceso 14328 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:42:01.752Z'
+}
+{
+  level: 'error',
+  message: 'Error al registrar el usuario: userId is not defined',
+  stack: 'ReferenceError: userId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:56:61',
+  timestamp: '2023-12-26T22:42:58.538Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T22:51:26.507Z'
+}
+{
+  message: 'Proceso 1788 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:51:42.935Z'
+}
+{
+  message: 'Proceso 6584 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:51:42.937Z'
+}
+{
+  message: 'Proceso 11752 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:51:43.038Z'
+}
+{
+  message: 'Proceso 14260 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:51:43.745Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T22:54:08.755Z'
+}
+{
+  message: 'Proceso 10744 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:54:24.603Z'
+}
+{
+  message: 'Proceso 12144 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:54:24.659Z'
+}
+{
+  message: 'Proceso 4108 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:54:24.896Z'
+}
+{
+  message: 'Proceso 17492 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:54:24.939Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T22:56:38.633Z'
+}
+{
+  level: 'error',
+  message: 'Error al registrar el usuario: userId is not defined',
+  stack: 'ReferenceError: userId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:56:61',
+  timestamp: '2023-12-26T22:56:58.242Z'
+}
+{
+  message: 'Proceso 5536 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:57:00.007Z'
+}
+{
+  message: 'Proceso 2064 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:57:00.211Z'
+}
+{
+  message: 'Proceso 14944 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:57:00.257Z'
+}
+{
+  message: 'Proceso 17916 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T22:57:00.442Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:00:54.373Z'
+}
+{
+  message: 'Proceso 1780 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:09.756Z'
+}
+{
+  message: 'Proceso 17468 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:09.873Z'
+}
+{
+  message: 'Proceso 2952 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:10.081Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:23.161Z'
+}
+{
+  message: 'Proceso 9996 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:37.294Z'
+}
+{
+  message: 'Proceso 9676 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:37.490Z'
+}
+{
+  message: 'Proceso 232 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:37.592Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:01:51.126Z'
+}
+{
+  message: 'Proceso 2420 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:05.225Z'
+}
+{
+  message: 'Proceso 6720 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:05.227Z'
+}
+{
+  message: 'Proceso 3396 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:05.536Z'
+}
+{
+  message: 'Proceso 5548 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:05.787Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:24.536Z'
+}
+{
+  message: 'Proceso 16264 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:39.669Z'
+}
+{
+  message: 'Proceso 16936 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:39.691Z'
+}
+{
+  message: 'Proceso 14076 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:39.738Z'
+}
+{
+  message: 'Proceso 14724 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:02:39.782Z'
+}
+{
+  level: 'error',
+  message: 'Error al registrar el usuario: userId is not defined',
+  stack: 'ReferenceError: userId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:56:61',
+  timestamp: '2023-12-26T23:02:57.633Z'
+}
+{
+  level: 'error',
+  message: 'Error al registrar el usuario: userId is not defined',
+  stack: 'ReferenceError: userId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:56:61',
+  timestamp: '2023-12-26T23:03:23.454Z'
+}
+{
+  level: 'error',
+  message: 'Error al registrar el usuario: userId is not defined',
+  stack: 'ReferenceError: userId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:56:61',
+  timestamp: '2023-12-26T23:06:12.027Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:14:29.783Z'
+}
+{
+  message: 'Proceso 7972 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:14:42.522Z'
+}
+{
+  message: 'Proceso 8420 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:14:42.586Z'
+}
+{
+  message: 'Proceso 10200 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:14:42.608Z'
+}
+{
+  message: 'Proceso 4980 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:14:42.717Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:16:25.097Z'
+}
+{
+  message: 'Proceso 13380 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:16:38.407Z'
+}
+{
+  message: 'Proceso 3760 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:16:38.409Z'
+}
+{
+  message: 'Proceso 14108 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:16:38.489Z'
+}
+{
+  message: 'Proceso 9760 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:16:38.753Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:17:23.822Z'
+}
+{
+  message: 'Proceso 8592 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:17:40.509Z'
+}
+{
+  message: 'Proceso 3444 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:17:40.663Z'
+}
+{
+  message: 'Proceso 14108 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:17:40.745Z'
+}
+{
+  message: 'Proceso 7404 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:17:40.815Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:22:24.345Z'
+}
+{
+  message: 'Proceso 15628 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:22:41.879Z'
+}
+{
+  message: 'Proceso 17604 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:22:41.964Z'
+}
+{
+  message: 'Proceso 9852 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:22:41.997Z'
+}
+{
+  message: 'Proceso 8928 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:22:42.924Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:23:27.604Z'
+}
+{
+  message: 'Proceso 8296 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:23:45.770Z'
+}
+{
+  message: 'Proceso 13936 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:23:46.237Z'
+}
+{
+  message: 'Proceso 572 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:23:46.435Z'
+}
+{
+  message: 'Proceso 5340 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:23:46.488Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-26T23:30:59.506Z'
+}
+{
+  message: 'Proceso 14416 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:31:17.095Z'
+}
+{
+  message: 'Proceso 17556 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:31:17.153Z'
+}
+{
+  message: 'Proceso 16476 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:31:17.155Z'
+}
+{
+  message: 'Proceso 15044 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-26T23:31:17.171Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:22:01.780Z'
+}
+{
+  message: 'Proceso 3352 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:22:23.016Z'
+}
+{
+  message: 'Proceso 11056 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:22:23.053Z'
+}
+{
+  message: 'Proceso 16992 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:22:23.127Z'
+}
+{
+  message: 'Proceso 4484 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:22:23.357Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:25:38.314Z'
+}
+{
+  message: 'Proceso 14148 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:25:51.327Z'
+}
+{
+  message: 'Proceso 17528 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:25:51.330Z'
+}
+{
+  message: 'Proceso 11868 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:25:51.373Z'
+}
+{
+  message: 'Proceso 12208 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:25:51.418Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:15.054Z'
+}
+{
+  message: 'Proceso 11480 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:20.471Z'
+}
+{
+  message: 'Proceso 10696 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:21.004Z'
+}
+{
+  message: 'Proceso 7748 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:21.105Z'
+}
+{
+  message: 'Proceso 9040 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:21.399Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:34.939Z'
+}
+{
+  message: 'Proceso 5252 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:38.686Z'
+}
+{
+  message: 'Proceso 9860 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:39.203Z'
+}
+{
+  message: 'Proceso 16056 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:28:39.204Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:29:05.602Z'
+}
+{
+  message: 'Proceso 9152 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:29:21.188Z'
+}
+{
+  message: 'Proceso 5408 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:29:21.431Z'
+}
+{
+  message: 'Proceso 9224 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:29:21.441Z'
+}
+{
+  message: 'Proceso 10364 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:29:21.493Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:30:06.388Z'
+}
+{
+  message: 'Proceso 17296 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:30:21.513Z'
+}
+{
+  message: 'Proceso 1560 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:30:21.631Z'
+}
+{
+  message: 'Proceso 11108 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:30:21.690Z'
+}
+{
+  message: 'Proceso 5788 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:30:21.707Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:32:36.159Z'
+}
+{
+  message: 'Proceso 13912 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:32:49.599Z'
+}
+{
+  message: 'Proceso 9452 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:32:49.929Z'
+}
+{
+  message: 'Proceso 15856 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:32:49.931Z'
+}
+{
+  message: 'Proceso 10692 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:32:50.228Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:33:39.997Z'
+}
+{
+  message: 'Proceso 9892 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:33:46.873Z'
+}
+{
+  message: 'Proceso 17812 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:33:47.129Z'
+}
+{
+  message: 'Proceso 17944 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:33:47.332Z'
+}
+{
+  message: 'Proceso 1252 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:33:47.468Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:34:16.870Z'
+}
+{
+  message: 'Proceso 984 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:34:34.928Z'
+}
+{
+  message: 'Proceso 12908 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:34:35.193Z'
+}
+{
+  message: 'Proceso 17912 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:34:35.247Z'
+}
+{
+  message: 'Proceso 13340 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:34:35.320Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:36:52.850Z'
+}
+{
+  message: 'Proceso 1328 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:37:06.200Z'
+}
+{
+  message: 'Proceso 3768 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:37:06.223Z'
+}
+{
+  message: 'Proceso 5884 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:37:06.244Z'
+}
+{
+  message: 'Proceso 5244 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:37:06.263Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:43:11.914Z'
+}
+{
+  message: 'Proceso 10184 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:43:23.170Z'
+}
+{
+  message: 'Proceso 14892 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:43:23.265Z'
+}
+{
+  message: 'Proceso 948 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:43:23.464Z'
+}
+{
+  message: 'Proceso 9156 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:43:23.584Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T00:44:22.794Z'
+}
+{
+  message: 'Proceso 12060 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:44:40.447Z'
+}
+{
+  message: 'Proceso 17036 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:44:40.548Z'
+}
+{
+  message: 'Proceso 7796 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:44:40.640Z'
+}
+{
+  message: 'Proceso 16008 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T00:44:41.011Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T01:18:14.243Z'
+}
+{
+  message: 'Proceso 15652 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:18:31.258Z'
+}
+{
+  message: 'Proceso 6200 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:18:31.260Z'
+}
+{
+  message: 'Proceso 2356 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:18:31.332Z'
+}
+{
+  message: 'Proceso 17856 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:18:31.629Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T01:26:45.406Z'
+}
+{
+  message: 'Proceso 13064 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:26:57.894Z'
+}
+{
+  message: 'Proceso 11508 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:26:57.967Z'
+}
+{
+  message: 'Proceso 4412 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:26:58.018Z'
+}
+{
+  message: 'Proceso 12076 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:26:58.409Z'
+}

@@ -106,19 +106,28 @@ router.get("/home/:idUser", async (req, res) => {
   res.render('home', { first_name, last_name, products });
 });
 
+// router.get('/api/products', async (req, res) => {
+//   try {
+//     const userId = req.user ? req.user.id : 'guest';
+//     const cart = await cartManager.cartRepository.getCart(userId);
+
+//     if (!cart) {
+//       await cartManager.createCart(userId);
+//     }
+//     const products = await productManager.findAll();
+//     res.render('home', { products, cart });
+//   } catch (error) {
+//     logger.error("Error al cargar la vista de productos:", error);
+//     res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
+//   }
+// });
+
 router.get('/api/products', async (req, res) => {
   try {
-    const userId = req.user ? req.user.id : 'guest';
-    const cart = await cartManager.cartRepository.getCart(userId);
-
-    if (!cart) {
-      await cartManager.createCart(userId);
-    }
-    const products = await productManager.findAll();
-    res.render('home', { products, cart });
+    const products = await productsManager.getAllProducts();
+    res.json(products);
   } catch (error) {
-    logger.error("Error al cargar la vista de productos:", error);
-    res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
+    res.status(500).json({ error: error.message });
   }
 });
 

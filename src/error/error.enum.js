@@ -24,5 +24,6 @@ export const errorDictionary = {
     'ERROR_DELETE_PRODUCT' : 'Error al eliminarl el producto',
     'ACCESS_DANIED' : 'No tienes permiso para realizar esta acción',
     'ERROR_SIMULATING_PRODUCTS' : 'Error al generar productos simulados',
+    'USER_ALREADY_EXISTS' : 'El usuario ya existe',
 
 };

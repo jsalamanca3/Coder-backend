@@ -29,7 +29,7 @@ export const generateToken = (user) => {
 };
 
 export const authToken = (req,res,next) => {
-    const authHeader = req.header.authorization;
+    const authHeader = req.headers.authorization;
     if(!authHeader) return re.status(401).send({error: "No sea autenticado"})
 
     const token = authHeader.split( ' ' )[1];

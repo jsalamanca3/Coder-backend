@@ -1,28 +1,28 @@
-import express from 'express';
+import express from "express";
 import { __dirname } from "./utils.js";
-import cartsRouter from './router/carts.router.js';
-import productRouter from './router/product.router.js';
-import viewsRouter from './router/views.router.js';
-import usersRouter from './router/user.router.js';
-import loginRouter from './router/login.router.js';
-import loggerTest from './router/loggerTest.router.js';
-import sessionRouter from './router/sessions.router.js';
-import { ProductManager } from './persistencia/dao/functions/ProductManager.js';
-import { Server } from 'socket.io';
-import { engine } from 'express-handlebars';
+import cartsRouter from "./router/carts.router.js";
+import productRouter from "./router/product.router.js";
+import viewsRouter from "./router/views.router.js";
+import usersRouter from "./router/user.router.js";
+import loginRouter from "./router/login.router.js";
+import loggerTest from "./router/loggerTest.router.js";
+import sessionRouter from "./router/sessions.router.js";
+import { ProductManager } from "./persistencia/dao/functions/ProductManager.js";
+import { Server } from "socket.io";
+import { engine } from "express-handlebars";
 import "./config/configDB.js";
-import chatRouter from './router/chat.router.js';
-import { messageModel } from './persistencia/dao/models/messages.models.js';
+import chatRouter from "./router/chat.router.js";
+import { messageModel } from "./persistencia/dao/models/messages.models.js";
 import session from "express-session";
 import mongoStore from "connect-mongo";
 import cookieParser from "cookie-parser";
-import passport from 'passport';
-import './passport.js';
-import config from './config/config.js';
-import mockingProducts from './router/mockingproducts.router.js';
-import logger from './winston.js';
-import cluster from 'cluster';
-import { cpus } from 'os';
+import passport from "passport";
+import "./passport.js";
+import config from "./config/config.js";
+import mockingProducts from "./router/mockingproducts.router.js";
+import logger from "./winston.js";
+import cluster from "cluster";
+import { cpus } from "os";
 
 const app = express();
 app.use(cookieParser());
@@ -36,17 +36,14 @@ if (cluster.isPrimary) {
     cluster.fork();
   }
   cluster.on("exit", (worker) => {
-    logger.info(`Proceso ${worker.process.pid} ha terminado`)
+    logger.info(`Proceso ${worker.process.pid} ha terminado`);
   });
 }
 
-
-
 /* handlebars */
-app.engine('handlebars', engine());
-app.set('view engine', 'handlebars');
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
 app.set("views", __dirname + "/views");
-
 
 /* session Mongo */
 const MONGODB_URI = config.mongo_uri;
@@ -72,8 +69,8 @@ app.use("/api/login", loginRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/sessions", sessionRouter);
 app.use("/api/products", productRouter);
-app.use("/api/createproducts", productRouter);
 app.use("/api/carts", cartsRouter);
+app.use("/api/createProduct", productRouter);
 app.use("/api/chat", chatRouter);
 app.use("/api/mocking", mockingProducts);
 app.use("/api/loggerTest", loggerTest);
@@ -88,56 +85,66 @@ const socketServer = new Server(httpServer);
 
 /* server Websocket */
 
-socketServer.on('connection', (socket) => {
-  const productManager = new ProductManager('./productos.json');
+socketServer.on("connection", (socket) => {
+  const productManager = new ProductManager("./productos.json");
   logger.info(`Cliente conectado ${socket.id}`);
-  socket.on('disconnect', () => {
+  socket.on("disconnect", () => {
     logger.info(`Cliente desconectado ${socket.id}`);
   });
 
-  socket.on('addProduct', async (newProduct) => {
+  socket.on("addProduct", async (newProduct) => {
     try {
       const addedProduct = await productManager.addProduct(newProduct);
-      logger.info('Producto agregado:', addedProduct);
-      socketServer.emit('productAdded', addedProduct);
+      logger.info("Producto agregado:", addedProduct);
+      socketServer.emit("productAdded", addedProduct);
     } catch (error) {
-      logger.error('Error al agregar producto:', error.message);
+      logger.error("Error al agregar producto:", error.message);
     }
   });
 
-  socket.on('deleteProduct', async (productId) => {
+  socket.on("deleteProduct", async (productId) => {
     try {
       const deletedProduct = await productManager.removeProductById(productId);
       if (deletedProduct) {
-        socketServer.emit('productDeleted', productId);
-        logger.info('Producto eliminado:', deletedProduct);
+        socketServer.emit("productDeleted", productId);
+        logger.info("Producto eliminado:", deletedProduct);
       } else {
-        logger.info('Producto no encontrado o no se pudo eliminar.');
+        logger.info("Producto no encontrado o no se pudo eliminar.");
       }
     } catch (error) {
-      logger.error('Error al eliminar producto:', error.message);
+      logger.error("Error al eliminar producto:", error.message);
     }
   });
 
-  socket.on('newUser', (user) => {
-    socket.emit('chatMessage', { user: 'Chat Bot', message: `¡Bienvenid@, ${user}!` });
-    socket.broadcast.emit('chatMessage', { user: 'Chat Bot', message: `${user} se ha unido al chat.` });
+  socket.on("newUser", (user) => {
+    socket.emit("chatMessage", {
+      user: "Chat Bot",
+      message: `¡Bienvenid@, ${user}!`,
+    });
+    socket.broadcast.emit("chatMessage", {
+      user: "Chat Bot",
+      message: `${user} se ha unido al chat.`,
+    });
   });
 
-  socket.on('message', async (data) => {
-    logger.info('Datos de mensaje recibidos:', data);
+  socket.on("message", async (data) => {
+    logger.info("Datos de mensaje recibidos:", data);
 
     if (data && isValidEmail(data.email) && isValidMessage(data.message)) {
       try {
-        const newMessage = new messageModel({ email: data.email, message: data.message, processed: true });
-        logger.info('Mensaje guardado en la base de datos:', newMessage);
-        socket.broadcast.emit('chatMessage', newMessage);
-        logger.info('Mensaje emitido al chat:', newMessage);
+        const newMessage = new messageModel({
+          email: data.email,
+          message: data.message,
+          processed: true,
+        });
+        logger.info("Mensaje guardado en la base de datos:", newMessage);
+        socket.broadcast.emit("chatMessage", newMessage);
+        logger.info("Mensaje emitido al chat:", newMessage);
       } catch (error) {
-        logger.error('Error al guardar el mensaje:', error);
+        logger.error("Error al guardar el mensaje:", error);
       }
     } else {
-      socket.emit('messageError', 'Los datos del mensaje son incorrectos.');
+      socket.emit("messageError", "Los datos del mensaje son incorrectos.");
     }
   });
 
@@ -146,9 +153,8 @@ socketServer.on('connection', (socket) => {
   }
 
   function isValidMessage(message) {
-    return message && message.trim() !== '';
+    return message && message.trim() !== "";
   }
-
 });
 
 export { socketServer };

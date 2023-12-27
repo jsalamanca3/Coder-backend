@@ -184,29 +184,41 @@ router.put("/:cid", async (req, res) => {
   }
 });
 
-router.put("/:cid/products/:pid", async (req, res) => {
+router.post("/:cid/product/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const cid = req.params.cid;
     const pid = req.params.pid;
-    const quantity = req.body.quantity;
+    const quantity = req.body.quantity || 1;
+    const product = await productsModel.findById(pid);
 
-    if (!quantity || typeof quantity !== 'number') {
-      return res.status(404).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
+    if (!product) {
+      return res.status(404).json({ error: "Producto no encontrado" });
     }
-    const cart = await cartsModel.findOne({ _id: cid });
+
+    const cart = await cartsModel.findOne({ id: cid });
     if (!cart) {
-      return res.status(404).json({ error: errorDictionary['CART_NOT_FOUND'] });
+      return res.status(404).json({ error: "Carrito no encontrado" });
     }
-    const productInCart = cart.products.find(item => item.product.equals(pid));
-    if (!productInCart) {
-      res.status(500).json({ error: errorDictionary['ADD_TO_CART_ERROR'] });
+
+    if (req.user.role === 'premium' && product.owner === req.user._id) {
+      return res.status(403).json({ error: errorDictionary['ACCESS_DANIED'] });
     }
-    productInCart.quantity = quantity;
+
+    const productInCart = cart.products.find((item) => item.product.equals(product._id));
+    if (productInCart) {
+      productInCart.quantity += quantity;
+    } else {
+      cart.products.push({
+        product: product._id,
+        quantity: quantity,
+      });
+    }
 
     await cart.save();
+
     res.json(cart);
   } catch (error) {
-    res.status(500).json({ error: errorDictionary['ADD_TO_CART_ERROR'] });
+    res.status(500).json({ error: "Error al agregar o actualizar el producto en el carrito" });
   }
 });
 
