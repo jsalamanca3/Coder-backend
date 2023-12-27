@@ -47,26 +47,19 @@ const saltRounds = 10;
 
 router.post("/", async (req, res) => {
   const { first_name, last_name, email, password } = req.body;
-  console.log('Datos recibidos del formulario:', { first_name, last_name, email, password });
-
   if (!first_name || !last_name || !email || !password) {
     return res.status(400).json({ error: errorDictionary['INVALID_DATA_FORMAT'] });
   }
   try {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
-    console.log('1:', password, saltRounds);
-    console.log('2', hashedPassword);
 
     const existingUser = await usersManager.findByEmail(email);
-    console.log('Usuario existente:', existingUser, 'soy el correo del usuario que se registra', email);
     if (existingUser) {
       return res.status(400).json({ error: errorDictionary['USER_ALREADY_EXISTS'] });
     };
 
     const cartManagerInstance = new CartManager();
     const createCart = await cartManagerInstance.createCart(userId);
-    console.log('3:', createCart);
-    console.log('4:', userId);
 
     const createdUser = await usersManager.createOne({
       first_name,

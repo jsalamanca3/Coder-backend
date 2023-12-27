@@ -5690,3 +5690,273 @@
   level: 'info',
   timestamp: '2023-12-27T01:26:58.409Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T01:34:13.367Z'
+}
+{
+  message: 'Proceso 7776 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:34:18.136Z'
+}
+{
+  message: 'Proceso 5400 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:34:18.282Z'
+}
+{
+  message: 'Proceso 11876 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:34:18.539Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T01:34:49.564Z'
+}
+{
+  message: 'Proceso 11276 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:35:04.689Z'
+}
+{
+  message: 'Proceso 9300 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:35:05.713Z'
+}
+{
+  message: 'Proceso 5772 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:35:05.994Z'
+}
+{
+  message: 'Proceso 2236 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:35:06.846Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T01:46:13.234Z'
+}
+{
+  message: 'Proceso 13388 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:46:23.905Z'
+}
+{
+  message: 'Proceso 688 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:46:23.912Z'
+}
+{
+  message: 'Proceso 6360 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:46:23.976Z'
+}
+{
+  message: 'Proceso 5892 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:46:24.097Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T01:54:10.348Z'
+}
+{
+  message: 'Proceso 16164 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:54:14.729Z'
+}
+{
+  message: 'Proceso 18116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:54:15.001Z'
+}
+{
+  message: 'Proceso 10248 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:54:15.278Z'
+}
+{
+  message: 'Proceso 10084 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:54:15.402Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T01:55:07.148Z'
+}
+{
+  message: 'Proceso 13268 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:55:23.201Z'
+}
+{
+  message: 'Proceso 2272 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:55:23.213Z'
+}
+{
+  message: 'Proceso 16784 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:55:23.262Z'
+}
+{
+  message: 'Proceso 15696 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T01:55:23.444Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T02:01:00.325Z'
+}
+{
+  message: 'Proceso 12080 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:01:10.984Z'
+}
+{
+  message: 'Proceso 2160 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:01:10.991Z'
+}
+{
+  message: 'Proceso 12456 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:01:11.062Z'
+}
+{
+  message: 'Proceso 5092 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:01:11.297Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T02:05:28.475Z'
+}
+{
+  message: 'Proceso 9648 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:05:43.676Z'
+}
+{
+  message: 'Proceso 17452 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:05:43.747Z'
+}
+{
+  message: 'Proceso 8156 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:05:44.225Z'
+}
+{
+  message: 'Proceso 2044 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:05:44.310Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T02:11:43.556Z'
+}
+{
+  message: 'Proceso 8948 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:11:53.336Z'
+}
+{
+  message: 'Proceso 16972 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:11:53.767Z'
+}
+{
+  message: 'Proceso 7500 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:11:53.780Z'
+}
+{
+  message: 'Proceso 17744 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:11:53.878Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:00.461Z'
+}
+{
+  message: 'Proceso 18328 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:13.880Z'
+}
+{
+  message: 'Proceso 15948 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:13.964Z'
+}
+{
+  message: 'Proceso 7180 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:14.061Z'
+}
+{
+  message: 'Proceso 13144 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:14.190Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:22.973Z'
+}
+{
+  message: 'Proceso 2124 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:33.407Z'
+}
+{
+  message: 'Proceso 13288 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:33.458Z'
+}
+{
+  message: 'Proceso 14012 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:33.461Z'
+}
+{
+  message: 'Proceso 16416 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:14:33.637Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-27T02:16:56.137Z'
+}
+{
+  message: 'Proceso 984 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:17:11.892Z'
+}
+{
+  message: 'Proceso 16196 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:17:11.952Z'
+}
+{
+  message: 'Proceso 18100 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:17:12.049Z'
+}
+{
+  message: 'Proceso 568 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-27T02:17:12.101Z'
+}

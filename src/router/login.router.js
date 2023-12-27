@@ -10,31 +10,27 @@ router.post("/", async (req, res) => {
   try {
     const { email, password } = req.body;
     const userDB = await usersManager.findByEmail(email);
-
     if (!userDB) {
       return res.redirect("/signup");
     }
 
-    if (password && userDB.password) {
-      const comparePassword = await compareData(password, userDB.password);
-      if (!comparePassword) {
-        return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
-      }
+    const comparePassword = await compareData(password, userDB[0].password);
+
+    if (comparePassword) {
+      req.session["email"] = email;
+      req.session["first_name"] = userDB[0].first_name;
+      req.session["isAdmin"] = email === "adminCoder@coder.com" && password === "Cod3r123";
+      return res.redirect(`/home/${userDB[0]._id}`);
     } else {
       return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
     }
-
-    req.session["email"] = email;
-    req.session["first_name"] = userDB.first_name;
-    req.session["isAdmin"] =
-      email === "adminCoder@coder.com" && password === "Cod3r123" ? true : false;
-    res.redirect(`/home/${userDB[0]._id}`);
 
   } catch (error) {
     console.error("Error al procesar la solicitud:", error);
     return res.status(500).json({ error: "Error interno del servidor" });
   }
 });
+
 
 const saltRounds = 10;
 
@@ -58,7 +54,6 @@ router.post("/signup", async (req, res) => {
 
   try {
     const createdUser = await usersManager.createOne(userToCreate);
-    // res.status(200).json({ message: "El usuario ha sido creado", createdUser });
     res.redirect(`/home/${createdUser._id}`);
   } catch (error) {
     console.error("Error al crear el usuario:", error);
