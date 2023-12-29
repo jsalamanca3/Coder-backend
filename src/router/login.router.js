@@ -83,7 +83,7 @@ router.post('/forgotPassword', async (req, res) => {
     subject: 'Restablecer Contraseña',
     text: `Haz clic en el siguiente enlace para restablecer tu contraseña: ${resetLink}`,
   };
-
+  console.log('soy el reset Token: ', resetToken)
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).json({ error: errorDictionary['EMAIL_SEND_ERROR'] });
@@ -97,15 +97,19 @@ router.use((req, res, next) => {
   next();
 });
 
-router.post("/resetPassword", async (req, res) => {
-  const { email, newPassword, resetToken } = req.body;
+router.put("/resetPassword", async (req, res) => {
+  const { newPassword, resetToken } = req.body;
+
   jwt.verify(resetToken, 'secret_key', async (err, decoded) => {
     if (err) {
       logger.error('Error verificando el token:', err);
       return res.status(400).json({ error: errorDictionary['INVALID_TOKEN'] });
     }
+
+    console.log('Token verificado con éxito:', decoded);
+
     try {
-      const user = await usersModel.findOne({ email });
+      const user = await usersModel.findById(decoded.userId);
       if (!user) {
         return res.status(404).json({ error: errorDictionary['USER_NOT_FOUND'] });
       }

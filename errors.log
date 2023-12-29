@@ -6423,3 +6423,568 @@
     '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
   timestamp: '2023-12-27T03:15:37.786Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:07:53.240Z'
+}
+{
+  message: 'Proceso 17116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:08:26.369Z'
+}
+{
+  message: 'Proceso 7804 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:08:27.223Z'
+}
+{
+  message: 'Proceso 16196 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:08:27.224Z'
+}
+{
+  message: 'Proceso 14080 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:08:27.574Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:102:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T19:11:45.774Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:102:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T19:12:05.678Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:14:49.815Z'
+}
+{
+  message: 'Proceso 16924 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:15:06.777Z'
+}
+{
+  message: 'Proceso 13240 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:15:06.851Z'
+}
+{
+  message: 'Proceso 7688 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:15:06.971Z'
+}
+{
+  message: 'Proceso 13752 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:15:07.304Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:16:13.651Z'
+}
+{
+  message: 'Proceso 1708 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:16:25.159Z'
+}
+{
+  message: 'Proceso 17424 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:16:25.453Z'
+}
+{
+  message: 'Proceso 7796 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:16:25.595Z'
+}
+{
+  message: 'Proceso 3448 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:16:25.930Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:17:00.955Z'
+}
+{
+  message: 'Proceso 12740 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:17:13.194Z'
+}
+{
+  message: 'Proceso 5876 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:17:13.197Z'
+}
+{
+  message: 'Proceso 6844 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:17:13.225Z'
+}
+{
+  message: 'Proceso 13096 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:17:13.231Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:103:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T19:17:31.999Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:18:29.781Z'
+}
+{
+  message: 'Proceso 5584 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:18:42.243Z'
+}
+{
+  message: 'Proceso 17612 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:18:42.257Z'
+}
+{
+  message: 'Proceso 11720 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:18:42.311Z'
+}
+{
+  message: 'Proceso 17080 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:18:42.592Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:104:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T19:18:50.096Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:38:30.032Z'
+}
+{
+  message: 'Proceso 17700 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:38:43.499Z'
+}
+{
+  message: 'Proceso 7688 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:38:43.641Z'
+}
+{
+  message: 'Proceso 4036 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:38:43.730Z'
+}
+{
+  message: 'Proceso 4336 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:38:43.833Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:38:55.811Z'
+}
+{
+  message: 'Proceso 9484 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:39:09.460Z'
+}
+{
+  message: 'Proceso 10924 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:39:09.587Z'
+}
+{
+  message: 'Proceso 3676 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:39:09.792Z'
+}
+{
+  message: 'Proceso 4880 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:39:09.867Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:104:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T19:39:21.960Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:40:16.131Z'
+}
+{
+  message: 'Proceso 17832 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:40:27.402Z'
+}
+{
+  message: 'Proceso 6408 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:40:27.434Z'
+}
+{
+  message: 'Proceso 5036 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:40:27.504Z'
+}
+{
+  message: 'Proceso 15816 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:40:27.767Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:105:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T19:40:43.334Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:105:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T19:41:06.235Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:43:58.196Z'
+}
+{
+  message: 'Proceso 888 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:44:09.882Z'
+}
+{
+  message: 'Proceso 15236 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:44:09.973Z'
+}
+{
+  message: 'Proceso 9896 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:44:09.974Z'
+}
+{
+  message: 'Proceso 14896 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:44:10.196Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:46:34.567Z'
+}
+{
+  message: 'Proceso 14448 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:46:46.244Z'
+}
+{
+  message: 'Proceso 17056 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:46:46.387Z'
+}
+{
+  message: 'Proceso 2136 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:46:46.480Z'
+}
+{
+  message: 'Proceso 8396 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:46:46.530Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T19:48:37.512Z'
+}
+{
+  message: 'Proceso 10924 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:48:56.256Z'
+}
+{
+  message: 'Proceso 13152 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:48:56.441Z'
+}
+{
+  message: 'Proceso 13276 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:48:56.529Z'
+}
+{
+  message: 'Proceso 14332 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T19:48:56.903Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T20:00:21.028Z'
+}
+{
+  message: 'Proceso 16720 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:00:34.578Z'
+}
+{
+  message: 'Proceso 6524 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:00:34.797Z'
+}
+{
+  message: 'Proceso 5584 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:00:35.019Z'
+}
+{
+  message: 'Proceso 6408 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:00:35.214Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:103:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T20:00:39.261Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:103:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T20:01:03.853Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T20:11:06.094Z'
+}
+{
+  message: 'Proceso 10364 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:11:17.688Z'
+}
+{
+  message: 'Proceso 11988 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:11:17.712Z'
+}
+{
+  message: 'Proceso 5100 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:11:17.832Z'
+}
+{
+  message: 'Proceso 7416 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:11:17.993Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T20:32:04.052Z'
+}
+{
+  message: 'Proceso 10268 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:32:10.867Z'
+}
+{
+  message: 'Proceso 7204 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:32:11.079Z'
+}
+{
+  message: 'Proceso 15772 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:32:11.151Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-28T20:32:45.333Z'
+}
+{
+  message: 'Proceso 3164 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:33:03.188Z'
+}
+{
+  message: 'Proceso 4700 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:33:03.561Z'
+}
+{
+  message: 'Proceso 4660 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:33:03.563Z'
+}
+{
+  message: 'Proceso 9732 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-28T20:33:03.672Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:103:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-28T20:34:03.521Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T00:12:39.476Z'
+}
+{
+  message: 'Proceso 18348 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:12:51.789Z'
+}
+{
+  message: 'Proceso 1764 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:12:51.996Z'
+}
+{
+  message: 'Proceso 18268 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:12:52.101Z'
+}
+{
+  message: 'Proceso 11392 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:12:52.164Z'
+}
