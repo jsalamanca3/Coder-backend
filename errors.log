@@ -6988,3 +6988,502 @@
   level: 'info',
   timestamp: '2023-12-29T00:12:52.164Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T00:51:37.114Z'
+}
+{
+  message: 'Proceso 8996 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:51:47.478Z'
+}
+{
+  message: 'Proceso 6208 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:51:47.486Z'
+}
+{
+  message: 'Proceso 12236 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:51:47.519Z'
+}
+{
+  message: 'Proceso 11624 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T00:51:47.521Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:02:08.572Z'
+}
+{
+  message: 'Proceso 12988 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:02:19.713Z'
+}
+{
+  message: 'Proceso 10060 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:02:19.739Z'
+}
+{
+  message: 'Proceso 2632 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:02:19.803Z'
+}
+{
+  message: 'Proceso 12656 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:02:20.090Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:03:08.659Z'
+}
+{
+  message: 'Proceso 6616 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:03:18.077Z'
+}
+{
+  message: 'Proceso 2080 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:03:18.091Z'
+}
+{
+  message: 'Proceso 4504 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:03:18.316Z'
+}
+{
+  message: 'Proceso 9240 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:03:18.523Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:05:38.154Z'
+}
+{
+  message: 'Proceso 2660 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:05:50.836Z'
+}
+{
+  message: 'Proceso 2760 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:05:50.856Z'
+}
+{
+  message: 'Proceso 12252 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:05:51.197Z'
+}
+{
+  message: 'Proceso 6744 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:05:51.291Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:104:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-29T01:06:08.527Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:15:42.722Z'
+}
+{
+  message: 'Proceso 7684 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:15:57.294Z'
+}
+{
+  message: 'Proceso 11220 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:15:57.388Z'
+}
+{
+  message: 'Proceso 5584 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:15:57.673Z'
+}
+{
+  message: 'Proceso 1292 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:15:57.756Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:16:47.163Z'
+}
+{
+  message: 'Proceso 6732 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:16:59.907Z'
+}
+{
+  message: 'Proceso 2728 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:16:59.912Z'
+}
+{
+  message: 'Proceso 11980 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:16:59.958Z'
+}
+{
+  message: 'Proceso 5628 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:17:00.249Z'
+}
+{
+  name: 'JsonWebTokenError',
+  message: 'Error verificando el token: jwt must be provided',
+  level: 'error',
+  stack: 'JsonWebTokenError: jwt must be provided\n' +
+    '    at module.exports [as verify] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\jsonwebtoken\\verify.js:60:17)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:104:7\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/login.router.js:97:3',
+  timestamp: '2023-12-29T01:18:15.596Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:33:18.840Z'
+}
+{
+  message: 'Proceso 13076 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:33:31.264Z'
+}
+{
+  message: 'Proceso 12840 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:33:31.532Z'
+}
+{
+  message: 'Proceso 9636 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:33:31.627Z'
+}
+{
+  message: 'Proceso 5496 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:33:31.750Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:33:53.298Z'
+}
+{
+  message: 'Proceso 9116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:34:08.135Z'
+}
+{
+  message: 'Proceso 5540 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:34:08.137Z'
+}
+{
+  message: 'Proceso 6896 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:34:08.217Z'
+}
+{
+  message: 'Proceso 1100 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:34:08.277Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:42:45.994Z'
+}
+{
+  message: 'Proceso 12656 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:42:59.038Z'
+}
+{
+  message: 'Proceso 8920 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:42:59.248Z'
+}
+{
+  message: 'Proceso 2884 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:42:59.261Z'
+}
+{
+  message: 'Proceso 9620 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:42:59.494Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:52:42.411Z'
+}
+{
+  message: 'Proceso 6160 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:52:52.652Z'
+}
+{
+  message: 'Proceso 4740 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:52:52.721Z'
+}
+{
+  message: 'Proceso 9228 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:52:52.921Z'
+}
+{
+  message: 'Proceso 3104 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:52:53.172Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:54:53.379Z'
+}
+{
+  message: 'Proceso 9428 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:00.647Z'
+}
+{
+  message: 'Proceso 1100 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:00.792Z'
+}
+{
+  message: 'Proceso 11872 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:00.957Z'
+}
+{
+  message: 'Proceso 9992 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:00.995Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:28.685Z'
+}
+{
+  message: 'Proceso 1488 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:32.582Z'
+}
+{
+  message: 'Proceso 5104 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:32.768Z'
+}
+{
+  message: 'Proceso 6476 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:32.807Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:55:59.790Z'
+}
+{
+  message: 'Proceso 1636 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:56:13.900Z'
+}
+{
+  message: 'Proceso 2100 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:56:13.964Z'
+}
+{
+  message: 'Proceso 832 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:56:13.966Z'
+}
+{
+  message: 'Proceso 12832 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:56:14.723Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T01:57:54.944Z'
+}
+{
+  message: 'Proceso 7052 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:58:06.742Z'
+}
+{
+  message: 'Proceso 1116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:58:06.855Z'
+}
+{
+  message: 'Proceso 10684 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:58:07.043Z'
+}
+{
+  message: 'Proceso 1984 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T01:58:07.373Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T02:04:49.524Z'
+}
+{
+  message: 'Proceso 5172 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:05:04.924Z'
+}
+{
+  message: 'Proceso 5432 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:05:05.004Z'
+}
+{
+  message: 'Proceso 11228 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:05:05.005Z'
+}
+{
+  message: 'Proceso 3692 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:05:05.090Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T02:07:54.029Z'
+}
+{
+  message: 'Proceso 2000 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:05.181Z'
+}
+{
+  message: 'Proceso 2728 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:05.427Z'
+}
+{
+  message: 'Proceso 9116 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:05.460Z'
+}
+{
+  message: 'Proceso 5080 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:05.596Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:41.746Z'
+}
+{
+  message: 'Proceso 4560 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:52.734Z'
+}
+{
+  message: 'Proceso 8604 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:52.772Z'
+}
+{
+  message: 'Proceso 9356 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:52.981Z'
+}
+{
+  message: 'Proceso 1188 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:08:53.212Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:08.013Z'
+}
+{
+  message: 'Proceso 1268 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:14.741Z'
+}
+{
+  message: 'Proceso 4764 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:14.875Z'
+}
+{
+  message: 'Proceso 5600 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:15.076Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:25.607Z'
+}
+{
+  message: 'Proceso 4580 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:40.043Z'
+}
+{
+  message: 'Proceso 756 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:40.166Z'
+}
+{
+  message: 'Proceso 4128 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:40.439Z'
+}
+{
+  message: 'Proceso 1560 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-29T02:10:40.554Z'
+}

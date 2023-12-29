@@ -36,7 +36,14 @@ const userSchema = new Schema({
    cart: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Cart",
-    }
+    },
+    resetToken: {
+        token: String,
+        used: {
+          type: Boolean,
+          default: false,
+        },
+    },
 });
 
 const usersModel = model('User', userSchema);

@@ -68,7 +68,12 @@ router.post('/forgotPassword', async (req, res) => {
   if (!user) {
     return res.status(404).json({ error: errorDictionary['USER_NOT_FOUND'] });
   }
-  const resetToken = jwt.sign({ userId: user._id }, 'secret_key', { expiresIn: '1h' });
+
+  if (user.resetToken && user.resetToken.used) {
+    return res.status(400).json({ error: errorDictionary['TOKEN_ALREADY_USED'] });
+  }
+
+  const resetToken = jwt.sign({ userId: user._id }, config.jwt_secret, { expiresIn: '1h' });
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -83,7 +88,15 @@ router.post('/forgotPassword', async (req, res) => {
     subject: 'Restablecer Contraseña',
     text: `Haz clic en el siguiente enlace para restablecer tu contraseña: ${resetLink}`,
   };
-  console.log('soy el reset Token: ', resetToken)
+  console.log('soy el reset Token: ', resetToken);
+
+  user.resetToken = {
+    token: resetToken,
+    used: false,
+  };
+
+  await user.save();
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).json({ error: errorDictionary['EMAIL_SEND_ERROR'] });
@@ -97,10 +110,13 @@ router.use((req, res, next) => {
   next();
 });
 
-router.put("/resetPassword", async (req, res) => {
+router.post("/resetPassword", async (req, res) => {
+  console.log('Recibiendo solicitud para restablecer contraseña:', req.body);
   const { newPassword, resetToken } = req.body;
 
-  jwt.verify(resetToken, 'secret_key', async (err, decoded) => {
+  jwt.verify(resetToken, config.jwt_secret, async (err, decoded) => {
+    console.log('Error al verificar el token:', err);
+    console.log('Token decodificado:', decoded);
     if (err) {
       logger.error('Error verificando el token:', err);
       return res.status(400).json({ error: errorDictionary['INVALID_TOKEN'] });
@@ -113,10 +129,14 @@ router.put("/resetPassword", async (req, res) => {
       if (!user) {
         return res.status(404).json({ error: errorDictionary['USER_NOT_FOUND'] });
       }
+      if (user.resetToken.used) {
+        return res.status(400).json({ error: errorDictionary['TOKEN_ALREADY_USED'] });
+      }
       const hashedPassword = await bcrypt.hash(newPassword, 10);
       user.password = hashedPassword;
+      user.resetToken.used = true;
       await user.save();
-      res.status(200).json({ message: 'Contraseña restablecida exitosamente' });
+      res.status(200).json({ success: true, message: 'Contraseña restablecida exitosamente' });
     } catch (error) {
       logger.error('Error al restablecer la contraseña:', error);
       res.status(500).json({ error: errorDictionary['INTERNAL_SERVER_ERROR'] });
