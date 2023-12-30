@@ -68,7 +68,9 @@ router.post("/", autorizeMiddleware, async (req, res) => {
       return;
     }
 
-    const owner = currentUser.role === "admin" ? adminUserId : currentUser._id;
+    const adminObjectId  = currentUser._id;
+
+    const owner = currentUser.role === "admin" ? adminObjectId : currentUser._id;
 
     const newProduct = new productsModel({
       title: value.title,

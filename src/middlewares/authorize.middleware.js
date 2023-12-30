@@ -4,8 +4,7 @@ import logger from "../winston.js";
 // Middleware de autorización
 const authorizeMiddleware = async (req, res, next) => {
   const userRole = req.user ? req.user.role : null;
-
-  console.log('Rol del usuario:', userRole);
+  logger.info('Rol del usuario:', userRole);
 
   const isAdmin = userRole === 'admin';
   const isPremium = userRole === 'premium';

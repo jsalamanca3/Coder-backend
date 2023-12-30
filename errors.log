@@ -5044,3 +5044,1147 @@
   level: 'info',
   timestamp: '2023-12-30T04:08:16.159Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T11:11:21.351Z'
+}
+{
+  message: 'Proceso 17264 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:11:40.425Z'
+}
+{
+  message: 'Proceso 6224 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:11:40.536Z'
+}
+{
+  message: 'Proceso 14444 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:11:40.537Z'
+}
+{
+  message: 'Proceso 16636 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:11:40.641Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2023-12-30T11:11:57.759Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2023-12-30T11:23:57.194Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:24:16.109Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658f404cc82c0bbdde857954"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$wpiLWI6BAM8R.Io8NGS2.ubQ30W2fXiifUYdlWIx.Ux7UJXLmD70O',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658f404cc82c0bbdde857957")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:24:16.112Z'
+}
+{
+  title: 'Bufanda 1',
+  price: '25',
+  stock: '8',
+  description: 'bufanda de lino',
+  code: '12',
+  status: 'available',
+  category: 'lino',
+  thumbnails: 'NotFound',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2023-12-30T11:24:16.115Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'Bufanda 1',
+    description: 'bufanda de lino',
+    code: '12',
+    price: 25,
+    status: 'available',
+    stock: 8,
+    thumbnails: 'NotFound',
+    category: 'lino',
+    owner: new ObjectId("658f404cc82c0bbdde857954"),
+    _id: new ObjectId("658ffde038485a1671a87b36")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2023-12-30T11:24:16.154Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2023-12-30T11:24:16.290Z'
+}
+{
+  message: 'serialize 658ffdf438485a1671a87b39',
+  level: 'info',
+  timestamp: '2023-12-30T11:24:37.500Z'
+}
+{
+  message: 'serialize 658ffeb938485a1671a87b4a',
+  level: 'info',
+  timestamp: '2023-12-30T11:27:53.623Z'
+}
+{
+  message: 'serialize 658ffeb938485a1671a87b4a',
+  level: 'info',
+  timestamp: '2023-12-30T11:29:54.674Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:31:00.246Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:31:00.248Z'
+}
+{
+  title: 'Manzana',
+  price: '1200',
+  stock: '40',
+  description: 'verde',
+  code: '14',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2023-12-30T11:31:00.260Z'
+}
+{
+  level: 'error',
+  message: 'Error al crear el producto: adminUserId is not defined',
+  stack: 'ReferenceError: adminUserId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:71:50\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at authorizeMiddleware (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/middlewares/authorize.middleware.js:45:5)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)',
+  timestamp: '2023-12-30T11:31:00.266Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:33:00.227Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:33:00.228Z'
+}
+{
+  title: 'manzana',
+  price: '1200',
+  stock: '20',
+  description: 'verde',
+  code: '14',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2023-12-30T11:33:00.229Z'
+}
+{
+  level: 'error',
+  message: 'Error al crear el producto: adminUserId is not defined',
+  stack: 'ReferenceError: adminUserId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:71:50\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at authorizeMiddleware (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/middlewares/authorize.middleware.js:45:5)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)',
+  timestamp: '2023-12-30T11:33:00.234Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T11:34:42.757Z'
+}
+{
+  message: 'Proceso 14868 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:34:55.552Z'
+}
+{
+  message: 'Proceso 16100 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:34:55.739Z'
+}
+{
+  message: 'Proceso 12728 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:34:55.956Z'
+}
+{
+  message: 'Proceso 9380 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:34:56.161Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:35:37.706Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:35:37.710Z'
+}
+{
+  title: 'manzana',
+  price: '1200',
+  stock: '20',
+  description: 'verde',
+  code: '15',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2023-12-30T11:35:37.715Z'
+}
+{
+  level: 'error',
+  message: 'Error al crear el producto: adminUserId is not defined',
+  stack: 'ReferenceError: adminUserId is not defined\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:72:50\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at authorizeMiddleware (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/middlewares/authorize.middleware.js:45:5)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)',
+  timestamp: '2023-12-30T11:35:37.740Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T11:41:56.567Z'
+}
+{
+  message: 'Proceso 13112 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:42:08.904Z'
+}
+{
+  message: 'Proceso 12292 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:42:08.950Z'
+}
+{
+  message: 'Proceso 6568 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:42:09.001Z'
+}
+{
+  message: 'Proceso 15384 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:42:09.027Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:42:21.503Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:42:21.507Z'
+}
+{
+  title: 'manzana',
+  price: '1200',
+  stock: '20',
+  description: 'verde',
+  code: '15',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2023-12-30T11:42:21.516Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true
+        }
+      }
+    },
+    validationError: Error: Product validation failed: owner: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+        at ValidationError.inspect (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\error\validation.js:50:26)
+        at formatValue (node:internal/util/inspect:805:19)
+        at formatProperty (node:internal/util/inspect:1926:11)
+        at formatRaw (node:internal/util/inspect:1054:9)
+        at formatValue (node:internal/util/inspect:840:10)
+        at formatProperty (node:internal/util/inspect:1926:11)
+        at formatRaw (node:internal/util/inspect:1054:9)
+        at formatValue (node:internal/util/inspect:840:10)
+        at inspect (node:internal/util/inspect:364:10)
+        at Format.transform (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        owner: CastError: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+            at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+            at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+            at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+            at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+            at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+            at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+            at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+            at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24
+            at Layer.handle [as handle_request] (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\layer.js:95:5)
+            at next (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\route.js:144:13) {
+          stringValue: '"admin"',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: 'admin',
+          path: 'owner',
+          reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new ObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\node_modules\bson\lib\bson.cjs:2055:23)
+              at castObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+              at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+              at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+              at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+              at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+              at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+              at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+              at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+              at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24,
+          valueType: 'string'
+        }
+      },
+      _message: 'Product validation failed'
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '15',
+    price: 1200,
+    status: 'available',
+    stock: 20,
+    thumbnails: 'soyunamanzana',
+    category: 'fruta',
+    _id: new ObjectId("6590021db09df1fe8999ff89")
+  },
+  '$errors': {
+    owner: CastError: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+        at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+        at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+        at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+        at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+        at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+        at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24
+        at Layer.handle [as handle_request] (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\route.js:144:13) {
+      stringValue: '"admin"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'admin',
+      path: 'owner',
+      reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new ObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\node_modules\bson\lib\bson.cjs:2055:23)
+          at castObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+          at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+          at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+          at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+          at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+          at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24,
+      valueType: 'string'
+    }
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2023-12-30T11:42:21.551Z'
+}
+{
+  errors: {
+    owner: CastError: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+        at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+        at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+        at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+        at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+        at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+        at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24
+        at Layer.handle [as handle_request] (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\route.js:144:13) {
+      stringValue: '"admin"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'admin',
+      path: 'owner',
+      reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new ObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\node_modules\bson\lib\bson.cjs:2055:23)
+          at castObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+          at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+          at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+          at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+          at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+          at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24,
+      valueType: 'string'
+    }
+  },
+  _message: 'Product validation failed',
+  level: 'error',
+  message: 'Error al crear el producto: Product validation failed: owner: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"',
+  stack: 'ValidationError: Product validation failed: owner: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"\n' +
+    '    at Document.invalidate (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:3173:32)\n' +
+    '    at model.$set (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:1453:12)\n' +
+    '    at model.$set (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:1113:16)\n' +
+    '    at model.Document (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:164:12)\n' +
+    '    at model.Model (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\model.js:123:12)\n' +
+    '    at new model (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\model.js:4718:15)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at authorizeMiddleware (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/middlewares/authorize.middleware.js:45:5)',
+  timestamp: '2023-12-30T11:42:21.584Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:42:55.004Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:42:55.006Z'
+}
+{
+  title: 'manzana',
+  price: '1200',
+  stock: '20',
+  description: 'verde',
+  code: '15',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2023-12-30T11:42:55.009Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true
+        }
+      }
+    },
+    validationError: Error: Product validation failed: owner: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+        at ValidationError.inspect (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\error\validation.js:50:26)
+        at formatValue (node:internal/util/inspect:805:19)
+        at formatProperty (node:internal/util/inspect:1926:11)
+        at formatRaw (node:internal/util/inspect:1054:9)
+        at formatValue (node:internal/util/inspect:840:10)
+        at formatProperty (node:internal/util/inspect:1926:11)
+        at formatRaw (node:internal/util/inspect:1054:9)
+        at formatValue (node:internal/util/inspect:840:10)
+        at inspect (node:internal/util/inspect:364:10)
+        at Format.transform (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\logform\pretty-print.js:27:19) {
+      errors: {
+        owner: CastError: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+            at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+            at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+            at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+            at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+            at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+            at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+            at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+            at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24
+            at Layer.handle [as handle_request] (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\layer.js:95:5)
+            at next (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\route.js:144:13) {
+          stringValue: '"admin"',
+          messageFormat: undefined,
+          kind: 'ObjectId',
+          value: 'admin',
+          path: 'owner',
+          reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+              at new ObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\node_modules\bson\lib\bson.cjs:2055:23)
+              at castObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+              at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+              at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+              at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+              at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+              at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+              at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+              at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+              at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24,
+          valueType: 'string'
+        }
+      },
+      _message: 'Product validation failed'
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '15',
+    price: 1200,
+    status: 'available',
+    stock: 20,
+    thumbnails: 'soyunamanzana',
+    category: 'fruta',
+    _id: new ObjectId("6590023fb09df1fe8999ff8c")
+  },
+  '$errors': {
+    owner: CastError: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+        at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+        at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+        at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+        at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+        at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+        at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24
+        at Layer.handle [as handle_request] (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\route.js:144:13) {
+      stringValue: '"admin"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'admin',
+      path: 'owner',
+      reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new ObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\node_modules\bson\lib\bson.cjs:2055:23)
+          at castObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+          at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+          at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+          at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+          at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+          at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24,
+      valueType: 'string'
+    }
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2023-12-30T11:42:55.022Z'
+}
+{
+  errors: {
+    owner: CastError: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"
+        at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:250:11)
+        at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+        at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+        at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+        at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+        at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+        at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24
+        at Layer.handle [as handle_request] (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\layer.js:95:5)
+        at next (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\express\lib\router\route.js:144:13) {
+      stringValue: '"admin"',
+      messageFormat: undefined,
+      kind: 'ObjectId',
+      value: 'admin',
+      path: 'owner',
+      reason: BSONError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+          at new ObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\node_modules\bson\lib\bson.cjs:2055:23)
+          at castObjectId (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+          at ObjectId.cast (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schema\objectid.js:248:12)
+          at SchemaType.applySetters (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\schematype.js:1219:12)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1411:22)
+          at model.$set (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:1113:16)
+          at model.Document (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\document.js:164:12)
+          at model.Model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:123:12)
+          at new model (C:\Users\Julia\OneDrive - Universidad de San Buenaventura - Bogota\Programación aprendiendo\coder-back-end\Coder-backend\node_modules\mongoose\lib\model.js:4718:15)
+          at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24,
+      valueType: 'string'
+    }
+  },
+  _message: 'Product validation failed',
+  level: 'error',
+  message: 'Error al crear el producto: Product validation failed: owner: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"',
+  stack: 'ValidationError: Product validation failed: owner: Cast to ObjectId failed for value "admin" (type string) at path "owner" because of "BSONError"\n' +
+    '    at Document.invalidate (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:3173:32)\n' +
+    '    at model.$set (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:1453:12)\n' +
+    '    at model.$set (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:1113:16)\n' +
+    '    at model.Document (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\document.js:164:12)\n' +
+    '    at model.Model (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\model.js:123:12)\n' +
+    '    at new model (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\mongoose\\lib\\model.js:4718:15)\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/products.service.router.js:76:24\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at authorizeMiddleware (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/middlewares/authorize.middleware.js:45:5)',
+  timestamp: '2023-12-30T11:42:55.036Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T11:47:01.922Z'
+}
+{
+  message: 'Proceso 14512 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:47:16.691Z'
+}
+{
+  message: 'Proceso 244 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:47:16.910Z'
+}
+{
+  message: 'Proceso 12656 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:47:17.132Z'
+}
+{
+  message: 'Proceso 12404 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:47:17.464Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:47:36.220Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2023-12-30T11:47:36.223Z'
+}
+{
+  title: 'manzana',
+  price: '1200',
+  stock: '20',
+  description: 'verde',
+  code: '15',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2023-12-30T11:47:36.229Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '15',
+    price: 1200,
+    status: 'available',
+    stock: 20,
+    thumbnails: 'soyunamanzana',
+    category: 'fruta',
+    owner: new ObjectId("658ffeb938485a1671a87b4a"),
+    _id: new ObjectId("65900358cd9fe425f63fe1a5")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2023-12-30T11:47:36.262Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2023-12-30T11:47:36.386Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T11:59:07.119Z'
+}
+{
+  message: 'Proceso 15540 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:59:23.625Z'
+}
+{
+  message: 'Proceso 15368 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:59:23.742Z'
+}
+{
+  message: 'Proceso 14384 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:59:23.840Z'
+}
+{
+  message: 'Proceso 17084 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T11:59:24.141Z'
+}
