@@ -6188,3 +6188,158 @@
   level: 'info',
   timestamp: '2023-12-30T11:59:24.141Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T12:04:39.981Z'
+}
+{
+  message: 'Proceso 15656 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:04:53.423Z'
+}
+{
+  message: 'Proceso 15024 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:04:53.457Z'
+}
+{
+  message: 'Proceso 16188 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:04:53.613Z'
+}
+{
+  message: 'Proceso 8984 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:04:53.664Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T12:08:01.299Z'
+}
+{
+  message: 'Proceso 10352 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:08:14.171Z'
+}
+{
+  message: 'Proceso 16844 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:08:14.213Z'
+}
+{
+  message: 'Proceso 11776 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:08:14.260Z'
+}
+{
+  message: 'Proceso 5800 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:08:14.629Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T12:09:49.513Z'
+}
+{
+  message: 'Proceso 11896 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:10:03.004Z'
+}
+{
+  message: 'Proceso 11620 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:10:03.041Z'
+}
+{
+  message: 'Proceso 9536 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:10:03.095Z'
+}
+{
+  message: 'Proceso 11624 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:10:03.346Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T12:16:38.834Z'
+}
+{
+  message: 'Proceso 1136 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:16:58.584Z'
+}
+{
+  message: 'Proceso 13796 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:16:58.687Z'
+}
+{
+  message: 'Proceso 12168 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:16:58.818Z'
+}
+{
+  message: 'Proceso 4284 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:16:59.127Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T12:18:55.654Z'
+}
+{
+  message: 'Proceso 17180 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:19:08.717Z'
+}
+{
+  message: 'Proceso 4852 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:19:08.740Z'
+}
+{
+  message: 'Proceso 5488 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:19:08.803Z'
+}
+{
+  message: 'Proceso 15184 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:19:09.064Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2023-12-30T12:20:08.348Z'
+}
+{
+  message: 'Proceso 6568 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:20:23.303Z'
+}
+{
+  message: 'Proceso 4088 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:20:23.318Z'
+}
+{
+  message: 'Proceso 15948 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:20:23.385Z'
+}
+{
+  message: 'Proceso 12104 ha terminado',
+  level: 'info',
+  timestamp: '2023-12-30T12:20:23.793Z'
+}
+{
+  message: 'Entrando al endpoint: premiun.uid',
+  level: 'info',
+  timestamp: '2023-12-30T12:20:47.494Z'
+}
