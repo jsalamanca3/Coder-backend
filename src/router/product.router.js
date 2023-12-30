@@ -104,12 +104,29 @@ const productSchema = Joi.object({
 
 router.post("/", autorizeMiddleware, async (req, res) => {
   try {
-    const { error, value } = productSchema.validate(req.body);
+    const currentUser = req.user;
 
-    if (error) {
-      res.status(400).json({ error: error.details[0].message });
+    if (!(currentUser.role === "admin" || currentUser.role === "premium")) {
+      console.log("Error: Solo usuarios admin o premium pueden crear productos");
+      return res.status(403).json({
+        error: "Solo usuarios admin o premium pueden crear productos",
+      });
+    }
+
+    const requiredFields = ['title', 'price', 'category'];
+    const missingFields = requiredFields.filter(field => !req.body[field]);
+
+    if (missingFields.length > 0) {
+      const errorMessage = `Faltan campos obligatorios: ${missingFields.join(', ')}`;
+      return res.status(400).json({ error: errorMessage });
+    }
+
+    const { error, value } = productSchema.validate(req.body);
+    if (error || !value) {
+      res.status(400).json({ error: error?.details[0].message || 'Error de validación del producto' });
       return;
     }
+    const owner = currentUser.role === "admin" ? null : currentUser._id;
     const newProduct = new productsModel({
       title: value.title,
       description: value.description,
@@ -119,16 +136,17 @@ router.post("/", autorizeMiddleware, async (req, res) => {
       stock: value.stock,
       category: value.category,
       thumbnails: value.thumbnails,
+      owner: owner,
     });
 
     await newProduct.save();
 
     res.status(201).json(newProduct);
   } catch (error) {
-    return res.status(401).json({ error: errorDictionary['PRODUCT_CREATION_ERROR'] });
+    logger.error("Error al crear el producto:", error);
+    res.status(500).json({ error: 'Error al crear el producto' });
   }
 });
-
 router.put("/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const productId = req.params.pid;

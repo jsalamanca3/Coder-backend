@@ -25,5 +25,6 @@ export const errorDictionary = {
     'ACCESS_DANIED' : 'No tienes permiso para realizar esta acción',
     'ERROR_SIMULATING_PRODUCTS' : 'Error al generar productos simulados',
     'USER_ALREADY_EXISTS' : 'El usuario ya existe',
+    'SAME_PASSWORD_ERROR' : 'No puedes poner la misma contraseña',
 
 };

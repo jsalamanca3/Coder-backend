@@ -96,48 +96,49 @@ router.post("api/realTimeProducts/deleteProduct", async (req, res) => {
 });
 
 router.get("/api/createproduct", (req, res) => {
-  res.render('createProduct');
+  res.render('createproduct');
 });
 
 router.get("/home/:idUser", async (req, res) => {
-  const { idUser } = req.params
-  const userInfo = await usersManager.findById(idUser)
-  const { first_name, last_name } = userInfo;
-  let products = await productsManager.findAll();
-  const userCart = await cartsModel.findOne({ userId: idUser });
-  let carts = '';
-  !userCart ? carts = await cartManager.cartRepository.createCart(idUser) : carts = userCart;
-  const cardId = carts.id
-  products.map((item) => {
-    item.cartId = cardId
-  })
-  res.render('home', { first_name, last_name, products });
+  try {
+    const { idUser } = req.params;
+    const userInfo = await usersManager.findById(idUser);
+    if (!userInfo) {
+      return res.status(404).send("Usuario no encontrado");
+    }
+
+    const { first_name, last_name } = userInfo;
+
+    let products = await productsManager.findAll();
+
+    const userCart = await cartsModel.findOne({ userId: idUser });
+    let carts = userCart || (await cartManager.cartRepository.createCart(idUser));
+    const cartId = carts.id;
+
+    products = products.map((item) => ({ ...item, cartId }));
+
+    res.render('home', { first_name, last_name, products });
+  } catch (error) {
+    console.error('Error en la ruta /home/:idUser:', error);
+    res.status(500).send('Error interno del servidor');
+  }
 });
 
-// router.get('/api/products', async (req, res) => {
-//   try {
-//     const userId = req.user ? req.user.id : 'guest';
-//     const cart = await cartManager.cartRepository.getCart(userId);
-
-//     if (!cart) {
-//       await cartManager.createCart(userId);
-//     }
-//     const products = await productManager.findAll();
-//     res.render('home', { products, cart });
-//   } catch (error) {
-//     logger.error("Error al cargar la vista de productos:", error);
-//     res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
-//   }
-// });
 
 router.get('/api/products', async (req, res) => {
   try {
+    /* const userId = req.user ? req.user.id : 'admin, premium, user';
+    const cart = await cartManager.cartRepository.getCart(userId);
+    if (!cart) {
+      await cartManager.cartRepository.createCart(userId);
+     } */
     const products = await productsManager.getAllProducts();
-    res.json(products);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
+     res.render('home', {products});
+   } catch (error) {
+    logger.error("Error al cargar la vista de productos:", error);
+     res.status(500).send({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
+   }
+ });
 
 router.get('/carts/:cid', async (req, res) => {
   try {

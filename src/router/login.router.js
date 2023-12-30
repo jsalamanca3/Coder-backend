@@ -132,6 +132,11 @@ router.post("/resetPassword", async (req, res) => {
       if (user.resetToken.used) {
         return res.status(400).json({ error: errorDictionary['TOKEN_ALREADY_USED'] });
       }
+      const isSamePassword = await bcrypt.compare(newPassword, user.password);
+      if (isSamePassword) {
+        return res.status(400).json({ error: errorDictionary['SAME_PASSWORD_ERROR'] });
+      }
+
       const hashedPassword = await bcrypt.hash(newPassword, 10);
       user.password = hashedPassword;
       user.resetToken.used = true;

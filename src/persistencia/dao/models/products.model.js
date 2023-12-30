@@ -21,7 +21,8 @@ const productsSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ["available", "sold"]
+        enum: ["available", "sold"],
+        default: 'available',
     },
     stock: {
         type: Number,
@@ -39,6 +40,7 @@ const productsSchema = new Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
+        required: false,
       },
 })
 
