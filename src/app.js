@@ -1,5 +1,5 @@
 import express from "express";
-import { __dirname } from "./utils.js";
+import { __filename } from "./utils.js";
 import cartsRouter from "./router/carts.router.js";
 import productRouter from "./router/product.router.js";
 import createRouter from "./router/products.service.router.js";
@@ -24,12 +24,14 @@ import mockingProducts from "./router/mockingproducts.router.js";
 import logger from "./winston.js";
 import cluster from "cluster";
 import { cpus } from "os";
+import swaggerUi from "swagger-ui-express";
+import { swaggerSetup } from "./utils/swaggerSpecs.js";
 
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__filename + "/public"));
 
 if (cluster.isPrimary) {
   console.log(`Este es el proceso Principal ${process.pid}`);
@@ -44,7 +46,7 @@ if (cluster.isPrimary) {
 /* handlebars */
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
-app.set("views", __dirname + "/views");
+app.set("views", __filename + "/views");
 
 /* session Mongo */
 const MONGODB_URI = config.mongo_uri;
@@ -75,6 +77,7 @@ app.use("/api/createproduct", createRouter);
 app.use("/api/chat", chatRouter);
 app.use("/api/mocking", mockingProducts);
 app.use("/api/loggerTest", loggerTest);
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSetup));
 
 const PORT = 8080;
 

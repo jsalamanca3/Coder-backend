@@ -1,4 +1,4 @@
-import { dirname } from "path";
+import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
@@ -6,7 +6,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export const __dirname = dirname(fileURLToPath(import.meta.url));
+export const __filename = fileURLToPath(import.meta.url);
+export const __dirname = join(dirname(__filename));
 
 /* bcrypt */
 

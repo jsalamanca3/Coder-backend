@@ -1,0 +1,310 @@
+components:
+  schemas:
+    Cart:
+      type: object
+      properties:
+        id:
+          type: string
+        products:
+          type: array
+          items:
+            type: object
+            properties:
+              product:
+                type: string
+                description: ID del producto.
+              quantity:
+                type: integer
+                description: Cantidad del producto en el carrito.
+            example:
+              - product: "product_id_1"
+                quantity: 2
+              - product: "product_id_2"
+                quantity: 1
+        user:
+          type: string
+          description: ID del usuario asociado al carrito.
+
+  CartProduct:
+    type: object
+    properties:
+      product:
+        type: string
+        description: ID del producto.
+      quantity:
+        type: integer
+        description: Cantidad del producto en el carrito.
+
+  ErrorUnauthorized:
+    type: object
+    properties:
+      error:
+        type: string
+        description: Mensaje de error.
+      example:
+        error: "Usuario no autenticado"
+
+  ErrorBadRequest:
+    type: object
+    properties:
+      error:
+        type: string
+        description: Mensaje de error.
+      example:
+        error: "Formato de datos no válido"
+
+  ErrorForbidden:
+    type: object
+    properties:
+      error:
+        type: string
+        description: Mensaje de error.
+      example:
+        error: "Acceso denegado"
+
+  ErrorNotFound:
+    type: object
+    properties:
+      error:
+        type: string
+        description: Mensaje de error.
+      example:
+        error: "Recurso no encontrado"
+
+  ErrorInternalServer:
+    type: object
+    properties:
+      error:
+        type: string
+        description: Mensaje de error.
+      example:
+        error: "Error del servidor"
+
+
+paths:
+  /carts/active:
+    get:
+      summary: Obtener carrito activo del usuario
+      tags:
+        - Cart
+      description: Obtiene el carrito activo del usuario autenticado.
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Operación exitosa
+          schema:
+            type: object
+            properties:
+              cart:
+                $ref: '#/definitions/Cart'
+        401:
+          description: Usuario no autenticado
+          schema:
+            $ref: '#/definitions/ErrorUnauthorized'
+        404:
+          description: Carrito o usuario no encontrado
+          schema:
+            $ref: '#/definitions/ErrorNotFound'
+        500:
+          description: Error del servidor
+          schema:
+            $ref: '#/definitions/ErrorInternalServer'
+
+  /carts:
+    post:
+      summary: Crear un nuevo carrito
+      tags:
+        - Cart
+      description: Crea un nuevo carrito para el usuario autenticado.
+      security:
+        - bearerAuth: []
+      responses:
+        201:
+          description: Carrito creado exitosamente
+          schema:
+            type: object
+            properties:
+              cart:
+                $ref: '#/definitions/Cart'
+        500:
+          description: Error del servidor
+          schema:
+            $ref: '#/definitions/ErrorInternalServer'
+
+  /carts/{cid}:
+    get:
+      summary: Obtener detalles de un carrito por ID
+      tags:
+        - Cart
+      description: Obtiene los detalles de un carrito específico por ID.
+      parameters:
+        - in: path
+          name: cid
+          type: string
+          required: true
+          description: ID del carrito.
+      responses:
+        200:
+          description: Operación exitosa
+          schema:
+            $ref: '#/definitions/Cart'
+        404:
+          description: Carrito no encontrado
+          schema:
+            $ref: '#/definitions/ErrorNotFound'
+        500:
+          description: Error del servidor
+          schema:
+            $ref: '#/definitions/ErrorInternalServer'
+
+    put:
+      summary: Actualizar productos en el carrito
+      tags:
+        - Cart
+      description: Actualiza los productos en el carrito especificado.
+      parameters:
+        - in: path
+          name: cid
+          type: string
+          required: true
+          description: ID del carrito.
+      requestBody:
+        description: Nuevos productos del carrito.
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  product:
+                    type: string
+                    description: ID del producto.
+                  quantity:
+                    type: integer
+                    description: Cantidad del producto en el carrito.
+              example:
+                - product: "product_id_1"
+                  quantity: 2
+                - product: "product_id_2"
+                  quantity: 1
+      responses:
+        200:
+          description: Carrito actualizado exitosamente
+          schema:
+            $ref: '#/definitions/Cart'
+        400:
+          description: Formato de productos no válido
+          schema:
+            $ref: '#/definitions/ErrorBadRequest'
+        404:
+          description: Carrito no encontrado
+          schema:
+            $ref: '#/definitions/ErrorNotFound'
+        500:
+          description: Error del servidor
+          schema:
+            $ref: '#/definitions/ErrorInternalServer'
+
+  /carts/{cid}/product/{pid}:
+    post:
+      summary: Agregar producto al carrito
+      tags:
+        - Cart
+      description: Agrega un producto al carrito especificado.
+      parameters:
+        - in: path
+          name: cid
+          type: string
+          required: true
+          description: ID del carrito.
+        - in: path
+          name: pid
+          type: string
+          required: true
+          description: ID del producto.
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Producto agregado al carrito exitosamente
+          schema:
+            $ref: '#/definitions/Cart'
+        400:
+          description: Formato de datos no válido
+          schema:
+            $ref: '#/definitions/ErrorBadRequest'
+        403:
+          description: Acceso denegado
+          schema:
+            $ref: '#/definitions/ErrorForbidden'
+        404:
+          description: Carrito o producto no encontrado
+          schema:
+            $ref: '#/definitions/ErrorNotFound'
+        500:
+          description: Error del servidor
+          schema:
+            $ref: '#/definitions/ErrorInternalServer'
+    get:
+      summary: Obtener detalles de un producto en el carrito
+      tags:
+        - Cart
+      description: Obtiene los detalles de un producto en el carrito.
+      parameters:
+        - in: path
+          name: cid
+          type: string
+          required: true
+          description: ID del carrito.
+        - in: path
+          name: pid
+          type: string
+          required: true
+          description: ID del producto.
+      responses:
+        200:
+          description: Operación exitosa
+          schema:
+            $ref: '#/definitions/CartProduct'
+        404:
+          description: Carrito o producto no encontrado en el carrito
+          schema:
+            $ref: '#/definitions/ErrorNotFound'
+        500:
+          description: Error del servidor
+          schema:
+            $ref: '#/definitions/ErrorInternalServer'
+
+  /carts/{cid}/products/{pid}:
+    delete:
+      summary: Eliminar producto del carrito
+      tags:
+        - Cart
+      description: Elimina un producto del carrito especificado.
+      parameters:
+        - in: path
+          name: cid
+          type: string
+          required: true
+          description: ID del carrito.
+        - in: path
+          name: pid
+          type: string
+          required: true
+          description: ID del producto.
+      responses:
+        200:
+          description: Producto eliminado del carrito exitosamente
+          schema:
+            $ref: '#/definitions/Cart'
+        404:
+          description: Carrito o producto no encontrado
+          schema:
+            $ref: '#/definitions/ErrorNotFound'
+        500:
+          description: Error del servidor
+          schema:
+            $ref: '#/definitions/ErrorInternalServer'

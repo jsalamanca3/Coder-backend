@@ -105,5 +105,4 @@ router.put('/premium/:uid', async (req, res) => {
   }
 });
 
-
 export default router;
