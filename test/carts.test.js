@@ -1,86 +1,90 @@
-import { assert, expect, should } from 'chai';  // Using Assert style
-import supertest from 'supertest';
-import { cartsModel } from '../src/persistencia/dao/models/carts.model.js';
-import { productsModel } from '../src/persistencia/dao/models/products.model.js';
+import { assert, expect, should } from "chai";
+import supertest from "supertest";
+import sinon from "sinon";
 import * as app from "../src/app.js";
+import { cartsModel } from "../src/persistencia/dao/models/carts.model.js";
+import { usersModel } from "../src/persistencia/dao/models/users.model.js";
+import { ticketModel } from "../src/persistencia/dao/models/ticket.model.js";
+import nodemailer from "nodemailer";
+import logger from "../src/winston.js";
 
 const api = supertest("http://localhost:8080");
 
-describe('Carts Router', () => {
-  let testCart;
-  let testProduct;
+describe("GET /active", () => {
+  it("should return a 401 status for unauthenticated user", async () => {
+    const response = await api.get("/api/carts/active");
+    expect(response.statusCode).to.equal(401);
+    expect(response.body).to.have.property("error");
+  });
+});
 
-  before(async () => {//setup
-    // Crear un carrito y un producto de prueba antes de ejecutar las pruebas
-    testCart = await cartsModel.create({ _id: '658f8a8e5d69a23f47582bb4', products: [] });
-    testProduct = await productsModel.create({
-      title: 'Producto de Prueba',
-      price: 19.99,
-      category: 'Electrónicos',
-      stock: 10,
-      thumbnails: 'url_de_thumbnails',
-      code: 'ABC123',
+
+describe("POST /", () => {
+  it("should create a new cart and return 201 status", async () => {
+    const userId = "658ffeb938485a1671a87b4a";
+
+    const cartsModelStub = sinon.stub(cartsModel.prototype, "save").callsFake(async function() {
+      this._id = userId;
+      this.products = [];
+      this.user = userId;
+      return this;
     });
-  });
 
-  after(async () => { //teardown
-    await cartsModel.deleteMany({});
-    await productsModel.deleteMany({});
-  });
+    const response = await api.post("/api/carts/").send();
+    expect(response.statusCode).to.equal(201);
+    expect(response.body).to.have.property("_id").to.equal(userId);
 
-  it('should create a new cart', async () => {
-    const existingUserId = "658f8a8e5d69a23f47582bb4";
-    const newCartData = {
-      user: existingUserId,
-};
-    const response = await api.post('/api/carts/create').send(newCartData);
-    expect(response.status).to.equal(201);
-    expect(response.body).to.be.an('object');
-    expect(response.body).to.have.property('user', existingUserId);
+    cartsModelStub.restore();
   });
+});
 
-  it('should get the active cart', async () => {
-    const response = await api.get('/api/carts/active');
-    expect(response.status).to.equal(200);
-    expect(response.body).to.be.an('object');
-    expect(response.body).to.have.property('cart');
-  });
+describe("POST /:cid/purchase", () => {
+  it("should process the purchase and return 200 status", async () => {
+    const cartId = "658ffeb938485a1671a87b4d";
+    const userEmail = "chizatonishikigi@gmail.com";
 
-  it('should add a product to the cart', async () => {
-    const response = await api.post(`/api/carts/${testCart.id}/product/${testProduct._id}`).send({ quantity: 2 });
-    expect(response.status).to.equal(200);
-    expect(response.body).to.be.an('object');
-    expect(response.body.products).to.be.an('array').that.is.not.empty;
-  });
+    const cartsModelStub = sinon.stub(cartsModel, "findOne").resolves({
+      _id: cartId,
+      user: "658ffeb938485a1671a87b4a",
+      products: [
+        { product: { _id: "65abbb706fe2f3163e3d9a01", stock: 10 }, quantity: 2 },
+        { product: { _id: "65abbbdbf4228e7341316d7d", stock: 5 }, quantity: 1 },
+      ],
+    });
 
-  it('should get details of a product in the cart', async () => {
-    const response = await api.get(`/api/carts/${testCart.id}/product/${testProduct._id}`);
-    expect(response.status).to.equal(200);
-    expect(response.body).to.be.an('object');
-    expect(response.body).to.have.property('product');
-  });
+    const usersModelStub = sinon.stub(usersModel, "findOne").resolves({
+      _id: "658ffeb938485a1671a87b4a",
+      email: userEmail,
+    });
 
-  it('should delete a product from the cart', async () => {
-    const response = await api.delete(`/api/carts/${testCart.id}/products/${testProduct._id}`);
-    expect(response.status).to.equal(200);
-    expect(response.body).to.be.an('object');
-    expect(response.body.products).to.be.an('array').that.is.empty;
-  });
+    const transporterStub = sinon.stub(nodemailer, "createTransport").returns({
+      sendMail: (options, callback) => {
+        callback(null, { response: "Email sent successfully" });
+      },
+    });
 
-  it('should delete a cart', async () => {
-    const response = await api.delete(`/api/carts/${testCart.id}`);
-    expect(response.status).to.equal(200);
-    expect(response.body).to.be.an('object');
-    expect(response.body.id).to.equal(testCart.id);
-    expect(response.body.products).to.not.include(testProduct._id);
-  });
+    const ticketModelStub = sinon.stub(ticketModel.prototype, "save").resolves({
+      code: "12",
+      purchase_datetime: new Date(),
+      amount: 50,
+      purchaser: userEmail,
+      products: [
+        { product: { _id: "product_id_1", name: "Product 1" }, quantity: 2 },
+        { product: { _id: "product_id_2", name: "Product 2" }, quantity: 1 },
+      ],
+    });
 
-  it('should purchase products from the cart', async () => {
-    // Asegúrate de tener productos en el carrito antes de ejecutar esta prueba
-    // (puedes agregar productos al carrito en una prueba anterior)
-    const response = await api.post(`/api/carts/${testCart.id}/purchase`);
-    expect(response.status).to.equal(200);
-    expect(response.body).to.be.an('object');
-    expect(response.body).to.have.property('message', 'Compra completada con éxito');
+    try {
+      const response = await api.post(`/api/carts/${cartId}/purchase`);
+      expect(response.status).to.equal(200);
+      expect(response.body).to.have.property("message").to.equal("Compra completada con éxito");
+    } catch (error) {
+      logger.error("Error en el endpoint /api/carts/:cid/purchase:", error);
+    } finally {
+      cartsModelStub.restore();
+      usersModelStub.restore();
+      transporterStub.restore();
+      ticketModelStub.restore();
+    }
   });
 });

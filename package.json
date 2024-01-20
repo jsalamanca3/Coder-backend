@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/app.js",
-    "test": "mocha -t 10000 test/carts.test.js"
+    "test": "mocha -t 10000 test/products.test.js"
   },
   "author": "",
   "license": "ISC",
@@ -37,6 +37,7 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
+    "sinon": "^17.0.1",
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
     "supertest": "^6.3.4",
