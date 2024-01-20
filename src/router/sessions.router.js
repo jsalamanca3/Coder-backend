@@ -45,27 +45,38 @@ router.get("/github",
 /* JWTToken */
 const users = []
 router.post('/register', (req, res) => {
-    const { name, email, password } = req.body;
+    const { first_name, last_name, email, password } = req.body;
     const exists = users.find(user => user.email===email);
     if(exists) return res.status(400).send({status:"error", error:"User already exists"});
     const user = {
-        name,
+        first_name,
+        last_name,
         email,
         password
     }
-    user.push(user);
+    users.push(user);
     const access_token = generateToken(user);
     res.send({status:"success", access_token});
 });
 
 
-router.post('/login', (req, res) => {
-    const {email,password} = req.body;
-    const user = users.find(user => user.email===email&&user.password===password);
-    if(!user) return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
-    const access_token = generateToken(user);
-    res.send({status:"success", access_token});
+router.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+  const user = users.find(user => user.email === email);
+
+  if (!user) {
+      return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
+  }
+  const comparePassword = await bcrypt.compare(password, user.password);
+
+  if (!comparePassword) {
+      return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
+  }
+
+  const access_token = generateToken(user);
+  res.send({ status: "success", access_token });
 });
+
 
 /* GOOGLE */
 

@@ -7738,3 +7738,1272 @@
   level: 'info',
   timestamp: '2024-01-08T04:54:30.147Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-08T13:11:30.314Z'
+}
+{
+  message: 'Proceso 13036 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:11:53.420Z'
+}
+{
+  message: 'Proceso 9176 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:11:54.016Z'
+}
+{
+  message: 'Proceso 10444 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:11:54.239Z'
+}
+{
+  message: 'Proceso 7968 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:11:54.553Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-08T13:30:01.702Z'
+}
+{
+  message: 'Proceso 3288 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:30:15.043Z'
+}
+{
+  message: 'Proceso 9636 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:30:15.283Z'
+}
+{
+  message: 'Proceso 6812 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:30:15.357Z'
+}
+{
+  message: 'Proceso 2820 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:30:15.378Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-08T13:31:49.189Z'
+}
+{
+  message: 'Proceso 12324 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:32:21.019Z'
+}
+{
+  message: 'Proceso 13020 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:32:21.350Z'
+}
+{
+  message: 'Proceso 11204 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:32:21.535Z'
+}
+{
+  message: 'Proceso 9696 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:32:21.694Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-08T13:33:08.674Z'
+}
+{
+  message: 'Proceso 7652 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:33:21.279Z'
+}
+{
+  message: 'Proceso 13208 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:33:21.304Z'
+}
+{
+  message: 'Proceso 13612 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:33:21.313Z'
+}
+{
+  message: 'Proceso 6812 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T13:33:21.371Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-08T13:34:31.806Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:34:40.574Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-08T13:35:29.864Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:35:33.950Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2024-01-08T13:35:45.187Z',
+  [Symbol(id)]: <Buffer 65 8f 40 4c c8 2c 0b bd de 85 79 54>
+}
+{
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2024-01-08T13:35:45.364Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2024-01-08T13:35:49.449Z',
+  [Symbol(id)]: <Buffer 65 8f 40 4c c8 2c 0b bd de 85 79 54>
+}
+{
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2024-01-08T13:35:49.679Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2024-01-08T13:36:11.932Z',
+  [Symbol(id)]: <Buffer 65 8f 40 4c c8 2c 0b bd de 85 79 54>
+}
+{
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2024-01-08T13:36:12.121Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:36:20.011Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:36:28.402Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2024-01-08T13:36:37.617Z',
+  [Symbol(id)]: <Buffer 65 8f 40 4c c8 2c 0b bd de 85 79 54>
+}
+{
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2024-01-08T13:36:37.768Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:36:57.495Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:37:06.496Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:37:12.950Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:37:20.114Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:37:26.080Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:37:31.791Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T13:41:05.391Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T14:04:56.245Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T14:05:06.240Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T14:08:10.247Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-08T14:10:24.907Z'
+}
+{
+  message: 'Proceso 9368 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T14:10:39.989Z'
+}
+{
+  message: 'Proceso 5660 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T14:10:40.081Z'
+}
+{
+  message: 'Proceso 7380 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T14:10:40.301Z'
+}
+{
+  message: 'Proceso 7652 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-08T14:10:40.308Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-08T14:11:08.871Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-12T13:23:30.937Z'
+}
+{
+  message: 'Proceso 16464 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-12T13:23:45.747Z'
+}
+{
+  message: 'Proceso 808 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-12T13:23:45.885Z'
+}
+{
+  message: 'Proceso 17080 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-12T13:23:45.921Z'
+}
+{
+  message: 'Proceso 15868 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-12T13:23:46.138Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-15T01:25:15.523Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-15T01:25:51.281Z'
+}
+{
+  message: 'Proceso 8664 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-15T01:26:10.353Z'
+}
+{
+  message: 'Proceso 7920 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-15T01:26:10.361Z'
+}
+{
+  message: 'Proceso 5772 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-15T01:26:10.643Z'
+}
+{
+  message: 'Proceso 14284 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-15T01:26:10.794Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-18T00:29:46.664Z'
+}
+{
+  message: 'Proceso 10888 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T00:29:58.135Z'
+}
+{
+  message: 'Proceso 12300 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T00:29:58.225Z'
+}
+{
+  message: 'Proceso 9520 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T00:29:58.296Z'
+}
+{
+  message: 'Proceso 3208 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T00:29:58.397Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-18T01:44:32.486Z'
+}
+{
+  message: 'Proceso 5644 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:44:46.974Z'
+}
+{
+  message: 'Proceso 3772 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:44:46.998Z'
+}
+{
+  message: 'Proceso 9828 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:44:47.031Z'
+}
+{
+  message: 'Proceso 4960 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:44:47.633Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-18T01:54:03.362Z'
+}
+{
+  message: 'Proceso 12280 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:54:19.629Z'
+}
+{
+  message: 'Proceso 12740 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:54:19.633Z'
+}
+{
+  message: 'Proceso 576 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:54:19.710Z'
+}
+{
+  message: 'Proceso 3152 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T01:54:19.715Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-18T02:02:14.336Z'
+}
+{
+  message: 'Proceso 3308 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T02:02:30.830Z'
+}
+{
+  message: 'Proceso 15308 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T02:02:30.844Z'
+}
+{
+  message: 'Proceso 1520 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T02:02:30.898Z'
+}
+{
+  message: 'Proceso 9456 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-18T02:02:31.208Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-19T22:47:54.536Z'
+}
+{
+  message: 'Proceso 1656 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:48:12.611Z'
+}
+{
+  message: 'Proceso 13476 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:48:12.749Z'
+}
+{
+  message: 'Proceso 4496 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:48:12.864Z'
+}
+{
+  message: 'Proceso 8376 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:48:12.865Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-19T22:53:41.015Z'
+}
+{
+  message: 'Proceso 1492 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:53:57.859Z'
+}
+{
+  message: 'Proceso 13660 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:53:57.907Z'
+}
+{
+  message: 'Proceso 13476 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:53:58.128Z'
+}
+{
+  message: 'Proceso 14968 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T22:53:58.294Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-19T23:01:08.278Z'
+}
+{
+  message: 'Proceso 16428 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:01:22.189Z'
+}
+{
+  message: 'Proceso 2948 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:01:22.251Z'
+}
+{
+  message: 'Proceso 16628 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:01:22.381Z'
+}
+{
+  message: 'Proceso 15812 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:01:22.563Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-19T23:03:06.038Z'
+}
+{
+  message: 'Proceso 1416 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:03:22.359Z'
+}
+{
+  message: 'Proceso 13400 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:03:22.570Z'
+}
+{
+  message: 'Proceso 15220 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:03:22.711Z'
+}
+{
+  message: 'Proceso 16992 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:03:22.759Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-19T23:13:40.412Z'
+}
+{
+  message: 'Proceso 15124 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:13:56.789Z'
+}
+{
+  message: 'Proceso 4180 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:13:56.879Z'
+}
+{
+  message: 'Proceso 2632 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:13:57.119Z'
+}
+{
+  message: 'Proceso 11024 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:13:57.386Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-19T23:20:12.060Z'
+}
+{
+  message: 'Proceso 16968 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:20:25.127Z'
+}
+{
+  message: 'Proceso 8108 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:20:25.266Z'
+}
+{
+  message: 'Proceso 14364 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:20:25.473Z'
+}
+{
+  message: 'Proceso 10064 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-19T23:20:25.525Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T00:39:32.663Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T00:48:38.969Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T00:50:20.502Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T00:56:30.297Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T00:58:06.904Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T01:28:50.736Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T01:49:30.536Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:01:01.023Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:02:57.872Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:12:50.177Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:21:27.748Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:26:00.934Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:41:37.236Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:54:13.382Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:17.729Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:17.859Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:17.969Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:39.842Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:39.954Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.248Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.321Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.347Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.425Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.456Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.543Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.559Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.607Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.759Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:54:40.867Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T02:57:03.082Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:06.460Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:06.576Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:06.684Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:22.868Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:22.978Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.087Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.428Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.524Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.622Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.712Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.830Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.931Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:23.979Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:24.086Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:57:24.191Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T02:59:16.486Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T03:12:15.068Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:18.916Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:19.022Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:19.121Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:33.991Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.103Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.254Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.318Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.429Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.547Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.560Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.678Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.803Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:34.927Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:35.039Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:12:35.153Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T03:17:21.121Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:24.517Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:24.618Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:24.722Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:40.577Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:40.681Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:40.764Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:40.829Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.123Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.235Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.251Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.332Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.356Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.387Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.490Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:17:41.535Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T03:19:23.011Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:27.091Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:27.217Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:27.315Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:45.790Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:45.803Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:45.886Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:45.911Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.021Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.028Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.253Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.291Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.359Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.397Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.452Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:19:46.490Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T03:33:50.257Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:33:54.165Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:33:54.269Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:33:54.364Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:08.333Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:08.566Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:08.606Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:08.670Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:08.721Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:08.820Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:08.935Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:09.047Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:09.244Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:09.301Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:09.402Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T03:34:09.496Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T03:59:10.051Z'
+}
+{
+  message: 'Proceso 4888 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T03:59:28.165Z'
+}
+{
+  message: 'Proceso 11548 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T03:59:28.981Z'
+}
+{
+  message: 'Proceso 16896 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T03:59:29.082Z'
+}
+{
+  message: 'Proceso 6872 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T03:59:29.085Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:04:53.709Z'
+}
+{
+  message: 'Proceso 16696 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:05:14.524Z'
+}
+{
+  message: 'Proceso 17160 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:05:14.581Z'
+}
+{
+  message: 'Proceso 17332 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:05:14.585Z'
+}
+{
+  message: 'Proceso 2632 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:05:14.657Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:10:00.327Z'
+}
+{
+  message: 'Proceso 7912 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:10:19.325Z'
+}
+{
+  message: 'Proceso 16128 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:10:19.407Z'
+}
+{
+  message: 'Proceso 8516 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:10:19.547Z'
+}
+{
+  message: 'Proceso 8236 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-20T04:10:19.935Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:10:50.322Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:15:55.548Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:20:55.935Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:28:03.456Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:33:03.405Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:35:23.780Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:41:42.404Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T04:51:41.185Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T05:01:08.179Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T05:17:24.420Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T05:26:50.032Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T05:31:44.892Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T05:39:47.207Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T06:04:37.856Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T06:07:11.585Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T06:08:18.330Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T06:12:46.986Z'
+}

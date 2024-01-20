@@ -207,7 +207,7 @@ router.put("/:cid", async (req, res) => {
   }
 });
 
-router.post("/:cid/product/:pid", autorizeMiddleware, async (req, res) => {
+/* router.post("/:cid/product/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const cid = req.params.cid;
     const pid = req.params.pid;
@@ -247,7 +247,7 @@ router.post("/:cid/product/:pid", autorizeMiddleware, async (req, res) => {
       error: "Error al agregar o actualizar el producto en el carrito",
     });
   }
-});
+}); */
 
 router.delete("/:cid", async (req, res) => {
   try {

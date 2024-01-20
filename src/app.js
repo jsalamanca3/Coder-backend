@@ -1,5 +1,5 @@
 import express from "express";
-import { __filename } from "./utils.js";
+import { __fileUrl } from "./utils.js";
 import cartsRouter from "./router/carts.router.js";
 import productRouter from "./router/product.router.js";
 import createRouter from "./router/products.service.router.js";
@@ -31,7 +31,7 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__filename + "/public"));
+app.use(express.static(__fileUrl + "/public"));
 
 if (cluster.isPrimary) {
   console.log(`Este es el proceso Principal ${process.pid}`);
@@ -46,7 +46,7 @@ if (cluster.isPrimary) {
 /* handlebars */
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
-app.set("views", __filename + "/views");
+app.set("views", __fileUrl + "/views");
 
 /* session Mongo */
 const MONGODB_URI = config.mongo_uri;

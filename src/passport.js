@@ -1,5 +1,5 @@
 import passport from "passport";
-import { Strategy as LocalStorategy } from "passport-local";
+import { Strategy as LocalStrategy } from "passport-local";
 import { Strategy as GithubStrategy } from "passport-github2";
 import { ExtractJwt, Strategy as JWTStrategy } from "passport-jwt";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
@@ -19,7 +19,7 @@ const GOOGLE_CLIENT_ID = config.google_client_id;
 const GOOGLE_CLIENT_SECRET = config.google_client_secret;
 
 /* Local */
-passport.use("signup", new LocalStorategy({
+passport.use("signup", new LocalStrategy({
   usernameField: "email",
   passReqToCallback: true,
 },
@@ -42,7 +42,7 @@ passport.use("signup", new LocalStorategy({
 )
 );
 
-passport.use("login", new LocalStorategy({ usernameField: "email" },
+passport.use("login", new LocalStrategy({ usernameField: "email" },
   async (email, password, done) => {
     try {
       const userDB = await usersManager.findByEmail(email);
@@ -53,13 +53,18 @@ passport.use("login", new LocalStorategy({ usernameField: "email" },
       if (!comparePassword) {
         return done(null, false);
       }
-      done(null, userDB);
+      const userObject = {
+        id: userDB[0].id,
+        email: userDB[0].email,
+        password: userDB[0].password,
+      };
+      done(null, userObject);
     } catch (error) {
       done(error);
     }
   }
-)
-);
+));
+
 
 /* JWT */
 passport.use("jwt", new JWTStrategy({

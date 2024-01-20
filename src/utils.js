@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+export const __fileUrl = dirname(fileURLToPath(import.meta.url));
 export const __filename = fileURLToPath(import.meta.url);
 export const __dirname = join(dirname(__filename));
 
