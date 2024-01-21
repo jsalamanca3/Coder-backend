@@ -13007,3 +13007,2108 @@
     '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
   timestamp: '2024-01-20T20:01:53.499Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T20:08:19.580Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:24.437Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:24.558Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:24.651Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.527Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.539Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.631Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.645Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.779Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.788Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.797Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:41.895Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:42.034Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:42.224Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:42.346Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:08:42.449Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T20:24:38.436Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:24:42.577Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:24:42.698Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:24:42.801Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:01.463Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:01.563Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:01.667Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:01.937Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.047Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.060Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.149Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.164Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.268Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.304Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.452Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:25:02.545Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T20:27:39.212Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:27:44.897Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:27:45.046Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:27:45.149Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:06.434Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:06.545Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:06.673Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:07.186Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:07.293Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:07.390Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:07.716Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:07.821Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:07.937Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:08.104Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:08.260Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:28:08.363Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T20:31:07.368Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:12.108Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:12.256Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:12.390Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.253Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.367Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.416Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.495Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.584Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.686Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.719Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.819Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.862Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:34.944Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:35.018Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:31:35.171Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T20:41:45.161Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:41:49.502Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:41:49.623Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:41:49.743Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:08.465Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:08.582Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:08.689Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:09.515Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:09.850Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:09.971Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:10.043Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:10.067Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:10.117Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:10.155Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:10.221Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:42:10.276Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T20:55:29.647Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T20:55:33.308Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:33.631Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:33.780Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:33.896Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T20:55:51.917Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T20:55:52.159Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.252Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.358Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T20:55:52.425Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T20:55:52.434Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.464Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.684Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.711Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.794Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.836Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.849Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.889Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.943Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:52.960Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T20:55:53.083Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-20T21:00:24.752Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T21:00:28.148Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:28.529Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:28.643Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:28.772Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T21:00:48.830Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T21:00:48.966Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.119Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.196Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.301Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.387Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T21:00:49.450Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.504Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:35:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-20T21:00:49.512Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.687Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.764Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.807Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.874Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.911Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.931Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-20T21:00:49.976Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:32:07.613Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:34:23.813Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:35:11.827Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:36:56.739Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:37:06.042Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:39:20.306Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:40:58.630Z'
+}
+{
+  message: 'serialize 658ffdf438485a1671a87b39',
+  level: 'info',
+  timestamp: '2024-01-21T00:41:19.389Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:42:21.768Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:42:21.769Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:42:21.773Z'
+}
+{
+  title: 'manzana',
+  price: '1200',
+  stock: '123',
+  description: 'Roja',
+  code: '11',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:42:21.778Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'Roja',
+    code: '11',
+    price: 1200,
+    status: 'available',
+    stock: 123,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac686dae71bbc4f06a3c24")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:42:21.796Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:42:21.898Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:42:57.367Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:42:57.368Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:42:57.369Z'
+}
+{
+  title: 'manzana',
+  price: '2000',
+  stock: '60',
+  description: 'verde',
+  code: '12',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:42:57.371Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '12',
+    price: 2000,
+    status: 'available',
+    stock: 60,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac6891ae71bbc4f06a3c28")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:42:57.378Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:42:57.469Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:44:49.734Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:45:57.176Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:45:57.178Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:45:57.181Z'
+}
+{
+  title: 'manzana',
+  price: '2000',
+  stock: '60',
+  description: 'verde',
+  code: '12',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:45:57.186Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '12',
+    price: 2000,
+    status: 'available',
+    stock: 60,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac69453f82cf2336adca88")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:45:57.204Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:45:57.299Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:46:16.790Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:46:16.791Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:46:16.793Z'
+}
+{
+  title: 'manzana',
+  price: '2000',
+  stock: '60',
+  description: 'verde',
+  code: '12',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:46:16.797Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '12',
+    price: 2000,
+    status: 'available',
+    stock: 60,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac69583f82cf2336adca8b")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:46:16.802Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:46:16.887Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:47:20.496Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:47:46.433Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:47:46.434Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:47:46.437Z'
+}
+{
+  title: 'manzana',
+  price: '2000',
+  stock: '60',
+  description: 'verde',
+  code: '12',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:47:46.442Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '12',
+    price: 2000,
+    status: 'available',
+    stock: 60,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac69b25b9aa393dc2cccdd")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:47:46.456Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:47:46.549Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:47:50.850Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:47:50.851Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:47:50.852Z'
+}
+{
+  title: 'manzana',
+  price: '2000',
+  stock: '60',
+  description: 'verde',
+  code: '12',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:47:50.854Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '12',
+    price: 2000,
+    status: 'available',
+    stock: 60,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac69b65b9aa393dc2ccce0")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:47:50.860Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:47:50.946Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:49:39.800Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:51:53.309Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:51:53.310Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:51:53.313Z'
+}
+{
+  title: 'manzana',
+  price: '2000',
+  stock: '60',
+  description: 'verde',
+  code: '12',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:51:53.320Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '12',
+    price: 2000,
+    status: 'available',
+    stock: 60,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac6aa920796b57f0cdc83e")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:51:53.334Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:51:53.423Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:51:57.161Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:51:57.161Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        _id: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("658ffdf438485a1671a87b39"),
+    first_name: 'Julian Salamanca',
+    last_name: 'gt',
+    email: 'luthier.astaroth@gmail.com',
+    password: '$2b$10$Io/zGMrwizT1ccc1utw91eo3YOhqVzXdptBX.KfGk9JEwNruRGDPy',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    __v: 0,
+    cart: new ObjectId("658ffdf538485a1671a87b3c")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:51:57.163Z'
+}
+{
+  title: 'manzana',
+  price: '2000',
+  stock: '60',
+  description: 'verde',
+  code: '12',
+  status: 'available',
+  category: 'fruta',
+  thumbnails: 'soyunamanzana.jpg',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-01-21T00:51:57.165Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'manzana',
+    description: 'verde',
+    code: '12',
+    price: 2000,
+    status: 'available',
+    stock: 60,
+    thumbnails: 'soyunamanzana.jpg',
+    category: 'fruta',
+    owner: new ObjectId("658ffdf438485a1671a87b39"),
+    _id: new ObjectId("65ac6aad20796b57f0cdc841")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-01-21T00:51:57.173Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-01-21T00:51:57.271Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:55:24.830Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:42:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:55:30.251Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:55:30.276Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:42:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:55:49.538Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:55:49.570Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:42:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:55:50.397Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:55:50.454Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:42:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:55:51.056Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:55:51.080Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:42:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:55:51.176Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:55:51.222Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:56:57.046Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:57:01.486Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:57:01.739Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:57:17.993Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:57:18.238Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:57:18.398Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:57:18.544Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:57:18.598Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:57:18.631Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:57:18.747Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:57:18.820Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T00:58:16.881Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:58:20.854Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:58:21.118Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:58:38.781Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:58:38.976Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:58:39.245Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:58:39.418Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:58:39.542Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:58:39.809Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T00:58:40.011Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T00:58:40.385Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T01:00:50.460Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T01:00:54.422Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T01:00:54.731Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T01:01:13.478Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T01:01:13.754Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T01:01:13.773Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T01:01:13.854Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T01:01:13.891Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T01:01:14.013Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T01:01:14.120Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T01:01:14.170Z'
+}
