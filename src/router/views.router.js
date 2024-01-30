@@ -155,8 +155,20 @@ router.get('/carts/:cid', async (req, res) => {
   }
 });
 
-router.get("/users/uploader/:idUser", (req, res) => {
-  res.render('uploader');
+router.get("/users/uploader/:idUser", async (req, res) => {
+  try {
+    const { idUser } = req.params;
+    const userInfo = await usersManager.findById({ idUser });
+
+    if (!userInfo) {
+      return res.status(404).send("Usuario no encontrado");
+    }
+
+    res.render('uploader', { idUser });
+  } catch (error) {
+    res.status(500).send('Error interno del servidor');
+  }
 });
+
 
 export default router;

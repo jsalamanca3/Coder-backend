@@ -50,6 +50,10 @@ const userSchema = new Schema({
             reference: String
         }
     ],
+    documentsProcessed: {
+        type: Boolean,
+        default: false,
+    },
     last_connection: {
         type: Date,
         default: null

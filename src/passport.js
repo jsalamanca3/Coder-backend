@@ -80,6 +80,7 @@ passport.use("jwt", new JWTStrategy({
       return done(null, false);
     }
   } catch (error) {
+    logger.error('Error al verificar el token JWT:', error);
     return done(error, false);
   }
 }));

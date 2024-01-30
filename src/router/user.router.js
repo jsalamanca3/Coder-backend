@@ -7,7 +7,7 @@ import session from "express-session";
 import { CartManager } from "../persistencia/dao/functions/cartManager.js";
 import { errorDictionary } from "../error/error.enum.js";
 import logger from "../winston.js";
-import multer from "multer";
+import { upload } from "../utils/multer.js";
 
 const router = Router();
 
@@ -112,113 +112,122 @@ router.post("/", async (req, res) => {
   }
 });
 
-//multer
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    let folder;
-
-    if (file.fieldname === "profileImage") {
-      folder = "profiles";
-    } else if (file.fieldname === "productImage") {
-      folder = "products";
-    } else {
-      folder = "documents";
-    }
-
-    cb(null, `uploads/${folder}`);
-  },
-  filename: (req, file, cb) => {
-    cb(null, `${Date.now()}_${file.originalname}`);
-  },
-});
-const upload = multer({ storage });
-
 //ruta documents:
 
-router.get(
-  "/uploader/:idUser",
+router.get("/uploader/:idUser", async (req, res) => {
+  const { idUser } = req.params;
+  try {
+    const user = await usersManager.findById(idUser);
+    if (!user) {
+      return res
+        .status(404)
+        .render("error", { message: errorDictionary["USER_NOT_FOUND"] });
+    }
+
+    res.render("uploader", { idUser });
+  } catch (error) {
+    console.error("Error en la carga del uploader:", error);
+    res.status(500).json({ error: errorDictionary["USER_NOT_FOUND"] });
+  }
+});
+
+router.post(
+  "/:uid/documents",
+  upload.fields([
+    { name: "identification", maxCount: 1 },
+    { name: "proofOfAddress", maxCount: 1 },
+    { name: "bankStatement", maxCount: 1 },
+  ]),
   async (req, res) => {
-    console.log("entrando por aquí")
+    const userId = req.params.uid;
+    const uploadedDocuments = req.files;
+
+    logger.info("Documentos cargados:", uploadedDocuments);
+
     try {
-      const { idUser } = req.params;
-      const user = await usersManager.findById(idUser);
+      const user = await usersModel.findById(userId);
+
       if (!user) {
-        return res.status(404).render('error', { message: errorDictionary['USER_NOT_FOUND'] });
+        return res.status(404).json({ message: "Usuario no encontrado" });
       }
 
-      res.render("uploader", user);
+      if (
+        !uploadedDocuments ||
+        !uploadedDocuments.identification ||
+        !uploadedDocuments.proofOfAddress ||
+        !uploadedDocuments.bankStatement
+      ) {
+        console.error(
+          "Error: uploadedDocuments es indefinido o algún campo está faltando"
+        );
+        return res.status(400).json({ error: "Documentos no encontrados" });
+      }
+
+      const documents = [];
+      for (const field in uploadedDocuments) {
+        const document = uploadedDocuments[field][0];
+        documents.push({
+          name: document.originalname,
+          reference: document.path,
+        });
+      }
+
+      user.documents = documents;
+      await user.save();
+
+      res
+        .status(200)
+        .json({ message: "Documentos subidos exitosamente", user });
     } catch (error) {
-      console.error('Error en la carga del uploader:', error);
-      res.status(500).json({ error: errorDictionary["USER_NOT_FOUND"] });
+      console.error("Error al subir documentos:", error);
+      res.status(500).json({ error: "Error al subir documentos" });
     }
   }
 );
 
-router.post("/:uid/documents", upload.array("documents"), async (req, res) => {
-  const userId = req.params.uid;
-  const uploadedDocuments = req.files;
-
-  try {
-    const user = await usersModel.findById(userId);
-
-    if (!user) {
-      return res.status(404).json({ message: "Usuario no encontrado" });
-    }
-    user.documents = uploadedDocuments.map((document) => ({
-      name: document.originalname,
-      reference: document.path,
-    }));
-
-    await user.save();
-
-    res.status(200).json({ message: "Documentos subidos exitosamente", user });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Error al subir documentos" });
-  }
-});
-
 router.put("/premium/:uid", async (req, res) => {
-  logger.info("Entrando al endpoint: premium.uid");
   const { uid } = req.params;
 
   try {
     const user = await usersModel.findById(uid);
+
     if (!user) {
       return res.status(404).json({ error: errorDictionary["USER_NOT_FOUND"] });
     }
+
     const requiredDocuments = [
-      "Identificación",
-      "Comprobante de domicilio",
-      "Comprobante de estado de cuenta",
+      "identificacion.pdf",
+      "comprobante.pdf",
+      "estado de cuenta.pdf",
     ];
-    const userDocuments = user.documents.map((document) => document.name);
-    const hasRequiredDocuments = requiredDocuments.every((doc) =>
-      userDocuments.includes(doc)
-    );
+
+    const userDocuments = user.documents.map((document) => document.name.toLowerCase());
+    const hasRequiredDocuments = requiredDocuments.every((doc) => userDocuments.includes(doc));
+
     if (!hasRequiredDocuments) {
-      return res.status(400).json({
-        error: "Faltan documentos requeridos para actualizar a premium",
-      });
+      return res.status(400).json({ error: "Faltan documentos requeridos para actualizar a premium" });
     }
-    if (!user.documentsProcessed) {
-      return res.status(400).json({
-        error: "El usuario no ha terminado de procesar su documentación",
-      });
+
+    if (user.documentsProcessed === false) {
+      const newRole = user.role === "user" ? "premium" : "user";
+
+      if (!["user", "premium"].includes(newRole)) {
+        return res.status(400).json({ error: "Rol no válido" });
+      }
+
+      user.role = newRole;
+      await user.save();
+
+      return res.status(200).json({ message: "Rol de usuario actualizado a premium con éxito" });
     }
-    const newRole = user.role === "user" ? "premium" : "user";
-    if (newRole !== "user" && newRole !== "premium") {
-      return res.status(400).json({ error: "Rol no válido" });
-    }
-    user.role = newRole;
-    await user.save();
-    res
-      .status(200)
-      .json({ message: "Rol de usuario actualizado a premium con éxito" });
+
+    return res.status(400).json({ error: "El usuario no ha terminado de procesar su documentación" });
+
   } catch (error) {
     logger.error("Error al cambiar el rol:", error);
     res.status(500).json({ error: errorDictionary["INTERNAL_SERVER_ERROR"] });
   }
 });
+
 
 export default router;
