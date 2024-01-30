@@ -15112,3 +15112,3544 @@
   message: 'Rol del usuario:',
   timestamp: '2024-01-21T01:01:14.170Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-21T02:05:31.639Z'
+}
+{
+  message: 'Usuario no autenticado',
+  level: 'info',
+  timestamp: '2024-01-21T02:05:32.996Z'
+}
+{
+  level: 'error',
+  message: 'Error al procesar la compra: cartsModel.findOne(...).populate is not a function',
+  stack: 'TypeError: cartsModel.findOne(...).populate is not a function\n' +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/carts.router.js:291:8\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at param (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:365:14)\n' +
+    '    at param (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:376:14)\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:421:3)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at trim_prefix (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:646:15\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:265:14)\n' +
+    '    at Function.handle (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:47:12)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at trim_prefix (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at strategy.pass (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\passport\\lib\\middleware\\authenticate.js:346:9)\n' +
+    '    at SessionStrategy.authenticate (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\passport\\lib\\strategies\\session.js:75:10)\n' +
+    '    at attempt (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\passport\\lib\\middleware\\authenticate.js:369:16)\n' +
+    '    at authenticate (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\passport\\lib\\middleware\\authenticate.js:370:7)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at trim_prefix (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at initialize (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\passport\\lib\\middleware\\initialize.js:98:5)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at trim_prefix (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at session (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express-session\\index.js:479:7)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at trim_prefix (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at serveStatic (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\serve-static\\index.js:75:16)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at trim_prefix (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:328:13)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\e'... 7083 more characters,
+  timestamp: '2024-01-21T02:05:34.635Z'
+}
+{
+  message: 'Error en el endpoint /api/carts/:cid/purchase: expected 404 to equal 200',
+  actual: 404,
+  expected: 200,
+  showDiff: true,
+  operator: 'strictEqual',
+  level: 'error',
+  stack: 'AssertionError: expected 404 to equal 200\n' +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/carts.test.js:79:34)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T02:05:34.783Z'
+}
+{
+  message: "Error: expected {} to have property 'status'",
+  actual: {},
+  expected: undefined,
+  showDiff: false,
+  level: 'error',
+  stack: "AssertionError: expected {} to have property 'status'\n" +
+    '    at Context.<anonymous> (file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/test/products.test.js:41:37)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-01-21T02:05:36.550Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T02:05:36.817Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T02:05:36.937Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-01-21T02:05:37.059Z'
+}
+{
+  message: 'Proceso 10912 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-21T02:05:53.437Z'
+}
+{
+  message: 'Proceso 5116 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-21T02:05:53.614Z'
+}
+{
+  message: 'Proceso 6460 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-21T02:05:53.834Z'
+}
+{
+  message: 'Proceso 9916 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-21T02:05:54.329Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T18:31:48.073Z'
+}
+{
+  message: 'Proceso 15764 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:32:05.056Z'
+}
+{
+  message: 'Proceso 9988 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:32:05.062Z'
+}
+{
+  message: 'Proceso 3816 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:32:05.159Z'
+}
+{
+  message: 'Proceso 11588 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:32:05.369Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T18:32:45.850Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T18:40:25.300Z'
+}
+{
+  message: 'Proceso 15304 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:40:38.792Z'
+}
+{
+  message: 'Proceso 17024 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:40:38.910Z'
+}
+{
+  message: 'Proceso 17184 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:40:38.958Z'
+}
+{
+  message: 'Proceso 13072 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:40:38.997Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T18:44:25.856Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T18:51:55.738Z'
+}
+{
+  message: 'Proceso 14876 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:52:10.701Z'
+}
+{
+  message: 'Proceso 15456 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:52:10.877Z'
+}
+{
+  message: 'Proceso 12048 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:52:10.908Z'
+}
+{
+  message: 'Proceso 14256 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:52:11.400Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T18:52:55.244Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T18:55:17.760Z'
+}
+{
+  message: 'Proceso 5984 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:55:32.924Z'
+}
+{
+  message: 'Proceso 8420 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:55:33.090Z'
+}
+{
+  message: 'Proceso 16824 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:55:33.166Z'
+}
+{
+  message: 'Proceso 8204 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T18:55:33.194Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T18:55:43.195Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T19:02:50.140Z'
+}
+{
+  message: 'Proceso 4024 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:03:06.995Z'
+}
+{
+  message: 'Proceso 9544 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:03:07.042Z'
+}
+{
+  message: 'Proceso 5472 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:03:07.184Z'
+}
+{
+  message: 'Proceso 10764 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:03:07.476Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T19:03:14.386Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T19:04:34.824Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T19:16:24.632Z'
+}
+{
+  message: 'Proceso 18184 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:16:39.245Z'
+}
+{
+  message: 'Proceso 16212 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:16:39.367Z'
+}
+{
+  message: 'Proceso 12556 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:16:39.463Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T19:17:16.346Z'
+}
+{
+  message: 'Proceso 16820 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:17:49.135Z'
+}
+{
+  message: 'Proceso 12104 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:17:49.182Z'
+}
+{
+  message: 'Proceso 14852 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:17:49.184Z'
+}
+{
+  message: 'Proceso 14540 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:17:49.566Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T19:18:30.443Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T19:22:31.248Z'
+}
+{
+  message: 'Proceso 15356 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:22:51.366Z'
+}
+{
+  message: 'Proceso 18272 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:22:51.376Z'
+}
+{
+  message: 'Proceso 14492 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:22:51.528Z'
+}
+{
+  message: 'Proceso 15780 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:22:52.185Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T19:22:52.845Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T19:28:35.784Z'
+}
+{
+  message: 'Proceso 15892 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:28:51.839Z'
+}
+{
+  message: 'Proceso 15944 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:28:51.983Z'
+}
+{
+  message: 'Proceso 7732 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:28:52.026Z'
+}
+{
+  message: 'Proceso 11652 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T19:28:52.109Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T19:29:00.669Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:23:10.795Z'
+}
+{
+  message: 'Proceso 12708 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:23:30.397Z'
+}
+{
+  message: 'Proceso 16248 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:23:30.663Z'
+}
+{
+  message: 'Proceso 3924 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:23:30.791Z'
+}
+{
+  message: 'Proceso 16292 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:23:31.100Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T20:23:38.747Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:25:22.381Z'
+}
+{
+  message: 'Proceso 16964 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:25:37.954Z'
+}
+{
+  message: 'Proceso 17860 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:25:38.240Z'
+}
+{
+  message: 'Proceso 11324 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:25:38.390Z'
+}
+{
+  message: 'Proceso 1868 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:25:38.562Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:27:12.750Z'
+}
+{
+  message: 'Proceso 14568 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:27:29.944Z'
+}
+{
+  message: 'Proceso 12812 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:27:30.125Z'
+}
+{
+  message: 'Proceso 16424 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:27:30.127Z'
+}
+{
+  message: 'Proceso 15624 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:27:30.550Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:28:14.001Z'
+}
+{
+  message: 'Proceso 12312 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:28:33.951Z'
+}
+{
+  message: 'Proceso 3816 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:28:34.309Z'
+}
+{
+  message: 'Proceso 16500 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:28:34.587Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:28:46.088Z'
+}
+{
+  message: 'Proceso 9176 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:29:02.084Z'
+}
+{
+  message: 'Proceso 17256 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:29:02.110Z'
+}
+{
+  message: 'Proceso 4892 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:29:02.290Z'
+}
+{
+  message: 'Proceso 16992 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:29:02.449Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T20:29:18.087Z'
+}
+{
+  message: 'serialize 658f404cc82c0bbdde857954',
+  level: 'info',
+  timestamp: '2024-01-28T20:29:33.421Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:30:51.828Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:34:18.406Z'
+}
+{
+  message: 'Proceso 14656 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:34:32.902Z'
+}
+{
+  message: 'Proceso 16204 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:34:32.930Z'
+}
+{
+  message: 'Proceso 12408 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:34:33.045Z'
+}
+{
+  message: 'Proceso 13636 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:34:33.138Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:35:49.246Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:36:03.717Z'
+}
+{
+  message: 'Proceso 14120 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:36:07.622Z'
+}
+{
+  message: 'Proceso 16288 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:36:08.052Z'
+}
+{
+  message: 'Proceso 15612 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:36:08.066Z'
+}
+{
+  message: 'Proceso 6344 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:36:08.326Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:39:57.908Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:40:13.736Z'
+}
+{
+  message: 'Proceso 16652 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:40:18.755Z'
+}
+{
+  message: 'Proceso 11536 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:40:18.913Z'
+}
+{
+  message: 'Proceso 6736 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:40:18.930Z'
+}
+{
+  message: 'Proceso 11296 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:40:18.938Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:40:44.893Z'
+}
+{
+  message: 'Proceso 18428 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:41:00.779Z'
+}
+{
+  message: 'Proceso 15032 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:41:00.827Z'
+}
+{
+  message: 'Proceso 13444 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:41:00.853Z'
+}
+{
+  message: 'Proceso 9136 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:41:00.952Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:43:03.866Z'
+}
+{
+  message: 'Proceso 15260 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:43:20.899Z'
+}
+{
+  message: 'Proceso 15916 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:43:20.938Z'
+}
+{
+  message: 'Proceso 12888 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:43:20.958Z'
+}
+{
+  message: 'Proceso 14572 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:43:21.256Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:43:45.242Z'
+}
+{
+  message: 'Proceso 18260 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:09.655Z'
+}
+{
+  message: 'Proceso 14008 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:09.847Z'
+}
+{
+  message: 'Proceso 17852 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:09.857Z'
+}
+{
+  message: 'Proceso 11056 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:10.863Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:25.222Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:39.426Z'
+}
+{
+  message: 'Proceso 12656 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:44.340Z'
+}
+{
+  message: 'Proceso 13636 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:44.413Z'
+}
+{
+  message: 'Proceso 14084 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:44.488Z'
+}
+{
+  message: 'Proceso 4276 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:44:44.846Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:46:32.113Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:46:49.451Z'
+}
+{
+  message: 'Proceso 12644 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:46:49.836Z'
+}
+{
+  message: 'Proceso 13012 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:46:49.855Z'
+}
+{
+  message: 'Proceso 17024 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:46:49.865Z'
+}
+{
+  message: 'Proceso 16120 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:46:49.916Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:48:00.986Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:48:20.048Z'
+}
+{
+  message: 'Proceso 4684 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:48:20.116Z'
+}
+{
+  message: 'Proceso 14272 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:48:20.167Z'
+}
+{
+  message: 'Proceso 14984 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:48:20.385Z'
+}
+{
+  message: 'Proceso 9840 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:48:20.589Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:49:06.563Z'
+}
+{
+  message: 'Proceso 14420 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:49:14.116Z'
+}
+{
+  message: 'Proceso 15608 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:49:14.221Z'
+}
+{
+  message: 'Proceso 16444 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:49:14.497Z'
+}
+{
+  message: 'Proceso 16704 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:49:14.588Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:50:18.707Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:50:23.915Z'
+}
+{
+  message: 'Proceso 17720 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:50:39.620Z'
+}
+{
+  message: 'Proceso 12872 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:50:39.623Z'
+}
+{
+  message: 'Proceso 14628 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:50:39.642Z'
+}
+{
+  message: 'Proceso 6780 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:50:39.767Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:53:12.959Z'
+}
+{
+  message: 'Proceso 6836 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:53:32.102Z'
+}
+{
+  message: 'Proceso 17864 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:53:32.184Z'
+}
+{
+  message: 'Proceso 12880 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:53:32.813Z'
+}
+{
+  message: 'Proceso 16304 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:53:32.954Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:53:53.092Z'
+}
+{
+  message: 'Proceso 5620 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:54:08.316Z'
+}
+{
+  message: 'Proceso 12196 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:54:08.390Z'
+}
+{
+  message: 'Proceso 16172 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:54:08.585Z'
+}
+{
+  message: 'Proceso 13344 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:54:08.704Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:54:42.340Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T20:54:54.595Z'
+}
+{
+  message: 'Proceso 11640 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:55:05.514Z'
+}
+{
+  message: 'Proceso 18032 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:55:05.686Z'
+}
+{
+  message: 'Proceso 12676 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:55:05.731Z'
+}
+{
+  message: 'Proceso 14924 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:55:05.797Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:57:01.441Z'
+}
+{
+  message: 'Proceso 10492 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:57:13.356Z'
+}
+{
+  message: 'Proceso 14260 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:57:13.522Z'
+}
+{
+  message: 'Proceso 11532 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:57:13.797Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:58:13.432Z'
+}
+{
+  message: 'Proceso 1416 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:58:28.979Z'
+}
+{
+  message: 'Proceso 14208 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:58:28.994Z'
+}
+{
+  message: 'Proceso 14272 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:58:29.378Z'
+}
+{
+  message: 'Proceso 15616 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:58:29.633Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T20:59:03.953Z'
+}
+{
+  message: 'Proceso 17304 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:59:25.188Z'
+}
+{
+  message: 'Proceso 5760 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:59:25.324Z'
+}
+{
+  message: 'Proceso 9188 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:59:25.446Z'
+}
+{
+  message: 'Proceso 4208 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T20:59:25.469Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:00:34.930Z'
+}
+{
+  message: 'Proceso 17556 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:00:53.658Z'
+}
+{
+  message: 'Proceso 15108 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:00:54.023Z'
+}
+{
+  message: 'Proceso 15060 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:00:54.416Z'
+}
+{
+  message: 'Proceso 16352 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:00:54.775Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:01:45.103Z'
+}
+{
+  message: 'Proceso 14824 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:02:03.818Z'
+}
+{
+  message: 'Proceso 17716 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:02:03.934Z'
+}
+{
+  message: 'Proceso 15924 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:02:03.996Z'
+}
+{
+  message: 'Proceso 10680 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:02:04.169Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T21:02:16.015Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-28T21:02:27.207Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T21:02:34.423Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:17:27.120Z'
+}
+{
+  message: 'Proceso 15868 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:17:46.338Z'
+}
+{
+  message: 'Proceso 13732 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:17:46.341Z'
+}
+{
+  message: 'Proceso 17828 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:17:46.472Z'
+}
+{
+  message: 'Proceso 5044 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:17:46.474Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:19:05.411Z'
+}
+{
+  message: 'Proceso 18292 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:19:13.228Z'
+}
+{
+  message: 'Proceso 16744 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:19:13.438Z'
+}
+{
+  message: 'Proceso 16440 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:19:13.697Z'
+}
+{
+  message: 'Proceso 16104 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:19:13.906Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:19:44.196Z'
+}
+{
+  message: 'Proceso 1396 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:20:02.314Z'
+}
+{
+  message: 'Proceso 16388 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:20:02.546Z'
+}
+{
+  message: 'Proceso 14972 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:20:02.644Z'
+}
+{
+  message: 'Proceso 11296 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:20:02.781Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-28T21:20:04.147Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T21:20:10.554Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T21:20:42.178Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:24:45.181Z'
+}
+{
+  message: 'Proceso 12860 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:25:02.229Z'
+}
+{
+  message: 'Proceso 8204 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:25:02.289Z'
+}
+{
+  message: 'Proceso 14660 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:25:02.477Z'
+}
+{
+  message: 'Proceso 13884 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:25:02.669Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-28T21:25:19.353Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T21:25:24.689Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-28T21:25:54.117Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-28T21:25:57.713Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-28T21:30:24.457Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:38:34.959Z'
+}
+{
+  message: 'Proceso 13136 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:38:56.345Z'
+}
+{
+  message: 'Proceso 17648 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:38:56.410Z'
+}
+{
+  message: 'Proceso 4964 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:38:56.725Z'
+}
+{
+  message: 'Proceso 16340 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:38:56.930Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-28T21:41:47.486Z'
+}
+{
+  message: 'Proceso 17232 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:42:05.569Z'
+}
+{
+  message: 'Proceso 11708 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:42:05.582Z'
+}
+{
+  message: 'Proceso 16104 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:42:05.659Z'
+}
+{
+  message: 'Proceso 17740 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-28T21:42:05.823Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T20:41:41.344Z'
+}
+{
+  message: 'Proceso 8704 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:41:54.918Z'
+}
+{
+  message: 'Proceso 16072 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:41:55.195Z'
+}
+{
+  message: 'Proceso 16988 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:41:55.237Z'
+}
+{
+  message: 'Proceso 12932 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:41:55.327Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T20:50:22.624Z'
+}
+{
+  message: 'Proceso 15656 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:50:36.166Z'
+}
+{
+  message: 'Proceso 10096 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:50:36.182Z'
+}
+{
+  message: 'Proceso 16992 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:50:36.241Z'
+}
+{
+  message: 'Proceso 11116 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:50:36.564Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T20:57:37.671Z'
+}
+{
+  message: 'Proceso 8956 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:57:45.666Z'
+}
+{
+  message: 'Proceso 17692 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:57:45.775Z'
+}
+{
+  message: 'Proceso 17344 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:57:45.876Z'
+}
+{
+  message: 'Proceso 15764 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:57:45.939Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T20:57:57.429Z'
+}
+{
+  message: 'Proceso 668 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:58:12.114Z'
+}
+{
+  message: 'Proceso 9880 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:58:12.160Z'
+}
+{
+  message: 'Proceso 12284 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:58:12.287Z'
+}
+{
+  message: 'Proceso 5984 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T20:58:12.318Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:01:45.261Z'
+}
+{
+  message: 'Proceso 1532 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:01:57.496Z'
+}
+{
+  message: 'Proceso 10596 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:01:57.688Z'
+}
+{
+  message: 'Proceso 1240 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:01:57.800Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:02:27.042Z'
+}
+{
+  message: 'Proceso 15072 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:02:42.025Z'
+}
+{
+  message: 'Proceso 17448 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:02:42.104Z'
+}
+{
+  message: 'Proceso 12140 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:02:42.106Z'
+}
+{
+  message: 'Proceso 10160 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:02:42.576Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:03:28.566Z'
+}
+{
+  message: 'Proceso 9292 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:03:43.086Z'
+}
+{
+  message: 'Proceso 14024 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:03:43.123Z'
+}
+{
+  message: 'Proceso 1316 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:03:43.143Z'
+}
+{
+  message: 'Proceso 16008 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:03:43.224Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:04:42.374Z'
+}
+{
+  message: 'Proceso 1956 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:04:56.424Z'
+}
+{
+  message: 'Proceso 11256 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:04:56.625Z'
+}
+{
+  message: 'Proceso 16828 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:04:56.747Z'
+}
+{
+  message: 'Proceso 10032 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:04:56.750Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:08:05.873Z'
+}
+{
+  message: 'Proceso 18136 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:08:21.816Z'
+}
+{
+  message: 'Proceso 11408 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:08:21.996Z'
+}
+{
+  message: 'Proceso 18340 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:08:22.205Z'
+}
+{
+  message: 'Proceso 876 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:08:22.676Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:12:05.285Z'
+}
+{
+  message: 'Proceso 8484 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:12:22.558Z'
+}
+{
+  message: 'Proceso 1112 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:12:22.560Z'
+}
+{
+  message: 'Proceso 3288 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:12:22.593Z'
+}
+{
+  message: 'Proceso 12560 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:12:22.606Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:22:01.608Z'
+}
+{
+  message: 'Proceso 5072 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:22:17.205Z'
+}
+{
+  message: 'Proceso 16316 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:22:17.217Z'
+}
+{
+  message: 'Proceso 6268 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:22:17.229Z'
+}
+{
+  message: 'Proceso 8968 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:22:17.235Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:26:39.173Z'
+}
+{
+  message: 'Proceso 5504 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:26:55.106Z'
+}
+{
+  message: 'Proceso 6096 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:26:55.192Z'
+}
+{
+  message: 'Proceso 9856 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:26:55.241Z'
+}
+{
+  message: 'Proceso 15132 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:26:55.411Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-29T21:26:57.807Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:30:22.765Z'
+}
+{
+  message: 'Proceso 4672 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:30:37.514Z'
+}
+{
+  message: 'Proceso 16168 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:30:37.635Z'
+}
+{
+  message: 'Proceso 13708 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:30:37.864Z'
+}
+{
+  message: 'Proceso 12604 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:30:37.895Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:31:17.570Z'
+}
+{
+  message: 'Proceso 9324 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:31:31.812Z'
+}
+{
+  message: 'Proceso 1524 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:31:31.965Z'
+}
+{
+  message: 'Proceso 5772 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:31:32.098Z'
+}
+{
+  message: 'Proceso 13136 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:31:32.234Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-29T21:36:54.032Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:38:45.825Z'
+}
+{
+  message: 'Proceso 5260 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:38:57.753Z'
+}
+{
+  message: 'Proceso 13152 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:38:58.068Z'
+}
+{
+  message: 'Proceso 13752 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:38:58.391Z'
+}
+{
+  message: 'Proceso 12504 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:38:58.643Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:39:24.933Z'
+}
+{
+  message: 'Proceso 5940 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:39:26.582Z'
+}
+{
+  message: 'Proceso 16284 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:39:26.584Z'
+}
+{
+  message: 'Proceso 8856 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:39:26.589Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:39:43.669Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T21:39:50.478Z'
+}
+{
+  message: 'Proceso 8460 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:40:01.984Z'
+}
+{
+  message: 'Proceso 572 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:40:02.120Z'
+}
+{
+  message: 'Proceso 17784 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:40:02.188Z'
+}
+{
+  message: 'Proceso 17676 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:40:02.239Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:43:19.539Z'
+}
+{
+  message: 'Proceso 7068 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:43:35.571Z'
+}
+{
+  message: 'Proceso 10672 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:43:35.744Z'
+}
+{
+  message: 'Proceso 10712 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:43:35.929Z'
+}
+{
+  message: 'Proceso 4860 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:43:36.033Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:44:36.151Z'
+}
+{
+  message: 'Proceso 5608 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:44:51.915Z'
+}
+{
+  message: 'Proceso 12936 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:44:51.916Z'
+}
+{
+  message: 'Proceso 10736 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:44:51.977Z'
+}
+{
+  message: 'Proceso 8128 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:44:52.208Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T21:45:20.921Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:48:45.769Z'
+}
+{
+  message: 'Proceso 5792 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:49:00.226Z'
+}
+{
+  message: 'Proceso 12064 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:49:00.330Z'
+}
+{
+  message: 'Proceso 15632 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:49:00.439Z'
+}
+{
+  message: 'Proceso 4280 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:49:00.493Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T21:50:24.914Z'
+}
+{
+  level: 'info',
+  message: 'soy la nueva hora',
+  timestamp: '2024-01-29T21:56:39.764Z'
+}
+{
+  level: 'info',
+  message: 'User email:',
+  timestamp: '2024-01-29T21:57:23.394Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T22:56:40.897Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: '65b6b97b525db2ac02b68ce0' },
+  user: {
+    _id: '65b6b97b525db2ac02b68ce0',
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    last_connection: '2024-01-28T21:30:24.457Z',
+    documents: [],
+    __v: 0,
+    cart: '65b6b97b525db2ac02b68ce3'
+  },
+  email: 'ale@gmail.com',
+  first_name: 'Alejandra',
+  isAdmin: false,
+  level: 'info',
+  message: 'User Data Session:',
+  timestamp: '2024-01-29T21:57:23.396Z'
+}
+{
+  level: 'info',
+  message: 'Hora de desconexion',
+  timestamp: '2024-01-29T21:57:23.398Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T21:58:07.534Z'
+}
+{
+  message: 'Proceso 15944 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:58:24.768Z'
+}
+{
+  message: 'Proceso 5708 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:58:24.835Z'
+}
+{
+  message: 'Proceso 2192 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:58:24.895Z'
+}
+{
+  message: 'Proceso 1372 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T21:58:25.225Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T22:00:06.072Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:04:19.756Z'
+}
+{
+  message: 'Proceso 7248 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:04:36.022Z'
+}
+{
+  message: 'Proceso 18080 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:04:36.472Z'
+}
+{
+  message: 'Proceso 16948 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:04:36.602Z'
+}
+{
+  message: 'Proceso 16816 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:04:36.720Z'
+}
+{
+  level: 'info',
+  message: 'ID de usuario:',
+  timestamp: '2024-01-29T22:05:14.437Z',
+  [Symbol(id)]: <Buffer 65 b6 b9 7b 52 5d b2 ac 02 b6 8c e0>
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("65b6b97b525db2ac02b68ce3"),
+    products: [],
+    id: '32537ad1-4644-4a56-af69-eccf3846744a',
+    user: new ObjectId("65b6b97b525db2ac02b68ce0"),
+    __v: 0
+  },
+  level: 'info',
+  message: 'Resultado de la búsqueda de carrito:',
+  timestamp: '2024-01-29T22:05:14.628Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        user: 'init',
+        _id: 'init',
+        products: 'init',
+        id: 'init',
+        __v: 'init'
+      },
+      states: {
+        require: {},
+        init: { _id: true, products: true, id: true, user: true, __v: true }
+      }
+    },
+    skipId: true,
+    populated: {
+      'products.product': {
+        value: [],
+        options: {
+          model: Model { Product },
+          _docs: [ '65b6b97b525db2ac02b68ce3': [] ],
+          _childDocs: [],
+          path: 'products.product',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { Product }
+        }
+      },
+      user: {
+        value: new ObjectId("65b6b97b525db2ac02b68ce0"),
+        options: {
+          model: Model { User },
+          _docs: [
+            '65b6b97b525db2ac02b68ce3': new ObjectId("65b6b97b525db2ac02b68ce0")
+          ],
+          _childDocs: [
+            {
+              resetToken: { used: false },
+              _id: new ObjectId("65b6b97b525db2ac02b68ce0"),
+              first_name: 'J Salamanca',
+              last_name: 'gt',
+              email: 'jfsalamanca3@gmail.com',
+              password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+              role: 'user',
+              from_github: false,
+              from_google: true,
+              last_connection: 2024-01-29T22:00:06.152Z,
+              documents: [],
+              __v: 0,
+              cart: new ObjectId("65b6b97b525db2ac02b68ce3")
+            }
+          ],
+          path: 'user',
+          _queryProjection: null,
+          _localModel: Model { Cart },
+          [Symbol(mongoose.PopulateOptions#Model)]: Model { User }
+        }
+      }
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    _id: new ObjectId("65b6b97b525db2ac02b68ce3"),
+    products: [],
+    id: '32537ad1-4644-4a56-af69-eccf3846744a',
+    user: {
+      resetToken: { used: false },
+      _id: new ObjectId("65b6b97b525db2ac02b68ce0"),
+      first_name: 'J Salamanca',
+      last_name: 'gt',
+      email: 'jfsalamanca3@gmail.com',
+      password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+      role: 'user',
+      from_github: false,
+      from_google: true,
+      last_connection: 2024-01-29T22:00:06.152Z,
+      documents: [],
+      __v: 0,
+      cart: new ObjectId("65b6b97b525db2ac02b68ce3")
+    },
+    __v: 0
+  },
+  level: 'info',
+  message: 'soy el carrito:',
+  timestamp: '2024-01-29T22:05:15.126Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true,
+    wasPopulated: { value: new ObjectId("65b6b97b525db2ac02b68ce0") },
+    parent: {
+      _id: new ObjectId("65b6b97b525db2ac02b68ce3"),
+      products: [],
+      id: '32537ad1-4644-4a56-af69-eccf3846744a',
+      user: {
+        resetToken: { used: false },
+        _id: new ObjectId("65b6b97b525db2ac02b68ce0"),
+        first_name: 'J Salamanca',
+        last_name: 'gt',
+        email: 'jfsalamanca3@gmail.com',
+        password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+        role: 'user',
+        from_github: false,
+        from_google: true,
+        last_connection: 2024-01-29T22:00:06.152Z,
+        documents: [],
+        __v: 0,
+        cart: new ObjectId("65b6b97b525db2ac02b68ce3")
+      },
+      __v: 0
+    }
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65b6b97b525db2ac02b68ce0"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    last_connection: 2024-01-29T22:00:06.152Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65b6b97b525db2ac02b68ce3")
+  },
+  level: 'info',
+  message: 'soy el usuario:',
+  timestamp: '2024-01-29T22:05:15.218Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65b6b97b525db2ac02b68ce0"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    last_connection: 2024-01-29T22:00:06.152Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65b6b97b525db2ac02b68ce3")
+  },
+  level: 'info',
+  message: 'soy el correo:',
+  timestamp: '2024-01-29T22:05:15.224Z'
+}
+{
+  level: 'info',
+  message: 'soy el email del correo:',
+  timestamp: '2024-01-29T22:05:15.225Z'
+}
+{
+  level: 'warning',
+  message: 'Correo electrónico enviado:',
+  timestamp: '2024-01-29T22:05:17.091Z'
+}
+{
+  level: 'info',
+  message: 'User email:',
+  timestamp: '2024-01-29T22:05:18.754Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T23:05:17.092Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: '65b6b97b525db2ac02b68ce0' },
+  user: {
+    _id: '65b6b97b525db2ac02b68ce0',
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    last_connection: '2024-01-29T21:50:24.998Z',
+    documents: [],
+    __v: 0,
+    cart: '65b6b97b525db2ac02b68ce3'
+  },
+  level: 'info',
+  message: 'User Data Session:',
+  timestamp: '2024-01-29T22:05:18.755Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T22:07:18.232Z'
+}
+{
+  level: 'info',
+  message: 'User email:',
+  timestamp: '2024-01-29T22:07:44.469Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T23:07:19.532Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: '65b6b97b525db2ac02b68ce0' },
+  user: {
+    _id: '65b6b97b525db2ac02b68ce0',
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    last_connection: '2024-01-29T22:05:18.756Z',
+    documents: [],
+    __v: 0,
+    cart: '65b6b97b525db2ac02b68ce3'
+  },
+  level: 'info',
+  message: 'User Data Session:',
+  timestamp: '2024-01-29T22:07:44.470Z'
+}
+{
+  level: 'info',
+  message: 'soy la nueva hora',
+  timestamp: '2024-01-29T22:08:00.932Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:13:33.192Z'
+}
+{
+  message: 'Proceso 8648 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:13:49.144Z'
+}
+{
+  message: 'Proceso 17388 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:13:49.307Z'
+}
+{
+  message: 'Proceso 7332 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:13:49.645Z'
+}
+{
+  message: 'Proceso 10104 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:13:49.657Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:14:48.977Z'
+}
+{
+  message: 'Proceso 10592 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:15:08.584Z'
+}
+{
+  message: 'Proceso 8320 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:15:08.726Z'
+}
+{
+  message: 'Proceso 12464 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:15:08.898Z'
+}
+{
+  message: 'Proceso 10676 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:15:09.095Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:17:41.067Z'
+}
+{
+  message: 'Proceso 12500 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:18:04.227Z'
+}
+{
+  message: 'Proceso 6780 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:18:04.381Z'
+}
+{
+  message: 'Proceso 13080 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:18:04.434Z'
+}
+{
+  message: 'Proceso 17968 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:18:04.633Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:19:36.837Z'
+}
+{
+  message: 'Proceso 8768 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:19:47.606Z'
+}
+{
+  message: 'Proceso 15436 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:19:47.766Z'
+}
+{
+  message: 'Proceso 8320 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:19:48.057Z'
+}
+{
+  message: 'Proceso 14264 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:19:48.124Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:20:46.471Z'
+}
+{
+  level: 'error',
+  message: "Error al cerrar sesión: Cannot read properties of undefined (reading 'email')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'email')\n" +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:68:113\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-01-29T22:20:51.044Z'
+}
+{
+  message: 'Proceso 14144 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:21:01.166Z'
+}
+{
+  message: 'Proceso 14100 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:21:01.265Z'
+}
+{
+  message: 'Proceso 6332 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:21:01.311Z'
+}
+{
+  message: 'Proceso 17620 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:21:01.504Z'
+}
+{
+  level: 'error',
+  message: "Error al cerrar sesión: Cannot read properties of undefined (reading 'email')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'email')\n" +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:68:113\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-01-29T22:21:20.328Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:23:58.361Z'
+}
+{
+  level: 'error',
+  message: "Error al cerrar sesión: Cannot read properties of undefined (reading 'email')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'email')\n" +
+    '    at file:///C:/Users/Julia/OneDrive%20-%20Universidad%20de%20San%20Buenaventura%20-%20Bogota/Programaci%C3%B3n%20aprendiendo/coder-back-end/Coder-backend/src/router/user.router.js:71:42\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:175:3)\n' +
+    '    at router (C:\\Users\\Julia\\OneDrive - Universidad de San Buenaventura - Bogota\\Programación aprendiendo\\coder-back-end\\Coder-backend\\node_modules\\express\\lib\\router\\index.js:47:12)',
+  timestamp: '2024-01-29T22:24:12.243Z'
+}
+{
+  message: 'Proceso 13712 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:24:14.674Z'
+}
+{
+  message: 'Proceso 15640 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:24:14.988Z'
+}
+{
+  message: 'Proceso 12784 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:24:14.991Z'
+}
+{
+  message: 'Proceso 3008 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:24:15.082Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T22:25:51.586Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:32:49.049Z'
+}
+{
+  message: 'Proceso 11112 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:33:04.086Z'
+}
+{
+  message: 'Proceso 8356 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:33:04.348Z'
+}
+{
+  message: 'Proceso 2860 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:33:04.350Z'
+}
+{
+  message: 'Proceso 13148 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:33:04.464Z'
+}
+{
+  level: 'info',
+  message: 'User email:',
+  timestamp: '2024-01-29T22:33:33.905Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T23:26:10.051Z,
+    originalMaxAge: 3599999,
+    httpOnly: true
+  },
+  passport: { user: '65b6b97b525db2ac02b68ce0' },
+  user: {
+    _id: '65b6b97b525db2ac02b68ce0',
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    last_connection: '2024-01-29T22:07:44.470Z',
+    documents: [],
+    __v: 0,
+    cart: '65b6b97b525db2ac02b68ce3'
+  },
+  level: 'info',
+  message: 'User Data Session:',
+  timestamp: '2024-01-29T22:33:33.922Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T22:33:45.943Z'
+}
+{
+  level: 'info',
+  message: 'User email:',
+  timestamp: '2024-01-29T22:34:00.260Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T23:33:47.892Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: '65b6b97b525db2ac02b68ce0' },
+  user: {
+    _id: '65b6b97b525db2ac02b68ce0',
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$JMcBlVf1uRLt/p4ETpjn.uLlBNfkHzbCSox1CWQSRwnm1HkH9WPE2',
+    role: 'user',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    last_connection: '2024-01-29T22:33:33.935Z',
+    documents: [],
+    __v: 0,
+    cart: '65b6b97b525db2ac02b68ce3'
+  },
+  level: 'info',
+  message: 'User Data Session:',
+  timestamp: '2024-01-29T22:34:00.262Z'
+}
+{
+  level: 'info',
+  message: 'soy la nueva hora',
+  timestamp: '2024-01-29T22:35:39.536Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:40:33.098Z'
+}
+{
+  message: 'Proceso 1092 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:40:58.108Z'
+}
+{
+  message: 'Proceso 8096 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:40:58.292Z'
+}
+{
+  message: 'Proceso 15136 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:40:58.345Z'
+}
+{
+  message: 'Proceso 11392 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:40:58.346Z'
+}
+{
+  message: 'serialize 65b6b97b525db2ac02b68ce0',
+  level: 'info',
+  timestamp: '2024-01-29T22:41:33.674Z'
+}
+{
+  level: 'info',
+  message: 'soy la nueva hora',
+  timestamp: '2024-01-29T22:42:36.283Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:44:33.234Z'
+}
+{
+  message: 'Proceso 9656 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:44:40.370Z'
+}
+{
+  message: 'Proceso 15520 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:44:40.530Z'
+}
+{
+  message: 'Proceso 17440 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:44:40.609Z'
+}
+{
+  message: 'Proceso 16252 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:44:40.721Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:44:59.472Z'
+}
+{
+  message: 'Proceso 16280 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:14.428Z'
+}
+{
+  message: 'Proceso 13088 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:14.837Z'
+}
+{
+  message: 'Proceso 9148 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:14.930Z'
+}
+{
+  message: 'Proceso 14416 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:15.066Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:45.221Z'
+}
+{
+  message: 'Proceso 3384 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:53.365Z'
+}
+{
+  message: 'Proceso 14036 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:53.367Z'
+}
+{
+  message: 'Proceso 13536 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:53.531Z'
+}
+{
+  message: 'Proceso 7132 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:45:53.713Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:46:06.732Z'
+}
+{
+  message: 'Proceso 12228 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:46:25.306Z'
+}
+{
+  message: 'Proceso 8920 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:46:25.604Z'
+}
+{
+  message: 'Proceso 3392 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:46:25.702Z'
+}
+{
+  message: 'Proceso 18088 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:46:26.444Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:47:14.085Z'
+}
+{
+  message: 'Proceso 15372 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:47:34.043Z'
+}
+{
+  message: 'Proceso 6660 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:47:34.276Z'
+}
+{
+  message: 'Proceso 18068 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:47:34.431Z'
+}
+{
+  message: 'Proceso 9776 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:47:34.673Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:47:47.794Z'
+}
+{
+  message: 'Proceso 14548 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:48:02.154Z'
+}
+{
+  message: 'Proceso 3764 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:48:02.284Z'
+}
+{
+  message: 'Proceso 15764 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:48:02.291Z'
+}
+{
+  message: 'Proceso 10912 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:48:02.412Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:49:42.325Z'
+}
+{
+  message: 'Proceso 14540 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:50:01.425Z'
+}
+{
+  message: 'Proceso 12708 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:50:01.439Z'
+}
+{
+  message: 'Proceso 4292 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:50:01.579Z'
+}
+{
+  message: 'Proceso 8804 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:50:02.161Z'
+}
+{
+  message: 'serialize 65b82bbfac0148ec0490c215',
+  level: 'info',
+  timestamp: '2024-01-29T22:50:39.621Z'
+}
+{
+  level: 'info',
+  message: 'Correo electrónico del usuario:',
+  timestamp: '2024-01-29T22:51:51.801Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T23:50:41.264Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: '65b82bbfac0148ec0490c215' },
+  user: {
+    first_name: 'Julián Fernando',
+    last_name: 'Salamanca Chacón',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$5bvrTSPkQ1EKzDNanPAZferDewoUU..97utBm1mAZx9ph7WvhopRm',
+    role: 'user',
+    from_github: true,
+    from_google: false,
+    resetToken: { used: false },
+    last_connection: null,
+    _id: '65b82bbfac0148ec0490c215',
+    documents: [],
+    __v: 0,
+    cart: '65b82bbfac0148ec0490c218'
+  },
+  level: 'info',
+  message: 'Sesión completa:',
+  timestamp: '2024-01-29T22:51:51.804Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:53:31.073Z'
+}
+{
+  message: 'Proceso 11976 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:53:49.322Z'
+}
+{
+  message: 'Proceso 9984 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:53:49.512Z'
+}
+{
+  message: 'Proceso 4508 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:53:49.859Z'
+}
+{
+  message: 'Proceso 11720 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:53:49.860Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:54:14.801Z'
+}
+{
+  message: 'serialize 65b82bbfac0148ec0490c215',
+  level: 'info',
+  timestamp: '2024-01-29T22:54:20.216Z'
+}
+{
+  _id: new ObjectId("65b82bbfac0148ec0490c215"),
+  first_name: 'Julián Fernando',
+  last_name: 'Salamanca Chacón',
+  email: 'jfsalamanca3@gmail.com',
+  password: '$2b$10$5bvrTSPkQ1EKzDNanPAZferDewoUU..97utBm1mAZx9ph7WvhopRm',
+  role: 'user',
+  from_github: true,
+  from_google: false,
+  resetToken: { used: false },
+  last_connection: 2024-01-29T22:51:51.805Z,
+  documents: [],
+  __v: 0,
+  cart: new ObjectId("65b82bbfac0148ec0490c218"),
+  level: 'info',
+  message: 'Usuario autenticado con GitHub:',
+  timestamp: '2024-01-29T22:54:20.430Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T23:54:20.215Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: new ObjectId("65b82bbfac0148ec0490c215") },
+  user: {
+    _id: new ObjectId("65b82bbfac0148ec0490c215"),
+    first_name: 'Julián Fernando',
+    last_name: 'Salamanca Chacón',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$5bvrTSPkQ1EKzDNanPAZferDewoUU..97utBm1mAZx9ph7WvhopRm',
+    role: 'user',
+    from_github: true,
+    from_google: false,
+    resetToken: { used: false },
+    last_connection: 2024-01-29T22:51:51.805Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65b82bbfac0148ec0490c218")
+  },
+  level: 'info',
+  message: 'Sesión configurada:',
+  timestamp: '2024-01-29T22:54:20.435Z'
+}
+{
+  message: 'Proceso 16988 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:54:35.335Z'
+}
+{
+  message: 'Proceso 7484 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:54:35.451Z'
+}
+{
+  message: 'Proceso 10032 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:54:35.739Z'
+}
+{
+  message: 'Proceso 3056 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:54:36.243Z'
+}
+{
+  level: 'info',
+  message: 'Correo electrónico del usuario:',
+  timestamp: '2024-01-29T22:55:02.151Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-29T23:54:23.429Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: '65b82bbfac0148ec0490c215' },
+  user: {
+    _id: '65b82bbfac0148ec0490c215',
+    first_name: 'Julián Fernando',
+    last_name: 'Salamanca Chacón',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$5bvrTSPkQ1EKzDNanPAZferDewoUU..97utBm1mAZx9ph7WvhopRm',
+    role: 'user',
+    from_github: true,
+    from_google: false,
+    resetToken: { used: false },
+    last_connection: '2024-01-29T22:51:51.805Z',
+    documents: [],
+    __v: 0,
+    cart: '65b82bbfac0148ec0490c218'
+  },
+  level: 'info',
+  message: 'Sesión completa:',
+  timestamp: '2024-01-29T22:55:02.153Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:57:28.019Z'
+}
+{
+  message: 'Proceso 10592 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:57:33.980Z'
+}
+{
+  message: 'Proceso 10716 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:57:33.983Z'
+}
+{
+  message: 'Proceso 11540 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:57:34.232Z'
+}
+{
+  message: 'Proceso 6336 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:57:34.387Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:57:52.697Z'
+}
+{
+  message: 'Proceso 732 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:07.537Z'
+}
+{
+  message: 'Proceso 15152 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:07.538Z'
+}
+{
+  message: 'Proceso 9780 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:07.623Z'
+}
+{
+  message: 'Proceso 4340 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:08.559Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:21.147Z'
+}
+{
+  message: 'Proceso 6608 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:36.324Z'
+}
+{
+  message: 'Proceso 16484 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:36.336Z'
+}
+{
+  message: 'Proceso 7416 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:36.410Z'
+}
+{
+  message: 'Proceso 14920 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T22:58:36.527Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:08:16.088Z'
+}
+{
+  message: 'Proceso 14264 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:08:32.106Z'
+}
+{
+  message: 'Proceso 3392 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:08:32.201Z'
+}
+{
+  message: 'Proceso 4856 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:08:32.233Z'
+}
+{
+  message: 'Proceso 2492 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:08:32.307Z'
+}
+{
+  level: 'info',
+  message: 'soy la nueva hora',
+  timestamp: '2024-01-29T23:09:43.423Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:16:14.454Z'
+}
+{
+  message: 'Proceso 14272 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:16:34.775Z'
+}
+{
+  message: 'Proceso 17052 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:16:34.849Z'
+}
+{
+  message: 'Proceso 16084 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:16:35.129Z'
+}
+{
+  message: 'Proceso 6196 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:16:35.146Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:20:40.247Z'
+}
+{
+  message: 'Proceso 9136 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:20:46.856Z'
+}
+{
+  message: 'Proceso 12252 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:20:47.001Z'
+}
+{
+  message: 'Proceso 9180 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:20:47.128Z'
+}
+{
+  message: 'Proceso 8456 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:20:47.259Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:21:01.646Z'
+}
+{
+  message: 'Proceso 14912 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:21:17.310Z'
+}
+{
+  message: 'Proceso 17940 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:21:17.385Z'
+}
+{
+  message: 'Proceso 988 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:21:17.387Z'
+}
+{
+  message: 'Proceso 9984 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:21:17.585Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:23:39.393Z'
+}
+{
+  message: 'Proceso 10400 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:23:40.230Z'
+}
+{
+  message: 'Proceso 2600 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:23:40.685Z'
+}
+{
+  message: 'Proceso 3312 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:23:40.873Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:25:10.015Z'
+}
+{
+  message: 'Proceso 17180 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:25:31.968Z'
+}
+{
+  message: 'Proceso 7760 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:25:32.217Z'
+}
+{
+  message: 'Proceso 11848 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:25:32.584Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:25:46.293Z'
+}
+{
+  message: 'Proceso 15356 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:05.272Z'
+}
+{
+  message: 'Proceso 10624 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:05.626Z'
+}
+{
+  message: 'Proceso 17356 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:05.809Z'
+}
+{
+  message: 'Proceso 12884 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:05.901Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:28.833Z'
+}
+{
+  message: 'Proceso 17584 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:47.428Z'
+}
+{
+  message: 'Proceso 14240 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:47.620Z'
+}
+{
+  message: 'Proceso 14916 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:47.864Z'
+}
+{
+  message: 'Proceso 18120 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:26:48.037Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:27:08.519Z'
+}
+{
+  message: 'Proceso 14008 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:27:22.710Z'
+}
+{
+  message: 'Proceso 8668 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:27:22.719Z'
+}
+{
+  message: 'Proceso 5024 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:27:22.761Z'
+}
+{
+  message: 'Proceso 12920 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:27:22.895Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:30:01.813Z'
+}
+{
+  message: 'Proceso 6852 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:30:20.518Z'
+}
+{
+  message: 'Proceso 4740 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:30:20.575Z'
+}
+{
+  message: 'Proceso 5760 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:30:20.670Z'
+}
+{
+  message: 'Proceso 11292 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:30:20.867Z'
+}
+{
+  level: 'info',
+  message: 'Correo electrónico del usuario:',
+  timestamp: '2024-01-29T23:30:43.329Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-30T00:30:39.210Z,
+    originalMaxAge: 3599999,
+    httpOnly: true
+  },
+  email: 'ale@gmail.com',
+  first_name: 'Alejandra',
+  isAdmin: false,
+  level: 'info',
+  message: 'Sesión completa:',
+  timestamp: '2024-01-29T23:30:43.331Z'
+}
+{
+  level: 'info',
+  message: 'soy la nueva hora',
+  timestamp: '2024-01-29T23:30:52.181Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:32:14.659Z'
+}
+{
+  message: 'Proceso 11804 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:32:31.466Z'
+}
+{
+  message: 'Proceso 11792 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:32:31.551Z'
+}
+{
+  message: 'Proceso 13308 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:32:31.633Z'
+}
+{
+  message: 'Proceso 14344 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:32:31.747Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:33:17.569Z'
+}
+{
+  message: 'Proceso 12572 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:33:33.373Z'
+}
+{
+  message: 'Proceso 16444 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:33:33.432Z'
+}
+{
+  message: 'Proceso 12940 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:33:33.450Z'
+}
+{
+  message: 'Proceso 15272 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:33:33.787Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-29T23:44:29.598Z'
+}
+{
+  message: 'Proceso 13012 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:44:53.758Z'
+}
+{
+  message: 'Proceso 2596 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:44:53.800Z'
+}
+{
+  message: 'Proceso 7532 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:44:53.885Z'
+}
+{
+  message: 'Proceso 16576 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-29T23:44:54.153Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-30T00:05:16.966Z'
+}
+{
+  message: 'Proceso 9812 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:05:33.052Z'
+}
+{
+  message: 'Proceso 10268 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:05:33.083Z'
+}
+{
+  message: 'Proceso 11988 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:05:33.285Z'
+}
+{
+  message: 'Proceso 15844 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:05:33.416Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-30T00:06:41.818Z'
+}
+{
+  message: 'Proceso 4056 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:06:55.782Z'
+}
+{
+  message: 'Proceso 240 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:06:56.074Z'
+}
+{
+  message: 'Proceso 9872 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:06:56.147Z'
+}
+{
+  message: 'Proceso 16088 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:06:56.259Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-30T00:09:18.107Z'
+}
+{
+  message: 'Proceso 5560 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:09:41.386Z'
+}
+{
+  message: 'Proceso 10556 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:09:41.475Z'
+}
+{
+  message: 'Proceso 9800 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:09:41.518Z'
+}
+{
+  message: 'Proceso 11084 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:09:41.725Z'
+}
+{
+  message: 'serialize 65b82bbfac0148ec0490c215',
+  level: 'info',
+  timestamp: '2024-01-30T00:10:08.638Z'
+}
+{
+  _id: new ObjectId("65b82bbfac0148ec0490c215"),
+  first_name: 'Julián Fernando',
+  last_name: 'Salamanca Chacón',
+  email: 'jfsalamanca3@gmail.com',
+  password: '$2b$10$5bvrTSPkQ1EKzDNanPAZferDewoUU..97utBm1mAZx9ph7WvhopRm',
+  role: 'user',
+  from_github: true,
+  from_google: false,
+  resetToken: { used: false },
+  last_connection: 2024-01-29T22:55:02.155Z,
+  documents: [],
+  __v: 0,
+  cart: new ObjectId("65b82bbfac0148ec0490c218"),
+  level: 'info',
+  message: 'Usuario autenticado con GitHub:',
+  timestamp: '2024-01-30T00:10:08.892Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-30T01:10:08.637Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: new ObjectId("65b82bbfac0148ec0490c215") },
+  user: {
+    _id: new ObjectId("65b82bbfac0148ec0490c215"),
+    first_name: 'Julián Fernando',
+    last_name: 'Salamanca Chacón',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$5bvrTSPkQ1EKzDNanPAZferDewoUU..97utBm1mAZx9ph7WvhopRm',
+    role: 'user',
+    from_github: true,
+    from_google: false,
+    resetToken: { used: false },
+    last_connection: 2024-01-29T22:55:02.155Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65b82bbfac0148ec0490c218")
+  },
+  level: 'info',
+  message: 'Sesión configurada:',
+  timestamp: '2024-01-30T00:10:08.896Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-30T00:12:46.776Z'
+}
+{
+  message: 'Proceso 9928 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:13:07.710Z'
+}
+{
+  message: 'Proceso 17896 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:13:07.765Z'
+}
+{
+  message: 'Proceso 14880 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:13:08.076Z'
+}
+{
+  message: 'Proceso 17180 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:13:08.078Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-30T00:14:54.092Z'
+}
+{
+  message: 'Proceso 10924 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:15:08.185Z'
+}
+{
+  message: 'Proceso 17420 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:15:08.325Z'
+}
+{
+  message: 'Proceso 11316 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:15:08.327Z'
+}
+{
+  message: 'Proceso 10112 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:15:08.450Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-01-30T00:17:15.046Z'
+}
+{
+  message: 'Proceso 15908 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:17:38.228Z'
+}
+{
+  message: 'Proceso 10736 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:17:38.252Z'
+}
+{
+  message: 'Proceso 13060 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:17:38.314Z'
+}
+{
+  message: 'Proceso 16488 ha terminado',
+  level: 'info',
+  timestamp: '2024-01-30T00:17:38.317Z'
+}
+{
+  level: 'info',
+  message: 'Correo electrónico del usuario:',
+  timestamp: '2024-01-30T00:18:48.778Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-01-30T01:18:46.117Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: '65b82bbfac0148ec0490c215' },
+  user: {
+    _id: '65b82bbfac0148ec0490c215',
+    first_name: 'Julián Fernando',
+    last_name: 'Salamanca Chacón',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$5bvrTSPkQ1EKzDNanPAZferDewoUU..97utBm1mAZx9ph7WvhopRm',
+    role: 'user',
+    from_github: true,
+    from_google: false,
+    resetToken: { used: false },
+    last_connection: '2024-01-29T22:55:02.155Z',
+    documents: [],
+    __v: 0,
+    cart: '65b82bbfac0148ec0490c218'
+  },
+  level: 'info',
+  message: 'Sesión completa:',
+  timestamp: '2024-01-30T00:18:48.783Z'
+}
+{
+  level: 'info',
+  message: 'soy la nueva hora',
+  timestamp: '2024-01-30T00:19:00.212Z'
+}

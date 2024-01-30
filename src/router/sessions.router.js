@@ -3,6 +3,7 @@ import passport from "passport";
 import { authToken, generateToken } from "../utils.js";
 import { errorDictionary } from "../error/error.enum.js";
 import logger from "../winston.js";
+import { usersModel } from "../persistencia/dao/models/users.model.js";
 
 const router = Router();
 
@@ -17,7 +18,21 @@ router.post("/login",
   passport.authenticate("login", {
     successRedirect: "/home",
     failureRedirect: "/error",
-  })
+  }),
+  async (req, res) => {
+    try {
+      const { email } = req.body;
+      await usersModel.updateOne(
+        { email: email },
+        { $set: { last_connection: new Date() } },
+        logger.info("hora de conexión:", new Date()),
+      );
+      res.redirect("/home");
+    } catch (error) {
+      logger.error("Error al procesar la solicitud:", error);
+      return res.status(500).json({ error: "Error interno del servidor" });
+    }
+  }
 );
 
 router.get("/auth/github",
@@ -31,13 +46,23 @@ router.get("/github",
     failureRedirect: '/error',
   }),
   async (req, res) => {
-    if (req.user[0]) {
-      req.session.user = req.user[0];
-    } else {
-      req.session.user = req.user;
+    try {
+      const user = req.user[0] ? req.user[0] : req.user;
+      await usersModel.updateOne(
+        { _id: user._id },
+        { $set: { last_connection: new Date() } }
+      );
+      req.session.user = user;
+
+      logger.info("Usuario autenticado con GitHub:", user);
+      logger.info("Sesión configurada:", req.session);
+
+      const userId = user._id;
+      res.redirect(`/home/${userId}`);
+    } catch (error) {
+      console.error("Error al manejar la autenticación de GitHub:", error);
+      res.status(500).json({ error: 'Error interno del servidor' });
     }
-    const userId = req.session.user._id;
-    res.redirect(`/home/${userId}`);
   }
 );
 
@@ -59,22 +84,34 @@ router.post('/register', (req, res) => {
     res.send({status:"success", access_token});
 });
 
-
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
-  const user = users.find(user => user.email === email);
 
-  if (!user) {
+  try {
+    const user = await usersModel.findOne({ email: email });
+
+    if (!user) {
       return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
-  }
-  const comparePassword = await bcrypt.compare(password, user.password);
+    }
 
-  if (!comparePassword) {
+    const comparePassword = await bcrypt.compare(password, user.password);
+
+    if (!comparePassword) {
       return res.status(401).json({ error: errorDictionary['CREDENTIALS_ERROR'] });
-  }
+    }
 
-  const access_token = generateToken(user);
-  res.send({ status: "success", access_token });
+    await usersModel.updateOne(
+      { email: email },
+      { $set: { last_connection: new Date() } },
+      console.log("soy la hora de la conexón:", new Date())
+    );
+
+    const access_token = generateToken(user);
+    res.send({ status: "success", access_token });
+  } catch (error) {
+    console.error("Error al iniciar sesión:", error);
+    res.status(500).json({ error: errorDictionary['INTERNAL_SERVER_ERROR'] });
+  }
 });
 
 
@@ -91,15 +128,26 @@ router.get('/auth/google/callback',
     failureRedirect: '/error',
   }),
   async (req, res) => {
-    if (req.user[0]) {
-      req.session.user = req.user[0];
-    } else {
-      req.session.user = req.user;
+    try {
+      const user = req.user[0] ? req.user[0] : req.user;
+      await usersModel.updateOne(
+        { _id: user._id },
+        { $set: { last_connection: new Date() } }
+      );
+      req.session.user = user;
+
+      logger.info("Usuario autenticado con Google:", user);
+      logger.info("Sesión configurada:", req.session);
+
+      const userId = user._id;
+      res.redirect(`/home/${userId}`);
+    } catch (error) {
+      console.error("Error al manejar la autenticación de Google:", error);
+      res.status(500).json({ error: 'Error interno del servidor' });
     }
-    const userId = req.session.user._id;
-    res.redirect(`/home/${userId}`);
   }
 );
+
 
 //current
 
@@ -168,8 +216,5 @@ router.get('/current-google',
     }
   }
 );
-
-
-
 
 export default router;

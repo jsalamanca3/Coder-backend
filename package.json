@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/app.js",
-    "test": "mocha -t 10000 test/products.test.js"
+    "test": "mocha -t 10000 test"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +31,7 @@
     "mongodb": "^6.1.0",
     "mongoose": "^7.6.1",
     "mongoose-paginate-v2": "^1.7.4",
+    "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
     "passport": "^0.6.0",
     "passport-github2": "^0.1.12",

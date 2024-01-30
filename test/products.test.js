@@ -74,7 +74,7 @@ describe('Products Router', () => {
     expect(response.body).to.have.property('title', newProductData.title);
   });
 
- /*  it('should update an existing product', async () => {
+  it('should update an existing product', async () => {
     const updatedProductData = {
       title: 'Producto Actualizado',
       price: 39.99,
@@ -87,12 +87,12 @@ describe('Products Router', () => {
     expect(response._body).to.have.property('title', updatedProductData.title);
     expect(response._body).to.have.property('price', updatedProductData.price);
     expect(response._body).to.have.property('category', updatedProductData.category);
-  }); */
+  });
 
-  /* it('should delete an existing product', async () => {
+  it('should delete an existing product', async () => {
     const response = await api.delete(`/api/products/${existingProduct._id}`);
     expect(response.statusCode).to.equal(200);
     expect(response._body).to.be.an('object');
     expect(response._body).to.have.property('message', 'Producto eliminado exitosamente');
-  }); */
+  });
 });

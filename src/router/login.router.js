@@ -18,10 +18,14 @@ router.post("/", async (req, res) => {
     if (!userDB) {
       return res.redirect("/signup");
     }
-
     const comparePassword = await compareData(password, userDB[0].password);
 
     if (comparePassword) {
+      await usersModel.updateOne(
+        { email: email },
+        { $set: { last_connection: new Date() } },
+        logger.info("soy la nueva hora", new Date()),
+    );
       req.session["email"] = email;
       req.session["first_name"] = userDB[0].first_name;
       req.session["isAdmin"] = email === "adminCoder@coder.com" && password === "Cod3r123";
@@ -31,7 +35,7 @@ router.post("/", async (req, res) => {
     }
 
   } catch (error) {
-    console.error("Error al procesar la solicitud:", error);
+    logger.error("Error al procesar la solicitud:", error);
     return res.status(500).json({ error: "Error interno del servidor" });
   }
 });

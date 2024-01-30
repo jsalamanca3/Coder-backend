@@ -44,6 +44,16 @@ const userSchema = new Schema({
           default: false,
         },
     },
+    documents: [
+        {
+            name: String,
+            reference: String
+        }
+    ],
+    last_connection: {
+        type: Date,
+        default: null
+    },
 });
 
 const usersModel = model('User', userSchema);

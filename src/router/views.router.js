@@ -117,7 +117,7 @@ router.get("/home/:idUser", async (req, res) => {
 
     products = products.map((item) => ({ ...item, cartId }));
 
-    res.render('home', { first_name, last_name, products });
+    res.render('home', { first_name, last_name, products, idUser });
   } catch (error) {
     console.error('Error en la ruta /home/:idUser:', error);
     res.status(500).send('Error interno del servidor');
@@ -153,6 +153,10 @@ router.get('/carts/:cid', async (req, res) => {
     logger.error('Error al cargar la vista del carrito:', error);
     res.status(500).json({error: errorDictionary['DATABASE_CONNECTION_ERROR']});
   }
+});
+
+router.get("/users/uploader/:idUser", (req, res) => {
+  res.render('uploader');
 });
 
 export default router;
