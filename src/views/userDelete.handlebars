@@ -1,0 +1,8 @@
+ <h1>Lista de Usuarios Inactivos</h1>
+    <ul>
+        {{#each users}}
+            <li>{{first_name}} - {{email}} - {{last_connection_time}} <a href="#" onclick="deleteUser({{id}})">Eliminar</a></li>
+        {{/each}}
+    </ul>
+
+    <script src="/js/userButtonDelete.js"></script>

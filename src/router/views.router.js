@@ -8,6 +8,7 @@ import { cartsModel } from "../persistencia/dao/models/carts.model.js";
 import checkUserRole from '../persistencia/dao/managers/loginManager.js';
 import { errorDictionary } from "../error/error.enum.js";
 import logger from "../winston.js";
+import calculateLastConnectionTime from "../persistencia/dao/functions/lastConnection.js";
 
 const router = Router();
 const productManager = new ProductManager();
@@ -61,7 +62,7 @@ router.get("/api", async (req, res) => {
   }
 });
 
-router.get("api/realTimeProducts", async (req, res) => {
+router.get("/api/realTimeProducts", async (req, res) => {
   try {
     const products = await productManager.findAll();
     res.render('realTimeProducts', { products });
@@ -71,7 +72,7 @@ router.get("api/realTimeProducts", async (req, res) => {
   }
 });
 
-router.post("api/realTimeProducts/addProduct", async (req, res) => {
+router.post("/api/realTimeProducts/addProduct", async (req, res) => {
   try {
     const product = req.body;
     const newProduct = await productManager.productRepository.addProduct(product);
@@ -83,7 +84,7 @@ router.post("api/realTimeProducts/addProduct", async (req, res) => {
   }
 });
 
-router.post("api/realTimeProducts/deleteProduct", async (req, res) => {
+router.post("/api/realTimeProducts/deleteProduct", async (req, res) => {
   try {
     const productId = req.body.id;
     await productManager.productRepository.deleteProduct(productId);
@@ -170,5 +171,20 @@ router.get("/users/uploader/:idUser", async (req, res) => {
   }
 });
 
+router.get("/api/users/delete", async (req, res) => {
+  try {
+    const users = await usersManager.findInactiveUsers(2);
+    const usersWithTime = users.map(user => ({
+      email: user.email,
+      first_name: user.first_name,
+      last_connection_time: calculateLastConnectionTime(user.last_connection)
+    }));
+
+    res.render('userDelete', { users: usersWithTime });
+  } catch (error) {
+    console.error('Error al obtener los usuarios inactivos:', error);
+    res.status(500).send('Error interno del servidor');
+  }
+});
 
 export default router;

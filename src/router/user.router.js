@@ -8,17 +8,25 @@ import { CartManager } from "../persistencia/dao/functions/cartManager.js";
 import { errorDictionary } from "../error/error.enum.js";
 import logger from "../winston.js";
 import { upload } from "../utils/multer.js";
+import { sendInactiveUserEmail } from "../persistencia/dao/functions/userInactive.js";
 
 const router = Router();
 
 router.get("/", async (req, res) => {
   try {
     const users = await usersManager.findAll();
-    res.status(200).json({ message: "Usuarios", users });
+    const simplifiedUsers = users.map(user => ({
+      nombre: user.first_name,
+      correo: user.email,
+      rol: user.role,
+    }));
+
+    res.status(200).json({ message: "Usuarios", users: simplifiedUsers });
   } catch (error) {
     return res.status(500).json({ error: errorDictionary["USER_NOT_FOUND"] });
   }
 });
+
 
 router.get("/logout", async (req, res) => {
   try {
@@ -229,5 +237,21 @@ router.put("/premium/:uid", async (req, res) => {
   }
 });
 
+router.delete("/", async (req, res) => {
+  try {
+    const inactiveUsers = await usersManager.findInactiveUsers(2);
+
+    inactiveUsers.forEach(async (user) => {
+      await sendInactiveUserEmail(user.email);
+    });
+
+    await usersManager.deleteInactiveUsers(inactiveUsers);
+
+    res.status(200).json({ message: "Usuarios inactivos eliminados y notificados correctamente" });
+  } catch (error) {
+    console.error("Error al eliminar usuarios inactivos:", error);
+    return res.status(500).json({ error: "Error interno del servidor" });
+  }
+});
 
 export default router;
