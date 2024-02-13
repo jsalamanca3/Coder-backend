@@ -4,6 +4,7 @@ import Joi from 'joi';
 import { v4 as uuidv4 } from 'uuid';
 import autorizeMiddleware from '../middlewares/authorize.middleware.js'
 import { errorDictionary } from "../error/error.enum.js";
+import { usersModel } from "../persistencia/dao/models/users.model.js";
 const router = Router();
 
 router.get("/", async (req, res) => {
@@ -167,16 +168,29 @@ router.put("/:pid", autorizeMiddleware, async (req, res) => {
 router.delete("/:pid", autorizeMiddleware, async (req, res) => {
   try {
     const productId = req.params.pid;
-    const result = await productsModel.findByIdAndDelete(productId);
+    const product = await productsModel.findById(productId);
 
-    if (result) {
+    if (!product) {
+      return res.status(404).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
+    }
+
+    const owner = await usersModel.findById(product.ownerId);
+    if (owner && owner.isPremium) {
+      await enviarCorreo(owner.email, 'Producto Eliminado', product.title, product.description);
+    }
+
+    if (!owner || owner.isPremium) {
+      const result = await productsModel.findByIdAndDelete(productId);
       res.json({ message: "Producto eliminado exitosamente" });
     } else {
-      return res.status(401).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
+      res.status(403).json({ error: "No tienes permiso para eliminar este producto" });
     }
   } catch (error) {
-    return res.status(401).json({ error: errorDictionary['ERROR_DELETE_PRODUCT'] });
+    console.error('Error al eliminar el producto:', error);
+    res.status(500).json({ error: errorDictionary['ERROR_DELETE_PRODUCT'] });
   }
 });
+
+
 
 export default router;

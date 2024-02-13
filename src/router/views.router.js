@@ -9,7 +9,7 @@ import checkUserRole from '../persistencia/dao/managers/loginManager.js';
 import { errorDictionary } from "../error/error.enum.js";
 import logger from "../winston.js";
 import calculateLastConnectionTime from "../persistencia/dao/functions/lastConnection.js";
-
+import authorizeMiddleware from "../middlewares/authorize.middleware.js";
 const router = Router();
 const productManager = new ProductManager();
 const cartManager = new CartManager();
@@ -42,13 +42,26 @@ router.get("/error", (req, res) => {
   res.render("error");
 })
 
-router.get("/profile", checkUserRole('usuario'), (req, res) => {
-  res.send('Bienvenido, usuario');
+router.get('/profile', async (req, res) => {
+  try {
+    res.send('Bienvenido, usuario');
+  } catch (error) {
+    console.error('Error en la vista del Usuario:', error);
+    res.status(500).send('Error interno del servidor');
+  }
 });
 
-router.get("/admin", checkUserRole('admin'), (req, res) => {
-  res.send('Bienvenido, administrador');
+router.get('/admin', checkUserRole, authorizeMiddleware, async (req, res) => {
+  try {
+    const userRole = req.session;
+    const products = await productManager.findAll();
+    res.render('deleteProduct', { role: userRole, products });
+  } catch (error) {
+    console.error('Error en la vista de administrador:', error);
+    res.status(500).send('Error interno del servidor');
+  }
 });
+
 
 router.get("/api", async (req, res) => {
   try {
@@ -175,10 +188,13 @@ router.get("/api/users/delete", async (req, res) => {
   try {
     const users = await usersManager.findInactiveUsers(2);
     const usersWithTime = users.map(user => ({
+      id: user._id,
       email: user.email,
       first_name: user.first_name,
       last_connection_time: calculateLastConnectionTime(user.last_connection)
     }));
+
+    console.log("ids", usersWithTime)
 
     res.render('userDelete', { users: usersWithTime });
   } catch (error) {

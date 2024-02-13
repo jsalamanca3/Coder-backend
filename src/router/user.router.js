@@ -9,7 +9,7 @@ import { errorDictionary } from "../error/error.enum.js";
 import logger from "../winston.js";
 import { upload } from "../utils/multer.js";
 import { sendInactiveUserEmail } from "../persistencia/dao/functions/userInactive.js";
-
+import authorizeMiddleware from "../middlewares/authorize.middleware.js";
 const router = Router();
 
 router.get("/", async (req, res) => {
@@ -26,7 +26,6 @@ router.get("/", async (req, res) => {
     return res.status(500).json({ error: errorDictionary["USER_NOT_FOUND"] });
   }
 });
-
 
 router.get("/logout", async (req, res) => {
   try {
@@ -237,8 +236,9 @@ router.put("/premium/:uid", async (req, res) => {
   }
 });
 
-router.delete("/", async (req, res) => {
+router.delete("/:id", authorizeMiddleware, async (req, res) => {
   try {
+    const userId = req.params.id;
     const inactiveUsers = await usersManager.findInactiveUsers(2);
 
     inactiveUsers.forEach(async (user) => {
@@ -246,6 +246,7 @@ router.delete("/", async (req, res) => {
     });
 
     await usersManager.deleteInactiveUsers(inactiveUsers);
+    console.log("usuario eliminado:", inactiveUsers)
 
     res.status(200).json({ message: "Usuarios inactivos eliminados y notificados correctamente" });
   } catch (error) {

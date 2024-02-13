@@ -26,10 +26,12 @@ import cluster from "cluster";
 import { cpus } from "os";
 import swaggerUi from "swagger-ui-express";
 import { swaggerSetup } from "./utils/swaggerSpecs.js";
+import methodOverride from "method-override";
 
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__fileUrl + "/public"));
 

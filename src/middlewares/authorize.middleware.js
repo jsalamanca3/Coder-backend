@@ -39,6 +39,11 @@ const authorizeMiddleware = async (req, res, next) => {
           return res.status(403).json({ error: errorDictionary['ACCESS_DENIED'], message: 'No tiene permiso para crear productos' });
         }
       }
+    } else if (req.originalUrl.startsWith('/api/users/delete') && req.method === 'DELETE') {
+      console.log("pasando por aquí")
+      if (!isAdmin) {
+        return res.status(403).json({ error: errorDictionary['ACCESS_DENIED'] });
+      }
     }
 
     next();
