@@ -6265,3 +6265,1482 @@
   message: 'Rol del usuario:',
   timestamp: '2024-02-13T02:03:37.121Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T13:22:27.263Z'
+}
+{
+  message: 'Proceso 11644 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T13:22:46.307Z'
+}
+{
+  message: 'Proceso 8812 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T13:22:46.343Z'
+}
+{
+  message: 'Proceso 880 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T13:22:46.658Z'
+}
+{
+  message: 'Proceso 8144 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T13:22:46.775Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T14:04:28.813Z'
+}
+{
+  message: 'Proceso 15116 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:04:56.175Z'
+}
+{
+  message: 'Proceso 15616 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:04:56.309Z'
+}
+{
+  message: 'Proceso 20504 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:04:56.557Z'
+}
+{
+  message: 'Proceso 16404 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:04:56.668Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-02-13T15:05:09.977Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  level: 'info',
+  message: 'Sesión completa:',
+  timestamp: '2024-02-13T14:05:11.387Z'
+}
+{
+  message: 'serialize 658ffeb938485a1671a87b4a',
+  level: 'info',
+  timestamp: '2024-02-13T14:05:21.796Z'
+}
+{
+  _id: new ObjectId("658ffeb938485a1671a87b4a"),
+  first_name: 'Chizato Nishikigi',
+  last_name: 'gt',
+  email: 'chizatonishikigi@gmail.com',
+  password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+  role: 'admin',
+  from_github: false,
+  from_google: true,
+  resetToken: { used: false },
+  __v: 0,
+  cart: new ObjectId("658ffeb938485a1671a87b4d"),
+  last_connection: 2024-02-13T01:54:07.396Z,
+  level: 'info',
+  message: 'Usuario autenticado con Google:',
+  timestamp: '2024-02-13T14:05:22.020Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-02-13T15:05:21.795Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: new ObjectId("658ffeb938485a1671a87b4a") },
+  user: {
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d"),
+    last_connection: 2024-02-13T01:54:07.396Z
+  },
+  level: 'info',
+  message: 'Sesión configurada:',
+  timestamp: '2024-02-13T14:05:22.023Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:05:28.771Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:05:34.290Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:05:37.090Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:06:26.263Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:06:29.083Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T14:17:27.417Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:17:33.399Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:17:35.789Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:17:38.447Z'
+}
+{
+  message: 'Proceso 12024 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:17:51.167Z'
+}
+{
+  message: 'Proceso 20944 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:17:51.248Z'
+}
+{
+  message: 'Proceso 20164 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:17:51.345Z'
+}
+{
+  message: 'Proceso 19628 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:17:51.885Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:17:52.555Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:17:54.842Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:18:40.536Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T14:19:32.366Z'
+}
+{
+  message: 'Proceso 12532 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:19:35.471Z'
+}
+{
+  message: 'Proceso 18396 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:19:35.715Z'
+}
+{
+  message: 'Proceso 15912 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:19:35.836Z'
+}
+{
+  message: 'Proceso 21016 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:19:36.006Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T14:19:58.473Z'
+}
+{
+  message: 'Proceso 21468 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:20:16.065Z'
+}
+{
+  message: 'Proceso 19616 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:20:16.138Z'
+}
+{
+  message: 'Proceso 2088 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:20:16.146Z'
+}
+{
+  message: 'Proceso 12980 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:20:16.373Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:20:20.921Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:20:22.967Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T14:22:09.681Z'
+}
+{
+  message: 'Proceso 7896 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:22:29.692Z'
+}
+{
+  message: 'Proceso 14480 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:22:29.755Z'
+}
+{
+  message: 'Proceso 19848 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:22:29.778Z'
+}
+{
+  message: 'Proceso 11604 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:22:29.814Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:22:38.259Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:22:41.473Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:22:44.988Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:33:14.096Z'
+}
+{
+  message: 'serialize 65caca523640b1d74eca49b4',
+  level: 'info',
+  timestamp: '2024-02-13T14:33:31.695Z'
+}
+{
+  _id: new ObjectId("65caca523640b1d74eca49b4"),
+  first_name: 'J Salamanca',
+  last_name: 'gt',
+  email: 'jfsalamanca3@gmail.com',
+  password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+  role: 'premium',
+  from_github: false,
+  from_google: true,
+  resetToken: { used: false },
+  documentsProcessed: false,
+  last_connection: 2024-02-13T01:48:03.145Z,
+  documents: [],
+  __v: 0,
+  cart: new ObjectId("65caca523640b1d74eca49b7"),
+  level: 'info',
+  message: 'Usuario autenticado con Google:',
+  timestamp: '2024-02-13T14:33:31.924Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-02-13T15:33:31.694Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: new ObjectId("65caca523640b1d74eca49b4") },
+  user: {
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    documentsProcessed: false,
+    last_connection: 2024-02-13T01:48:03.145Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Sesión configurada:',
+  timestamp: '2024-02-13T14:33:31.931Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:33:42.364Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:33:42.366Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        documentsProcessed: 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          documentsProcessed: true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    documentsProcessed: false,
+    last_connection: 2024-02-13T14:33:31.781Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:33:42.369Z'
+}
+{
+  title: 'Bufanda 1',
+  price: '25',
+  stock: '8',
+  description: 'bufanda de lino',
+  code: '12',
+  status: 'available',
+  category: 'lino',
+  thumbnails: 'NotFound',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-02-13T14:33:42.379Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'Bufanda 1',
+    description: 'bufanda de lino',
+    code: '12',
+    price: 25,
+    status: 'available',
+    stock: 8,
+    thumbnails: 'NotFound',
+    category: 'lino',
+    owner: new ObjectId("65caca523640b1d74eca49b4"),
+    _id: new ObjectId("65cb7dc64cb3f50b49bdf2f8")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-02-13T14:33:42.402Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-02-13T14:33:42.531Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:33:52.458Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:33:52.459Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        documentsProcessed: 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          documentsProcessed: true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    documentsProcessed: false,
+    last_connection: 2024-02-13T14:33:31.781Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:33:52.460Z'
+}
+{
+  title: 'Bufanda 2',
+  price: '25',
+  stock: '8',
+  description: 'bufanda de lino',
+  code: '12',
+  status: 'available',
+  category: 'lino',
+  thumbnails: 'NotFound',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-02-13T14:33:52.462Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'Bufanda 2',
+    description: 'bufanda de lino',
+    code: '12',
+    price: 25,
+    status: 'available',
+    stock: 8,
+    thumbnails: 'NotFound',
+    category: 'lino',
+    owner: new ObjectId("65caca523640b1d74eca49b4"),
+    _id: new ObjectId("65cb7dd04cb3f50b49bdf2fc")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-02-13T14:33:52.465Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-02-13T14:33:52.551Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:34:00.679Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:34:00.680Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        documentsProcessed: 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          documentsProcessed: true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    documentsProcessed: false,
+    last_connection: 2024-02-13T14:33:31.781Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:34:00.680Z'
+}
+{
+  title: 'Bufanda 3',
+  price: '25',
+  stock: '8',
+  description: 'bufanda de lino',
+  code: '12',
+  status: 'available',
+  category: 'lino',
+  thumbnails: 'NotFound',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-02-13T14:34:00.682Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'Bufanda 3',
+    description: 'bufanda de lino',
+    code: '12',
+    price: 25,
+    status: 'available',
+    stock: 8,
+    thumbnails: 'NotFound',
+    category: 'lino',
+    owner: new ObjectId("65caca523640b1d74eca49b4"),
+    _id: new ObjectId("65cb7dd84cb3f50b49bdf300")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-02-13T14:34:00.686Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-02-13T14:34:00.785Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T14:43:37.054Z'
+}
+{
+  message: 'Proceso 18156 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:43:56.462Z'
+}
+{
+  message: 'Proceso 19868 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:43:56.962Z'
+}
+{
+  message: 'Proceso 14244 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:43:56.965Z'
+}
+{
+  message: 'Proceso 7516 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T14:43:57.172Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:45:09.664Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:45:13.834Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T14:45:18.386Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T15:12:02.493Z'
+}
+{
+  message: 'Proceso 16364 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:12:21.181Z'
+}
+{
+  message: 'Proceso 11680 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:12:21.237Z'
+}
+{
+  message: 'Proceso 3500 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:12:21.353Z'
+}
+{
+  message: 'Proceso 11660 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:12:21.508Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-02-13T16:12:20.964Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  level: 'info',
+  message: 'Sesión completa:',
+  timestamp: '2024-02-13T15:12:25.983Z'
+}
+{
+  message: 'serialize 658ffeb938485a1671a87b4a',
+  level: 'info',
+  timestamp: '2024-02-13T15:12:35.558Z'
+}
+{
+  _id: new ObjectId("658ffeb938485a1671a87b4a"),
+  first_name: 'Chizato Nishikigi',
+  last_name: 'gt',
+  email: 'chizatonishikigi@gmail.com',
+  password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+  role: 'admin',
+  from_github: false,
+  from_google: true,
+  resetToken: { used: false },
+  __v: 0,
+  cart: new ObjectId("658ffeb938485a1671a87b4d"),
+  last_connection: 2024-02-13T14:05:21.905Z,
+  level: 'info',
+  message: 'Usuario autenticado con Google:',
+  timestamp: '2024-02-13T15:12:35.780Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-02-13T16:12:35.557Z,
+    originalMaxAge: 3600000,
+    httpOnly: true
+  },
+  passport: { user: new ObjectId("658ffeb938485a1671a87b4a") },
+  user: {
+    _id: new ObjectId("658ffeb938485a1671a87b4a"),
+    first_name: 'Chizato Nishikigi',
+    last_name: 'gt',
+    email: 'chizatonishikigi@gmail.com',
+    password: '$2b$10$p0pOdpaNbUMLjiqDtEul9eYz1AFV6UNnghqrXbG1u/hCSjZ0P/6vC',
+    role: 'admin',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    __v: 0,
+    cart: new ObjectId("658ffeb938485a1671a87b4d"),
+    last_connection: 2024-02-13T14:05:21.905Z
+  },
+  level: 'info',
+  message: 'Sesión configurada:',
+  timestamp: '2024-02-13T15:12:35.784Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:12:47.018Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:12:51.350Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:12:54.516Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:13:16.704Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:13:19.259Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T15:15:04.961Z'
+}
+{
+  message: 'Proceso 10844 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:15:26.162Z'
+}
+{
+  message: 'Proceso 4412 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:15:26.181Z'
+}
+{
+  message: 'Proceso 20768 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:15:26.185Z'
+}
+{
+  message: 'Proceso 11932 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:15:26.190Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:15:31.230Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:15:33.781Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:18:23.533Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T15:19:10.725Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:19:13.739Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:19:19.710Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:19:25.228Z'
+}
+{
+  message: 'Proceso 11812 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:19:32.341Z'
+}
+{
+  message: 'Proceso 9400 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:19:32.404Z'
+}
+{
+  message: 'Proceso 20280 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:19:32.522Z'
+}
+{
+  message: 'Proceso 20188 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:19:32.790Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T15:22:42.442Z'
+}
+{
+  message: 'Proceso 1192 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:23:04.722Z'
+}
+{
+  message: 'Proceso 7632 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:23:04.729Z'
+}
+{
+  message: 'Proceso 8744 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:23:04.816Z'
+}
+{
+  message: 'Proceso 6420 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:23:05.026Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:14.772Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:14.774Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        documentsProcessed: 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          documentsProcessed: true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    documentsProcessed: false,
+    last_connection: 2024-02-13T14:33:31.781Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:14.777Z'
+}
+{
+  title: 'Bufanda 3',
+  price: '25',
+  stock: '8',
+  description: 'bufanda de lino',
+  code: '12',
+  status: 'available',
+  category: 'lino',
+  thumbnails: 'NotFound',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-02-13T15:23:14.780Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'Bufanda 3',
+    description: 'bufanda de lino',
+    code: '12',
+    price: 25,
+    status: 'available',
+    stock: 8,
+    thumbnails: 'NotFound',
+    category: 'lino',
+    owner: new ObjectId("65caca523640b1d74eca49b4"),
+    _id: new ObjectId("65cb8962c7da7c761561d49d")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-02-13T15:23:14.803Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-02-13T15:23:14.920Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:23.470Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:23.471Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        documentsProcessed: 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          documentsProcessed: true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    documentsProcessed: false,
+    last_connection: 2024-02-13T14:33:31.781Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:23.473Z'
+}
+{
+  title: 'Bufanda 2',
+  price: '25',
+  stock: '8',
+  description: 'bufanda de lino',
+  code: '12',
+  status: 'available',
+  category: 'lino',
+  thumbnails: 'NotFound',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-02-13T15:23:23.483Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'Bufanda 2',
+    description: 'bufanda de lino',
+    code: '12',
+    price: 25,
+    status: 'available',
+    stock: 8,
+    thumbnails: 'NotFound',
+    category: 'lino',
+    owner: new ObjectId("65caca523640b1d74eca49b4"),
+    _id: new ObjectId("65cb896bc7da7c761561d4a1")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-02-13T15:23:23.491Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-02-13T15:23:23.580Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:32.652Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:32.653Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        password: 'init',
+        email: 'init',
+        last_name: 'init',
+        first_name: 'init',
+        role: 'init',
+        from_github: 'init',
+        from_google: 'init',
+        'resetToken.used': 'init',
+        documentsProcessed: 'init',
+        last_connection: 'init',
+        _id: 'init',
+        documents: 'init',
+        __v: 'init',
+        cart: 'init'
+      },
+      states: {
+        require: {},
+        default: {},
+        init: {
+          _id: true,
+          first_name: true,
+          last_name: true,
+          email: true,
+          password: true,
+          role: true,
+          from_github: true,
+          from_google: true,
+          'resetToken.used': true,
+          documentsProcessed: true,
+          last_connection: true,
+          documents: true,
+          __v: true,
+          cart: true
+        }
+      }
+    },
+    skipId: true
+  },
+  '$isNew': false,
+  _doc: {
+    resetToken: { used: false },
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    documentsProcessed: false,
+    last_connection: 2024-02-13T14:33:31.781Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:23:32.656Z'
+}
+{
+  title: 'Bufanda 1',
+  price: '25',
+  stock: '8',
+  description: 'bufanda de lino',
+  code: '12',
+  status: 'available',
+  category: 'lino',
+  thumbnails: 'NotFound',
+  level: 'info',
+  message: 'Datos del producto recibidos:',
+  timestamp: '2024-02-13T15:23:32.659Z'
+}
+{
+  '$__': InternalCache {
+    activePaths: StateMachine {
+      paths: {
+        category: 'modify',
+        thumbnails: 'modify',
+        stock: 'modify',
+        price: 'modify',
+        code: 'modify',
+        title: 'modify',
+        status: 'modify',
+        _id: 'default',
+        description: 'modify',
+        owner: 'modify'
+      },
+      states: {
+        require: {},
+        default: { _id: true },
+        modify: {
+          title: true,
+          description: true,
+          code: true,
+          price: true,
+          status: true,
+          stock: true,
+          thumbnails: true,
+          category: true,
+          owner: true
+        }
+      }
+    }
+  },
+  _doc: {
+    title: 'Bufanda 1',
+    description: 'bufanda de lino',
+    code: '12',
+    price: 25,
+    status: 'available',
+    stock: 8,
+    thumbnails: 'NotFound',
+    category: 'lino',
+    owner: new ObjectId("65caca523640b1d74eca49b4"),
+    _id: new ObjectId("65cb8974c7da7c761561d4a5")
+  },
+  level: 'info',
+  message: 'Nuevo producto:',
+  timestamp: '2024-02-13T15:23:32.664Z'
+}
+{
+  message: 'Producto creado con éxito',
+  level: 'info',
+  timestamp: '2024-02-13T15:23:32.766Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:24:10.182Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:24:26.317Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:24:31.991Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-13T15:27:26.381Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-13T15:30:53.191Z'
+}
+{
+  message: 'Proceso 12380 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:31:09.989Z'
+}
+{
+  message: 'Proceso 18272 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:31:10.124Z'
+}
+{
+  message: 'Proceso 6328 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:31:10.532Z'
+}
+{
+  message: 'Proceso 1260 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-13T15:31:10.662Z'
+}

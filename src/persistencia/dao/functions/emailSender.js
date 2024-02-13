@@ -12,26 +12,22 @@ const transporter = nodemailer.createTransport({
     },
   });
 
-// Función para enviar el correo electrónico
-async function enviarCorreo(email, asunto, mensaje) {
+  async function enviarCorreo(email, subject, message) {
+    console.log("Entrando aquí")
+    try {
+      const mailOptions = {
+        from: MAIL_USER,
+        to: email,
+        subject: subject,
+        text: message,
+      };
 
-    const asunto = "El producto ha sido Eliminado";
-    const mensaje = `El producto "${title}" ha sido eliminado. Descripción: ${description}`;
-  try {
-    // Configurar el correo electrónico
-    const mailOptions = {
-      from: MAIL_USER,
-      to: email,
-      subject: asunto,
-      text: mensaje,
-    };
-
-    const info = await transporter.sendMail(mailOptions);
-    console.log('Correo electrónico enviado:', info.response);
-  } catch (error) {
-    console.error('Error al enviar el correo electrónico:', error);
-    throw error;
+      const info = await transporter.sendMail(mailOptions);
+      console.log('Correo electrónico enviado:', info.response);
+    } catch (error) {
+      console.error('Error al enviar el correo electrónico:', error);
+      throw error;
+    }
   }
-}
 
 export { enviarCorreo };

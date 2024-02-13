@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 import autorizeMiddleware from '../middlewares/authorize.middleware.js'
 import { errorDictionary } from "../error/error.enum.js";
 import { usersModel } from "../persistencia/dao/models/users.model.js";
+import { enviarCorreo } from "../persistencia/dao/functions/emailSender.js";
+
 const router = Router();
 
 router.get("/", async (req, res) => {
@@ -171,22 +173,31 @@ router.delete("/:pid", autorizeMiddleware, async (req, res) => {
     const product = await productsModel.findById(productId);
 
     if (!product) {
+      logger.error("producto no encontrado")
       return res.status(404).json({ error: errorDictionary['PRODUCT_NOT_FOUND'] });
     }
 
-    const owner = await usersModel.findById(product.ownerId);
-    if (owner && owner.isPremium) {
-      await enviarCorreo(owner.email, 'Producto Eliminado', product.title, product.description);
+    console.log("duenho", product.owner)
+    if (!product.owner) {
+      const result = await productsModel.findByIdAndDelete(productId);
+      logger.info("Producto eliminado:", productId);
+      return res.json({ message: "Producto eliminado exitosamente" });
     }
 
-    if (!owner || owner.isPremium) {
-      const result = await productsModel.findByIdAndDelete(productId);
-      res.json({ message: "Producto eliminado exitosamente" });
-    } else {
-      res.status(403).json({ error: "No tienes permiso para eliminar este producto" });
+    const owner = await usersModel.findById(product.owner);
+    if (!owner) {
+      logger.info("duehno mo encontrado", owner);
+      return res.status(404).json({ error: errorDictionary['OWNER_NOT_FOUND'] });
     }
+
+    if (owner.role === 'premium') {
+      await enviarCorreo(owner.email, 'Producto Eliminado', `El producto "${product.title}" ha sido eliminado. Descripción: ${product.description}`);
+    }
+    const result = await productsModel.findByIdAndDelete(productId);
+    logger.info("Producto eliminado:", productId);
+    res.json({ message: "Producto eliminado exitosamente" });
   } catch (error) {
-    console.error('Error al eliminar el producto:', error);
+    logger.error('Error al eliminar el producto:', error);
     res.status(500).json({ error: errorDictionary['ERROR_DELETE_PRODUCT'] });
   }
 });
