@@ -7744,3 +7744,268 @@
   level: 'info',
   timestamp: '2024-02-13T15:31:10.662Z'
 }
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-16T19:43:37.856Z'
+}
+{
+  message: 'Proceso 848 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:43:53.774Z'
+}
+{
+  message: 'Proceso 1788 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:43:53.914Z'
+}
+{
+  message: 'Proceso 1728 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:43:54.143Z'
+}
+{
+  message: 'Proceso 5680 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:43:54.167Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-16T19:46:47.968Z'
+}
+{
+  message: 'Proceso 13972 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:47:05.579Z'
+}
+{
+  message: 'Proceso 6932 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:47:06.126Z'
+}
+{
+  message: 'Proceso 13044 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:47:06.490Z'
+}
+{
+  message: 'Proceso 13636 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:47:06.625Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:48:12.311Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:48:30.873Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:48:31.039Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:48:31.179Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:48:31.363Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:51:09.377Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:51:24.227Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:51:24.237Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:51:24.459Z'
+}
+{
+  message: 'Escuchando al puerto undefined',
+  level: 'info',
+  timestamp: '2024-02-16T19:51:24.837Z'
+}
+{
+  message: 'Proceso 13100 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:52:54.183Z'
+}
+{
+  message: 'Proceso 8148 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:52:54.252Z'
+}
+{
+  message: 'Proceso 3888 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:52:54.385Z'
+}
+{
+  message: 'Proceso 12564 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:52:54.526Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-16T19:53:05.703Z'
+}
+{
+  message: 'Proceso 8148 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:53:25.932Z'
+}
+{
+  message: 'Proceso 7656 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:53:26.063Z'
+}
+{
+  message: 'Proceso 8868 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:53:26.064Z'
+}
+{
+  message: 'Proceso 8496 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T19:53:26.155Z'
+}
+{
+  message: 'serialize 65caca523640b1d74eca49b4',
+  level: 'info',
+  timestamp: '2024-02-16T19:54:19.780Z'
+}
+{
+  _id: new ObjectId("65caca523640b1d74eca49b4"),
+  first_name: 'J Salamanca',
+  last_name: 'gt',
+  email: 'jfsalamanca3@gmail.com',
+  password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+  role: 'premium',
+  from_github: false,
+  from_google: true,
+  resetToken: { used: false },
+  documentsProcessed: false,
+  last_connection: 2024-02-13T14:33:31.781Z,
+  documents: [],
+  __v: 0,
+  cart: new ObjectId("65caca523640b1d74eca49b7"),
+  level: 'info',
+  message: 'Usuario autenticado con Google:',
+  timestamp: '2024-02-16T19:54:20.049Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-02-16T20:54:19.777Z,
+    originalMaxAge: 3599999,
+    httpOnly: true
+  },
+  passport: { user: new ObjectId("65caca523640b1d74eca49b4") },
+  user: {
+    _id: new ObjectId("65caca523640b1d74eca49b4"),
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    documentsProcessed: false,
+    last_connection: 2024-02-13T14:33:31.781Z,
+    documents: [],
+    __v: 0,
+    cart: new ObjectId("65caca523640b1d74eca49b7")
+  },
+  level: 'info',
+  message: 'Sesión configurada:',
+  timestamp: '2024-02-16T19:54:20.061Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-16T19:55:07.911Z'
+}
+{
+  level: 'info',
+  message: 'Rol del usuario:',
+  timestamp: '2024-02-16T19:55:17.133Z'
+}
+{
+  message: 'Escuchando al puerto 8080',
+  level: 'info',
+  timestamp: '2024-02-16T20:03:10.067Z'
+}
+{
+  message: 'Proceso 5868 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T20:03:27.026Z'
+}
+{
+  message: 'Proceso 8780 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T20:03:27.143Z'
+}
+{
+  message: 'Proceso 14096 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T20:03:27.251Z'
+}
+{
+  message: 'Proceso 14036 ha terminado',
+  level: 'info',
+  timestamp: '2024-02-16T20:03:27.305Z'
+}
+{
+  level: 'info',
+  message: 'Correo electrónico del usuario:',
+  timestamp: '2024-02-16T20:04:47.034Z'
+}
+{
+  cookie: {
+    path: '/',
+    _expires: 2024-02-16T21:04:45.058Z,
+    originalMaxAge: 3599999,
+    httpOnly: true
+  },
+  passport: { user: '65caca523640b1d74eca49b4' },
+  user: {
+    _id: '65caca523640b1d74eca49b4',
+    first_name: 'J Salamanca',
+    last_name: 'gt',
+    email: 'jfsalamanca3@gmail.com',
+    password: '$2b$10$rE9vvE4QvTzErMiuAF1rJO0CRq8QQbNJobQYzAXXBKUA04hlZvDLG',
+    role: 'premium',
+    from_github: false,
+    from_google: true,
+    resetToken: { used: false },
+    documentsProcessed: false,
+    last_connection: '2024-02-13T14:33:31.781Z',
+    documents: [],
+    __v: 0,
+    cart: '65caca523640b1d74eca49b7'
+  },
+  level: 'info',
+  message: 'Sesión completa:',
+  timestamp: '2024-02-16T20:04:47.039Z'
+}

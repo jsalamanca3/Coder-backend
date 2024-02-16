@@ -81,7 +81,7 @@ app.use("/api/mocking", mockingProducts);
 app.use("/api/loggerTest", loggerTest);
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSetup));
 
-const PORT = 8080;
+const PORT = config.db_port || 3000;
 
 const httpServer = app.listen(PORT, () => {
   logger.info(`Escuchando al puerto ${PORT}`);

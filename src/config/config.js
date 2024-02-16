@@ -13,4 +13,5 @@ export default {
     mail_user: process.env.MAIL_USER,
     mail_password: process.env.MAIL_PASSWORD,
     environment: process.env.ENVIRONMENT,
+    db_port: process.env.PORT,
 };
