@@ -26,12 +26,10 @@ import cluster from "cluster";
 import { cpus } from "os";
 import swaggerUi from "swagger-ui-express";
 import { swaggerSetup } from "./utils/swaggerSpecs.js";
-import methodOverride from "method-override";
 
 const app = express();
 app.use(cookieParser());
 app.use(express.json());
-app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__fileUrl + "/public"));
 
@@ -41,7 +39,7 @@ if (cluster.isPrimary) {
     cluster.fork();
   }
   cluster.on("exit", (worker) => {
-    logger.info(`Proceso ${worker.process.pid} ha terminado`);
+    console.log(`Proceso ${worker.process.pid} ha terminado`);
   });
 }
 
@@ -55,6 +53,8 @@ const MONGODB_URI = config.mongo_uri;
 app.use(
   session({
     secret: config.session_secret,
+    resave: true,
+    saveUninitialized: true,
     cookie: {
       maxAge: 60 * 60 * 1000,
     },
@@ -84,7 +84,7 @@ app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSetup));
 const PORT = config.db_port || 3000;
 
 const httpServer = app.listen(PORT, () => {
-  logger.info(`Escuchando al puerto ${PORT}`);
+  console.log(`Escuchando al puerto ${PORT}`);
 });
 
 const socketServer = new Server(httpServer);
