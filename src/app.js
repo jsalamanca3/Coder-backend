@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__fileUrl + "/public"));
-
+/*
 if (cluster.isPrimary) {
   console.log(`Este es el proceso Principal ${process.pid}`);
   for (let i = 0; i < cpus().length; i++) {
@@ -41,7 +41,7 @@ if (cluster.isPrimary) {
   cluster.on("exit", (worker) => {
     console.log(`Proceso ${worker.process.pid} ha terminado`);
   });
-}
+} */
 
 /* handlebars */
 app.engine("handlebars", engine());
