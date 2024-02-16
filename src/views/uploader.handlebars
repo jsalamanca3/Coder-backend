@@ -1,0 +1,9 @@
+
+    <h1>Uploader</h1>
+        <form id="uploadForm" action="/api/users/{{ idUser }}/documents" method="post" enctype="multipart/form-data">
+        <p> Identificación </p> <input type="file" name="identification" accept=".pdf, .doc, .docx">
+        <p> Comprobante de Domicilio</p> <input type="file" name="proofOfAddress" accept=".pdf, .doc, .docx">
+        <p> Estado de Cuenta</p> <input type="file" name="bankStatement" accept=".pdf, .doc, .docx">
+        <input type="submit" value="Cargar Documentos 1">
+        </form>
+

@@ -1,0 +1,175 @@
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        first_name:
+          type: string
+          description: Primer nombre del usuario.
+        last_name:
+          type: string
+          description: Apellido del usuario.
+        email:
+          type: string
+          description: Correo electrónico del usuario.
+        password:
+          type: string
+          description: Contraseña del usuario.
+        role:
+          type: string
+          enum:
+            - admin
+            - premium
+            - user
+          default: user
+          description: Rol del usuario.
+        from_github:
+          type: boolean
+          default: false
+          description: Indica si el usuario se registró desde GitHub.
+        from_google:
+          type: boolean
+          default: false
+          description: Indica si el usuario se registró desde Google.
+        cart:
+          type: string
+          description: ID del carrito asociado al usuario (referencia a un carrito).
+        resetToken:
+          type: string
+          description: Token para restablecer la contraseña.
+
+paths:
+  /api/users:
+    get:
+      summary: Obtener la lista de usuarios
+      tags:
+        - User
+      description: Retorna una lista de todos los usuarios.
+      responses:
+        200:
+          description: Operación exitosa
+          content:
+            application/json:
+              example:
+                message: "Usuarios"
+                users: [...]
+
+    post:
+      summary: Crear un nuevo usuario
+      tags:
+        - User
+      description: Crea un nuevo usuario con la información proporcionada.
+      requestBody:
+        description: Información del usuario
+        required: true
+        content:
+          application/json:
+            example:
+              first_name: Juan
+              last_name: Pérez
+              email: juan@example.com
+              password: "password123"
+      responses:
+        302:
+          description: Redirección exitosa a la página de inicio
+        400:
+          description: Error en la solicitud
+          content:
+            application/json:
+              example:
+                error: "INVALID_DATA_FORMAT"
+        409:
+          description: Usuario ya existe
+          content:
+            application/json:
+              example:
+                error: "USER_ALREADY_EXISTS"
+        500:
+          description: Error del servidor
+          content:
+            application/json:
+              example:
+                error: "ERROR_TO_CREATE_USER"
+
+  /api/users/logout:
+    get:
+      summary: Cerrar sesión de usuario
+      tags:
+        - User
+      description: Cierra la sesión de usuario y redirige a la página de inicio de sesión.
+      responses:
+        302:
+          description: Redirección exitosa a la página de inicio de sesión
+        500:
+          description: Error del servidor
+          content:
+            application/json:
+              example:
+                error: "USER_NOT_FOUND"
+
+  /api/users/{idUser}:
+    get:
+      summary: Obtener detalles de un usuario por ID
+      tags:
+        - User
+      description: Retorna los detalles de un usuario específico.
+      parameters:
+        - in: path
+          name: idUser
+          schema:
+            type: string
+          description: ID del usuario.
+      security:
+        - bearerAuth: []
+      responses:
+        200:
+          description: Operación exitosa
+          content:
+            application/json:
+              example:
+                message: "Usuario"
+                user: {...}
+        500:
+          description: Error del servidor
+          content:
+            application/json:
+              example:
+                error: "USER_NOT_FOUND"
+
+  /api/users/premium/{uid}:
+    put:
+      summary: Actualizar el rol del usuario a premium
+      tags:
+        - User
+      description: Actualiza el rol de un usuario a "premium".
+      parameters:
+        - in: path
+          name: uid
+          schema:
+            type: string
+          description: ID del usuario.
+      responses:
+        200:
+          description: Rol de usuario actualizado exitosamente
+          content:
+            application/json:
+              example:
+                message: "Rol de usuario actualizado con éxito"
+        400:
+          description: Rol no válido
+          content:
+            application/json:
+              example:
+                error: "Rol no válido"
+        404:
+          description: Usuario no encontrado
+          content:
+            application/json:
+              example:
+                error: "USER_NOT_FOUND"
+        500:
+          description: Error del servidor
+          content:
+            application/json:
+              example:
+                error: "INTERNAL_SERVER_ERROR"

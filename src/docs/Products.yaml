@@ -1,0 +1,243 @@
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Título del producto.
+        description:
+          type: string
+          description: Descripción del producto.
+        code:
+          type: string
+          description: Código único del producto.
+        price:
+          type: number
+          description: Precio del producto.
+        status:
+          type: string
+          enum:
+            - available
+            - sold
+          default: available
+          description: Estado del producto (disponible, vendido).
+        stock:
+          type: number
+          description: Cantidad disponible en stock.
+        category:
+          type: string
+          description: Categoría del producto.
+        thumbnails:
+          type: string
+          description: URL de la imagen del producto.
+        owner:
+          type: string
+          description: ID del propietario del producto (referencia a un usuario).
+
+paths:
+  /api/products:
+    get:
+      summary: Obtener la lista de productos paginados y filtrados.
+      tags:
+      - Products
+      description: Retorna una lista de productos según los parámetros proporcionados.
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: Número de página.
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Cantidad de elementos por página.
+        - in: query
+          name: sort
+          schema:
+            type: string
+          description: Orden de clasificación (opcional).
+        - in: query
+          name: query
+          schema:
+            type: string
+          description: Búsqueda por título o categoría (opcional).
+      responses:
+        200:
+          description: Operación exitosa
+          content:
+            application/json:
+              example:
+                status: "success"
+                payload: [...]
+                totalDocs: 10
+                totalPages: 2
+                prevPage: 1
+                nextPage: 3
+                hasPrevPage: true
+                hasNextPage: true
+                prevLink: "/api/products?page=1&limit=10"
+                nextLink: "/api/products?page=3&limit=10"
+    post:
+      summary: Crear un nuevo producto.
+      tags:
+      - Products
+      description: Crea un nuevo producto con la información proporcionada.
+      security:
+        - bearerAuth: []
+      requestBody:
+        description: Información del producto
+        required: true
+        content:
+          application/json:
+            example:
+              title: Manzana
+              description: Roja y jugosa
+              code: "001"
+              price: 2.5
+              status: available
+              stock: 100
+              category: Frutas
+              thumbnails: https://example.com/apple.jpg
+      responses:
+        201:
+          description: Producto creado exitosamente
+          content:
+            application/json:
+              example:
+                status: "success"
+                payload: {...}
+        400:
+          description: Error en la solicitud
+          content:
+            application/json:
+              example:
+                error: "Faltan campos obligatorios: title, price, category"
+        403:
+          description: Acceso no autorizado
+          content:
+            application/json:
+              example:
+                error: "Solo usuarios admin o premium pueden crear productos"
+        500:
+          description: Error del servidor
+          content:
+            application/json:
+              example:
+                error: "Error al crear el producto"
+
+  /api/products/{pid}:
+    get:
+      summary: Obtener detalles de un producto por ID.
+      tags:
+      - Products
+      description: Retorna los detalles de un producto específico.
+      parameters:
+        - in: path
+          name: pid
+          schema:
+            type: string
+          description: ID del producto.
+      responses:
+        200:
+          description: Operación exitosa
+          content:
+            application/json:
+              example:
+                status: "success"
+                payload: {...}
+        401:
+          description: Producto no encontrado
+          content:
+            application/json:
+              example:
+                error: "PRODUCT_NOT_FOUND"
+    put:
+      summary: Actualizar un producto por ID.
+      tags:
+      - Products
+      description: Actualiza un producto existente con la información proporcionada.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: pid
+          schema:
+            type: string
+          description: ID del producto.
+      requestBody:
+        description: Nuevos datos del producto.
+        required: true
+        content:
+          application/json:
+            example:
+              title: Manzana Roja
+              description: Roja y jugosa
+              price: 3.0
+              stock: 150
+      responses:
+        200:
+          description: Producto actualizado exitosamente
+          content:
+            application/json:
+              example:
+                status: "success"
+                payload: {...}
+        401:
+          description: Producto no encontrado
+          content:
+            application/json:
+              example:
+                error: "PRODUCT_NOT_FOUND"
+        403:
+          description: Acceso no autorizado
+          content:
+            application/json:
+              example:
+                error: "Solo usuarios admin o premium pueden actualizar productos"
+        500:
+          description: Error del servidor
+          content:
+            application/json:
+              example:
+                error: "Error al actualizar el producto"
+    delete:
+      summary: Eliminar un producto por ID.
+      tags:
+      - Products
+      description: Elimina un producto existente según su ID.
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: pid
+          schema:
+            type: string
+          description: ID del producto.
+      responses:
+        200:
+          description: Producto eliminado exitosamente
+          content:
+            application/json:
+              example:
+                status: "success"
+                message: "Producto eliminado exitosamente"
+        401:
+          description: Producto no encontrado
+          content:
+            application/json:
+              example:
+                error: "PRODUCT_NOT_FOUND"
+        403:
+          description: Acceso no autorizado
+          content:
+            application/json:
+              example:
+                error: "Solo usuarios admin o premium pueden eliminar productos"
+        500:
+          description: Error del servidor
+          content:
+            application/json:
+              example:
+                error: "Error al eliminar el producto"
